@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="ko" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Global Market Pulse | 글로벌 주식 이슈 & 트렌딩 대시보드</title>
+  <meta name="description" content="글로벌 금융 시장의 주요 이슈를 지속적으로 트래킹하고, 뉴스 ↔ 종목 간의 양방향 탐색을 지원하는 실시간 주식 대시보드">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#eef2ff',
+              100: '#e0e7ff',
+              500: '#6366f1',
+              600: '#4f46e5',
+              700: '#4338ca',
+            },
+            surface: {
+              DEFAULT: '#0f172a',
+              card: '#1e293b',
+              border: '#334155',
+              hover: '#283548'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <!-- TradingView Widget Script -->
+  <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap');
+    body {
+      font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+    }
+    .font-mono {
+      font-family: 'JetBrains Mono', monospace;
+    }
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #0f172a;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #334155;
+      border-radius: 3px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #475569;
+    }
+  </style>
+</head>
+<body class="bg-[#0b0f19] text-slate-100 min-h-screen flex flex-col antialiased selection:bg-indigo-500 selection:text-white">
+
+  <!-- Navigation Bar -->
+  <header class="border-b border-surface-border bg-surface/90 backdrop-blur sticky top-0 z-30">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-indigo-600 to-cyan-400 flex items-center justify-center shadow-lg shadow-indigo-500/20">
+          <i data-lucide="activity" class="w-6 h-6 text-white"></i>
+        </div>
+        <div>
+          <h1 class="text-lg font-bold tracking-tight bg-gradient-to-r from-white via-slate-200 to-indigo-300 bg-clip-text text-transparent">
+            Global Market Pulse
+          </h1>
+          <p class="text-xs text-slate-400 hidden sm:block">뉴스 ↔ 종목 양방향 인텔리전스</p>
+        </div>
+      </div>
+
+      <!-- Live Clock & Status -->
+      <div class="flex items-center space-x-4">
+        <div class="hidden md:flex items-center space-x-2 text-xs text-slate-400 bg-surface-card px-3 py-1.5 rounded-full border border-surface-border">
+          <span class="inline-block w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+          <span>업데이트: </span>
+          <span id="lastUpdatedTime" class="font-mono text-slate-200">데이터 로딩 중...</span>
+        </div>
+
+        <button id="refreshBtn" onclick="loadMarketData(true)" class="flex items-center space-x-1.5 text-xs font-medium px-3 py-1.5 rounded-lg bg-surface-card hover:bg-surface-hover border border-surface-border text-slate-300 transition-colors">
+          <i data-lucide="refresh-cw" class="w-3.5 h-3.5" id="refreshIcon"></i>
+          <span>새로고침</span>
+        </button>
+
+        <a href="https://github.com/DaramGC/p001" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-white transition-colors">
+          <i data-lucide="github" class="w-5 h-5"></i>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Market Brief Banner -->
+  <section class="border-b border-surface-border bg-slate-900/50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs sm:text-sm">
+        <div class="flex items-center space-x-3 bg-surface-card/60 px-4 py-2 rounded-lg border border-surface-border/60">
+          <div class="flex items-center space-x-1.5 text-indigo-400 font-semibold shrink-0">
+            <span class="text-base">🇺🇸</span>
+            <span>미국 증시</span>
+          </div>
+          <div class="text-slate-300 truncate" id="usMarketStatus">시장 상황 확인 중...</div>
+        </div>
+        <div class="flex items-center space-x-3 bg-surface-card/60 px-4 py-2 rounded-lg border border-surface-border/60">
+          <div class="flex items-center space-x-1.5 text-indigo-400 font-semibold shrink-0">
+            <span class="text-base">🇰🇷</span>
+            <span>한국 증시</span>
+          </div>
+          <div class="text-slate-300 truncate" id="krMarketStatus">시장 상황 확인 중...</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content Layout -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 w-full flex-grow">
+    
+    <!-- Controls: Filter Tabs & Search -->
+    <div class="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-4 mb-6">
+      <!-- Filter Tabs -->
+      <div class="flex items-center p-1 bg-surface-card rounded-xl border border-surface-border w-fit">
+        <button onclick="setMarketFilter('ALL')" id="filter-ALL" class="filter-tab px-4 py-1.5 rounded-lg text-xs font-semibold transition-all bg-indigo-600 text-white shadow">
+          전체 보기
+        </button>
+        <button onclick="setMarketFilter('US')" id="filter-US" class="filter-tab px-4 py-1.5 rounded-lg text-xs font-medium text-slate-400 hover:text-white transition-all">
+          글로벌 / 미국
+        </button>
+        <button onclick="setMarketFilter('KR')" id="filter-KR" class="filter-tab px-4 py-1.5 rounded-lg text-xs font-medium text-slate-400 hover:text-white transition-all">
+          한국 시장
+        </button>
+      </div>
+
+      <!-- Search Input -->
+      <div class="relative w-full sm:w-72">
+        <i data-lucide="search" class="w-4 h-4 text-slate-400 absolute left-3 top-1/2 -translate-y-1/2 pointer-events-none"></i>
+        <input 
+          type="text" 
+          id="searchInput" 
+          oninput="handleSearch(this.value)" 
+          placeholder="이슈 키워드 또는 종목 검색..." 
+          class="w-full pl-9 pr-4 py-2 rounded-xl bg-surface-card border border-surface-border text-xs focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 text-slate-200 placeholder:text-slate-500"
+        >
+      </div>
+    </div>
+
+    <!-- Dual Layout: View A (Major Issues) & View B (Trending Tickers) -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+      
+      <!-- View A: Major Issues (Left 8 cols) -->
+      <section class="lg:col-span-8 space-y-4">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center space-x-2">
+            <i data-lucide="newspaper" class="w-5 h-5 text-indigo-400"></i>
+            <h2 class="text-base font-bold text-slate-100">핵심 거시 & 섹터 이슈</h2>
+            <span id="issuesCount" class="text-xs px-2 py-0.5 rounded-full bg-surface-card border border-surface-border text-slate-400">0</span>
+          </div>
+          <span class="text-xs text-slate-500">종목 칩 클릭 시 차트와 연계 사유 표시</span>
+        </div>
+
+        <!-- Issue Cards Container -->
+        <div id="issuesContainer" class="space-y-4">
+          <!-- 로딩 스켈레톤 -->
+          <div class="p-6 rounded-2xl bg-surface-card border border-surface-border animate-pulse">
+            <div class="h-5 bg-slate-700/50 rounded w-1/3 mb-4"></div>
+            <div class="h-4 bg-slate-700/30 rounded w-full mb-2"></div>
+            <div class="h-4 bg-slate-700/30 rounded w-4/5 mb-4"></div>
+            <div class="flex space-x-2">
+              <div class="h-8 bg-slate-700/50 rounded-lg w-20"></div>
+              <div class="h-8 bg-slate-700/50 rounded-lg w-24"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- View B: Trending Tickers (Right 4 cols) -->
+      <section class="lg:col-span-4 space-y-4">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center space-x-2">
+            <i data-lucide="flame" class="w-5 h-5 text-amber-400"></i>
+            <h2 class="text-base font-bold text-slate-100">주목받는 트렌딩 종목</h2>
+          </div>
+          <span class="text-xs text-slate-500">클릭하여 차트 분석</span>
+        </div>
+
+        <div class="bg-surface-card rounded-2xl border border-surface-border p-4 shadow-sm">
+          <div id="trendingContainer" class="space-y-3">
+            <!-- 스켈레톤 -->
+            <div class="h-14 bg-slate-800/50 rounded-xl animate-pulse"></div>
+            <div class="h-14 bg-slate-800/50 rounded-xl animate-pulse"></div>
+            <div class="h-14 bg-slate-800/50 rounded-xl animate-pulse"></div>
+          </div>
+        </div>
+
+        <!-- Info Card: About Pipeline -->
+        <div class="rounded-2xl border border-surface-border/60 bg-gradient-to-br from-indigo-950/30 to-slate-900 p-4 text-xs text-slate-400 space-y-2">
+          <div class="flex items-center space-x-2 text-indigo-300 font-semibold">
+            <i data-lucide="cpu" class="w-4 h-4"></i>
+            <span>지능형 파이프라인 안내</span>
+          </div>
+          <p>
+            본 대시보드는 Google News 및 글로벌 금융 피드를 수집하고, <strong class="text-slate-200">Gemini 2.5 Flash</strong>가 실시간 뉴스를 정형화하여 관련 종목과 사유를 매핑합니다.
+          </p>
+          <div class="pt-1 flex items-center justify-between text-[11px] text-slate-500 border-t border-surface-border/40">
+            <span>크론잡: 3시간 주기 자동 갱신</span>
+            <span>호스팅: GitHub Pages</span>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- TradingView Chart & Details Modal -->
+  <div id="chartModal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-3 sm:p-6 bg-black/80 backdrop-blur-sm transition-opacity duration-200">
+    <div class="bg-[#131722] border border-surface-border rounded-2xl w-full max-w-5xl h-[85vh] flex flex-col overflow-hidden shadow-2xl animate-in fade-in zoom-in-95 duration-150">
+      
+      <!-- Modal Header -->
+      <div class="px-5 py-3.5 border-b border-surface-border flex items-center justify-between bg-surface-card/80">
+        <div class="flex items-center space-x-3">
+          <div class="w-8 h-8 rounded-lg bg-indigo-600/20 border border-indigo-500/30 flex items-center justify-center text-indigo-400 font-bold text-sm">
+            <span id="modalSymbolIcon">$</span>
+          </div>
+          <div>
+            <div class="flex items-center space-x-2">
+              <span id="modalTickerName" class="font-bold text-white text-base">종목명</span>
+              <span id="modalTickerSymbol" class="font-mono text-xs px-2 py-0.5 rounded bg-slate-800 text-slate-300 border border-slate-700">SYMBOL</span>
+              <span id="modalTickerMarket" class="text-xs text-slate-400 font-medium">MARKET</span>
+            </div>
+            <p id="modalReason" class="text-xs text-indigo-300 mt-0.5 line-clamp-1">주목받는 사유 내용</p>
+          </div>
+        </div>
+
+        <button onclick="closeChartModal()" class="w-8 h-8 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-400 hover:text-white flex items-center justify-center transition-colors">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <!-- TradingView Widget Embed Container -->
+      <div id="tradingview_widget_container" class="flex-grow w-full h-full relative bg-[#131722]">
+        <div id="tradingview_widget" class="w-full h-full"></div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="border-t border-surface-border/60 py-6 mt-12 bg-surface/50 text-xs text-slate-500 text-center">
+    <div class="max-w-7xl mx-auto px-4 space-y-1">
+      <p>© 2026 Global Market Pulse. Automated by GitHub Actions & Gemini 2.5 Flash.</p>
+      <p>본 서비스에서 제공하는 정보는 투자 권유가 아니며, 시장 리서치 및 참고 목적으로 제공됩니다.</p>
+    </div>
+  </footer>
+
+  <!-- Application Logic -->
+  <script>
+    // State Store
+    let marketData = null;
+    let currentFilter = 'ALL';
+    let searchQuery = '';
+
+    // Sentiment Style Mapping
+    const sentimentConfig = {
+      POSITIVE: {
+        label: '호재 / 수혜',
+        bg: 'bg-emerald-500/10 text-emerald-400 border-emerald-500/20',
+        dot: 'bg-emerald-400'
+      },
+      NEGATIVE: {
+        label: '악재 / 리스크',
+        bg: 'bg-rose-500/10 text-rose-400 border-rose-500/20',
+        dot: 'bg-rose-400'
+      },
+      NEUTRAL: {
+        label: '중립 / 변동성',
+        bg: 'bg-amber-500/10 text-amber-400 border-amber-500/20',
+        dot: 'bg-amber-400'
+      }
+    };
+
+    // Format TradingView Symbol
+    function getTVSymbol(market, symbol) {
+      const cleanSym = symbol.replace('.KS', '').replace('.KQ', '').trim();
+      const m = (market || '').toUpperCase();
+      if (m === 'KRX' || /^[0-9]{6}$/.test(cleanSym)) {
+        return `KRX:${cleanSym}`;
+      } else if (m === 'NYSE') {
+        return `NYSE:${cleanSym}`;
+      } else {
+        return `NASDAQ:${cleanSym}`;
+      }
+    }
+
+    // Format Relative Time / ISO string
+    function formatTime(isoString) {
+      if (!isoString) return '최근';
+      try {
+        const date = new Date(isoString);
+        return date.toLocaleString('ko-KR', {
+          month: 'numeric',
+          day: 'numeric',
+          hour: '2-digit',
+          minute: '2-digit',
+          timeZoneName: 'short'
+        });
+      } catch (e) {
+        return isoString;
+      }
+    }
+
+    // Fetch and Load Data
+    async function loadMarketData(forceRefresh = false) {
+      const refreshIcon = document.getElementById('refreshIcon');
+      if (refreshIcon) refreshIcon.classList.add('animate-spin');
+
+      try {
+        const cacheBuster = forceRefresh ? `?_=${Date.now()}` : '';
+        // 배포 경로에 따라 data.json 또는 public/data.json 시도
+        let response = await fetch(`data.json${cacheBuster}`);
+        if (!response.ok) {
+          response = await fetch(`public/data.json${cacheBuster}`);
+        }
+        if (!response.ok) {
+          throw new Error('데이터셋을 불러올 수 없습니다.');
+        }
+        marketData = await response.json();
+        renderDashboard();
+      } catch (err) {
+        console.error('Data load error:', err);
+        // Fallback: 인라인 기본 데이터
+        renderErrorState(err.message);
+      } finally {
+        if (refreshIcon) {
+          setTimeout(() => refreshIcon.classList.remove('animate-spin'), 500);
+        }
+      }
+    }
+
+    function renderErrorState(msg) {
+      const container = document.getElementById('issuesContainer');
+      container.innerHTML = `
+        <div class="p-8 rounded-2xl bg-surface-card border border-rose-500/20 text-center space-y-3">
+          <i data-lucide="alert-triangle" class="w-8 h-8 text-rose-400 mx-auto"></i>
+          <p class="text-sm text-slate-300">데이터를 불러오는 중 문제가 발생했습니다: ${msg}</p>
+          <button onclick="loadMarketData(true)" class="px-4 py-2 rounded-lg bg-indigo-600 text-xs text-white font-medium hover:bg-indigo-500">
+            다시 시도
+          </button>
+        </div>
+      `;
+      lucide.createIcons();
+    }
+
+    // Render Dashboard
+    function renderDashboard() {
+      if (!marketData) return;
+
+      // Update Timestamp & Market Summary
+      document.getElementById('lastUpdatedTime').textContent = formatTime(marketData.updated_at);
+      document.getElementById('usMarketStatus').textContent = marketData.market_summary?.us_status || '미국 시장 혼조세';
+      document.getElementById('krMarketStatus').textContent = marketData.market_summary?.kr_status || '국내 수급 주시';
+
+      renderIssues();
+      renderTrending();
+      lucide.createIcons();
+    }
+
+    // Set Filter Tab
+    function setMarketFilter(filter) {
+      currentFilter = filter;
+      document.querySelectorAll('.filter-tab').forEach(tab => {
+        tab.className = 'filter-tab px-4 py-1.5 rounded-lg text-xs font-medium text-slate-400 hover:text-white transition-all';
+      });
+      const activeBtn = document.getElementById(`filter-${filter}`);
+      if (activeBtn) {
+        activeBtn.className = 'filter-tab px-4 py-1.5 rounded-lg text-xs font-semibold transition-all bg-indigo-600 text-white shadow';
+      }
+      renderIssues();
+    }
+
+    // Search Handler
+    function handleSearch(val) {
+      searchQuery = val.trim().toLowerCase();
+      renderIssues();
+      renderTrending();
+    }
+
+    // Render Major Issues (View A)
+    function renderIssues() {
+      const container = document.getElementById('issuesContainer');
+      if (!marketData || !marketData.major_issues) return;
+
+      let filtered = marketData.major_issues.filter(issue => {
+        // Market Filter
+        if (currentFilter === 'US' && issue.market === 'KR') return false;
+        if (currentFilter === 'KR' && issue.market === 'US') return false;
+
+        // Search Query
+        if (searchQuery) {
+          const matchTitle = issue.title.toLowerCase().includes(searchQuery);
+          const matchSummary = issue.summary.toLowerCase().includes(searchQuery);
+          const matchTickers = issue.related_tickers?.some(t => 
+            t.symbol.toLowerCase().includes(searchQuery) || 
+            t.name.toLowerCase().includes(searchQuery) ||
+            (t.reason && t.reason.toLowerCase().includes(searchQuery))
+          );
+          return matchTitle || matchSummary || matchTickers;
+        }
+        return true;
+      });
+
+      document.getElementById('issuesCount').textContent = `${filtered.length}건`;
+
+      if (filtered.length === 0) {
+        container.innerHTML = `
+          <div class="p-8 rounded-2xl bg-surface-card border border-surface-border text-center text-slate-400 text-sm">
+            해당 조건에 일치하는 이슈가 없습니다.
+          </div>
+        `;
+        return;
+      }
+
+      container.innerHTML = filtered.map(issue => {
+        const sentiment = sentimentConfig[issue.sentiment] || sentimentConfig.NEUTRAL;
+        const marketBadge = issue.market === 'KR' ? '🇰🇷 한국' : (issue.market === 'US' ? '🇺🇸 미국' : '🌐 글로벌');
+
+        return `
+          <article class="p-5 sm:p-6 rounded-2xl bg-surface-card border border-surface-border hover:border-indigo-500/40 transition-all duration-200 shadow-sm space-y-4">
+            
+            <!-- Issue Meta -->
+            <div class="flex flex-wrap items-center justify-between gap-2">
+              <div class="flex items-center space-x-2">
+                <span class="text-xs px-2.5 py-1 rounded-md font-medium bg-slate-800 text-slate-300 border border-slate-700/60">
+                  ${marketBadge}
+                </span>
+                <span class="text-xs px-2.5 py-1 rounded-md font-semibold border flex items-center space-x-1.5 ${sentiment.bg}">
+                  <span class="w-1.5 h-1.5 rounded-full ${sentiment.dot}"></span>
+                  <span>${sentiment.label}</span>
+                </span>
+              </div>
+              
+              <!-- Sources Link -->
+              ${issue.sources && issue.sources.length > 0 ? `
+                <div class="flex items-center space-x-1 text-xs text-slate-400">
+                  <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+                  <a href="${issue.sources[0].url}" target="_blank" rel="noopener noreferrer" class="hover:text-indigo-400 underline decoration-slate-600 underline-offset-2 truncate max-w-[200px]" title="${issue.sources[0].title}">
+                    ${issue.sources[0].title || '원문 출처'}
+                  </a>
+                </div>
+              ` : ''}
+            </div>
+
+            <!-- Title & Summary -->
+            <div class="space-y-1.5">
+              <h3 class="text-base sm:text-lg font-bold text-white leading-snug tracking-tight">
+                ${issue.title}
+              </h3>
+              <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                ${issue.summary}
+              </p>
+            </div>
+
+            <!-- Related Ticker Chips -->
+            <div class="pt-2 border-t border-surface-border/50">
+              <span class="text-[11px] font-semibold text-slate-400 block mb-2">연관 핵심 종목 & 수혜/피해 요인 (차트 보기):</span>
+              <div class="flex flex-wrap gap-2">
+                ${(issue.related_tickers || []).map(ticker => `
+                  <button 
+                    onclick='openChartModal(${JSON.stringify(ticker).replace(/'/g, "&apos;")})'
+                    class="group flex items-center space-x-2 px-3 py-1.5 rounded-xl bg-slate-800/80 hover:bg-indigo-950/80 border border-slate-700/80 hover:border-indigo-500/60 text-left transition-all"
+                  >
+                    <span class="font-mono text-xs font-bold text-indigo-400 group-hover:text-indigo-300">${ticker.symbol}</span>
+                    <span class="text-xs font-medium text-slate-200">${ticker.name}</span>
+                    <i data-lucide="line-chart" class="w-3.5 h-3.5 text-slate-400 group-hover:text-indigo-400 transition-colors"></i>
+                  </button>
+                `).join('')}
+              </div>
+            </div>
+
+          </article>
+        `;
+      }).join('');
+
+      lucide.createIcons();
+    }
+
+    // Render Trending Tickers (View B)
+    function renderTrending() {
+      const container = document.getElementById('trendingContainer');
+      if (!marketData || !marketData.trending_tickers) return;
+
+      let tickers = marketData.trending_tickers;
+      if (searchQuery) {
+        tickers = tickers.filter(t => 
+          t.symbol.toLowerCase().includes(searchQuery) ||
+          t.name.toLowerCase().includes(searchQuery) ||
+          (t.why_trending && t.why_trending.toLowerCase().includes(searchQuery))
+        );
+      }
+
+      if (tickers.length === 0) {
+        container.innerHTML = `
+          <div class="p-4 text-center text-xs text-slate-400">
+            검색된 트렌딩 종목이 없습니다.
+          </div>
+        `;
+        return;
+      }
+
+      container.innerHTML = tickers.map(ticker => {
+        const isUp = (ticker.change_rate || '').includes('+');
+        const changeBadgeClass = isUp ? 'text-emerald-400 bg-emerald-500/10 border-emerald-500/20' : 'text-rose-400 bg-rose-500/10 border-rose-500/20';
+
+        return `
+          <div 
+            onclick='openChartModal(${JSON.stringify(ticker).replace(/'/g, "&apos;")})'
+            class="p-3 rounded-xl bg-slate-800/40 hover:bg-slate-800 border border-surface-border/60 hover:border-indigo-500/40 cursor-pointer transition-all space-y-1.5 group"
+          >
+            <div class="flex items-center justify-between">
+              <div class="flex items-center space-x-2">
+                <span class="font-mono text-xs font-bold text-white group-hover:text-indigo-400">${ticker.symbol}</span>
+                <span class="text-xs font-medium text-slate-300 truncate max-w-[110px]">${ticker.name}</span>
+                <span class="text-[10px] px-1.5 py-0.5 rounded bg-slate-700/50 text-slate-400">${ticker.market}</span>
+              </div>
+              <span class="font-mono text-xs font-bold px-2 py-0.5 rounded border ${changeBadgeClass}">
+                ${ticker.change_rate || '변동'}
+              </span>
+            </div>
+            <p class="text-xs text-slate-400 group-hover:text-slate-300 leading-snug line-clamp-2">
+              ${ticker.why_trending || ticker.reason || '시장 주목도 급증'}
+            </p>
+          </div>
+        `;
+      }).join('');
+
+      lucide.createIcons();
+    }
+
+    // Modal & TradingView Chart Logic
+    let tvWidgetInstance = null;
+
+    function openChartModal(ticker) {
+      const modal = document.getElementById('chartModal');
+      const tvSymbol = getTVSymbol(ticker.market, ticker.symbol);
+
+      document.getElementById('modalTickerName').textContent = ticker.name || ticker.symbol;
+      document.getElementById('modalTickerSymbol').textContent = ticker.symbol;
+      document.getElementById('modalTickerMarket').textContent = ticker.market || 'EXCHANGE';
+      document.getElementById('modalReason').textContent = ticker.why_trending || ticker.reason || '해당 이슈 관련 핵심 종목';
+      document.getElementById('modalSymbolIcon').textContent = ticker.market === 'KRX' ? '₩' : '$';
+
+      modal.classList.remove('hidden');
+
+      // Initialize or Update TradingView Widget
+      const widgetContainer = document.getElementById('tradingview_widget');
+      widgetContainer.innerHTML = ''; // reset
+
+      new TradingView.widget({
+        "autosize": true,
+        "symbol": tvSymbol,
+        "interval": "D",
+        "timezone": "Asia/Seoul",
+        "theme": "dark",
+        "style": "1",
+        "locale": "kr",
+        "toolbar_bg": "#0f172a",
+        "enable_publishing": false,
+        "allow_symbol_change": true,
+        "container_id": "tradingview_widget",
+        "hide_side_toolbar": false,
+        "studies": [
+          "MASimple@tv-basicstudies",
+          "RSI@tv-basicstudies"
+        ]
+      });
+
+      lucide.createIcons();
+    }
+
+    function closeChartModal() {
+      const modal = document.getElementById('chartModal');
+      modal.classList.add('hidden');
+      const widgetContainer = document.getElementById('tradingview_widget');
+      widgetContainer.innerHTML = '';
+    }
+
+    // ESC Key to close modal
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        closeChartModal();
+      }
+    });
+
+    // Close on backdrop click
+    document.getElementById('chartModal').addEventListener('click', (e) => {
+      if (e.target.id === 'chartModal') {
+        closeChartModal();
+      }
+    });
+
+    // Initialize on page load
+    document.addEventListener('DOMContentLoaded', () => {
+      loadMarketData();
+      lucide.createIcons();
+    });
+  </script>
+</body>
+</html>

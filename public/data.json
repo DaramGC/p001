@@ -1,0 +1,195 @@
+{
+  "updated_at": "2026-10-05T18:00:00Z",
+  "market_summary": {
+    "us_status": "빅테크 실적 기대감 및 금리 전망 속 기술주 강세",
+    "kr_status": "외국인/기관 반도체 및 밸류업 종목 중심 순매수 유입"
+  },
+  "major_issues": [
+    {
+      "id": "issue-001",
+      "market": "GLOBAL",
+      "title": "AI 반도체 수요 확장 및 차세대 HBM 패키징 공급 경쟁",
+      "summary": "글로벌 빅테크의 AI 데이터센터 설비투자(CAPEX) 확대 지속에 힘입어 차세대 가속기 및 HBM3E/HBM4 공급망 수혜 기업으로 자금 유입이 집중되고 있습니다.",
+      "sentiment": "POSITIVE",
+      "related_tickers": [
+        {
+          "symbol": "NVDA",
+          "name": "NVIDIA",
+          "market": "NASDAQ",
+          "reason": "차세대 블랙웰(Blackwell) 아키텍처 칩 양산 확대 및 CSP 고객사 선주문 쇄도"
+        },
+        {
+          "symbol": "000660",
+          "name": "SK하이닉스",
+          "market": "KRX",
+          "reason": "HBM3E 12단 독점적 공급 지위와 글로벌 메모리 가격 상승 모멘텀 유지"
+        },
+        {
+          "symbol": "005930",
+          "name": "삼성전자",
+          "market": "KRX",
+          "reason": "차세대 HBM 공급 인증 진행 및 첨단 파운드리 2나노 공정 수주 기대감"
+        },
+        {
+          "symbol": "TSM",
+          "name": "TSMC",
+          "market": "NYSE",
+          "reason": "첨단 CoWoS 패키징 생산라인 풀가동 및 3나노 이하 선단공정 파운드리 독점력"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Big Tech AI Capex Surge Fuels Global Semiconductor Rally",
+          "url": "https://www.cnbc.com"
+        },
+        {
+          "title": "국내 반도체 대장주, 글로벌 AI 모멘텀 힘입어 강세",
+          "url": "https://news.google.com"
+        }
+      ]
+    },
+    {
+      "id": "issue-002",
+      "market": "US",
+      "title": "미국 기준금리 정책 경로 및 국채 금리 안정화 기대",
+      "summary": "연준(Fed)의 통화정책 완화 기조와 물가 지표 안정세가 지속되며, 미국 장기채 금리 진정과 함께 빅테크 성장주 밸류에이션 부담이 점진적으로 완화되고 있습니다.",
+      "sentiment": "NEUTRAL",
+      "related_tickers": [
+        {
+          "symbol": "AAPL",
+          "name": "Apple",
+          "market": "NASDAQ",
+          "reason": "금리 안정화에 따른 성장주 멀티플 회복 및 생성형 AI 기능 탑재 신제품 교체주기 도래"
+        },
+        {
+          "symbol": "MSFT",
+          "name": "Microsoft",
+          "market": "NASDAQ",
+          "reason": "애저(Azure) 클라우드 인프라 성장세 유지 및 엔터프라이즈 코파일럿 도입 확산"
+        },
+        {
+          "symbol": "JPM",
+          "name": "JPMorgan Chase",
+          "market": "NYSE",
+          "reason": "금리 인하기 투자은행(IB) 인수합병 및 IPO 수수료 수익 반등 가시화"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Fed rate trajectory in focus as inflation metrics soften",
+          "url": "https://www.reuters.com"
+        }
+      ]
+    },
+    {
+      "id": "issue-003",
+      "market": "KR",
+      "title": "국내 밸류업 프로그램 2차 랠리 및 배당·자사주 소각 본격화",
+      "summary": "한국거래소 기업 밸류업 가이드라인 강화 및 상장사들의 자발적 주주환원 공시가 확대되면서 저PBR 지주사와 금융주로 기관 및 외국인 자금 매수세가 유입되고 있습니다.",
+      "sentiment": "POSITIVE",
+      "related_tickers": [
+        {
+          "symbol": "105560",
+          "name": "KB금융",
+          "market": "KRX",
+          "reason": "자사주 소각 비율 상향 및 주주환원율 40% 도달 선언 등 금융업종 선도"
+        },
+        {
+          "symbol": "005380",
+          "name": "현대차",
+          "market": "KRX",
+          "reason": "인도 법인 상장 가치 반영 및 분기 배당 확대, 친환경 하이브리드 고수익성 확보"
+        },
+        {
+          "symbol": "086790",
+          "name": "하나금융지주",
+          "market": "KRX",
+          "reason": "적극적 보통주자본(CET1) 비율 관리 기반의 자사주 매입 정책 모멘텀"
+        }
+      ],
+      "sources": [
+        {
+          "title": "밸류업 지수 리밸런싱 앞두고 금융·자동차 저PBR주 매수세 집중",
+          "url": "https://news.google.com"
+        }
+      ]
+    },
+    {
+      "id": "issue-004",
+      "market": "GLOBAL",
+      "title": "글로벌 지정학적 공급망 재편과 방산·인프라 수주 랠리",
+      "summary": "유럽 및 중동의 방위비 증액 기조와 미국 주도의 공급망 재편으로 에너지 인프라, K-방산, 변압기·전력망 기자재 기업들의 중장기 수주 파이프라인이 견고하게 확장 중입니다.",
+      "sentiment": "POSITIVE",
+      "related_tickers": [
+        {
+          "symbol": "012450",
+          "name": "한화에어로스페이스",
+          "market": "KRX",
+          "reason": "다연장로켓 천무 및 K9 자주포 해외 수출 잔고 급증과 방산 통합 시너지"
+        },
+        {
+          "symbol": "267260",
+          "name": "HD현대일렉트릭",
+          "market": "KRX",
+          "reason": "북미 AI 데이터센터 전력 증설로 인한 초고압 변압기 판가 상승 및 주문 잔고 5년치 확보"
+        },
+        {
+          "symbol": "GE",
+          "name": "GE Vernova",
+          "market": "NYSE",
+          "reason": "글로벌 전력망 교체 수요와 가스 터빈 발전 인프라 호황의 최대 수혜"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Global power grid supercycle drives electrification giants to record backlogs",
+          "url": "https://www.bloomberg.com"
+        }
+      ]
+    }
+  ],
+  "trending_tickers": [
+    {
+      "symbol": "TSLA",
+      "name": "Tesla",
+      "market": "NASDAQ",
+      "change_rate": "+5.2%",
+      "why_trending": "차세대 FSD V13 배포 임박 및 자율주행 로보택시 규제 승인 기대감"
+    },
+    {
+      "symbol": "NVDA",
+      "name": "NVIDIA",
+      "market": "NASDAQ",
+      "change_rate": "+3.4%",
+      "why_trending": "주요 클라우드 3사의 AI 인프라 투자 지속 확인 및 공급망 병목 완화"
+    },
+    {
+      "symbol": "000660",
+      "name": "SK하이닉스",
+      "market": "KRX",
+      "change_rate": "+4.1%",
+      "why_trending": "HBM 수요 견인으로 분기 실적 서프라이즈 및 업계 최고 수익성 재확인"
+    },
+    {
+      "symbol": "PLTR",
+      "name": "Palantir",
+      "market": "NASDAQ",
+      "change_rate": "+6.8%",
+      "why_trending": "AIP(인공지능 플랫폼) 미국 민간 기업 고객 침투율 급상승 및 S&P500 편입 수혜"
+    },
+    {
+      "symbol": "267260",
+      "name": "HD현대일렉트릭",
+      "market": "KRX",
+      "change_rate": "+4.5%",
+      "why_trending": "북미 초고압 변압기 수주 지속 및 글로벌 전력 슈퍼사이클 모멘텀"
+    },
+    {
+      "symbol": "042700",
+      "name": "한미반도체",
+      "market": "KRX",
+      "change_rate": "+3.8%",
+      "why_trending": "HBM용 듀얼 TC 본더 장비 글로벌 출하 증가 및 독점적 기술 해자"
+    }
+  ]
+}
