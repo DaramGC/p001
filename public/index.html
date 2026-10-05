@@ -463,14 +463,44 @@
           <div id="tradingview_widget" class="w-full h-full"></div>
         </div>
 
-        <div id="naverContainer" class="w-full h-full hidden flex flex-col items-center justify-center p-6 bg-slate-900 space-y-4">
-          <div class="text-sm font-semibold text-slate-200">네이버 페이 증권 실시간 일봉 차트</div>
-          <div class="rounded-xl overflow-hidden border border-surface-border bg-white shadow-lg p-2 max-w-2xl w-full flex justify-center">
-            <img id="naverChartImg" src="" alt="네이버 증권 차트" class="w-full max-h-[50vh] object-contain">
+        <div id="naverContainer" class="w-full h-full hidden flex flex-col items-center justify-center p-4 sm:p-6 bg-slate-900/95 space-y-3 sm:space-y-4 overflow-y-auto">
+          
+          <!-- Period Selection Toolbar (적당히 큰 기간 선택: 3개월, 1년, 3년, 일봉캔들, 당일) -->
+          <div class="flex flex-wrap items-center justify-between w-full max-w-2xl gap-2">
+            <div class="text-xs sm:text-sm font-bold text-slate-200 flex items-center space-x-1.5">
+              <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+              <span id="naverChartTitle">네이버 페이 증권 3개월 차트</span>
+            </div>
+
+            <!-- Timeframe Buttons -->
+            <div class="flex items-center p-0.5 rounded-lg bg-slate-800 border border-surface-border text-xs">
+              <button onclick="setNaverChartPeriod('area/month3')" id="naverPeriod-month3" class="naver-period-btn px-2.5 py-1 rounded-md font-bold bg-indigo-600 text-white transition-all shadow-sm">
+                3개월 (기본)
+              </button>
+              <button onclick="setNaverChartPeriod('area/year')" id="naverPeriod-year" class="naver-period-btn px-2.5 py-1 rounded-md font-medium text-slate-400 hover:text-white transition-all">
+                1년
+              </button>
+              <button onclick="setNaverChartPeriod('area/year3')" id="naverPeriod-year3" class="naver-period-btn px-2.5 py-1 rounded-md font-medium text-slate-400 hover:text-white transition-all">
+                3년
+              </button>
+              <button onclick="setNaverChartPeriod('candle/day')" id="naverPeriod-candle" class="naver-period-btn px-2.5 py-1 rounded-md font-medium text-slate-400 hover:text-white transition-all">
+                일봉 캔들
+              </button>
+              <button onclick="setNaverChartPeriod('area/day')" id="naverPeriod-day" class="naver-period-btn px-2.5 py-1 rounded-md font-medium text-slate-400 hover:text-white transition-all">
+                당일
+              </button>
+            </div>
           </div>
-          <p class="text-xs text-slate-400">
-            실시간 호가 및 재무 정보는 상단의 <strong class="text-emerald-400">[네이버증권]</strong> 버튼을 클릭하여 확인하세요.
-          </p>
+
+          <!-- Chart Image Frame -->
+          <div class="rounded-xl overflow-hidden border border-surface-border bg-white shadow-xl p-2 max-w-2xl w-full flex justify-center items-center min-h-[260px]">
+            <img id="naverChartImg" src="" alt="네이버 증권 차트" class="w-full max-h-[50vh] object-contain transition-opacity duration-200">
+          </div>
+
+          <div class="flex items-center justify-between w-full max-w-2xl text-[11px] text-slate-400 px-1">
+            <span>* 네이버 금융 KRX 실시간 차트 연동</span>
+            <span>호가/재무/토론은 상단 <strong class="text-emerald-400">[네이버증권]</strong> 바로가기</span>
+          </div>
         </div>
       </div>
 
@@ -1238,6 +1268,45 @@
     }
 
     // Modal & Chart
+    let currentNaverSymbol = '';
+    let currentNaverPeriod = 'area/month3'; // 당일(하루)보다 적당히 큰 기간인 3개월을 기본값으로 지정
+
+    const naverPeriodLabels = {
+      'area/month3': '네이버 페이 증권 3개월 차트',
+      'area/year': '네이버 페이 증권 1년 차트',
+      'area/year3': '네이버 페이 증권 3년 차트',
+      'candle/day': '네이버 페이 증권 일봉 캔들 차트',
+      'area/day': '네이버 페이 증권 당일 실시간 차트'
+    };
+
+    function setNaverChartPeriod(period) {
+      currentNaverPeriod = period;
+      document.querySelectorAll('.naver-period-btn').forEach(btn => {
+        btn.className = 'naver-period-btn px-2.5 py-1 rounded-md font-medium text-slate-400 hover:text-white transition-all';
+      });
+      const activeBtnId = period === 'area/month3' ? 'naverPeriod-month3' :
+                          period === 'area/year' ? 'naverPeriod-year' :
+                          period === 'area/year3' ? 'naverPeriod-year3' :
+                          period === 'candle/day' ? 'naverPeriod-candle' : 'naverPeriod-day';
+      const activeBtn = document.getElementById(activeBtnId);
+      if (activeBtn) {
+        activeBtn.className = 'naver-period-btn px-2.5 py-1 rounded-md font-bold bg-indigo-600 text-white transition-all shadow-sm';
+      }
+      updateNaverChartImage();
+    }
+
+    function updateNaverChartImage() {
+      if (!currentNaverSymbol) return;
+      const titleEl = document.getElementById('naverChartTitle');
+      if (titleEl) {
+        titleEl.textContent = naverPeriodLabels[currentNaverPeriod] || '네이버 페이 증권 차트';
+      }
+      const img = document.getElementById('naverChartImg');
+      if (img) {
+        img.src = `https://ssl.pstatic.net/imgfinance/chart/item/${currentNaverPeriod}/${currentNaverSymbol}.png?_=${Date.now()}`;
+      }
+    }
+
     function openChartModal(ticker) {
       const modal = document.getElementById('chartModal');
       const cleanSym = sanitizeSymbol(ticker.symbol);
@@ -1266,12 +1335,14 @@
       const tabNaverBtn = document.getElementById('tabNaverBtn');
 
       if (isKorean) {
+        currentNaverSymbol = cleanSym;
         tvLink.href = `https://www.tradingview.com/symbols/KRX-${cleanSym}/`;
         naverLink.href = `https://finance.naver.com/item/main.naver?code=${cleanSym}`;
         naverLink.classList.remove('hidden');
         tabNaverBtn.classList.remove('hidden');
-        document.getElementById('naverChartImg').src = `https://ssl.pstatic.net/imgfinance/chart/item/area/day/${cleanSym}.png?_=${Date.now()}`;
+        setNaverChartPeriod(currentNaverPeriod || 'area/month3');
       } else {
+        currentNaverSymbol = '';
         tvLink.href = `https://www.tradingview.com/symbols/${cleanSym}/`;
         naverLink.classList.add('hidden');
         tabNaverBtn.classList.add('hidden');
