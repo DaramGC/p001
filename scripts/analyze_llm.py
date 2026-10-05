@@ -1,12 +1,13 @@
 """
 analyze_llm.py
-- 대형 매크로 뉴스 + 중소형 특징주/수주/임상 RSS 피드 수집
+- 대형 매크로 뉴스 + 토스/네이버/야후 인기 종목 기반 심층 뉴스 통합 수집
 - yfinance 거시 지표 수집
-- Gemini 2.5 Flash를 통한 고도화 인텔리전스 추출:
-  1. 거시 & 섹터 밸류체인 이슈 (대형주 1·2차 밸류체인)
-  2. 중소형 강소기업 & 코스닥/스몰캡 개별 모멘텀주 (수주/공급계약/임상/특허/테마)
-  3. 주요 경제 지표 발표 캘린더 (미국 CPI, FOMC, 고용, 한은 금통위 등)
-  4. 트렌딩 종목 리스트
+- Gemini 2.5 Flash를 통한 종합 시장 인텔리전스 추출:
+  1. 거시 & 섹터 밸류체인 이슈 (1·2차 밸류체인)
+  2. 중소형 강소기업 & 코스닥/스몰캡 개별 모멘텀주
+  3. 주요 경제 지표 발표 캘린더 (미국 CPI, FOMC, 한은 금통위 등)
+  4. 8대 핵심 섹터별 동향 (HOT/WARM/COOL, 주도주, 촉매)
+  5. 스포트라이트 트렌딩 종목 리스트
 - public/data.json 으로 저장
 """
 
@@ -45,6 +46,110 @@ FALLBACK_MACRO = [
     {"name": "미국 10년물 국채", "display": "US 10Y", "price": "3.98%", "change": "-0.04%p", "is_up": False},
     {"name": "변동성(VIX)", "display": "VIX", "price": "16.85", "change": "-3.40%", "is_up": False},
     {"name": "WTI 유가", "display": "WTI Oil", "price": "$73.40", "change": "+1.15%", "is_up": True}
+]
+
+FALLBACK_SECTOR_TRENDS = [
+    {
+        "id": "sec-01",
+        "name": "AI 반도체 & 첨단 패키징",
+        "status": "HOT",
+        "sentiment": "POSITIVE",
+        "summary": "빅테크 AI CAPEX 증액과 HBM3E 12단/블랙웰 본격 양산으로 가속기 및 패키징 본딩 장비군에 글로벌 자금 집중.",
+        "catalysts": "HBM 공급부족 지속, 빅테크 커스텀 ASIC 칩 수주 확대",
+        "leading_stocks": [
+            {"symbol": "000660", "name": "SK하이닉스", "change": "+4.1%", "role": "HBM3E 글로벌 독점 공급"},
+            {"symbol": "NVDA", "name": "NVIDIA", "change": "+3.4%", "role": "차세대 블랙웰 GPU 공급 폭증"},
+            {"symbol": "042700", "name": "한미반도체", "change": "+3.8%", "role": "듀얼 TC 본더 장비 독점"}
+        ]
+    },
+    {
+        "id": "sec-02",
+        "name": "전력망 & 변압기 / 원전 인프라",
+        "status": "HOT",
+        "sentiment": "POSITIVE",
+        "summary": "AI 데이터센터의 막대한 전력 소모로 북미 전력망 병목 현상 심화, 초고압 변압기 주문 잔고가 5년치에 달함.",
+        "catalysts": "초고압 변압기 판가 인상, SMR(소형모듈원전) 전력 공급 계약",
+        "leading_stocks": [
+            {"symbol": "267260", "name": "HD현대일렉트릭", "change": "+4.5%", "role": "북미 초고압 변압기 최대 수혜"},
+            {"symbol": "010120", "name": "LS ELECTRIC", "change": "+3.2%", "role": "배전반 및 IDC 전력 솔루션"},
+            {"symbol": "GE", "name": "GE Vernova", "change": "+2.8%", "role": "글로벌 가스터빈 발전 인프라"}
+        ]
+    },
+    {
+        "id": "sec-03",
+        "name": "바이오 & 제약 / 플랫폼 기술",
+        "status": "WARM",
+        "sentiment": "POSITIVE",
+        "summary": "글로벌 금리 인하 사이클 진입과 함께 빅파마향 ADC/피하주사 플랫폼 기술수출 마일스톤 유입으로 센티먼트 개선.",
+        "catalysts": "해외 기술이전(L/O) 계약 체결, 글로벌 임상 3상 진입",
+        "leading_stocks": [
+            {"symbol": "196170", "name": "알테오젠", "change": "+4.9%", "role": "SC 제형 변경 플랫폼 독점력"},
+            {"symbol": "141080", "name": "레고켐바이오", "change": "+6.7%", "role": "차세대 ADC 링커 기술수출"},
+            {"symbol": "LLY", "name": "Eli Lilly", "change": "+1.9%", "role": "비만치료제 파이프라인 확장"}
+        ]
+    },
+    {
+        "id": "sec-04",
+        "name": "금융 & 지주사 (밸류업 / 주주환원)",
+        "status": "WARM",
+        "sentiment": "POSITIVE",
+        "summary": "기업 밸류업 가이드라인 강화 및 금융지주 중심의 적극적인 자사주 매입·소각 공시로 외국인 러브콜 지속.",
+        "catalysts": "자사주 소각 비율 상향, 보통주자본(CET1) 비율 관리",
+        "leading_stocks": [
+            {"symbol": "105560", "name": "KB금융", "change": "+2.4%", "role": "주주환원율 40% 도달 선언"},
+            {"symbol": "138040", "name": "메리츠금융지주", "change": "+1.8%", "role": "주주환원 모범 지주사"},
+            {"symbol": "005380", "name": "현대차", "change": "+1.5%", "role": "인도 법인 상장 배당 재원"}
+        ]
+    },
+    {
+        "id": "sec-05",
+        "name": "방산 & 우주항공",
+        "status": "WARM",
+        "sentiment": "POSITIVE",
+        "summary": "지정학적 갈등 장기화로 유럽 및 중동향 K-방산 수주잔고가 사상 최대치를 경신하며 실적 퀀텀점프 가시화.",
+        "catalysts": "다연장로켓 및 자주포 후속 수출 계약, 방위비 증액 기조",
+        "leading_stocks": [
+            {"symbol": "012450", "name": "한화에어로스페이스", "change": "+3.6%", "role": "K9/천무 유럽 수주 주도"},
+            {"symbol": "079550", "name": "LIG넥스원", "change": "+2.9%", "role": "유도무기 비궁/천궁 수출"}
+        ]
+    },
+    {
+        "id": "sec-06",
+        "name": "2차전지 & 친환경 모빌리티",
+        "status": "COOL",
+        "sentiment": "NEUTRAL",
+        "summary": "전기차 수요 성장 둔화(캐즘) 속에서 에너지저장장치(ESS) 배터리 납품 확대 및 차세대 전고체 개발로 활로 모색 중.",
+        "catalysts": "북미 ESS 배터리 공급 계약, LFP 배터리 양산",
+        "leading_stocks": [
+            {"symbol": "373220", "name": "LG에너지솔루션", "change": "+0.8%", "role": "북미 ESS 전용 라인 전환"},
+            {"symbol": "TSLA", "name": "Tesla", "change": "+5.2%", "role": "FSD 로보택시 및 메가팩 성장"}
+        ]
+    },
+    {
+        "id": "sec-07",
+        "name": "빅테크 & AI 클라우드 소프트웨어",
+        "status": "HOT",
+        "sentiment": "POSITIVE",
+        "summary": "엔터프라이즈 생성형 AI 도입 확산과 클라우드 부문 마진 개선이 가시화되며 소프트웨어 대장주 신고가 흐름.",
+        "catalysts": "기업용 코파일럿 구독 매출 급증, 민간 AI 수주",
+        "leading_stocks": [
+            {"symbol": "PLTR", "name": "Palantir", "change": "+6.8%", "role": "AIP 민간 침투율 급상승"},
+            {"symbol": "MSFT", "name": "Microsoft", "change": "+2.1%", "role": "애저 AI 클라우드 인프라"},
+            {"symbol": "GOOGL", "name": "Alphabet", "change": "+1.7%", "role": "제미나이 AI 검색 상용화"}
+        ]
+    },
+    {
+        "id": "sec-08",
+        "name": "로봇 & 스마트팩토리 자동화",
+        "status": "WARM",
+        "sentiment": "POSITIVE",
+        "summary": "제조 현장의 인건비 상승과 피지컬 AI 기술 발전으로 협동로봇 및 무인 자동화 물류 시스템 도입 가속화.",
+        "catalysts": "휴머노이드 제조 라인 파일럿 투입, 대기업 투자",
+        "leading_stocks": [
+            {"symbol": "454910", "name": "두산로보틱스", "change": "+3.5%", "role": "협동로봇 라인업 확장"},
+            {"symbol": "277810", "name": "레인보우로보틱스", "change": "+2.8%", "role": "휴머노이드 양산 협업"}
+        ]
+    }
 ]
 
 FALLBACK_CALENDAR = [
@@ -142,7 +247,7 @@ FALLBACK_SMALL_MID_CAPS = [
         "cap_category": "코스닥 소부장",
         "catalyst_type": "SUPPLY_CONTRACT",
         "title": "메모리 팹 가동률 정상화에 따른 건식 식각·박막 장비 공급 재개",
-        "summary": "국내 양대 메모리 제조사의 레거시 및 첨단 팹 보수 투자가 재개되면서 식각(Etch) 장비 납품이 전분기 대비 40% 이상 증가세로 전환했습니다.",
+        "summary": "국내 양대 메모리 제조사의 레거시 및 첨단 팹 보수 투자가 재개되면서 식각 장비 납품이 전분기 대비 40% 이상 증가세로 전환했습니다.",
         "change_rate": "+7.1%",
         "reason": "고객사 CAPEX 집행 재개에 따른 반도체 전공정 장비 턴어라운드"
     }
@@ -152,6 +257,7 @@ FALLBACK_DATA = {
     "updated_at": datetime.now(timezone.utc).isoformat(),
     "macro_indicators": FALLBACK_MACRO,
     "economic_calendar": FALLBACK_CALENDAR,
+    "sector_trends": FALLBACK_SECTOR_TRENDS,
     "small_mid_caps": FALLBACK_SMALL_MID_CAPS,
     "market_summary": {
         "us_status": "빅테크 실적 및 CPI 발표 앞둔 경계감 속 기술주 중심 선별 랠리",
@@ -412,7 +518,7 @@ def fetch_macro_indicators() -> List[Dict[str, Any]]:
 
 
 def analyze_market_with_gemini(articles: list, api_key: str, macro_data: list) -> Dict[str, Any]:
-    """Gemini API를 호출하여 고도화된 정형 분석 데이터 생성 (중소형주 + 캘린더 포함)"""
+    """Gemini API를 호출하여 종합 시장 분석 데이터(매크로+중소형주+캘린더+섹터동향) 생성"""
     from google import genai
     from google.genai import types
 
@@ -432,7 +538,7 @@ def analyze_market_with_gemini(articles: list, api_key: str, macro_data: list) -
           "lifecycle": "NEW" | "SURGING" | "MATURE",
           "time_horizon": "SHORT_TERM" | "MID_LONG_TERM",
           "priced_in_risk": "HIGH" | "MEDIUM" | "LOW",
-          "detected_at": "YYYY-MM-DD HH:MM (기사 날짜 기반)",
+          "detected_at": "YYYY-MM-DD HH:MM",
           "title": "이슈 제목",
           "summary": "2~3문장 심층 요약",
           "sentiment": "POSITIVE" | "NEGATIVE" | "NEUTRAL",
@@ -456,15 +562,33 @@ def analyze_market_with_gemini(articles: list, api_key: str, macro_data: list) -
       ],
       "small_mid_caps": [
         {
-          "symbol": "종목 티커 (한국은 6자리 숫자, 미국은 티커)",
+          "symbol": "종목 티커",
           "name": "기업명",
           "market": "KRX" | "NASDAQ",
           "cap_category": "코스닥 중소형주 / 소부장 / 바이오 / 스몰캡",
           "catalyst_type": "SUPPLY_CONTRACT" | "BIO_PIPELINE" | "TECH_PATENT" | "M_AND_A" | "THEME",
-          "title": "핵심 호재/모멘텀 요약 (수주, 특허, 기술수출, 임상 등)",
+          "title": "핵심 호재/모멘텀 요약",
           "summary": "세부 내용 2문장",
           "change_rate": "+7.5% 등 변동률",
           "reason": "주목 사유 1줄"
+        }
+      ],
+      "sector_trends": [
+        {
+          "id": "sec-01",
+          "name": "섹터명 (예: AI 반도체 & 첨단 패키징, 전력망 & 변압기, 바이오 & 제약, 금융 & 밸류업 등)",
+          "status": "HOT" | "WARM" | "COOL",
+          "sentiment": "POSITIVE" | "NEUTRAL" | "NEGATIVE",
+          "summary": "섹터 수급 및 동향 요약 1~2문장",
+          "catalysts": "주요 상승/하락 모멘텀 키워드",
+          "leading_stocks": [
+            {
+              "symbol": "종목 티커",
+              "name": "기업명",
+              "change": "+3.4%",
+              "role": "섹터 내 핵심 역할 1줄"
+            }
+          ]
         }
       ],
       "economic_calendar": [
@@ -473,10 +597,10 @@ def analyze_market_with_gemini(articles: list, api_key: str, macro_data: list) -
           "date": "YYYY-MM-DD",
           "d_day": "D-N 또는 D-Day",
           "country": "US" | "KR",
-          "event_name": "이벤트명 (예: 미국 CPI, FOMC 금리결정, 한은 금통위)",
+          "event_name": "이벤트명",
           "importance": "HIGH" | "MEDIUM",
           "forecast_vs_previous": "예상치 vs 이전치 요약",
-          "market_impact": "발표 결과가 증시(성장주/가치주/환율)에 미칠 영향 1문장"
+          "market_impact": "증시 영향 1문장"
         }
       ],
       "trending_tickers": [
@@ -492,31 +616,33 @@ def analyze_market_with_gemini(articles: list, api_key: str, macro_data: list) -
     """
 
     prompt = f"""
-    당신은 글로벌 헤지펀드의 수석 시장 분석가이자 매크로/섹터/스몰캡 퀀트 리서처입니다.
-    제공된 최신 뉴스 기사들과 거시 경제 지표를 심층 분석하여 전문가 수준의 종합 시장 인텔리전스 JSON을 생성하세요.
+    당신은 글로벌 탑티어 헤지펀드의 수석 시장 분석가이자 매크로/섹터/스몰캡 퀀트 리서처입니다.
+    제공된 방대한 최신 뉴스 기사들과 인기 종목 뉴스, 거시 경제 지표를 심층 분석하여 전문가 수준의 종합 시장 인텔리전스 JSON을 생성하세요.
 
     [핵심 분석 요구사항]
     1. 거시 & 대형 섹터 밸류체인 이슈 (major_issues, 3~5개):
        - 빅테크 및 반도체/금융/에너지 등 시장 주도 섹터 이슈.
        - 1차 직접 수혜(PRIMARY)와 2차 부품/인프라/낙수효과(SECONDARY)로 밸류체인을 분리할 것.
     2. 중소형 강소기업 & 코스닥/스몰캡 개별 모멘텀주 (small_mid_caps, 4~6개):
-       - 대형주(삼성전자, SK하이닉스 등) 외에, 시가총액이 크지 않지만 **독점 수주, 대규모 공급 계약 체결, 바이오 임상/기술이전, 특허, 신기술 상용화, 경영권 지분 경쟁 등 강력한 개별 촉매(Catalyst)**를 보유한 코스닥 및 나스닥 중소형주를 반드시 도출할 것.
-    3. 주요 경제 지표 발표 캘린더 (economic_calendar, 3~5개):
-       - 다가오는 미국 CPI, FOMC 금리결정, 고용보고서(NFP), 한국은행 금통위 등 증시에 직접적인 파급력을 미칠 주요 경제 이벤트 일정과 관전 포인트를 구성할 것.
-    4. 트렌딩 종목 (trending_tickers, 4~6개):
-       - 시장에서 현재 거래량과 급등락으로 가장 주목받는 종목 및 사유.
+       - 대형주 외에, **수주, 공급계약, 바이오 임상/기술이전, 특허, 신기술, 지분경쟁 등 강력한 개별 촉매**를 가진 코스닥 및 나스닥 중소형주를 반드시 도출할 것.
+    3. 8대 핵심 섹터별 시장 동향 (sector_trends, 6~8개):
+       - AI 반도체, 전력망/변압기, 바이오, 금융/밸류업, 방산, 2차전지, 클라우드SW, 로봇 등 주요 섹터의 온도(HOT/WARM/COOL), 센티먼트, 주도주 2~3개를 명확히 진단할 것.
+    4. 주요 경제 지표 발표 캘린더 (economic_calendar, 3~5개):
+       - 다가오는 미국 CPI, FOMC 금리결정, 고용보고서(NFP), 한국은행 금통위 등 일정 및 관전 포인트.
+    5. 트렌딩 종목 (trending_tickers, 5~7개):
+       - 토스/네이버/야후 투자자들이 지금 실시간으로 가장 주목하는 인기 급등락 종목.
 
     [입력 거시 지표]:
     {json.dumps(macro_data, ensure_ascii=False)}
 
-    [입력 기사 목록]:
+    [입력 기사 목록 (총 {len(articles)}개)]:
     {json.dumps(articles, ensure_ascii=False, indent=2)}
 
     [출력 규격]:
     {schema_instruction}
     """
 
-    logging.info("Gemini 2.5 Flash 종합 심층 분석(매크로+중소형주+캘린더) 요청 중...")
+    logging.info("Gemini 2.5 Flash 초대형 종합 분석(매크로+중소형주+섹터동향+캘린더) 요청 중...")
     response = client.models.generate_content(
         model="gemini-2.5-flash",
         contents=prompt,
@@ -530,10 +656,13 @@ def analyze_market_with_gemini(articles: list, api_key: str, macro_data: list) -
     parsed_json = json.loads(result_text)
     parsed_json["updated_at"] = datetime.now(timezone.utc).isoformat()
     parsed_json["macro_indicators"] = macro_data
+
     if "economic_calendar" not in parsed_json or not parsed_json["economic_calendar"]:
         parsed_json["economic_calendar"] = FALLBACK_CALENDAR
     if "small_mid_caps" not in parsed_json or not parsed_json["small_mid_caps"]:
         parsed_json["small_mid_caps"] = FALLBACK_SMALL_MID_CAPS
+    if "sector_trends" not in parsed_json or not parsed_json["sector_trends"]:
+        parsed_json["sector_trends"] = FALLBACK_SECTOR_TRENDS
 
     return parsed_json
 
@@ -554,9 +683,9 @@ def main():
         logging.info(f"저장 완료: {OUTPUT_PATH}")
         return
 
-    # 2. RSS 수집 및 분석
-    logging.info("RSS 기사 수집 시작...")
-    articles = collect_headlines(limit_per_feed=15)
+    # 2. RSS 및 인기 종목 맞춤 뉴스 수집
+    logging.info("통합 뉴스 수집 시작...")
+    articles = collect_headlines(limit_per_feed=20)
 
     if not articles:
         logging.warning("기사 수집 결과 없음. 폴백 데이터를 사용합니다.")
