@@ -127,24 +127,43 @@
     </div>
   </section>
 
-  <!-- Market Brief Banner -->
+  <!-- Market Brief Banner (미국 · 한국 · 주요 경제 캘린더 3열 반응형 배너) -->
   <section class="border-b border-surface-border/40 bg-slate-900/40">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs sm:text-sm">
-        <div class="flex items-center space-x-3 bg-surface-card/70 px-4 py-2.5 rounded-xl border border-surface-border/70 shadow-sm">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-3 text-xs sm:text-sm">
+        
+        <div class="flex items-center space-x-3 bg-surface-card/70 px-4 py-2.5 rounded-xl border border-surface-border/70 shadow-sm min-w-0">
           <div class="flex items-center space-x-1.5 text-indigo-400 font-bold shrink-0">
             <span class="text-base">🇺🇸</span>
-            <span>미국 증시 현황</span>
+            <span>미국 증시</span>
           </div>
-          <div class="text-slate-200 truncate font-medium" id="usMarketStatus">시장 상황 분석 중...</div>
+          <div class="text-slate-200 truncate font-medium min-w-0" id="usMarketStatus">시장 상황 분석 중...</div>
         </div>
-        <div class="flex items-center space-x-3 bg-surface-card/70 px-4 py-2.5 rounded-xl border border-surface-border/70 shadow-sm">
+
+        <div class="flex items-center space-x-3 bg-surface-card/70 px-4 py-2.5 rounded-xl border border-surface-border/70 shadow-sm min-w-0">
           <div class="flex items-center space-x-1.5 text-indigo-400 font-bold shrink-0">
             <span class="text-base">🇰🇷</span>
-            <span>한국 증시 현황</span>
+            <span>한국 증시</span>
           </div>
-          <div class="text-slate-200 truncate font-medium" id="krMarketStatus">국내 수급 분석 중...</div>
+          <div class="text-slate-200 truncate font-medium min-w-0" id="krMarketStatus">국내 수급 분석 중...</div>
         </div>
+
+        <!-- Economic Calendar Highlight Banner -->
+        <div onclick="switchMainView('CALENDAR')" class="flex items-center justify-between bg-surface-card/70 hover:bg-surface-hover px-4 py-2.5 rounded-xl border border-surface-border/70 hover:border-indigo-500/40 shadow-sm cursor-pointer transition-all min-w-0 group" title="경제 캘린더 전체 일정 보기">
+          <div class="flex items-center space-x-2 min-w-0">
+            <div class="flex items-center space-x-1 text-amber-300 font-bold shrink-0">
+              <i data-lucide="calendar" class="w-4 h-4 text-amber-400"></i>
+              <span>주요 일정</span>
+            </div>
+            <div class="text-slate-200 truncate font-medium text-xs sm:text-sm min-w-0" id="upcomingCalendarBanner">
+              D-5 미국 9월 CPI 발표
+            </div>
+          </div>
+          <span class="text-[11px] text-indigo-400 group-hover:translate-x-0.5 transition-transform font-bold shrink-0 ml-1">
+            캘린더 →
+          </span>
+        </div>
+
       </div>
     </div>
   </section>
@@ -152,33 +171,37 @@
   <!-- Main Content Layout -->
   <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 w-full flex-grow">
     
-    <!-- Navigation Tabs & Search Controls -->
-    <div class="flex flex-col md:flex-row items-stretch md:items-center justify-between gap-4 mb-6">
+    <!-- Navigation Tabs & Search Controls (짤림 방지: 반응형 그리드 탭) -->
+    <div class="flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-3 mb-6">
       
-      <!-- Primary View Tabs (4대 핵심 뷰) -->
-      <div class="flex items-center p-1 bg-surface-card rounded-xl border border-surface-border overflow-x-auto no-scrollbar shadow-sm">
-        <button onclick="switchMainView('ISSUES')" id="view-ISSUES" class="main-view-tab px-4 py-2 rounded-lg text-xs font-bold transition-all bg-indigo-600 text-white shadow whitespace-nowrap">
-          🏛️ 거시 & 밸류체인 이슈
+      <!-- Primary View Tabs (4대 핵심 뷰 - 짤림 없는 4열 반응형 그리드) -->
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-1.5 p-1 bg-surface-card rounded-xl border border-surface-border shadow-sm flex-grow max-w-3xl">
+        <button onclick="switchMainView('ISSUES')" id="view-ISSUES" class="main-view-tab px-3 sm:px-4 py-2 rounded-lg text-xs font-bold transition-all bg-indigo-600 text-white shadow text-center flex items-center justify-center space-x-1.5 min-w-0">
+          <span class="shrink-0">🏛️</span>
+          <span class="truncate">거시 & 이슈</span>
         </button>
-        <button onclick="switchMainView('SECTORS')" id="view-SECTORS" class="main-view-tab px-4 py-2 rounded-lg text-xs font-semibold text-slate-400 hover:text-white transition-all whitespace-nowrap">
-          📊 8대 섹터별 동향
+        <button onclick="switchMainView('SECTORS')" id="view-SECTORS" class="main-view-tab px-3 sm:px-4 py-2 rounded-lg text-xs font-semibold text-slate-400 hover:text-white transition-all text-center flex items-center justify-center space-x-1.5 min-w-0">
+          <span class="shrink-0">📊</span>
+          <span class="truncate">8대 섹터 동향</span>
         </button>
-        <button onclick="switchMainView('SMALL_CAPS')" id="view-SMALL_CAPS" class="main-view-tab px-4 py-2 rounded-lg text-xs font-semibold text-slate-400 hover:text-white transition-all whitespace-nowrap">
-          🚀 중소형 강소기업 & 코스닥
+        <button onclick="switchMainView('SMALL_CAPS')" id="view-SMALL_CAPS" class="main-view-tab px-3 sm:px-4 py-2 rounded-lg text-xs font-semibold text-slate-400 hover:text-white transition-all text-center flex items-center justify-center space-x-1.5 min-w-0">
+          <span class="shrink-0">🚀</span>
+          <span class="truncate">중소형 강소기업</span>
         </button>
-        <button onclick="switchMainView('CALENDAR')" id="view-CALENDAR" class="main-view-tab px-4 py-2 rounded-lg text-xs font-semibold text-slate-400 hover:text-white transition-all whitespace-nowrap">
-          📅 경제 캘린더 & 지표
+        <button onclick="switchMainView('CALENDAR')" id="view-CALENDAR" class="main-view-tab px-3 sm:px-4 py-2 rounded-lg text-xs font-semibold text-slate-400 hover:text-white transition-all text-center flex items-center justify-center space-x-1.5 min-w-0">
+          <span class="shrink-0">📅</span>
+          <span class="truncate">경제 캘린더</span>
         </button>
       </div>
 
       <!-- Search Input -->
-      <div class="relative w-full md:w-80">
+      <div class="relative w-full lg:w-72 shrink-0">
         <i data-lucide="search" class="w-4 h-4 text-slate-400 absolute left-3 top-1/2 -translate-y-1/2 pointer-events-none"></i>
         <input 
           type="text" 
           id="searchInput" 
           oninput="handleSearch(this.value)" 
-          placeholder="이슈, 섹터, 기업명, 티커(원익IPS, CPI)..." 
+          placeholder="이슈, 섹터, 종목, 지표(CPI)..." 
           class="w-full pl-9 pr-4 py-2 rounded-xl bg-surface-card border border-surface-border text-xs focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 text-slate-200 placeholder:text-slate-500 shadow-sm"
         >
       </div>
@@ -299,17 +322,20 @@
 
     <!-- ================= VIEW 4: 경제 캘린더 & 주요 지표 ================= -->
     <section id="section-CALENDAR" class="hidden space-y-6">
-      <div>
-        <h2 class="text-lg font-bold text-white flex items-center space-x-2">
-          <i data-lucide="calendar" class="w-5 h-5 text-indigo-400"></i>
-          <span>주요 경제 지표 발표 캘린더 & 증시 영향 (Economic Calendar)</span>
-        </h2>
-        <p class="text-xs text-slate-400 mt-0.5">
-          미국 CPI, 연준 FOMC, 한국은행 금통위 등 글로벌 금융시장을 뒤흔드는 주요 거시 경제 이벤트 일정 및 관전 포인트입니다.
-        </p>
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-surface-border/50 pb-3 min-w-0">
+        <div class="min-w-0">
+          <h2 class="text-base sm:text-lg font-bold text-white flex items-center space-x-2 truncate">
+            <i data-lucide="calendar" class="w-5 h-5 text-indigo-400 shrink-0"></i>
+            <span class="truncate">주요 경제 지표 발표 캘린더 & 증시 영향 (Economic Calendar)</span>
+          </h2>
+          <p class="text-xs text-slate-400 mt-0.5">
+            미국 CPI, 연준 FOMC, 한국은행 금통위 등 글로벌 금융시장을 뒤흔드는 주요 거시 경제 이벤트 일정 및 관전 포인트입니다.
+          </p>
+        </div>
+        <span id="calendarCount" class="text-xs px-2.5 py-0.5 rounded-full bg-surface-card border border-surface-border text-slate-300 font-mono font-bold self-start sm:self-auto shrink-0">4개 일정</span>
       </div>
 
-      <div id="calendarContainer" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div id="calendarContainer" class="grid grid-cols-1 lg:grid-cols-2 gap-4">
         <!-- 동적 렌더링 -->
       </div>
     </section>
@@ -569,6 +595,16 @@
       document.getElementById('usMarketStatus').textContent = marketData.market_summary?.us_status || '빅테크 선별 랠리';
       document.getElementById('krMarketStatus').textContent = marketData.market_summary?.kr_status || '국내 수급 주시';
 
+      // Update Top Upcoming Economic Calendar Banner
+      if (marketData.economic_calendar && marketData.economic_calendar.length > 0) {
+        const topEvent = marketData.economic_calendar[0];
+        const flag = topEvent.country === 'KR' ? '🇰🇷' : '🇺🇸';
+        const bannerEl = document.getElementById('upcomingCalendarBanner');
+        if (bannerEl) {
+          bannerEl.textContent = `${flag} [${topEvent.d_day}] ${topEvent.event_name}`;
+        }
+      }
+
       renderMacroPulse();
       renderIssues();
       renderTrending();
@@ -601,15 +637,15 @@
       }).join('');
     }
 
-    // Switch Primary View
+    // Switch Primary View (반응형 그리드 탭 클래스)
     function switchMainView(view) {
       currentMainView = view;
       document.querySelectorAll('.main-view-tab').forEach(t => {
-        t.className = 'main-view-tab px-4 py-2 rounded-lg text-xs font-semibold text-slate-400 hover:text-white transition-all whitespace-nowrap';
+        t.className = 'main-view-tab px-3 sm:px-4 py-2 rounded-lg text-xs font-semibold text-slate-400 hover:text-white transition-all text-center flex items-center justify-center space-x-1.5 min-w-0';
       });
       const activeBtn = document.getElementById(`view-${view}`);
       if (activeBtn) {
-        activeBtn.className = 'main-view-tab px-4 py-2 rounded-lg text-xs font-bold transition-all bg-indigo-600 text-white shadow whitespace-nowrap';
+        activeBtn.className = 'main-view-tab px-3 sm:px-4 py-2 rounded-lg text-xs font-bold transition-all bg-indigo-600 text-white shadow text-center flex items-center justify-center space-x-1.5 min-w-0';
       }
 
       document.getElementById('section-ISSUES').classList.toggle('hidden', view !== 'ISSUES');
@@ -1144,44 +1180,54 @@
         );
       }
 
+      const countEl = document.getElementById('calendarCount');
+      if (countEl) countEl.textContent = `${list.length}개 일정`;
+
+      if (list.length === 0) {
+        container.innerHTML = `<div class="col-span-full p-8 rounded-2xl bg-surface-card border border-surface-border text-center text-slate-400 text-sm">해당하는 경제 일정이 없습니다.</div>`;
+        return;
+      }
+
       container.innerHTML = list.map(item => {
         const flag = item.country === 'KR' ? '🇰🇷' : '🇺🇸';
         const isHigh = item.importance === 'HIGH';
         const impBadge = isHigh ? 'bg-rose-500/15 text-rose-300 border-rose-500/30 font-bold' : 'bg-amber-500/15 text-amber-300 border-amber-500/30 font-medium';
 
         return `
-          <div class="p-5 rounded-2xl bg-surface-card border border-surface-border hover:border-indigo-500/50 transition-all space-y-3 shadow-sm">
+          <div class="p-5 rounded-2xl bg-surface-card border border-surface-border hover:border-indigo-500/50 transition-all space-y-3 shadow-sm min-w-0 flex flex-col justify-between">
             
-            <div class="flex items-center justify-between border-b border-surface-border/50 pb-2.5">
-              <div class="flex items-center space-x-2">
-                <span class="text-base">${flag}</span>
-                <span class="font-mono text-xs font-bold text-indigo-300">${item.date}</span>
-                <span class="text-xs px-2 py-0.5 rounded-full font-mono font-extrabold bg-indigo-600/30 text-indigo-200 border border-indigo-500/40">
-                  ${item.d_day}
+            <div class="space-y-3 min-w-0">
+              <div class="flex items-center justify-between border-b border-surface-border/50 pb-2.5 min-w-0 gap-2">
+                <div class="flex items-center space-x-2 min-w-0">
+                  <span class="text-base shrink-0">${flag}</span>
+                  <span class="font-mono text-xs font-bold text-indigo-300 shrink-0">${item.date}</span>
+                  <span class="text-xs px-2 py-0.5 rounded-full font-mono font-extrabold bg-indigo-600/30 text-indigo-200 border border-indigo-500/40 shrink-0">
+                    ${item.d_day}
+                  </span>
+                </div>
+                <span class="text-[11px] px-2 py-0.5 rounded-md border shrink-0 ${impBadge}">
+                  ${isHigh ? '중요도 ★★★' : '중요도 ★★'}
                 </span>
               </div>
-              <span class="text-[11px] px-2 py-0.5 rounded-md border ${impBadge}">
-                ${isHigh ? '중요도 ★★★' : '중요도 ★★'}
-              </span>
-            </div>
 
-            <div class="space-y-1.5">
-              <h3 class="text-sm sm:text-base font-extrabold text-white leading-snug">
-                ${item.event_name}
-              </h3>
-              <div class="text-xs font-mono font-medium text-slate-300 bg-slate-800/80 px-3 py-1.5 rounded-lg border border-slate-700/60 inline-block">
-                ${item.forecast_vs_previous || '예상치 집계 중'}
+              <div class="space-y-1.5 min-w-0">
+                <h3 class="text-sm sm:text-base font-extrabold text-white leading-snug break-words">
+                  ${item.event_name}
+                </h3>
+                <div class="text-xs font-mono font-medium text-slate-300 bg-slate-800/80 px-3 py-1.5 rounded-lg border border-slate-700/60 inline-block max-w-full break-words">
+                  ${item.forecast_vs_previous || '예상치 집계 중'}
+                </div>
               </div>
-            </div>
 
-            <div class="p-3 rounded-xl bg-slate-900/60 border border-surface-border/60 text-xs text-slate-300 space-y-1">
-              <div class="font-bold text-indigo-300 flex items-center space-x-1">
-                <i data-lucide="zap" class="w-3.5 h-3.5 text-amber-400"></i>
-                <span>증시 영향 및 관전 포인트:</span>
+              <div class="p-3 rounded-xl bg-slate-900/60 border border-surface-border/60 text-xs text-slate-300 space-y-1 min-w-0">
+                <div class="font-bold text-indigo-300 flex items-center space-x-1">
+                  <i data-lucide="zap" class="w-3.5 h-3.5 text-amber-400 shrink-0"></i>
+                  <span>증시 영향 및 관전 포인트:</span>
+                </div>
+                <p class="leading-relaxed break-words">
+                  ${item.market_impact}
+                </p>
               </div>
-              <p class="leading-relaxed">
-                ${item.market_impact}
-              </p>
             </div>
 
           </div>
