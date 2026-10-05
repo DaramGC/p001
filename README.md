@@ -16,7 +16,7 @@
 2. **TradingView 실시간 인터랙티브 차트 무료 연동**
    - 미국 종목(`NASDAQ:NVDA`, `NYSE:TSM`) 및 한국 종목(`KRX:000660`, `KRX:005930`)을 지원하는 TradingView 위젯 모달 제공.
 3. **완전 무료 & 고가용성 서버리스 아키텍처**
-   - GitHub Actions 크론잡(3시간 주기)이 뉴스 RSS 피드를 수집하고 Gemini LLM을 통해 정형화된 `public/data.json`을 자동 빌드 & 커밋합니다.
+   - GitHub Actions 크론잡(2시간 주기)이 뉴스 RSS 피드를 수집하고 Gemini LLM을 통해 정형화된 `public/data.json`을 자동 빌드 & 커밋합니다.
    - 프론트엔드는 정적 `data.json`만 로드하므로 **API 키 유출 위험이 없으며 비용 0원**으로 운영됩니다.
 
 ---
@@ -27,7 +27,7 @@
 p001/
 ├── .github/
 │   └── workflows/
-│       └── update_data.yml       # 3시간 주기 자동 데이터 갱신 워크플로우
+│       └── update_data.yml       # 2시간 주기 자동 데이터 갱신 워크플로우
 ├── scripts/
 │   ├── fetch_sources.py          # Google News 및 RSS 피드 수집 모듈
 │   ├── analyze_llm.py            # Gemini 2.5 Flash 기반 정형 분석기
