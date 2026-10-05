@@ -68,13 +68,20 @@ def collect_headlines(limit_per_feed: int = 15) -> List[Dict[str, Any]]:
                 link = getattr(entry, "link", "")
                 summary_raw = getattr(entry, "summary", "")
                 clean_summary = clean_html(summary_raw)[:250]
-                published = getattr(entry, "published", "")
+                raw_published = getattr(entry, "published", "")
+                formatted_published = ""
+                if hasattr(entry, "published_parsed") and entry.published_parsed:
+                    import time
+                    formatted_published = time.strftime("%Y-%m-%d %H:%M", entry.published_parsed)
+                elif raw_published:
+                    formatted_published = raw_published[:16]
 
                 all_articles.append({
                     "title": clean_title,
                     "link": link,
                     "summary": clean_summary,
-                    "published": published,
+                    "published": raw_published,
+                    "published_at": formatted_published,
                     "source": source_name,
                     "market_hint": market_tag
                 })
