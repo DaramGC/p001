@@ -1,14 +1,62 @@
 {
-  "updated_at": "2026-10-05T18:45:00Z",
+  "updated_at": "2026-10-05T09:52:43.571480+00:00",
   "macro_indicators": [
-    { "name": "코스피", "display": "KOSPI", "price": "2,610.45", "change": "+0.45%", "is_up": true },
-    { "name": "코스닥", "display": "KOSDAQ", "price": "758.20", "change": "+0.12%", "is_up": true },
-    { "name": "S&P 500", "display": "S&P 500", "price": "5,751.07", "change": "+0.82%", "is_up": true },
-    { "name": "나스닥", "display": "NASDAQ", "price": "18,137.85", "change": "+1.22%", "is_up": true },
-    { "name": "원/달러 환율", "display": "USD/KRW", "price": "1,348.50", "change": "-0.25%", "is_up": false },
-    { "name": "미국 10년물 국채", "display": "US 10Y", "price": "3.98%", "change": "-0.04%p", "is_up": false },
-    { "name": "변동성(VIX)", "display": "VIX", "price": "16.85", "change": "-3.40%", "is_up": false },
-    { "name": "WTI 유가", "display": "WTI Oil", "price": "$73.40", "change": "+1.15%", "is_up": true }
+    {
+      "name": "코스피",
+      "display": "KOSPI",
+      "price": "7,003.74",
+      "change": "+0.46%",
+      "is_up": true
+    },
+    {
+      "name": "코스닥",
+      "display": "KOSDAQ",
+      "price": "893.29",
+      "change": "-0.11%",
+      "is_up": false
+    },
+    {
+      "name": "S&P 500",
+      "display": "S&P 500",
+      "price": "7,722.72",
+      "change": "+0.73%",
+      "is_up": true
+    },
+    {
+      "name": "나스닥",
+      "display": "NASDAQ",
+      "price": "27,190.86",
+      "change": "+1.19%",
+      "is_up": true
+    },
+    {
+      "name": "원/달러 환율",
+      "display": "USD/KRW",
+      "price": "1,344.08",
+      "change": "+0.12%",
+      "is_up": true
+    },
+    {
+      "name": "미국 10년물 국채",
+      "display": "US 10Y",
+      "price": "5.28%",
+      "change": "+0.76%",
+      "is_up": true
+    },
+    {
+      "name": "변동성(VIX)",
+      "display": "VIX",
+      "price": "16.29",
+      "change": "+6.40%",
+      "is_up": true
+    },
+    {
+      "name": "WTI 유가",
+      "display": "WTI Oil",
+      "price": "$90.57",
+      "change": "+0.72%",
+      "is_up": true
+    }
   ],
   "economic_calendar": [
     {
