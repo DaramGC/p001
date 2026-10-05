@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Global Market Pulse | 고도화된 글로벌 금융 이슈 & 밸류체인 대시보드</title>
-  <meta name="description" content="글로벌/한국 금융 시장의 주요 이슈, 멀티홉 밸류체인(1차 직접 수혜/2차 낙수효과), 거시 경제 지표 및 실시간 차트 분석을 제공하는 정적 인텔리전스 대시보드">
+  <title>Global Market Pulse | 글로벌 증시 · 중소형주 · 경제 캘린더 대시보드</title>
+  <meta name="description" content="글로벌/한국 대형 매크로, 코스닥 중소형 강소기업, 미국 CPI/FOMC 경제 캘린더, 실시간 거시 지표를 제공하는 무료 금융 인텔리전스 대시보드">
 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -22,10 +22,10 @@
               700: '#4338ca',
             },
             surface: {
-              DEFAULT: '#0b0f19',
-              card: '#151d30',
-              border: '#24324f',
-              hover: '#1e2942'
+              DEFAULT: '#080c14',
+              card: '#121a2d',
+              border: '#22304d',
+              hover: '#1a2640'
             }
           }
         }
@@ -46,7 +46,6 @@
     .font-mono {
       font-family: 'JetBrains Mono', monospace;
     }
-    /* Hide scrollbar for ticker row but keep functionality */
     .no-scrollbar::-webkit-scrollbar {
       display: none;
     }
@@ -59,10 +58,10 @@
       height: 6px;
     }
     ::-webkit-scrollbar-track {
-      background: #0b0f19;
+      background: #080c14;
     }
     ::-webkit-scrollbar-thumb {
-      background: #24324f;
+      background: #22304d;
       border-radius: 3px;
     }
     ::-webkit-scrollbar-thumb:hover {
@@ -85,40 +84,46 @@
             <h1 class="text-lg font-extrabold tracking-tight bg-gradient-to-r from-white via-slate-100 to-indigo-200 bg-clip-text text-transparent">
               Global Market Pulse
             </h1>
-            <span class="text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded-full bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">PRO v2.0</span>
+            <span class="text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded-full bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">PRO</span>
           </div>
-          <p class="text-xs text-slate-400 hidden sm:block">거시 지표 · 뉴스 ↔ 밸류체인(1·2차) · 실시간 차트 인텔리전스</p>
+          <p class="text-xs text-slate-400 hidden sm:block">대형 매크로 · 코스닥/스몰캡 강소기업 · 경제 캘린더 인텔리전스</p>
         </div>
       </div>
 
-      <!-- Live Clock & Status -->
-      <div class="flex items-center space-x-3 sm:space-x-4">
-        <div class="hidden md:flex items-center space-x-2 text-xs text-slate-400 bg-surface-card px-3.5 py-1.5 rounded-full border border-surface-border">
+      <!-- Controls: Refresh, Manual Trigger & Repo -->
+      <div class="flex items-center space-x-2 sm:space-x-3">
+        <div class="hidden lg:flex items-center space-x-2 text-xs text-slate-400 bg-surface-card px-3.5 py-1.5 rounded-full border border-surface-border">
           <span class="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-          <span>파이프라인 업데이트: </span>
-          <span id="lastUpdatedTime" class="font-mono text-slate-200 font-medium">데이터 로딩 중...</span>
+          <span>데이터 기준: </span>
+          <span id="lastUpdatedTime" class="font-mono text-slate-200 font-medium">로딩 중...</span>
         </div>
 
-        <button id="refreshBtn" onclick="loadMarketData(true)" class="flex items-center space-x-1.5 text-xs font-semibold px-3 py-1.5 rounded-lg bg-surface-card hover:bg-surface-hover border border-surface-border text-slate-200 transition-all shadow-sm">
+        <!-- 1) 브라우저 화면 새로고침 (Fetch 캐시 버스터) -->
+        <button id="refreshBtn" onclick="loadMarketData(true)" class="flex items-center space-x-1.5 text-xs font-semibold px-3 py-1.5 rounded-lg bg-surface-card hover:bg-surface-hover border border-surface-border text-slate-200 transition-all shadow-sm" title="최신 data.json 다시 읽기">
           <i data-lucide="refresh-cw" class="w-3.5 h-3.5" id="refreshIcon"></i>
-          <span class="hidden sm:inline">새로고침</span>
+          <span class="hidden sm:inline">화면 새로고침</span>
         </button>
 
-        <a href="https://github.com/DaramGC/p001" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-white transition-colors" title="GitHub 저장소 보기">
+        <!-- 2) 파이프라인 수동 즉시 가동 버튼 (수동 최신화 모달) -->
+        <button onclick="openManualUpdateModal()" class="flex items-center space-x-1.5 text-xs font-bold px-3 py-1.5 rounded-lg bg-gradient-to-r from-indigo-600 to-indigo-700 hover:from-indigo-500 hover:to-indigo-600 text-white shadow-md shadow-indigo-600/30 transition-all">
+          <i data-lucide="zap" class="w-3.5 h-3.5 text-amber-300"></i>
+          <span>수동 최신화</span>
+        </button>
+
+        <a href="https://github.com/DaramGC/p001" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-white transition-colors p-1" title="GitHub 저장소 바로가기">
           <i data-lucide="github" class="w-5 h-5"></i>
         </a>
       </div>
     </div>
   </header>
 
-  <!-- Macro Pulse Ticker Bar (New: Macro Indicators) -->
+  <!-- Macro Pulse Ticker Bar (환율, 금리, VIX, 주요 지수) -->
   <section class="border-b border-surface-border/60 bg-[#0e172a]/70">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2.5">
       <div class="flex items-center space-x-2 overflow-x-auto no-scrollbar" id="macroTickerBar">
-        <!-- 스켈레톤 로딩 -->
         <div class="text-xs text-slate-400 flex items-center space-x-2">
           <i data-lucide="loader-2" class="w-4 h-4 animate-spin text-indigo-400"></i>
-          <span>거시 경제 지표(환율, 금리, VIX, 주요 지수) 불러오는 중...</span>
+          <span>거시 경제 지표 불러오는 중...</span>
         </div>
       </div>
     </div>
@@ -149,98 +154,206 @@
   <!-- Main Content Layout -->
   <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 w-full flex-grow">
     
-    <!-- Controls: Filter Tabs & Search -->
-    <div class="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-4 mb-6">
-      <!-- Filter Tabs -->
-      <div class="flex items-center p-1 bg-surface-card rounded-xl border border-surface-border w-fit shadow-sm">
-        <button onclick="setMarketFilter('ALL')" id="filter-ALL" class="filter-tab px-4 py-1.5 rounded-lg text-xs font-bold transition-all bg-indigo-600 text-white shadow">
-          전체 보기
+    <!-- Navigation Tabs & Search Controls -->
+    <div class="flex flex-col md:flex-row items-stretch md:items-center justify-between gap-4 mb-6">
+      
+      <!-- Primary View Tabs -->
+      <div class="flex items-center p-1 bg-surface-card rounded-xl border border-surface-border overflow-x-auto no-scrollbar shadow-sm">
+        <button onclick="switchMainView('ISSUES')" id="view-ISSUES" class="main-view-tab px-4 py-2 rounded-lg text-xs font-bold transition-all bg-indigo-600 text-white shadow whitespace-nowrap">
+          🏛️ 거시 & 밸류체인 이슈
         </button>
-        <button onclick="setMarketFilter('US')" id="filter-US" class="filter-tab px-4 py-1.5 rounded-lg text-xs font-semibold text-slate-400 hover:text-white transition-all">
-          글로벌 / 미국
+        <button onclick="switchMainView('SMALL_CAPS')" id="view-SMALL_CAPS" class="main-view-tab px-4 py-2 rounded-lg text-xs font-semibold text-slate-400 hover:text-white transition-all whitespace-nowrap">
+          🚀 중소형 강소기업 & 코스닥
         </button>
-        <button onclick="setMarketFilter('KR')" id="filter-KR" class="filter-tab px-4 py-1.5 rounded-lg text-xs font-semibold text-slate-400 hover:text-white transition-all">
-          한국 시장
+        <button onclick="switchMainView('CALENDAR')" id="view-CALENDAR" class="main-view-tab px-4 py-2 rounded-lg text-xs font-semibold text-slate-400 hover:text-white transition-all whitespace-nowrap">
+          📅 경제 캘린더 & 지표
         </button>
       </div>
 
       <!-- Search Input -->
-      <div class="relative w-full sm:w-80">
+      <div class="relative w-full md:w-80">
         <i data-lucide="search" class="w-4 h-4 text-slate-400 absolute left-3 top-1/2 -translate-y-1/2 pointer-events-none"></i>
         <input 
           type="text" 
           id="searchInput" 
           oninput="handleSearch(this.value)" 
-          placeholder="이슈 키워드, 기업명, 티커(005930, NVDA)..." 
+          placeholder="이슈, 기업명, 티커(원익IPS, 005930, CPI)..." 
           class="w-full pl-9 pr-4 py-2 rounded-xl bg-surface-card border border-surface-border text-xs focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 text-slate-200 placeholder:text-slate-500 shadow-sm"
         >
       </div>
     </div>
 
-    <!-- Dual Layout: View A (Major Issues) & View B (Trending Tickers) -->
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+    <!-- ================= VIEW 1: 거시 & 밸류체인 이슈 ================= -->
+    <section id="section-ISSUES" class="space-y-6">
       
-      <!-- View A: Major Issues (Left 8 cols) -->
-      <section class="lg:col-span-8 space-y-4">
-        <div class="flex items-center justify-between">
-          <div class="flex items-center space-x-2">
-            <i data-lucide="layers" class="w-5 h-5 text-indigo-400"></i>
-            <h2 class="text-base font-bold text-slate-100">핵심 거시 & 섹터 밸류체인 이슈</h2>
-            <span id="issuesCount" class="text-xs px-2.5 py-0.5 rounded-full bg-surface-card border border-surface-border text-slate-400 font-mono font-semibold">0</span>
+      <!-- Market Sub-filters -->
+      <div class="flex items-center space-x-2">
+        <span class="text-xs text-slate-400 font-medium">지역 필터:</span>
+        <button onclick="setMarketFilter('ALL')" id="filter-ALL" class="sub-filter-btn px-3 py-1 rounded-lg text-xs font-bold bg-slate-800 text-indigo-400 border border-indigo-500/40">전체</button>
+        <button onclick="setMarketFilter('US')" id="filter-US" class="sub-filter-btn px-3 py-1 rounded-lg text-xs font-medium text-slate-400 hover:text-white border border-surface-border">글로벌 / 미국</button>
+        <button onclick="setMarketFilter('KR')" id="filter-KR" class="sub-filter-btn px-3 py-1 rounded-lg text-xs font-medium text-slate-400 hover:text-white border border-surface-border">한국 시장</button>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+        
+        <!-- Major Issues List (8 cols) -->
+        <div class="lg:col-span-8 space-y-4">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center space-x-2">
+              <i data-lucide="layers" class="w-5 h-5 text-indigo-400"></i>
+              <h2 class="text-base font-bold text-slate-100">핵심 거시 & 섹터 밸류체인 이슈</h2>
+              <span id="issuesCount" class="text-xs px-2.5 py-0.5 rounded-full bg-surface-card border border-surface-border text-slate-400 font-mono font-semibold">0</span>
+            </div>
+            <div class="flex items-center space-x-3 text-[11px] text-slate-400 hidden sm:flex">
+              <span class="flex items-center space-x-1"><span class="w-2 h-2 rounded-full bg-indigo-500"></span><span>1차 직접수혜</span></span>
+              <span class="flex items-center space-x-1"><span class="w-2 h-2 rounded-full bg-cyan-500"></span><span>2차 낙수효과</span></span>
+            </div>
           </div>
-          <div class="flex items-center space-x-3 text-[11px] text-slate-400 hidden sm:flex">
-            <span class="flex items-center space-x-1"><span class="w-2 h-2 rounded-full bg-indigo-500"></span><span>1차 직접수혜</span></span>
-            <span class="flex items-center space-x-1"><span class="w-2 h-2 rounded-full bg-cyan-500"></span><span>2차 낙수효과</span></span>
+
+          <div id="issuesContainer" class="space-y-4">
+            <!-- 로딩 스켈레톤 -->
+            <div class="p-6 rounded-2xl bg-surface-card border border-surface-border animate-pulse space-y-4">
+              <div class="h-6 bg-slate-700/50 rounded w-1/3"></div>
+              <div class="h-4 bg-slate-700/30 rounded w-full"></div>
+            </div>
           </div>
         </div>
 
-        <!-- Issue Cards Container -->
-        <div id="issuesContainer" class="space-y-4">
-          <!-- 로딩 스켈레톤 -->
-          <div class="p-6 rounded-2xl bg-surface-card border border-surface-border animate-pulse space-y-4">
-            <div class="h-6 bg-slate-700/50 rounded w-1/3"></div>
-            <div class="h-4 bg-slate-700/30 rounded w-full"></div>
-            <div class="h-4 bg-slate-700/30 rounded w-4/5"></div>
+        <!-- Trending Tickers Sidebar (4 cols) -->
+        <div class="lg:col-span-4 space-y-4">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center space-x-2">
+              <i data-lucide="flame" class="w-5 h-5 text-amber-400"></i>
+              <h2 class="text-base font-bold text-slate-100">스포트라이트 트렌딩 종목</h2>
+            </div>
+            <span class="text-xs text-slate-500">클릭 시 차트 연동</span>
+          </div>
+
+          <div class="bg-surface-card rounded-2xl border border-surface-border p-4 shadow-sm">
+            <div id="trendingContainer" class="space-y-3">
+              <div class="h-16 bg-slate-800/40 rounded-xl animate-pulse"></div>
+              <div class="h-16 bg-slate-800/40 rounded-xl animate-pulse"></div>
+            </div>
+          </div>
+
+          <!-- Info Card -->
+          <div class="rounded-2xl border border-surface-border/60 bg-gradient-to-br from-[#11192e] to-[#0d1322] p-4 text-xs text-slate-400 space-y-2.5 shadow-sm">
+            <div class="flex items-center space-x-2 text-indigo-300 font-semibold">
+              <i data-lucide="shield-check" class="w-4 h-4 text-indigo-400"></i>
+              <span>자동 최신화 안내</span>
+            </div>
+            <p class="leading-relaxed">
+              GitHub Actions 크론잡이 <strong class="text-slate-200">6시간 주기</strong>로 자동 최신화하며, 상단의 <strong class="text-indigo-400">[수동 최신화]</strong> 버튼으로 언제든 즉시 갱신할 수 있습니다.
+            </p>
           </div>
         </div>
-      </section>
 
-      <!-- View B: Trending Tickers (Right 4 cols) -->
-      <section class="lg:col-span-4 space-y-4">
-        <div class="flex items-center justify-between">
-          <div class="flex items-center space-x-2">
-            <i data-lucide="flame" class="w-5 h-5 text-amber-400"></i>
-            <h2 class="text-base font-bold text-slate-100">스포트라이트 트렌딩 종목</h2>
-          </div>
-          <span class="text-xs text-slate-500">클릭 시 차트 연동</span>
-        </div>
+      </div>
+    </section>
 
-        <div class="bg-surface-card rounded-2xl border border-surface-border p-4 shadow-sm">
-          <div id="trendingContainer" class="space-y-3">
-            <div class="h-16 bg-slate-800/40 rounded-xl animate-pulse"></div>
-            <div class="h-16 bg-slate-800/40 rounded-xl animate-pulse"></div>
-            <div class="h-16 bg-slate-800/40 rounded-xl animate-pulse"></div>
-          </div>
-        </div>
-
-        <!-- Info Card: About Pipeline -->
-        <div class="rounded-2xl border border-surface-border/60 bg-gradient-to-br from-[#11192e] to-[#0d1322] p-4 text-xs text-slate-400 space-y-2.5 shadow-sm">
-          <div class="flex items-center space-x-2 text-indigo-300 font-semibold">
-            <i data-lucide="cpu" class="w-4 h-4 text-indigo-400"></i>
-            <span>지능형 밸류체인 분석 파이프라인</span>
-          </div>
-          <p class="leading-relaxed">
-            Google News와 금융 RSS를 수집하여 <strong class="text-slate-200">Gemini 2.5 Flash</strong>가 1차 직접 수혜주와 2차 부품/인프라 낙수효과를 분리 매핑합니다.
+    <!-- ================= VIEW 2: 중소형 강소기업 & 코스닥 모멘텀주 ================= -->
+    <section id="section-SMALL_CAPS" class="hidden space-y-6">
+      <div class="flex items-center justify-between">
+        <div>
+          <h2 class="text-lg font-bold text-white flex items-center space-x-2">
+            <i data-lucide="rocket" class="w-5 h-5 text-indigo-400"></i>
+            <span>중소형 강소기업 & 코스닥 모멘텀주 (Small-Mid Cap Movers)</span>
+          </h2>
+          <p class="text-xs text-slate-400 mt-0.5">
+            대형주 외에 독점 수주, 대규모 공급계약, 임상/기술이전, 특허, 신기술 상용화 등 강력한 개별 촉매(Catalyst)를 보유한 종목들입니다.
           </p>
-          <div class="pt-2 flex items-center justify-between text-[11px] text-slate-500 border-t border-surface-border/50">
-            <span>주기: 2시간 자동 갱신</span>
-            <span>한국/미국 차트 완벽 연동</span>
+        </div>
+        <span id="smallCapCount" class="text-xs px-2.5 py-0.5 rounded-full bg-surface-card border border-surface-border text-slate-400 font-mono font-semibold">0</span>
+      </div>
+
+      <!-- Small Cap Cards Grid -->
+      <div id="smallCapsContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <!-- 동적 렌더링 -->
+      </div>
+    </section>
+
+    <!-- ================= VIEW 3: 경제 캘린더 & 주요 지표 ================= -->
+    <section id="section-CALENDAR" class="hidden space-y-6">
+      <div>
+        <h2 class="text-lg font-bold text-white flex items-center space-x-2">
+          <i data-lucide="calendar" class="w-5 h-5 text-indigo-400"></i>
+          <span>주요 경제 지표 발표 캘린더 & 증시 영향 (Economic Calendar)</span>
+        </h2>
+        <p class="text-xs text-slate-400 mt-0.5">
+          미국 CPI, 연준 FOMC, 한국은행 금통위 등 글로벌 금융시장을 뒤흔드는 주요 거시 경제 이벤트 일정 및 관전 포인트입니다.
+        </p>
+      </div>
+
+      <!-- Calendar Cards -->
+      <div id="calendarContainer" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <!-- 동적 렌더링 -->
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Manual Trigger / Update Guide Modal -->
+  <div id="manualUpdateModal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
+    <div class="bg-[#121927] border border-surface-border rounded-2xl w-full max-w-lg p-6 space-y-5 shadow-2xl animate-in fade-in zoom-in-95 duration-150">
+      
+      <div class="flex items-center justify-between border-b border-surface-border/60 pb-3">
+        <div class="flex items-center space-x-2.5 text-white font-bold text-base">
+          <div class="w-8 h-8 rounded-lg bg-indigo-500/20 flex items-center justify-center text-amber-300">
+            <i data-lucide="zap" class="w-4 h-4"></i>
+          </div>
+          <span>파이프라인 최신화 안내</span>
+        </div>
+        <button onclick="closeManualUpdateModal()" class="w-7 h-7 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-400 hover:text-white flex items-center justify-center">
+          <i data-lucide="x" class="w-4 h-4"></i>
+        </button>
+      </div>
+
+      <div class="space-y-4 text-xs text-slate-300 leading-relaxed">
+        
+        <div class="p-3.5 rounded-xl bg-indigo-950/40 border border-indigo-500/30 space-y-1.5">
+          <div class="font-bold text-indigo-300 text-sm flex items-center space-x-1.5">
+            <i data-lucide="info" class="w-4 h-4"></i>
+            <span>동작 방식 안내</span>
+          </div>
+          <p>
+            본 웹 서비스는 <strong>GitHub Pages 정적 호스팅</strong>이므로, API 키 유출 방지와 비용 0원 유지를 위해 <strong>GitHub Actions 봇</strong>이 6시간마다 자동으로 실행됩니다.
+          </p>
+        </div>
+
+        <div class="space-y-3">
+          <h4 class="font-bold text-slate-200">원할 때 즉시 수동 갱신하는 2가지 방법:</h4>
+          
+          <div class="p-3 rounded-xl bg-slate-800/60 border border-surface-border space-y-2">
+            <div class="font-semibold text-white flex items-center justify-between">
+              <span>방법 1: GitHub에서 [Run workflow] 원클릭 실행 (가장 추천)</span>
+            </div>
+            <p class="text-slate-400">
+              저장소의 Actions 워크플로우 페이지로 이동하여 <strong>[Run workflow]</strong>를 누르면 1분 내로 최신 뉴스와 시세를 즉시 수집·분석하여 웹에 반영합니다.
+            </p>
+            <a href="https://github.com/DaramGC/p001/actions/workflows/update_data.yml" target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-1.5 px-3 py-1.5 rounded-lg bg-indigo-600 hover:bg-indigo-500 text-white font-bold transition-all mt-1">
+              <span>GitHub Actions 수동 실행 페이지 열기</span>
+              <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+
+          <div class="p-3 rounded-xl bg-slate-800/60 border border-surface-border space-y-2">
+            <div class="font-semibold text-white">방법 2: 화면 새로고침</div>
+            <p class="text-slate-400">
+              이미 Actions 봇이 업데이트한 최신 데이터를 브라우저 캐시 없이 즉시 화면에 다시 로드하려면 상단의 <strong>[화면 새로고침]</strong> 버튼을 누르시면 됩니다.
+            </p>
           </div>
         </div>
-      </section>
+
+      </div>
+
+      <div class="pt-2 flex justify-end">
+        <button onclick="closeManualUpdateModal()" class="px-4 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-xs font-semibold text-slate-300">
+          닫기
+        </button>
+      </div>
 
     </div>
-  </main>
+  </div>
 
   <!-- Interactive Chart & Value-Chain Modal -->
   <div id="chartModal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-2 sm:p-4 md:p-6 bg-black/85 backdrop-blur-sm transition-opacity duration-200">
@@ -265,26 +378,23 @@
 
         <!-- Controls: External Links & Close -->
         <div class="flex items-center space-x-2">
-          <!-- TradingView 공식 웹사이트 바로가기 -->
           <a id="tvExternalLink" href="#" target="_blank" rel="noopener noreferrer" class="hidden sm:flex items-center space-x-1 text-xs px-2.5 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white transition-all border border-slate-700" title="TradingView에서 크게 보기">
             <span>TradingView</span>
             <i data-lucide="external-link" class="w-3 h-3"></i>
           </a>
 
-          <!-- 네이버 증권 바로가기 (한국 종목 전용) -->
           <a id="naverFinanceLink" href="#" target="_blank" rel="noopener noreferrer" class="hidden sm:flex items-center space-x-1 text-xs px-2.5 py-1.5 rounded-lg bg-emerald-950/60 hover:bg-emerald-900/80 text-emerald-300 hover:text-emerald-100 transition-all border border-emerald-700/50" title="네이버 페이 증권 바로가기">
             <span>네이버증권</span>
             <i data-lucide="external-link" class="w-3 h-3"></i>
           </a>
 
-          <!-- Close Modal -->
           <button onclick="closeChartModal()" class="w-8 h-8 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white flex items-center justify-center transition-colors">
             <i data-lucide="x" class="w-5 h-5"></i>
           </button>
         </div>
       </div>
 
-      <!-- Chart Source Toggle Tabs (특히 한국 주식의 2중 안전장치) -->
+      <!-- Chart Source Toggle Tabs (한국 주식 2중 안전장치) -->
       <div id="chartTabRow" class="px-5 py-2 bg-[#0e1626] border-b border-surface-border flex items-center justify-between text-xs">
         <div class="flex items-center space-x-2">
           <button id="tabTvBtn" onclick="switchChartTab('TV')" class="px-3 py-1 rounded-md font-semibold bg-indigo-600 text-white transition-all">
@@ -295,18 +405,16 @@
           </button>
         </div>
         <div class="text-[11px] text-slate-500 hidden sm:block">
-          * 지표 및 보조선 추가는 차트 좌측/상단 도구 모음을 이용하세요.
+          * 지표 및 보조선 추가는 차트 도구 모음을 이용하세요.
         </div>
       </div>
 
       <!-- Chart Body -->
       <div class="flex-grow w-full h-full relative bg-[#131722] overflow-hidden">
-        <!-- TradingView Widget Container -->
         <div id="tvContainer" class="w-full h-full">
           <div id="tradingview_widget" class="w-full h-full"></div>
         </div>
 
-        <!-- Naver Finance Fallback Container (한국 종목 백업 뷰) -->
         <div id="naverContainer" class="w-full h-full hidden flex flex-col items-center justify-center p-6 bg-slate-900 space-y-4">
           <div class="text-sm font-semibold text-slate-200">네이버 페이 증권 실시간 일봉 차트</div>
           <div class="rounded-xl overflow-hidden border border-surface-border bg-white shadow-lg p-2 max-w-2xl w-full flex justify-center">
@@ -324,53 +432,46 @@
   <!-- Footer -->
   <footer class="border-t border-surface-border/60 py-6 mt-12 bg-[#0a0f1a] text-xs text-slate-500 text-center">
     <div class="max-w-7xl mx-auto px-4 space-y-1">
-      <p>© 2026 Global Market Pulse PRO. Automated by GitHub Actions & Gemini 2.5 Flash.</p>
+      <p>© 2026 Global Market Pulse PRO. Automated by GitHub Actions (6-hour interval) & Gemini 2.5 Flash.</p>
       <p>본 서비스에서 제공하는 정보는 투자 권유가 아니며, 글로벌 시장 리서치 및 참고 목적으로 제공됩니다.</p>
     </div>
   </footer>
 
-  <!-- Main Scripts -->
+  <!-- Scripts -->
   <script>
-    // State Store
     let marketData = null;
-    let currentFilter = 'ALL';
+    let currentMainView = 'ISSUES'; // ISSUES | SMALL_CAPS | CALENDAR
+    let currentMarketFilter = 'ALL'; // ALL | US | KR
     let searchQuery = '';
-    let currentActiveTicker = null;
 
-    // Config: Sentiment
     const sentimentConfig = {
-      POSITIVE: {
-        label: '호재 / 수혜',
-        bg: 'bg-emerald-500/10 text-emerald-400 border-emerald-500/25',
-        dot: 'bg-emerald-400'
-      },
-      NEGATIVE: {
-        label: '악재 / 리스크',
-        bg: 'bg-rose-500/10 text-rose-400 border-rose-500/25',
-        dot: 'bg-rose-400'
-      },
-      NEUTRAL: {
-        label: '중립 / 변동성',
-        bg: 'bg-amber-500/10 text-amber-400 border-amber-500/25',
-        dot: 'bg-amber-400'
-      }
+      POSITIVE: { label: '호재 / 수혜', bg: 'bg-emerald-500/10 text-emerald-400 border-emerald-500/25', dot: 'bg-emerald-400' },
+      NEGATIVE: { label: '악재 / 리스크', bg: 'bg-rose-500/10 text-rose-400 border-rose-500/25', dot: 'bg-rose-400' },
+      NEUTRAL: { label: '중립 / 변동성', bg: 'bg-amber-500/10 text-amber-400 border-amber-500/25', dot: 'bg-amber-400' }
     };
 
-    // Config: Lifecycle
     const lifecycleConfig = {
       NEW: { label: '신규 발생', badge: 'bg-cyan-500/15 text-cyan-300 border-cyan-500/30' },
       SURGING: { label: '시장 확산', badge: 'bg-indigo-500/15 text-indigo-300 border-indigo-500/30' },
       MATURE: { label: '성숙/지속', badge: 'bg-slate-700/40 text-slate-300 border-slate-600/40' }
     };
 
-    // Config: Priced-in Risk
     const pricedInConfig = {
       HIGH: { label: '선반영 주의', badge: 'text-rose-400 bg-rose-500/10 border-rose-500/20' },
       MEDIUM: { label: '적정 반영', badge: 'text-amber-400 bg-amber-500/10 border-amber-500/20' },
       LOW: { label: '초기 국면', badge: 'text-emerald-400 bg-emerald-500/10 border-emerald-500/20' }
     };
 
-    // Format Korean Stock Code (6-digit zero padding)
+    const catalystConfig = {
+      SUPPLY_CONTRACT: { label: '수주 / 공급계약', badge: 'bg-blue-500/15 text-blue-300 border-blue-500/30' },
+      TECH_ORDER: { label: '신장비 수주', badge: 'bg-indigo-500/15 text-indigo-300 border-indigo-500/30' },
+      BIO_PIPELINE: { label: '바이오 / 기술수출', badge: 'bg-purple-500/15 text-purple-300 border-purple-500/30' },
+      TECH_PATENT: { label: '독점 특허 / 기술', badge: 'bg-emerald-500/15 text-emerald-300 border-emerald-500/30' },
+      AI_INFRA: { label: 'AI 인프라 수혜', badge: 'bg-cyan-500/15 text-cyan-300 border-cyan-500/30' },
+      M_AND_A: { label: '경영권 / 지분경쟁', badge: 'bg-amber-500/15 text-amber-300 border-amber-500/30' },
+      THEME: { label: '신흥 테마', badge: 'bg-slate-700/40 text-slate-300 border-slate-600/40' }
+    };
+
     function sanitizeSymbol(symbol) {
       if (!symbol) return '';
       let clean = symbol.replace('.KS', '').replace('.KQ', '').trim();
@@ -380,12 +481,9 @@
       return clean;
     }
 
-    // Format TradingView Symbol (한국 주식 버그 완벽 수정)
     function getTVSymbol(market, symbol) {
       const cleanSym = sanitizeSymbol(symbol);
       const m = (market || '').toUpperCase();
-      
-      // 한국 종목 판정: market이 KRX이거나 6자리 숫자인 경우
       if (m === 'KRX' || /^[0-9]{6}$/.test(cleanSym)) {
         return `KRX:${cleanSym}`;
       } else if (m === 'NYSE') {
@@ -395,7 +493,6 @@
       }
     }
 
-    // Format Relative Time / ISO string
     function formatTime(isoString) {
       if (!isoString) return '최근';
       try {
@@ -412,7 +509,7 @@
       }
     }
 
-    // Fetch and Load Data
+    // Load Data
     async function loadMarketData(forceRefresh = false) {
       const refreshIcon = document.getElementById('refreshIcon');
       if (refreshIcon) refreshIcon.classList.add('animate-spin');
@@ -423,14 +520,11 @@
         if (!response.ok) {
           response = await fetch(`public/data.json${cacheBuster}`);
         }
-        if (!response.ok) {
-          throw new Error('데이터셋을 불러올 수 없습니다.');
-        }
+        if (!response.ok) throw new Error('데이터셋을 불러올 수 없습니다.');
         marketData = await response.json();
         renderDashboard();
       } catch (err) {
         console.error('Data load error:', err);
-        renderErrorState(err.message);
       } finally {
         if (refreshIcon) {
           setTimeout(() => refreshIcon.classList.remove('animate-spin'), 500);
@@ -438,32 +532,19 @@
       }
     }
 
-    function renderErrorState(msg) {
-      const container = document.getElementById('issuesContainer');
-      container.innerHTML = `
-        <div class="p-8 rounded-2xl bg-surface-card border border-rose-500/20 text-center space-y-3">
-          <i data-lucide="alert-triangle" class="w-8 h-8 text-rose-400 mx-auto"></i>
-          <p class="text-sm text-slate-300">데이터를 불러오는 중 문제가 발생했습니다: ${msg}</p>
-          <button onclick="loadMarketData(true)" class="px-4 py-2 rounded-lg bg-indigo-600 text-xs text-white font-medium hover:bg-indigo-500">
-            다시 시도
-          </button>
-        </div>
-      `;
-      lucide.createIcons();
-    }
-
-    // Render Dashboard
+    // Render All
     function renderDashboard() {
       if (!marketData) return;
 
-      // Update Timestamp & Market Summary
       document.getElementById('lastUpdatedTime').textContent = formatTime(marketData.updated_at);
-      document.getElementById('usMarketStatus').textContent = marketData.market_summary?.us_status || '미국 시장 기술주 중심 흐름';
+      document.getElementById('usMarketStatus').textContent = marketData.market_summary?.us_status || '빅테크 선별 랠리';
       document.getElementById('krMarketStatus').textContent = marketData.market_summary?.kr_status || '국내 수급 주시';
 
       renderMacroPulse();
       renderIssues();
       renderTrending();
+      renderSmallCaps();
+      renderCalendar();
       lucide.createIcons();
     }
 
@@ -490,15 +571,33 @@
       }).join('');
     }
 
-    // Set Filter Tab
-    function setMarketFilter(filter) {
-      currentFilter = filter;
-      document.querySelectorAll('.filter-tab').forEach(tab => {
-        tab.className = 'filter-tab px-4 py-1.5 rounded-lg text-xs font-semibold text-slate-400 hover:text-white transition-all';
+    // Switch Primary View
+    function switchMainView(view) {
+      currentMainView = view;
+      document.querySelectorAll('.main-view-tab').forEach(t => {
+        t.className = 'main-view-tab px-4 py-2 rounded-lg text-xs font-semibold text-slate-400 hover:text-white transition-all whitespace-nowrap';
       });
-      const activeBtn = document.getElementById(`filter-${filter}`);
+      const activeBtn = document.getElementById(`view-${view}`);
       if (activeBtn) {
-        activeBtn.className = 'filter-tab px-4 py-1.5 rounded-lg text-xs font-bold transition-all bg-indigo-600 text-white shadow';
+        activeBtn.className = 'main-view-tab px-4 py-2 rounded-lg text-xs font-bold transition-all bg-indigo-600 text-white shadow whitespace-nowrap';
+      }
+
+      document.getElementById('section-ISSUES').classList.toggle('hidden', view !== 'ISSUES');
+      document.getElementById('section-SMALL_CAPS').classList.toggle('hidden', view !== 'SMALL_CAPS');
+      document.getElementById('section-CALENDAR').classList.toggle('hidden', view !== 'CALENDAR');
+
+      lucide.createIcons();
+    }
+
+    // Set Market Filter (for issues)
+    function setMarketFilter(filter) {
+      currentMarketFilter = filter;
+      document.querySelectorAll('.sub-filter-btn').forEach(btn => {
+        btn.className = 'sub-filter-btn px-3 py-1 rounded-lg text-xs font-medium text-slate-400 hover:text-white border border-surface-border';
+      });
+      const active = document.getElementById(`filter-${filter}`);
+      if (active) {
+        active.className = 'sub-filter-btn px-3 py-1 rounded-lg text-xs font-bold bg-slate-800 text-indigo-400 border border-indigo-500/40';
       }
       renderIssues();
     }
@@ -508,16 +607,18 @@
       searchQuery = val.trim().toLowerCase();
       renderIssues();
       renderTrending();
+      renderSmallCaps();
+      renderCalendar();
     }
 
-    // Render Major Issues (View A)
+    // Render Major Issues
     function renderIssues() {
       const container = document.getElementById('issuesContainer');
       if (!marketData || !marketData.major_issues) return;
 
       let filtered = marketData.major_issues.filter(issue => {
-        if (currentFilter === 'US' && issue.market === 'KR') return false;
-        if (currentFilter === 'KR' && issue.market === 'US') return false;
+        if (currentMarketFilter === 'US' && issue.market === 'KR') return false;
+        if (currentMarketFilter === 'KR' && issue.market === 'US') return false;
 
         if (searchQuery) {
           const matchTitle = issue.title.toLowerCase().includes(searchQuery);
@@ -535,11 +636,7 @@
       document.getElementById('issuesCount').textContent = `${filtered.length}건`;
 
       if (filtered.length === 0) {
-        container.innerHTML = `
-          <div class="p-8 rounded-2xl bg-surface-card border border-surface-border text-center text-slate-400 text-sm">
-            해당 조건에 일치하는 이슈가 없습니다.
-          </div>
-        `;
+        container.innerHTML = `<div class="p-8 rounded-2xl bg-surface-card border border-surface-border text-center text-slate-400 text-sm">해당 조건에 일치하는 이슈가 없습니다.</div>`;
         return;
       }
 
@@ -550,14 +647,12 @@
         const marketBadge = issue.market === 'KR' ? '🇰🇷 한국' : (issue.market === 'US' ? '🇺🇸 미국' : '🌐 글로벌');
         const detectedTime = issue.detected_at || '';
 
-        // 分离 1차 직접 수혜 / 2차 낙수효과
         const primaryTickers = (issue.related_tickers || []).filter(t => (t.tier || 'PRIMARY') === 'PRIMARY');
         const secondaryTickers = (issue.related_tickers || []).filter(t => t.tier === 'SECONDARY');
 
         return `
           <article class="p-5 sm:p-6 rounded-2xl bg-surface-card border border-surface-border hover:border-indigo-500/50 transition-all duration-200 shadow-sm space-y-4">
             
-            <!-- Issue Meta Header -->
             <div class="flex flex-wrap items-center justify-between gap-2 border-b border-surface-border/50 pb-3">
               <div class="flex flex-wrap items-center gap-2">
                 <span class="text-xs px-2.5 py-1 rounded-md font-semibold bg-slate-800 text-slate-200 border border-slate-700/70">
@@ -575,18 +670,14 @@
                 </span>
               </div>
 
-              <!-- News Date & Source -->
-              <div class="flex items-center space-x-2 text-[11px] text-slate-400">
-                ${detectedTime ? `
-                  <div class="flex items-center space-x-1 text-slate-400 bg-slate-800/80 px-2 py-0.5 rounded border border-slate-700/60 font-mono">
-                    <i data-lucide="clock" class="w-3 h-3 text-indigo-400"></i>
-                    <span>${detectedTime}</span>
-                  </div>
-                ` : ''}
-              </div>
+              ${detectedTime ? `
+                <div class="flex items-center space-x-1 text-[11px] text-slate-400 bg-slate-800/80 px-2 py-0.5 rounded border border-slate-700/60 font-mono">
+                  <i data-lucide="clock" class="w-3 h-3 text-indigo-400"></i>
+                  <span>${detectedTime}</span>
+                </div>
+              ` : ''}
             </div>
 
-            <!-- Title & Summary -->
             <div class="space-y-1.5">
               <h3 class="text-base sm:text-lg font-bold text-white leading-snug tracking-tight">
                 ${issue.title}
@@ -596,10 +687,7 @@
               </p>
             </div>
 
-            <!-- Multi-Hop Value Chain Ticker Chips -->
             <div class="space-y-3 pt-2">
-              
-              <!-- 1차 핵심 직접 수혜/영향 -->
               ${primaryTickers.length > 0 ? `
                 <div>
                   <div class="flex items-center space-x-1.5 text-[11px] font-bold text-indigo-300 mb-1.5">
@@ -612,7 +700,6 @@
                 </div>
               ` : ''}
 
-              <!-- 2차 부품/인프라/낙수효과 -->
               ${secondaryTickers.length > 0 ? `
                 <div>
                   <div class="flex items-center space-x-1.5 text-[11px] font-bold text-cyan-300 mb-1.5">
@@ -624,10 +711,8 @@
                   </div>
                 </div>
               ` : ''}
-
             </div>
 
-            <!-- News Sources with Date -->
             ${issue.sources && issue.sources.length > 0 ? `
               <div class="pt-3 border-t border-surface-border/50 flex flex-wrap items-center gap-x-4 gap-y-1.5 text-[11px] text-slate-400">
                 <span class="font-semibold text-slate-500">참고 뉴스 출처:</span>
@@ -666,7 +751,7 @@
       `;
     }
 
-    // Render Trending Tickers (View B)
+    // Render Trending
     function renderTrending() {
       const container = document.getElementById('trendingContainer');
       if (!marketData || !marketData.trending_tickers) return;
@@ -678,15 +763,6 @@
           t.name.toLowerCase().includes(searchQuery) ||
           (t.why_trending && t.why_trending.toLowerCase().includes(searchQuery))
         );
-      }
-
-      if (tickers.length === 0) {
-        container.innerHTML = `
-          <div class="p-4 text-center text-xs text-slate-400">
-            일치하는 트렌딩 종목이 없습니다.
-          </div>
-        `;
-        return;
       }
 
       container.innerHTML = tickers.map(ticker => {
@@ -718,33 +794,162 @@
       lucide.createIcons();
     }
 
-    // Modal & Chart Management
-    let tvWidgetInstance = null;
+    // Render Small-Mid Caps View
+    function renderSmallCaps() {
+      const container = document.getElementById('smallCapsContainer');
+      if (!marketData || !marketData.small_mid_caps) return;
 
+      let list = marketData.small_mid_caps;
+      if (searchQuery) {
+        list = list.filter(item => 
+          item.symbol.toLowerCase().includes(searchQuery) ||
+          item.name.toLowerCase().includes(searchQuery) ||
+          item.title.toLowerCase().includes(searchQuery) ||
+          item.summary.toLowerCase().includes(searchQuery) ||
+          (item.cap_category && item.cap_category.toLowerCase().includes(searchQuery))
+        );
+      }
+
+      document.getElementById('smallCapCount').textContent = `${list.length}개 종목`;
+
+      if (list.length === 0) {
+        container.innerHTML = `<div class="col-span-full p-8 rounded-2xl bg-surface-card border border-surface-border text-center text-slate-400 text-sm">해당하는 중소형주가 없습니다.</div>`;
+        return;
+      }
+
+      container.innerHTML = list.map(item => {
+        const catConfig = catalystConfig[item.catalyst_type] || catalystConfig.THEME;
+        const isUp = (item.change_rate || '').includes('+');
+        const changeClass = isUp ? 'text-emerald-400 bg-emerald-500/10 border-emerald-500/20' : 'text-rose-400 bg-rose-500/10 border-rose-500/20';
+
+        return `
+          <div 
+            onclick='openChartModal(${JSON.stringify(item).replace(/'/g, "&apos;")})'
+            class="p-5 rounded-2xl bg-surface-card border border-surface-border hover:border-indigo-500/60 cursor-pointer transition-all space-y-3 group shadow-sm flex flex-col justify-between"
+          >
+            <div class="space-y-2">
+              <div class="flex items-center justify-between">
+                <span class="text-[11px] px-2 py-0.5 rounded-md font-semibold border ${catConfig.badge}">
+                  ${catConfig.label}
+                </span>
+                <span class="font-mono text-xs font-extrabold px-2 py-0.5 rounded border ${changeClass}">
+                  ${item.change_rate || '변동'}
+                </span>
+              </div>
+
+              <div class="flex items-baseline space-x-2 pt-1">
+                <span class="font-extrabold text-base text-white group-hover:text-indigo-300 transition-colors">${item.name}</span>
+                <span class="font-mono text-xs text-indigo-400 font-bold">${item.symbol}</span>
+                <span class="text-[11px] text-slate-400">· ${item.cap_category || item.market}</span>
+              </div>
+
+              <h4 class="text-xs font-bold text-slate-100 leading-snug">
+                ${item.title}
+              </h4>
+              <p class="text-xs text-slate-300 leading-relaxed line-clamp-3">
+                ${item.summary}
+              </p>
+            </div>
+
+            <div class="pt-3 border-t border-surface-border/50 flex items-center justify-between text-[11px] text-slate-400">
+              <span class="truncate max-w-[200px] text-slate-400 font-medium">💡 ${item.reason || '개별 모멘텀 부각'}</span>
+              <span class="text-indigo-400 group-hover:translate-x-1 transition-transform font-bold flex items-center space-x-0.5">
+                <span>차트</span>
+                <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+              </span>
+            </div>
+          </div>
+        `;
+      }).join('');
+
+      lucide.createIcons();
+    }
+
+    // Render Economic Calendar View
+    function renderCalendar() {
+      const container = document.getElementById('calendarContainer');
+      if (!marketData || !marketData.economic_calendar) return;
+
+      let list = marketData.economic_calendar;
+      if (searchQuery) {
+        list = list.filter(item => 
+          item.event_name.toLowerCase().includes(searchQuery) ||
+          item.market_impact.toLowerCase().includes(searchQuery) ||
+          item.date.includes(searchQuery)
+        );
+      }
+
+      container.innerHTML = list.map(item => {
+        const flag = item.country === 'KR' ? '🇰🇷' : '🇺🇸';
+        const isHigh = item.importance === 'HIGH';
+        const impBadge = isHigh ? 'bg-rose-500/15 text-rose-300 border-rose-500/30 font-bold' : 'bg-amber-500/15 text-amber-300 border-amber-500/30 font-medium';
+
+        return `
+          <div class="p-5 rounded-2xl bg-surface-card border border-surface-border hover:border-indigo-500/50 transition-all space-y-3 shadow-sm">
+            
+            <div class="flex items-center justify-between border-b border-surface-border/50 pb-2.5">
+              <div class="flex items-center space-x-2">
+                <span class="text-base">${flag}</span>
+                <span class="font-mono text-xs font-bold text-indigo-300">${item.date}</span>
+                <span class="text-xs px-2 py-0.5 rounded-full font-mono font-extrabold bg-indigo-600/30 text-indigo-200 border border-indigo-500/40">
+                  ${item.d_day}
+                </span>
+              </div>
+              <span class="text-[11px] px-2 py-0.5 rounded-md border ${impBadge}">
+                ${isHigh ? '중요도 ★★★' : '중요도 ★★'}
+              </span>
+            </div>
+
+            <div class="space-y-1.5">
+              <h3 class="text-sm sm:text-base font-extrabold text-white leading-snug">
+                ${item.event_name}
+              </h3>
+              <div class="text-xs font-mono font-medium text-slate-300 bg-slate-800/80 px-3 py-1.5 rounded-lg border border-slate-700/60 inline-block">
+                ${item.forecast_vs_previous || '예상치 집계 중'}
+              </div>
+            </div>
+
+            <div class="p-3 rounded-xl bg-slate-900/60 border border-surface-border/60 text-xs text-slate-300 space-y-1">
+              <div class="font-bold text-indigo-300 flex items-center space-x-1">
+                <i data-lucide="zap" class="w-3.5 h-3.5 text-amber-400"></i>
+                <span>증시 영향 및 관전 포인트:</span>
+              </div>
+              <p class="leading-relaxed">
+                ${item.market_impact}
+              </p>
+            </div>
+
+          </div>
+        `;
+      }).join('');
+
+      lucide.createIcons();
+    }
+
+    // Modal & Chart
     function openChartModal(ticker) {
-      currentActiveTicker = ticker;
       const modal = document.getElementById('chartModal');
       const cleanSym = sanitizeSymbol(ticker.symbol);
       const isKorean = (ticker.market === 'KRX' || /^[0-9]{6}$/.test(cleanSym));
       const tvSymbol = getTVSymbol(ticker.market, ticker.symbol);
 
-      // Meta UI Update
       document.getElementById('modalTickerName').textContent = ticker.name || ticker.symbol;
       document.getElementById('modalTickerSymbol').textContent = cleanSym;
       document.getElementById('modalTickerMarket').textContent = ticker.market || (isKorean ? 'KRX' : 'NASDAQ');
-      document.getElementById('modalReason').textContent = ticker.why_trending || ticker.reason || '해당 이슈 관련 핵심 종목';
+      document.getElementById('modalReason').textContent = ticker.why_trending || ticker.reason || ticker.title || '해당 이슈 관련 핵심 종목';
       document.getElementById('modalSymbolIcon').textContent = isKorean ? '₩' : '$';
 
-      // 1차 / 2차 수혜 배지
       const tierBadge = document.getElementById('modalTickerTier');
       if (ticker.tier) {
         tierBadge.classList.remove('hidden');
         tierBadge.textContent = ticker.tier === 'PRIMARY' ? '1차 직접수혜' : '2차 낙수효과';
+      } else if (ticker.cap_category) {
+        tierBadge.classList.remove('hidden');
+        tierBadge.textContent = ticker.cap_category;
       } else {
         tierBadge.classList.add('hidden');
       }
 
-      // External Links
       const tvLink = document.getElementById('tvExternalLink');
       const naverLink = document.getElementById('naverFinanceLink');
       const tabNaverBtn = document.getElementById('tabNaverBtn');
@@ -761,13 +966,9 @@
         tabNaverBtn.classList.add('hidden');
       }
 
-      // Default Tab: TradingView
       switchChartTab('TV');
-
-      // Show Modal
       modal.classList.remove('hidden');
 
-      // Initialize TradingView Widget with Delay to avoid 0px container bug
       setTimeout(() => {
         initTradingViewWidget(tvSymbol);
       }, 50);
@@ -777,7 +978,7 @@
 
     function initTradingViewWidget(tvSymbol) {
       const widgetContainer = document.getElementById('tradingview_widget');
-      widgetContainer.innerHTML = ''; // reset
+      widgetContainer.innerHTML = '';
 
       try {
         new TradingView.widget({
@@ -787,7 +988,7 @@
           "timezone": "Asia/Seoul",
           "theme": "dark",
           "style": "1",
-          "locale": "ko", // 한국어 로케일 공식 규격 (ko)
+          "locale": "ko",
           "toolbar_bg": "#121927",
           "enable_publishing": false,
           "allow_symbol_change": true,
@@ -799,7 +1000,7 @@
           ]
         });
       } catch (e) {
-        console.error('TradingView Widget initialization error:', e);
+        console.error('TradingView Widget error:', e);
       }
     }
 
@@ -827,18 +1028,32 @@
       modal.classList.add('hidden');
       const widgetContainer = document.getElementById('tradingview_widget');
       widgetContainer.innerHTML = '';
-      currentActiveTicker = null;
     }
 
-    // ESC Key & Backdrop Click
+    // Manual Update Modal
+    function openManualUpdateModal() {
+      document.getElementById('manualUpdateModal').classList.remove('hidden');
+      lucide.createIcons();
+    }
+    function closeManualUpdateModal() {
+      document.getElementById('manualUpdateModal').classList.add('hidden');
+    }
+
+    // ESC Key & Backdrop
     document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') closeChartModal();
+      if (e.key === 'Escape') {
+        closeChartModal();
+        closeManualUpdateModal();
+      }
     });
     document.getElementById('chartModal').addEventListener('click', (e) => {
       if (e.target.id === 'chartModal') closeChartModal();
     });
+    document.getElementById('manualUpdateModal').addEventListener('click', (e) => {
+      if (e.target.id === 'manualUpdateModal') closeManualUpdateModal();
+    });
 
-    // Initialize
+    // Init
     document.addEventListener('DOMContentLoaded', () => {
       loadMarketData();
       lucide.createIcons();

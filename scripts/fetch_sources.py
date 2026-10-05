@@ -12,22 +12,43 @@ import feedparser
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
 
-# RSS 피드 목록
+# RSS 피드 목록 (대형 매크로 + 중소형 특징주 및 수주/임상/테마 집중 피드)
 FEEDS: List[Dict[str, str]] = [
     {
         "source": "Google News US Markets",
         "market": "US",
+        "category": "MACRO",
         "url": "https://news.google.com/rss/topics/CAAqJggKIiBDQkFTRWdvSUwyMHZNRGx6TVd4NVNBIQFSAldT?hl=en-US&gl=US&ceid=US:en"
     },
     {
         "source": "Google News KR Business",
         "market": "KR",
+        "category": "MACRO",
         "url": "https://news.google.com/rss/headlines/section/topic/BUSINESS.ko_kr?ned=kr&hl=ko&gl=KR"
+    },
+    {
+        "source": "국내 특징주 & 개별 모멘텀",
+        "market": "KR",
+        "category": "SMALL_MID",
+        "url": "https://news.google.com/rss/search?q=%ED%8A%B9%EC%A7%95%EC%A3%BC+when:1d&hl=ko&gl=KR&ceid=KR:ko"
+    },
+    {
+        "source": "국내 수주·공급계약·임상",
+        "market": "KR",
+        "category": "SMALL_MID",
+        "url": "https://news.google.com/rss/search?q=%EC%88%98%EC%A3%BC+OR+%EA%B3%B5%EA%B8%89%EA%B3%84%EC%95%BD+OR+%EC%9E%84%EC%83%81+when:1d&hl=ko&gl=KR&ceid=KR:ko"
     },
     {
         "source": "CNBC Market News",
         "market": "GLOBAL",
+        "category": "MACRO",
         "url": "https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=10000664"
+    },
+    {
+        "source": "Yahoo Finance News",
+        "market": "GLOBAL",
+        "category": "MOVERS",
+        "url": "https://finance.yahoo.com/news/rssindex"
     }
 ]
 
@@ -76,6 +97,9 @@ def collect_headlines(limit_per_feed: int = 15) -> List[Dict[str, Any]]:
                 elif raw_published:
                     formatted_published = raw_published[:16]
 
+                market_tag = feed_info["market"]
+                cat_tag = feed_info.get("category", "MACRO")
+
                 all_articles.append({
                     "title": clean_title,
                     "link": link,
@@ -83,7 +107,8 @@ def collect_headlines(limit_per_feed: int = 15) -> List[Dict[str, Any]]:
                     "published": raw_published,
                     "published_at": formatted_published,
                     "source": source_name,
-                    "market_hint": market_tag
+                    "market_hint": market_tag,
+                    "category_hint": cat_tag
                 })
 
                 count += 1

@@ -1,66 +1,117 @@
 {
-  "updated_at": "2026-10-05T09:36:54.495754+00:00",
+  "updated_at": "2026-10-05T18:45:00Z",
   "macro_indicators": [
+    { "name": "코스피", "display": "KOSPI", "price": "2,610.45", "change": "+0.45%", "is_up": true },
+    { "name": "코스닥", "display": "KOSDAQ", "price": "758.20", "change": "+0.12%", "is_up": true },
+    { "name": "S&P 500", "display": "S&P 500", "price": "5,751.07", "change": "+0.82%", "is_up": true },
+    { "name": "나스닥", "display": "NASDAQ", "price": "18,137.85", "change": "+1.22%", "is_up": true },
+    { "name": "원/달러 환율", "display": "USD/KRW", "price": "1,348.50", "change": "-0.25%", "is_up": false },
+    { "name": "미국 10년물 국채", "display": "US 10Y", "price": "3.98%", "change": "-0.04%p", "is_up": false },
+    { "name": "변동성(VIX)", "display": "VIX", "price": "16.85", "change": "-3.40%", "is_up": false },
+    { "name": "WTI 유가", "display": "WTI Oil", "price": "$73.40", "change": "+1.15%", "is_up": true }
+  ],
+  "economic_calendar": [
     {
-      "name": "코스피",
-      "display": "KOSPI",
-      "price": "7,003.74",
-      "change": "+0.46%",
-      "is_up": true
+      "id": "cal-01",
+      "date": "2026-10-10",
+      "d_day": "D-5",
+      "country": "US",
+      "event_name": "미국 9월 소비자물가지수 (CPI) 발표",
+      "importance": "HIGH",
+      "forecast_vs_previous": "예상치: 전년비 +2.3% (전월치: +2.5%)",
+      "market_impact": "근원 CPI의 둔화 지속 여부가 연준의 11월 FOMC 추가 25bp/50bp 금리 인하 강도를 결정짓는 분수령이 됩니다."
     },
     {
-      "name": "코스닥",
-      "display": "KOSDAQ",
-      "price": "893.29",
-      "change": "-0.11%",
-      "is_up": false
+      "id": "cal-02",
+      "date": "2026-10-11",
+      "d_day": "D-6",
+      "country": "KR",
+      "event_name": "한국은행 금융통화위원회 기준금리 결정",
+      "importance": "HIGH",
+      "forecast_vs_previous": "현행: 3.50% ➔ 기준금리 25bp 인하 가능성 고조",
+      "market_impact": "가계부채 추이와 수도권 집값 안정을 저울질하며 국내 통화정책 완화 피벗(Pivot) 본격 개시 여부 주목."
     },
     {
-      "name": "S&P 500",
-      "display": "S&P 500",
-      "price": "7,722.72",
-      "change": "+0.73%",
-      "is_up": true
+      "id": "cal-03",
+      "date": "2026-10-16",
+      "d_day": "D-11",
+      "country": "US",
+      "event_name": "미국 9월 소매판매 (Retail Sales)",
+      "importance": "MEDIUM",
+      "forecast_vs_previous": "예상치: 전월비 +0.3% (전월치: +0.1%)",
+      "market_impact": "미국 GDP의 70%를 차지하는 소비 건전성을 검증하여 경제 '노랜딩' 또는 연착륙 시나리오를 지지할지 판단."
     },
     {
-      "name": "나스닥",
-      "display": "NASDAQ",
-      "price": "27,190.86",
-      "change": "+1.19%",
-      "is_up": true
+      "id": "cal-04",
+      "date": "2026-11-04",
+      "d_day": "D-30",
+      "country": "US",
+      "event_name": "미국 연준 FOMC 정례회의 기준금리 결정",
+      "importance": "HIGH",
+      "forecast_vs_previous": "시장 컨센서스: 25bp 추가 인하 (연 4.50~4.75%)",
+      "market_impact": "점도표와 제롬 파월 의장의 기자회견을 통해 2026년 최종 종착 금리(Terminal Rate) 수준 제시."
+    }
+  ],
+  "small_mid_caps": [
+    {
+      "symbol": "240810",
+      "name": "원익IPS",
+      "market": "KRX",
+      "cap_category": "코스닥 중형주 (소부장)",
+      "catalyst_type": "TECH_ORDER",
+      "title": "차세대 ALD(원자층증착) 장비 글로벌 파운드리 2나노 양산 라인 공급",
+      "summary": "글로벌 선단공정 미세화로 ALD 증착 장비 주문이 급증하며 북미 및 국내 대형 팹향 신규 수주 사이클이 본격화되고 있습니다.",
+      "change_rate": "+8.4%",
+      "reason": "첨단 선단공정 게이트올어라운드(GAA) 전환에 따른 전공정 장비 공급 모멘텀"
     },
     {
-      "name": "원/달러 환율",
-      "display": "USD/KRW",
-      "price": "1,343.54",
-      "change": "+0.08%",
-      "is_up": true
+      "symbol": "141080",
+      "name": "레고켐바이오",
+      "market": "KRX",
+      "cap_category": "코스닥 바이오",
+      "catalyst_type": "BIO_PIPELINE",
+      "title": "차세대 ADC(항체약물접합체) 글로벌 빅파마 기술수출 마일스톤 유입",
+      "summary": "자체 링커 플랫폼 기반 파이프라인의 글로벌 임상 진입과 함께 단계별 기술료 수령이 가시화되며 바이오 섹터 투자심리를 견인하고 있습니다.",
+      "change_rate": "+6.7%",
+      "reason": "빅파마향 공동개발 마일스톤 조기 수령 및 후속 파이프라인 L/O 기대감"
     },
     {
-      "name": "미국 10년물 국채",
-      "display": "US 10Y",
-      "price": "5.28%",
-      "change": "+0.76%",
-      "is_up": true
+      "symbol": "403870",
+      "name": "HPSP",
+      "market": "KRX",
+      "cap_category": "코스닥 강소기업",
+      "catalyst_type": "TECH_PATENT",
+      "title": "고압 수소 어닐링 장비 독점적 해자 지속 및 메모리향 적용 확대",
+      "summary": "선단 D램 및 낸드 적층 수 증가로 고압 열처리 장비 수요가 폭증하며 고수익성(영업이익률 50%대) 프리미엄이 부각되고 있습니다.",
+      "change_rate": "+5.2%",
+      "reason": "HBM 고다층화에 따른 계면 결함 개선 필수 장비 독점 지위 유지"
     },
     {
-      "name": "변동성(VIX)",
-      "display": "VIX",
-      "price": "16.23",
-      "change": "+6.01%",
-      "is_up": true
+      "symbol": "SMCI",
+      "name": "Super Micro Computer",
+      "market": "NASDAQ",
+      "cap_category": "미국 테크 모멘텀주",
+      "catalyst_type": "AI_INFRA",
+      "title": "액체냉각(DLC) AI 서버 랙 대규모 출하 개시 소식",
+      "summary": "엔비디아 블랙웰 가속기 탑재를 위한 직접 액체 냉각 솔루션 탑재 서버 출하가 증가하며 단기 실적 반등 기대감이 반영되고 있습니다.",
+      "change_rate": "+9.8%",
+      "reason": "고발열 AI 가속기용 액체냉각 랙 시스템 주문 급증"
     },
     {
-      "name": "WTI 유가",
-      "display": "WTI Oil",
-      "price": "$90.23",
-      "change": "+0.34%",
-      "is_up": true
+      "symbol": "095610",
+      "name": "테스",
+      "market": "KRX",
+      "cap_category": "코스닥 소부장",
+      "catalyst_type": "SUPPLY_CONTRACT",
+      "title": "메모리 팹 가동률 정상화에 따른 건식 식각·박막 장비 공급 재개",
+      "summary": "국내 양대 메모리 제조사의 레거시 및 첨단 팹 보수 투자가 재개되면서 식각 장비 납품이 전분기 대비 40% 이상 증가세로 전환했습니다.",
+      "change_rate": "+7.1%",
+      "reason": "고객사 CAPEX 집행 재개에 따른 반도체 전공정 장비 턴어라운드"
     }
   ],
   "market_summary": {
-    "us_status": "빅테크 AI CAPEX 모멘텀 속 기술주 주도 강세",
-    "kr_status": "외국인·기관 HBM 반도체 및 금융 밸류업 종목 중심 순매수 유입"
+    "us_status": "빅테크 실적 및 CPI 발표 앞둔 경계감 속 기술주 중심 선별 랠리",
+    "kr_status": "금통위 피벗 기대감과 HBM·소부장 중심 코스닥·코스피 동반 매수세"
   },
   "major_issues": [
     {

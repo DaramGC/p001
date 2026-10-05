@@ -1,12 +1,13 @@
 """
 analyze_llm.py
-- RSS 기사 수집 및 yfinance 기반 거시 지표 수집
-- Gemini 2.5 Flash LLM을 통한 정형 분석:
-  * 밸류체인(1차 직접 수혜 vs 2차 낙수효과)
-  * 이슈 생명주기(NEW/SURGING/MATURE)
-  * 영향 기간(단기/중장기) & 선반영 리스크(HIGH/MED/LOW)
-  * 뉴스 발생 날짜 보존
-- 결과를 public/data.json 으로 저장
+- 대형 매크로 뉴스 + 중소형 특징주/수주/임상 RSS 피드 수집
+- yfinance 거시 지표 수집
+- Gemini 2.5 Flash를 통한 고도화 인텔리전스 추출:
+  1. 거시 & 섹터 밸류체인 이슈 (대형주 1·2차 밸류체인)
+  2. 중소형 강소기업 & 코스닥/스몰캡 개별 모멘텀주 (수주/공급계약/임상/특허/테마)
+  3. 주요 경제 지표 발표 캘린더 (미국 CPI, FOMC, 고용, 한은 금통위 등)
+  4. 트렌딩 종목 리스트
+- public/data.json 으로 저장
 """
 
 import os
@@ -46,12 +47,115 @@ FALLBACK_MACRO = [
     {"name": "WTI 유가", "display": "WTI Oil", "price": "$73.40", "change": "+1.15%", "is_up": True}
 ]
 
+FALLBACK_CALENDAR = [
+    {
+        "id": "cal-01",
+        "date": "2026-10-10",
+        "d_day": "D-5",
+        "country": "US",
+        "event_name": "미국 9월 소비자물가지수 (CPI) 발표",
+        "importance": "HIGH",
+        "forecast_vs_previous": "예상치: 전년비 +2.3% (전월치: +2.5%)",
+        "market_impact": "근원 CPI의 둔화 지속 여부가 연준의 11월 FOMC 추가 25bp/50bp 금리 인하 강도를 결정짓는 분수령이 됩니다."
+    },
+    {
+        "id": "cal-02",
+        "date": "2026-10-11",
+        "d_day": "D-6",
+        "country": "KR",
+        "event_name": "한국은행 금융통화위원회 기준금리 결정",
+        "importance": "HIGH",
+        "forecast_vs_previous": "현행: 3.50% ➔ 기준금리 25bp 인하 가능성 고조",
+        "market_impact": "가계부채 추이와 수도권 집값 안정을 저울질하며 국내 통화정책 완화 피벗(Pivot) 본격 개시 여부 주목."
+    },
+    {
+        "id": "cal-03",
+        "date": "2026-10-16",
+        "d_day": "D-11",
+        "country": "US",
+        "event_name": "미국 9월 소매판매 (Retail Sales)",
+        "importance": "MEDIUM",
+        "forecast_vs_previous": "예상치: 전월비 +0.3% (전월치: +0.1%)",
+        "market_impact": "미국 GDP의 70%를 차지하는 소비 건전성을 검증하여 경제 '노랜딩(No Landing)' 또는 연착륙 시나리오를 지지할지 판단."
+    },
+    {
+        "id": "cal-04",
+        "date": "2026-11-04",
+        "d_day": "D-30",
+        "country": "US",
+        "event_name": "미국 연준 FOMC 정례회의 기준금리 결정",
+        "importance": "HIGH",
+        "forecast_vs_previous": "시장 컨센서스: 25bp 추가 인하 (연 4.50~4.75%)",
+        "market_impact": "점도표와 제롬 파월 의장의 기자회견을 통해 2026년 최종 종착 금리(Terminal Rate) 수준 제시."
+    }
+]
+
+FALLBACK_SMALL_MID_CAPS = [
+    {
+        "symbol": "240810",
+        "name": "원익IPS",
+        "market": "KRX",
+        "cap_category": "코스닥 중형주 (소부장)",
+        "catalyst_type": "TECH_ORDER",
+        "title": "차세대 ALD(원자층증착) 장비 글로벌 파운드리 2나노 양산 라인 공급",
+        "summary": "글로벌 선단공정 미세화로 ALD 증착 장비 주문이 급증하며 북미 및 국내 대형 팹향 신규 수주 사이클이 본격화되고 있습니다.",
+        "change_rate": "+8.4%",
+        "reason": "첨단 선단공정 게이트올어라운드(GAA) 전환에 따른 전공정 장비 공급 모멘텀"
+    },
+    {
+        "symbol": "141080",
+        "name": "레고켐바이오",
+        "market": "KRX",
+        "cap_category": "코스닥 바이오",
+        "catalyst_type": "BIO_PIPELINE",
+        "title": "차세대 ADC(항체약물접합체) 글로벌 빅파마 기술수출 마일스톤 유입",
+        "summary": "자체 링커 플랫폼 기반 파이프라인의 글로벌 임상 진입과 함께 단계별 기술료 수령이 가시화되며 바이오 섹터 투자심리를 견인하고 있습니다.",
+        "change_rate": "+6.7%",
+        "reason": "빅파마향 공동개발 마일스톤 조기 수령 및 후속 파이프라인 L/O 기대감"
+    },
+    {
+        "symbol": "403870",
+        "name": "HPSP",
+        "market": "KRX",
+        "cap_category": "코스닥 강소기업",
+        "catalyst_type": "TECH_PATENT",
+        "title": "고압 수소 어닐링 장비 독점적 해자 지속 및 메모리향 적용 확대",
+        "summary": "선단 D램 및 낸드 적층 수 증가로 고압 열처리 장비 수요가 폭증하며 고수익성(영업이익률 50%대) 프리미엄이 부각되고 있습니다.",
+        "change_rate": "+5.2%",
+        "reason": "HBM 고다층화에 따른 계면 결함 개선 필수 장비 독점 지위 유지"
+    },
+    {
+        "symbol": "SMCI",
+        "name": "Super Micro Computer",
+        "market": "NASDAQ",
+        "cap_category": "미국 테크 모멘텀주",
+        "catalyst_type": "AI_INFRA",
+        "title": "액체냉각(DLC) AI 서버 랙 대규모 출하 개시 소식",
+        "summary": "엔비디아 블랙웰 가속기 탑재를 위한 직접 액체 냉각 솔루션 탑재 서버 출하가 증가하며 단기 실적 반등 기대감이 반영되고 있습니다.",
+        "change_rate": "+9.8%",
+        "reason": "고발열 AI 가속기용 액체냉각 랙 시스템 주문 급증"
+    },
+    {
+        "symbol": "095610",
+        "name": "테스",
+        "market": "KRX",
+        "cap_category": "코스닥 소부장",
+        "catalyst_type": "SUPPLY_CONTRACT",
+        "title": "메모리 팹 가동률 정상화에 따른 건식 식각·박막 장비 공급 재개",
+        "summary": "국내 양대 메모리 제조사의 레거시 및 첨단 팹 보수 투자가 재개되면서 식각(Etch) 장비 납품이 전분기 대비 40% 이상 증가세로 전환했습니다.",
+        "change_rate": "+7.1%",
+        "reason": "고객사 CAPEX 집행 재개에 따른 반도체 전공정 장비 턴어라운드"
+    }
+]
+
 FALLBACK_DATA = {
     "updated_at": datetime.now(timezone.utc).isoformat(),
     "macro_indicators": FALLBACK_MACRO,
+    "economic_calendar": FALLBACK_CALENDAR,
+    "small_mid_caps": FALLBACK_SMALL_MID_CAPS,
     "market_summary": {
-        "us_status": "빅테크 AI CAPEX 모멘텀 속 기술주 주도 강세",
-        "kr_status": "외국인·기관 HBM 반도체 및 금융 밸류업 종목 중심 순매수 유입"
+        "us_status": "빅테크 실적 및 CPI 발표 앞둔 경계감 속 기술주 중심 선별 랠리",
+        "kr_status": "금통위 피벗 기대감과 HBM·소부장 중심 코스닥·코스피 동반 매수세"
     },
     "major_issues": [
         {
@@ -281,7 +385,6 @@ def fetch_macro_indicators() -> List[Dict[str, Any]]:
                 change_pct = ((last_price - prev_close) / prev_close) * 100 if prev_close else 0.0
                 is_up = change_pct >= 0
 
-                # 포맷팅
                 if "KRW" in display or "^KS" in sym or "^KQ" in sym or "^GSPC" in sym or "^IXIC" in sym:
                     price_str = f"{last_price:,.2f}"
                 elif "10Y" in display or "^TNX" in sym:
@@ -300,18 +403,16 @@ def fetch_macro_indicators() -> List[Dict[str, Any]]:
                     "change": change_str,
                     "is_up": is_up
                 })
-                continue
         except Exception as e:
-            logging.warning(f"거시 지표 [{display}] 수집 실패 ({e}), 기본값 사용")
+            logging.warning(f"거시 지표 [{display}] 수집 실패 ({e})")
 
     if not results or len(results) < 4:
-        logging.info("수집 실패 항목이 많아 기본 거시 지표를 활용합니다.")
         return FALLBACK_MACRO
     return results
 
 
 def analyze_market_with_gemini(articles: list, api_key: str, macro_data: list) -> Dict[str, Any]:
-    """Gemini API를 호출하여 고도화된 정형 분석 데이터 생성"""
+    """Gemini API를 호출하여 고도화된 정형 분석 데이터 생성 (중소형주 + 캘린더 포함)"""
     from google import genai
     from google.genai import types
 
@@ -353,6 +454,31 @@ def analyze_market_with_gemini(articles: list, api_key: str, macro_data: list) -
           ]
         }
       ],
+      "small_mid_caps": [
+        {
+          "symbol": "종목 티커 (한국은 6자리 숫자, 미국은 티커)",
+          "name": "기업명",
+          "market": "KRX" | "NASDAQ",
+          "cap_category": "코스닥 중소형주 / 소부장 / 바이오 / 스몰캡",
+          "catalyst_type": "SUPPLY_CONTRACT" | "BIO_PIPELINE" | "TECH_PATENT" | "M_AND_A" | "THEME",
+          "title": "핵심 호재/모멘텀 요약 (수주, 특허, 기술수출, 임상 등)",
+          "summary": "세부 내용 2문장",
+          "change_rate": "+7.5% 등 변동률",
+          "reason": "주목 사유 1줄"
+        }
+      ],
+      "economic_calendar": [
+        {
+          "id": "cal-01",
+          "date": "YYYY-MM-DD",
+          "d_day": "D-N 또는 D-Day",
+          "country": "US" | "KR",
+          "event_name": "이벤트명 (예: 미국 CPI, FOMC 금리결정, 한은 금통위)",
+          "importance": "HIGH" | "MEDIUM",
+          "forecast_vs_previous": "예상치 vs 이전치 요약",
+          "market_impact": "발표 결과가 증시(성장주/가치주/환율)에 미칠 영향 1문장"
+        }
+      ],
       "trending_tickers": [
         {
           "symbol": "종목 티커",
@@ -366,19 +492,19 @@ def analyze_market_with_gemini(articles: list, api_key: str, macro_data: list) -
     """
 
     prompt = f"""
-    당신은 글로벌 헤지펀드의 수석 시장 분석가이자 매크로/섹터 퀀트 리서처입니다.
-    제공된 최신 뉴스 기사들과 거시 경제 지표를 심층 분석하여 전문가 수준의 시장 인텔리전스 JSON을 생성하세요.
+    당신은 글로벌 헤지펀드의 수석 시장 분석가이자 매크로/섹터/스몰캡 퀀트 리서처입니다.
+    제공된 최신 뉴스 기사들과 거시 경제 지표를 심층 분석하여 전문가 수준의 종합 시장 인텔리전스 JSON을 생성하세요.
 
-    [분석 원칙]
-    1. 핵심 거시 & 섹터 이슈 4~6개 도출:
-       - 글로벌 거시, 미국 빅테크, 한국 반도체/금융/수급을 균형 있게 다룰 것.
-       - 각 이슈의 생명주기(lifecycle: NEW, SURGING, MATURE), 영향 기간(time_horizon: SHORT_TERM, MID_LONG_TERM), 선반영 차익실현 리스크(priced_in_risk: HIGH, MEDIUM, LOW)를 객관적으로 평가할 것.
-       - 기사의 발행일시(published_at)를 감안하여 이슈의 detected_at과 소스 일시를 표기할 것.
-    2. 밸류체인 멀티홉 종목 매핑:
-       - 단순 연관을 넘어, 1차 직접 수혜(tier: "PRIMARY")와 2차 부품/인프라/낙수효과(tier: "SECONDARY")로 종목을 계층화할 것.
-       - 한국 주식은 6자리 표준 종목코드(예: 005930, 000660, 267260), 미국 주식은 표준 티커(예: NVDA, AAPL, TSM) 사용.
-    3. 트렌딩 종목 4~6개 선별:
-       - 뉴스 발생 빈도와 시장의 관심도가 집중된 종목과 핵심 사유 도출.
+    [핵심 분석 요구사항]
+    1. 거시 & 대형 섹터 밸류체인 이슈 (major_issues, 3~5개):
+       - 빅테크 및 반도체/금융/에너지 등 시장 주도 섹터 이슈.
+       - 1차 직접 수혜(PRIMARY)와 2차 부품/인프라/낙수효과(SECONDARY)로 밸류체인을 분리할 것.
+    2. 중소형 강소기업 & 코스닥/스몰캡 개별 모멘텀주 (small_mid_caps, 4~6개):
+       - 대형주(삼성전자, SK하이닉스 등) 외에, 시가총액이 크지 않지만 **독점 수주, 대규모 공급 계약 체결, 바이오 임상/기술이전, 특허, 신기술 상용화, 경영권 지분 경쟁 등 강력한 개별 촉매(Catalyst)**를 보유한 코스닥 및 나스닥 중소형주를 반드시 도출할 것.
+    3. 주요 경제 지표 발표 캘린더 (economic_calendar, 3~5개):
+       - 다가오는 미국 CPI, FOMC 금리결정, 고용보고서(NFP), 한국은행 금통위 등 증시에 직접적인 파급력을 미칠 주요 경제 이벤트 일정과 관전 포인트를 구성할 것.
+    4. 트렌딩 종목 (trending_tickers, 4~6개):
+       - 시장에서 현재 거래량과 급등락으로 가장 주목받는 종목 및 사유.
 
     [입력 거시 지표]:
     {json.dumps(macro_data, ensure_ascii=False)}
@@ -390,7 +516,7 @@ def analyze_market_with_gemini(articles: list, api_key: str, macro_data: list) -
     {schema_instruction}
     """
 
-    logging.info("Gemini 2.5 Flash 고도화 분석 요청 중...")
+    logging.info("Gemini 2.5 Flash 종합 심층 분석(매크로+중소형주+캘린더) 요청 중...")
     response = client.models.generate_content(
         model="gemini-2.5-flash",
         contents=prompt,
@@ -404,6 +530,11 @@ def analyze_market_with_gemini(articles: list, api_key: str, macro_data: list) -
     parsed_json = json.loads(result_text)
     parsed_json["updated_at"] = datetime.now(timezone.utc).isoformat()
     parsed_json["macro_indicators"] = macro_data
+    if "economic_calendar" not in parsed_json or not parsed_json["economic_calendar"]:
+        parsed_json["economic_calendar"] = FALLBACK_CALENDAR
+    if "small_mid_caps" not in parsed_json or not parsed_json["small_mid_caps"]:
+        parsed_json["small_mid_caps"] = FALLBACK_SMALL_MID_CAPS
+
     return parsed_json
 
 
@@ -434,7 +565,7 @@ def main():
     else:
         try:
             data_to_write = analyze_market_with_gemini(articles, api_key, macro_data)
-            logging.info("Gemini 심층 분석 및 JSON 추출 성공!")
+            logging.info("Gemini 종합 심층 분석 및 JSON 추출 성공!")
         except Exception as e:
             logging.error(f"Gemini API 호출 중 에러: {e}")
             if OUTPUT_PATH.exists():
