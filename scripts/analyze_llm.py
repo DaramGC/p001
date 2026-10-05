@@ -20,6 +20,7 @@ from pathlib import Path
 from typing import Dict, Any, List
 
 import yfinance as yf
+import urllib.request
 from fetch_sources import collect_headlines
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
@@ -195,7 +196,7 @@ FALLBACK_CALENDAR = [
     }
 ]
 
-# 한국 및 미국 중소형주 12종 (논리적 전개 구조 완비)
+# 한국 및 미국 중소형주 12종 (논리적 전개 구조 완비 및 실제 거래소 시세 반영)
 FALLBACK_SMALL_MID_CAPS = [
     {
         "symbol": "240810",
@@ -206,11 +207,12 @@ FALLBACK_SMALL_MID_CAPS = [
         "catalyst_type": "TECH_ORDER",
         "title": "글로벌 2나노 GAA 선단 파운드리향 차세대 ALD 증착 장비 독점 공급 개시",
         "summary": "반도체 회로 미세화 한계로 게이트올어라운드(GAA) 구조가 필수가 되면서 박막을 원자 단위로 정밀 도포하는 ALD 장비 수요가 폭증하고 있습니다.",
-        "change_rate": "+8.4%",
+        "change_rate": "-2.86%",
         "thesis": "기존 CVD 공정으로는 불가능한 2나노 나노시트 단차 피복성을 동사 원자층증착(ALD) 기술이 단독 충족하여 해외 파운드리향 납품 시작.",
         "financial_impact": "장비당 판매단가(ASP)가 전세대 대비 약 25% 상승하였으며, 2026년 하반기 파운드리 신규 라인 가동과 함께 전사 영업이익률 18%대 복귀 전망.",
         "competitive_edge": "국내 최대 반도체 전공정 포트폴리오 보유 및 고객사 2나노 R&D 단계부터 공동 개발한 독점 특허 해자.",
-        "risks_to_watch": "글로벌 선단 파운드리 업체의 2나노 양산 일정 지연 시 장비 입고 스케줄 순연 가능성."
+        "risks_to_watch": "글로벌 선단 파운드리 업체의 2나노 양산 일정 지연 시 장비 입고 스케줄 순연 가능성.",
+        "current_price": "139,400"
     },
     {
         "symbol": "141080",
@@ -221,11 +223,12 @@ FALLBACK_SMALL_MID_CAPS = [
         "catalyst_type": "BIO_PIPELINE",
         "title": "차세대 ADC(항체약물접합체) 플랫폼 얀센향 글로벌 임상 1상 진입 및 마일스톤 수령",
         "summary": "동사의 독자적 'ConjuALL' 링커 플랫폼이 적용된 파이프라인의 글로벌 임상이 가속화되며 단계별 마일스톤 유입이 가시화되고 있습니다.",
-        "change_rate": "+6.7%",
+        "change_rate": "-3.71%",
         "thesis": "표적 암세포에서만 약물이 선택적으로 방출되는 안전성 높은 링커 기술을 인정받아 글로벌 빅파마 대상 누적 8조원대 기술수출 계약 체결 완료.",
         "financial_impact": "2026년 내 약 450억원 규모의 임상 진척 마일스톤이 순차적으로 계상되어 별도 기준 흑자 기조 안착 예상.",
         "competitive_edge": "혈중 안정성이 뛰어난 링커와 독자 톡신(Payload) 조합으로 글로벌 경쟁사(시젠, 다이이찌산쿄) 대비 독성 부작용 최소화 입증.",
-        "risks_to_watch": "글로벌 경쟁 ADC 후보물질들의 임상 데이터 발표에 따른 단기 섹터 센티먼트 변동성."
+        "risks_to_watch": "글로벌 경쟁 ADC 후보물질들의 임상 데이터 발표에 따른 단기 섹터 센티먼트 변동성.",
+        "current_price": "83,000"
     },
     {
         "symbol": "403870",
@@ -236,11 +239,12 @@ FALLBACK_SMALL_MID_CAPS = [
         "catalyst_type": "TECH_PATENT",
         "title": "HBM 및 첨단 로직 공정 필수 고압 수소 어닐링 장비 독점력 지속",
         "summary": "반도체 계면의 트랜지스터 결함을 100% 고압 수소 환경에서 열처리하는 전공정 장비 수요가 미세화 진행에 따라 필수 불가결해지고 있습니다.",
-        "change_rate": "+5.2%",
+        "change_rate": "-4.06%",
         "thesis": "초미세 공정일수록 게이트 절연막 계면 결함이 주 결함 요인이 되며, 저온(450도 이하) 고압 수소 어닐링을 구현할 수 있는 유일한 장비사.",
         "financial_impact": "영업이익률이 무려 52%에 달하는 초고수익 구조를 지속하며, 메모리 제조사들의 1b D램 및 첨단 HBM 라인 증설에 따라 2026년 사상 최대 실적 경신 전망.",
         "competitive_edge": "고압 가스 안전 인증 및 원천 특허를 통한 강력한 진입 장벽으로 대체재 부재.",
-        "risks_to_watch": "후발 장비사들의 특허 무효화 소송 결과 및 양산 평가 진척 여부 지속 모니터링 필요."
+        "risks_to_watch": "후발 장비사들의 특허 무효화 소송 결과 및 양산 평가 진척 여부 지속 모니터링 필요.",
+        "current_price": "66,200"
     },
     {
         "symbol": "095610",
@@ -251,11 +255,12 @@ FALLBACK_SMALL_MID_CAPS = [
         "catalyst_type": "SUPPLY_CONTRACT",
         "title": "메모리 제조사 레거시 팹 가동률 정상화 및 첨단 박막 증착 장비 수주 턴어라운드",
         "summary": "국내 메모리 양사의 감산 종료와 선단 공정 전환 투자가 동시에 집행되면서 건식 식각 및 박막 장비 납품이 급격한 회복세에 접어들었습니다.",
-        "change_rate": "+7.1%",
-        "thesis": "낸드(NAND) 적층 단수 증가 및 D램 커패시터 증착 공정에 필수적인 PECVD/Gas Etch 장비의 고객사 발주가 전분기 대비 40% 이상 반등.",
-        "financial_impact": "2025년 적자 혹은 마진 압박 구간을 벗어나 2026년 분기별 매출 800억원 이상, 영업이익률 두 자릿수 턴어라운드 확실시.",
+        "change_rate": "-2.99%",
+        "thesis": "낸드 적층 단수 증가 및 D램 커패시터 증착 공정에 필수적인 PECVD/Gas Etch 장비의 고객사 발주가 전분기 대비 40% 이상 반등.",
+        "financial_impact": "2025년 마진 압박 구간을 벗어나 2026년 분기별 매출 800억원 이상, 영업이익률 두 자릿수 턴어라운드 확실시.",
         "competitive_edge": "삼성전자 및 SK하이닉스 양사 모두를 주요 고객사로 확보하여 CAPEX 재개 시 가장 빠른 실적 레버리지 발생.",
-        "risks_to_watch": "낸드 플래시 메모리 시장의 완제품 가격 회복 속도 및 감산 정책 변화."
+        "risks_to_watch": "낸드 플래시 메모리 시장의 완제품 가격 회복 속도 및 감산 정책 변화.",
+        "current_price": "178,400"
     },
     {
         "symbol": "084370",
@@ -266,11 +271,12 @@ FALLBACK_SMALL_MID_CAPS = [
         "catalyst_type": "TECH_ORDER",
         "title": "차세대 1b D램 및 3D 낸드용 LPCVD 저압 화학증착 장비 수주 급증",
         "summary": "박막의 균일도와 스텝 커버리지가 탁월한 저압 화학증착 장비의 글로벌 탑티어 공급 지위를 강화하고 있습니다.",
-        "change_rate": "+6.3%",
+        "change_rate": "-3.50%",
         "thesis": "외산 장비(도쿄일렉트론, 램리서치)가 독점하던 질화막/산화막 증착 공정을 성공적으로 국산화하여 주요 메모리사 채택률 급상승.",
         "financial_impact": "차세대 선단 공정 침투율 확대로 연간 매출 4,000억원 및 영업이익 800억원대 도달 가시화.",
         "competitive_edge": "싱글 웨이퍼 LPCVD 분야에서 세계 최고 수준의 박막 제어 기술력 보유.",
-        "risks_to_watch": "주요 고객사의 설비투자 집행 시기 이연에 따른 분기 실적 변동성."
+        "risks_to_watch": "주요 고객사의 설비투자 집행 시기 이연에 따른 분기 실적 변동성.",
+        "current_price": "179,400"
     },
     {
         "symbol": "397030",
@@ -281,11 +287,12 @@ FALLBACK_SMALL_MID_CAPS = [
         "catalyst_type": "BIO_PIPELINE",
         "title": "지속형 알부민 바인더 플랫폼 'SAFA' 기반 자가면역질환 신약 기술수출 성과 가시화",
         "summary": "약물의 체내 반감기를 획기적으로 늘려주는 SAFA 플랫폼을 기반으로 다국적 제약사향 공동연구 및 마일스톤 계약이 순항 중입니다.",
-        "change_rate": "+8.9%",
+        "change_rate": "-20.75%",
         "thesis": "인체 알부민과 결합하여 투약 주기를 주 1회에서 월 1회로 개선하는 플랫폼의 임상적 유효성이 확인되며 글로벌 L/O 협상 유리.",
-        "financial_impact": "체결된 기술수출 계약금 및 후속 마일스톤 유입으로 바이오텍 특유의 자금 조달 리스크(유상증자) 완전 해소.",
+        "financial_impact": "체결된 기술수출 계약금 및 후속 마일스톤 유입으로 바이오텍 특유의 자금 조달 리스크 완전 해소.",
         "competitive_edge": "항체 단편에 알부민 바인더를 융합하는 독창적 플랫폼으로 다양한 타깃 단백질에 무제한 확장 가능.",
-        "risks_to_watch": "파트너사의 글로벌 임상 2상 진입 일정 및 데이터 발표 결과."
+        "risks_to_watch": "파트너사의 글로벌 임상 2상 진입 일정 및 데이터 발표 결과.",
+        "current_price": "16,880"
     },
     {
         "symbol": "437730",
@@ -296,11 +303,12 @@ FALLBACK_SMALL_MID_CAPS = [
         "catalyst_type": "TECH_ORDER",
         "title": "모터·감속기·제어기 일체형 스마트 액추에이터 독점 공급 및 방산 드론 납품 확대",
         "summary": "로봇 관절 및 방산 무인화 장비의 핵심인 '3-in-1 일체형 액추에이터'의 대량 양산 능력을 확보하여 고객사 러브콜이 이어지고 있습니다.",
-        "change_rate": "+7.8%",
+        "change_rate": "+1.56%",
         "thesis": "개별 부품을 조립하던 기존 방식 대비 부피 30% 축소, 전력 효율 20% 향상시킨 일체형 구동 모듈로 로봇·방산 납품 확정.",
         "financial_impact": "현대차그룹 로봇 라인업 및 국내 방산 대기업향 납품 시작으로 2026년 수주잔고 1조원 돌파 전망.",
         "competitive_edge": "소프트웨어 제어 알고리즘과 정밀 하드웨어 모터 설계를 단일 패키지로 내재화한 국내 유일 기업.",
-        "risks_to_watch": "원자재(희토류 영구자석 등) 가격 급등에 따른 원가율 상승 가능성."
+        "risks_to_watch": "원자재(희토류 영구자석 등) 가격 급등에 따른 원가율 상승 가능성.",
+        "current_price": "52,100"
     },
     {
         "symbol": "SMCI",
@@ -311,11 +319,12 @@ FALLBACK_SMALL_MID_CAPS = [
         "catalyst_type": "AI_INFRA",
         "title": "엔비디아 블랙웰 GPU 가속기용 액체냉각(DLC) 서버 랙 대규모 양산 출하 개시",
         "summary": "100kW 이상 초고발열 AI 칩을 식히기 위한 직접 액체 냉각(Direct Liquid Cooling) 기술이 표준으로 자리잡으며 서버 출하량이 급증하고 있습니다.",
-        "change_rate": "+9.8%",
+        "change_rate": "+4.22%",
         "thesis": "기존 공랭식으로는 감당 불가능한 고밀도 AI 데이터센터의 필수 솔루션을 엔비디아와 공동 설계하여 시장 선점.",
         "financial_impact": "액체냉각 시스템이 적용된 랙의 마진율이 15% 이상으로 개선되며, 단기 회계 관련 노이즈 해소 시 실적 폭발력 부각.",
         "competitive_edge": "모듈형 블록 아키텍처를 통해 경쟁사(Dell, HP) 대비 신제품 출시 기간을 수개월 단축시키는 민첩성.",
-        "risks_to_watch": "지배구조 및 회계 감사 관련 불확실성 완전 해소 여부 확인 필요."
+        "risks_to_watch": "지배구조 및 회계 감사 관련 불확실성 완전 해소 여부 확인 필요.",
+        "current_price": "$43.69"
     },
     {
         "symbol": "ASTS",
@@ -326,11 +335,12 @@ FALLBACK_SMALL_MID_CAPS = [
         "catalyst_type": "TECH_ORDER",
         "title": "일반 스마트폰 직접 연결 5G 우주 저궤도 위성 'BlueBird' 상용 궤도 안착",
         "summary": "별도의 특수 단말기 없이 일반 스마트폰으로 저궤도 위성과 직접 음성/데이터를 송수신하는 차세대 통신망 구축이 현실화되고 있습니다.",
-        "change_rate": "+12.4%",
+        "change_rate": "+2.47%",
         "thesis": "AT&T, Verizon 등 미국 1·2위 통신사 및 글로벌 40여 개 통신사와 상용 서비스 계약 체결로 음영지역 없는 글로벌 커버리지 확보.",
         "financial_impact": "2026년 상용 서비스 개시와 함께 통신사 가입자당 추가 부가서비스 수수료(ARPU) 쉐어로 기하급수적 매출 성장 궤도 진입.",
         "competitive_edge": "축구장 크기의 거대 위성 안테나 어레이를 저궤도에 전개하는 독보적 특허 포트폴리오 보유.",
-        "risks_to_watch": "후속 위성 발사 로켓 일정 지연 및 규제 당국(FCC)의 최종 주파수 승인 일정."
+        "risks_to_watch": "후속 위성 발사 로켓 일정 지연 및 규제 당국(FCC)의 최종 주파수 승인 일정.",
+        "current_price": "$58.45"
     },
     {
         "symbol": "RKLB",
@@ -341,11 +351,12 @@ FALLBACK_SMALL_MID_CAPS = [
         "catalyst_type": "TECH_ORDER",
         "title": "중형 재사용 로켓 'Neutron' 핫파이어 테스트 성공 및 미 국방부 국방 발사 계약 수주",
         "summary": "소형 로켓(Electron)의 높은 발사 성공률에 이어 중형 재사용 로켓 개발이 막바지에 접어들며 스페이스X의 대항마로 급부상 중입니다.",
-        "change_rate": "+8.5%",
+        "change_rate": "+4.91%",
         "thesis": "민간 및 군사위성 발사 수요 폭증 속에서 스페이스X(Falcon 9) 외에 유일하게 정기적 상업 발사가 가능한 민간 발사체 기업.",
         "financial_impact": "위성 제작 및 우주 시스템 부문 수주잔고가 10억 달러를 돌파하며 하드웨어 제조사에서 종합 우주 인프라 기업으로 체질 개선.",
         "competitive_edge": "카본 복합재 차체 및 3D 프린팅 로켓 엔진 기술을 통한 압도적인 발사 비용 절감 및 50회 이상의 상업 궤도 발사 성공 트랙레코드.",
-        "risks_to_watch": "Neutron 로켓의 첫 상업 발사 성공 여부 및 연구개발비 집행에 따른 단기 잉여현금흐름 변동."
+        "risks_to_watch": "Neutron 로켓의 첫 상업 발사 성공 여부 및 연구개발비 집행에 따른 단기 잉여현금흐름 변동.",
+        "current_price": "$73.92"
     },
     {
         "symbol": "IONQ",
@@ -356,26 +367,28 @@ FALLBACK_SMALL_MID_CAPS = [
         "catalyst_type": "TECH_PATENT",
         "title": "상온 작동 트랩이온 양자컴퓨터 '#AQ 64' 조기 달성 및 엔터프라이즈 클라우드 서비스 확대",
         "summary": "극저온 냉각기 없이 상온에서 동작 가능한 이온트랩 방식의 양자 컴퓨터가 금융 및 신약 개발 알고리즘에서 상용 이점을 증명하고 있습니다.",
-        "change_rate": "+10.2%",
+        "change_rate": "-0.50%",
         "thesis": "초전도 방식(IBM, Google) 대비 큐비트 연결성과 게이트 충실도가 월등하여 상업용 양자 우위(Quantum Advantage) 달성에 가장 근접.",
-        "financial_impact": "미국 국립연구소 및 글로벌 제약사들과의 다년 계약으로 2026년 예약 수주액(Bookings) 1억 달러 돌파 예상.",
-        "competitive_edge": "천연 원자(바륨 이온)를 큐비트로 사용하여 큐비트 간 완벽한 동질성과 긴 결맞음 시간(Coherence Time) 확보.",
-        "risks_to_watch": "범용 양자컴퓨터 상용화까지의 기술 개발 타임라인 및 추가 자금 조달 가능성."
+        "financial_impact": "미국 국립연구소 및 글로벌 제약사들과의 다년 계약으로 2026년 예약 수주액 1억 달러 돌파 예상.",
+        "competitive_edge": "천연 원자(바륨 이온)를 큐비트로 사용하여 큐비트 간 완벽한 동질성과 긴 결맞음 시간 확보.",
+        "risks_to_watch": "범용 양자컴퓨터 상용화까지의 기술 개발 타임라인 및 추가 자금 조달 가능성.",
+        "current_price": "$43.77"
     },
     {
-        "symbol": "CEIX",
-        "name": "CONSOL Energy",
+        "symbol": "OKLO",
+        "name": "Oklo Inc",
         "market": "NYSE",
         "country": "US",
-        "cap_category": "미국 에너지 인프라 스몰캡",
+        "cap_category": "미국 SMR 원전/AI 전력 스몰캡",
         "catalyst_type": "AI_INFRA",
-        "title": "미국 동부 AI 데이터센터 전용 기저부하 발전소향 장기 석탄·가스 연료 공급 계약 체결",
-        "summary": "신재생 전력망 연결 대기 기간이 5년 이상 걸리자 빅테크들이 자체 오프그리드(Off-grid) 화력/가스 발전소 구축에 나서며 화석연료 수요가 역주행하고 있습니다.",
-        "change_rate": "+6.1%",
-        "thesis": "신재생에너지의 간헐성을 극복할 수 있는 24시간 연속 기저 전력 공급원으로서의 화석연료 재평가 수혜.",
-        "financial_impact": "고품질 석탄 생산 마진율 40% 유지 및 잉여현금흐름 전액을 배당과 자사주 매입에 투입하여 주주수익률 연 12% 상회.",
-        "competitive_edge": "미국 볼티모어 해상 수출 터미널을 자체 소유하여 물류비 절감 및 내수/수출 차익거래 극대화.",
-        "risks_to_watch": "미국 환경청(EPA)의 탄소 배출 규제 정책 변화 및 발전용 연료 단가 변동."
+        "title": "샘 올트먼 후원 SMR(소형 모듈 원자로) 차세대 AI 데이터센터 전력 공급 가속",
+        "summary": "빅테크 전력망 연결 병목이 5년 이상 지연되자 데이터센터 인근에 즉시 배치 가능한 초소형 고속 원자로 솔루션이 부각되고 있습니다.",
+        "change_rate": "-0.75%",
+        "thesis": "오프그리드(독립형) 전력망 구축을 추진하는 미국 하이퍼스케일러들과 사전 전력 공급 계약(PPA) 체결 추진.",
+        "financial_impact": "2027년 첫 상용 원자로 오로라(Aurora) 가동 시 다년간의 장기 전력 판매 매출 수천억 원 확보 가시화.",
+        "competitive_edge": "사용후핵연료를 재활용하는 액체금속 고속증식로 기술로 방사성 폐기물 부담을 획기적으로 낮추는 차세대 원전 해자.",
+        "risks_to_watch": "미국 원자력규제위원회(NRC)의 설계 승인 심사 일정 지연 가능성.",
+        "current_price": "$35.87"
     }
 ]
 
@@ -646,6 +659,108 @@ def fetch_macro_indicators() -> List[Dict[str, Any]]:
     return results
 
 
+def sync_realtime_quotes(data: Dict[str, Any]) -> Dict[str, Any]:
+    """
+    네이버 증권 공식 실시간 폴링 API(국내)와 야후 파이낸스 차트 API(미국)를 호출하여
+    small_mid_caps, sector_trends, trending_tickers의 실제 당일 주가(current_price)와
+    실제 등락률(change_rate / change)을 100% 실시간 동기화합니다.
+    """
+    kr_symbols = set()
+    us_symbols = set()
+
+    def categorize_symbol(sym: str):
+        if not sym:
+            return
+        clean_sym = str(sym).strip().upper()
+        if clean_sym.isdigit() and len(clean_sym) == 6:
+            kr_symbols.add(clean_sym)
+        elif clean_sym.isalpha() or "." in clean_sym or "-" in clean_sym:
+            us_symbols.add(clean_sym)
+
+    # 1. 대상 티커 수집
+    for item in data.get("small_mid_caps", []):
+        categorize_symbol(item.get("symbol"))
+
+    for sec in data.get("sector_trends", []):
+        for lead in sec.get("leading_stocks", []):
+            categorize_symbol(lead.get("symbol"))
+
+    for tr in data.get("trending_tickers", []):
+        categorize_symbol(tr.get("symbol"))
+
+    quotes_map = {}
+
+    # 2. 국내 KRX 시세 일괄 수집 (Naver Polling API - 단 1회 HTTP 호출로 전체 수집)
+    if kr_symbols:
+        try:
+            codes_csv = ",".join(kr_symbols)
+            url_kr = f"https://polling.finance.naver.com/api/realtime/domestic/stock/{codes_csv}"
+            req = urllib.request.Request(url_kr, headers={"User-Agent": "Mozilla/5.0"})
+            with urllib.request.urlopen(req, timeout=5) as resp:
+                res_json = json.loads(resp.read().decode("utf-8", errors="ignore"))
+                for item in res_json.get("datas", []):
+                    code = item.get("itemCode")
+                    close_price = item.get("closePrice")
+                    try:
+                        ratio_val = float(str(item.get("fluctuationsRatio", "0")).replace(",", ""))
+                        ratio_str = f"{ratio_val:+.2f}%"
+                    except Exception:
+                        ratio_str = f"{item.get('fluctuationsRatio', '0')}%"
+                    if code:
+                        quotes_map[code] = {
+                            "price": close_price,
+                            "change": ratio_str
+                        }
+            logging.info(f"KRX 종목 실시간 시세 동기화 완료: {len(kr_symbols)}개")
+        except Exception as e:
+            logging.warning(f"네이버 실시간 시세 수집 중 오류: {e}")
+
+    # 3. 미국 US 시세 수집 (Yahoo Finance Chart API)
+    for sym in us_symbols:
+        try:
+            url_us = f"https://query1.finance.yahoo.com/v8/finance/chart/{sym}"
+            req = urllib.request.Request(url_us, headers={"User-Agent": "Mozilla/5.0"})
+            with urllib.request.urlopen(req, timeout=5) as resp:
+                chart_data = json.loads(resp.read().decode("utf-8", errors="ignore"))
+                meta = chart_data.get("chart", {}).get("result", [{}])[0].get("meta", {})
+                cur = meta.get("regularMarketPrice")
+                prev = meta.get("chartPreviousClose", cur)
+                if cur is not None:
+                    pct = ((cur - prev) / prev) * 100 if prev else 0.0
+                    quotes_map[sym] = {
+                        "price": f"${cur:,.2f}",
+                        "change": f"{pct:+.2f}%"
+                    }
+        except Exception as e:
+            logging.warning(f"미국 종목 [{sym}] 실시간 시세 수집 중 오류: {e}")
+    logging.info(f"미국 종목 실시간 시세 동기화 완료: {len(us_symbols)}개")
+
+    # 4. 데이터에 실제 시장 시세 및 등락률 주입
+    # 4-1. small_mid_caps
+    for item in data.get("small_mid_caps", []):
+        sym = item.get("symbol")
+        if sym in quotes_map:
+            item["current_price"] = quotes_map[sym]["price"]
+            item["change_rate"] = quotes_map[sym]["change"]
+
+    # 4-2. sector_trends
+    for sec in data.get("sector_trends", []):
+        for lead in sec.get("leading_stocks", []):
+            sym = lead.get("symbol")
+            if sym in quotes_map:
+                lead["current_price"] = quotes_map[sym]["price"]
+                lead["change"] = quotes_map[sym]["change"]
+
+    # 4-3. trending_tickers
+    for tr in data.get("trending_tickers", []):
+        sym = tr.get("symbol")
+        if sym in quotes_map:
+            tr["current_price"] = quotes_map[sym]["price"]
+            tr["change_rate"] = quotes_map[sym]["change"]
+
+    return data
+
+
 def analyze_market_with_gemini(articles: list, api_key: str, macro_data: list) -> Dict[str, Any]:
     """Gemini API를 호출하여 논리 전개형 심층 리포트 데이터 생성"""
     from google import genai
@@ -816,8 +931,9 @@ def main():
         logging.warning("GEMINI_API_KEY 미설정. 고도화된 논리 리포트 데이터셋을 구성합니다.")
         FALLBACK_DATA["updated_at"] = datetime.now(timezone.utc).isoformat()
         FALLBACK_DATA["macro_indicators"] = macro_data
+        data_to_write = sync_realtime_quotes(FALLBACK_DATA)
         with open(OUTPUT_PATH, "w", encoding="utf-8") as f:
-            json.dump(FALLBACK_DATA, f, ensure_ascii=False, indent=2)
+            json.dump(data_to_write, f, ensure_ascii=False, indent=2)
         logging.info(f"저장 완료: {OUTPUT_PATH}")
         return
 
@@ -846,6 +962,13 @@ def main():
             else:
                 data_to_write = FALLBACK_DATA
                 data_to_write["macro_indicators"] = macro_data
+
+    # 3. 실시간 주가 및 등락률 완벽 동기화 (차트 모달과 100% 일치)
+    try:
+        data_to_write = sync_realtime_quotes(data_to_write)
+        logging.info("실시간 시장 주가 및 등락률 동기화 완료.")
+    except Exception as e:
+        logging.warning(f"실시간 주가 동기화 중 에러: {e}")
 
     with open(OUTPUT_PATH, "w", encoding="utf-8") as f:
         json.dump(data_to_write, f, ensure_ascii=False, indent=2)
