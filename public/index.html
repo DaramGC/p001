@@ -273,20 +273,26 @@
 
     <!-- ================= VIEW 3: 중소형 강소기업 & 코스닥 모멘텀주 ================= -->
     <section id="section-SMALL_CAPS" class="hidden space-y-6">
-      <div class="flex items-center justify-between">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
         <div>
           <h2 class="text-lg font-bold text-white flex items-center space-x-2">
             <i data-lucide="rocket" class="w-5 h-5 text-indigo-400"></i>
             <span>중소형 강소기업 & 코스닥 모멘텀주 (Small-Mid Cap Movers)</span>
           </h2>
           <p class="text-xs text-slate-400 mt-0.5">
-            독점 수주, 대규모 공급계약, 임상/기술이전, 특허, 신기술 등 개별 촉매(Catalyst)를 보유한 종목들입니다.
+            독점 수주, 대규모 공급계약, 임상/기술이전, 특허, 신기술 등 개별 촉매(Catalyst)와 구조적 실적 레버리지를 보유한 종목들입니다.
           </p>
         </div>
-        <span id="smallCapCount" class="text-xs px-2.5 py-0.5 rounded-full bg-surface-card border border-surface-border text-slate-400 font-mono font-semibold">0</span>
+        <div class="flex items-center space-x-2">
+          <span class="text-xs text-slate-400 font-medium hidden sm:inline">지역 필터:</span>
+          <button onclick="setSmallCapFilter('ALL')" id="scFilter-ALL" class="sc-filter-btn px-3 py-1 rounded-lg text-xs font-bold bg-slate-800 text-indigo-400 border border-indigo-500/40">전체</button>
+          <button onclick="setSmallCapFilter('KR')" id="scFilter-KR" class="sc-filter-btn px-3 py-1 rounded-lg text-xs font-medium text-slate-400 hover:text-white border border-surface-border">🇰🇷 코스닥 / 스몰캡</button>
+          <button onclick="setSmallCapFilter('US')" id="scFilter-US" class="sc-filter-btn px-3 py-1 rounded-lg text-xs font-medium text-slate-400 hover:text-white border border-surface-border">🇺🇸 미국 스몰캡</button>
+          <span id="smallCapCount" class="text-xs px-2.5 py-0.5 rounded-full bg-surface-card border border-surface-border text-slate-300 font-mono font-bold ml-1">0</span>
+        </div>
       </div>
 
-      <div id="smallCapsContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div id="smallCapsContainer" class="grid grid-cols-1 lg:grid-cols-2 gap-5">
         <!-- 동적 렌더링 -->
       </div>
     </section>
@@ -458,6 +464,7 @@
     let marketData = null;
     let currentMainView = 'ISSUES'; // ISSUES | SECTORS | SMALL_CAPS | CALENDAR
     let currentMarketFilter = 'ALL'; // ALL | US | KR
+    let currentSmallCapFilter = 'ALL'; // ALL | KR | US
     let searchQuery = '';
 
     const sentimentConfig = {
@@ -626,6 +633,19 @@
       renderIssues();
     }
 
+    // Set Small Cap Filter
+    function setSmallCapFilter(filter) {
+      currentSmallCapFilter = filter;
+      document.querySelectorAll('.sc-filter-btn').forEach(btn => {
+        btn.className = 'sc-filter-btn px-3 py-1 rounded-lg text-xs font-medium text-slate-400 hover:text-white border border-surface-border';
+      });
+      const active = document.getElementById(`scFilter-${filter}`);
+      if (active) {
+        active.className = 'sc-filter-btn px-3 py-1 rounded-lg text-xs font-bold bg-slate-800 text-indigo-400 border border-indigo-500/40';
+      }
+      renderSmallCaps();
+    }
+
     // Search Handler
     function handleSearch(val) {
       searchQuery = val.trim().toLowerCase();
@@ -653,7 +673,12 @@
             t.name.toLowerCase().includes(searchQuery) ||
             (t.reason && t.reason.toLowerCase().includes(searchQuery))
           );
-          return matchTitle || matchSummary || matchTickers;
+          const matchDeepDive = issue.deep_dive && (
+            (issue.deep_dive.trigger_context && issue.deep_dive.trigger_context.toLowerCase().includes(searchQuery)) ||
+            (issue.deep_dive.transmission_mechanism && issue.deep_dive.transmission_mechanism.toLowerCase().includes(searchQuery)) ||
+            (issue.deep_dive.key_checkpoints && issue.deep_dive.key_checkpoints.some(cp => cp.toLowerCase().includes(searchQuery)))
+          );
+          return matchTitle || matchSummary || matchTickers || matchDeepDive;
         }
         return true;
       });
@@ -712,7 +737,61 @@
               </p>
             </div>
 
-            <div class="space-y-3 pt-2">
+            <!-- 심층 투자 논리 분석 리포트 (Deep Dive Analysis) -->
+            ${issue.deep_dive ? `
+              <div class="rounded-xl bg-slate-900/90 border border-indigo-500/30 overflow-hidden shadow-sm">
+                <div class="px-4 py-2 bg-gradient-to-r from-indigo-950/80 via-slate-900 to-indigo-950/40 border-b border-indigo-500/20 flex items-center justify-between">
+                  <div class="flex items-center space-x-2 text-indigo-300 font-bold text-xs">
+                    <i data-lucide="git-branch" class="w-4 h-4 text-indigo-400"></i>
+                    <span>심층 투자 논리 분석 리포트 (Deep Dive Report)</span>
+                  </div>
+                  <span class="text-[10px] text-indigo-300/80 font-mono font-medium">배경 ➔ 파급 경로 ➔ 체크포인트</span>
+                </div>
+
+                <div class="p-3.5 space-y-2.5">
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-2.5 text-xs">
+                    <!-- Trigger -->
+                    <div class="p-3 rounded-lg bg-slate-800/60 border border-surface-border space-y-1">
+                      <div class="font-bold text-indigo-300 flex items-center space-x-1.5">
+                        <span class="w-1.5 h-1.5 rounded-full bg-indigo-400"></span>
+                        <span>1. 발생 배경 & 촉발 트리거 (Trigger)</span>
+                      </div>
+                      <p class="text-slate-300 leading-relaxed text-[11px] sm:text-xs">
+                        ${issue.deep_dive.trigger_context}
+                      </p>
+                    </div>
+
+                    <!-- Transmission -->
+                    <div class="p-3 rounded-lg bg-slate-800/60 border border-surface-border space-y-1">
+                      <div class="font-bold text-cyan-300 flex items-center space-x-1.5">
+                        <span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span>
+                        <span>2. 실적 & 마진 파급 메커니즘 (Transmission)</span>
+                      </div>
+                      <p class="text-slate-300 leading-relaxed text-[11px] sm:text-xs">
+                        ${issue.deep_dive.transmission_mechanism}
+                      </p>
+                    </div>
+                  </div>
+
+                  <!-- Key Checkpoints -->
+                  ${issue.deep_dive.key_checkpoints && issue.deep_dive.key_checkpoints.length > 0 ? `
+                    <div class="p-3 rounded-lg bg-slate-800/40 border border-surface-border/80 space-y-1.5">
+                      <div class="text-[11px] font-bold text-amber-300 flex items-center space-x-1.5">
+                        <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-amber-400"></i>
+                        <span>3. 투자자 핵심 관전 포인트 (Key Checkpoints):</span>
+                      </div>
+                      <ul class="space-y-1 text-[11px] sm:text-xs text-slate-300 pl-4 list-disc marker:text-amber-400">
+                        ${issue.deep_dive.key_checkpoints.map(cp => `
+                          <li class="leading-relaxed">${cp}</li>
+                        `).join('')}
+                      </ul>
+                    </div>
+                  ` : ''}
+                </div>
+              </div>
+            ` : ''}
+
+            <div class="space-y-3 pt-1">
               ${primaryTickers.length > 0 ? `
                 <div>
                   <div class="flex items-center space-x-1.5 text-[11px] font-bold text-indigo-300 mb-1.5">
@@ -902,21 +981,28 @@
       const container = document.getElementById('smallCapsContainer');
       if (!marketData || !marketData.small_mid_caps) return;
 
-      let list = marketData.small_mid_caps;
-      if (searchQuery) {
-        list = list.filter(item => 
-          item.symbol.toLowerCase().includes(searchQuery) ||
-          item.name.toLowerCase().includes(searchQuery) ||
-          item.title.toLowerCase().includes(searchQuery) ||
-          item.summary.toLowerCase().includes(searchQuery) ||
-          (item.cap_category && item.cap_category.toLowerCase().includes(searchQuery))
-        );
-      }
+      let list = marketData.small_mid_caps.filter(item => {
+        if (currentSmallCapFilter === 'KR' && item.country !== 'KR') return false;
+        if (currentSmallCapFilter === 'US' && item.country !== 'US') return false;
+
+        if (searchQuery) {
+          const q = searchQuery;
+          return item.symbol.toLowerCase().includes(q) ||
+            item.name.toLowerCase().includes(q) ||
+            (item.title && item.title.toLowerCase().includes(q)) ||
+            (item.summary && item.summary.toLowerCase().includes(q)) ||
+            (item.thesis && item.thesis.toLowerCase().includes(q)) ||
+            (item.financial_impact && item.financial_impact.toLowerCase().includes(q)) ||
+            (item.competitive_edge && item.competitive_edge.toLowerCase().includes(q)) ||
+            (item.cap_category && item.cap_category.toLowerCase().includes(q));
+        }
+        return true;
+      });
 
       document.getElementById('smallCapCount').textContent = `${list.length}개 종목`;
 
       if (list.length === 0) {
-        container.innerHTML = `<div class="col-span-full p-8 rounded-2xl bg-surface-card border border-surface-border text-center text-slate-400 text-sm">해당하는 중소형주가 없습니다.</div>`;
+        container.innerHTML = `<div class="col-span-full p-8 rounded-2xl bg-surface-card border border-surface-border text-center text-slate-400 text-sm">해당하는 조건의 중소형주가 없습니다.</div>`;
         return;
       }
 
@@ -924,43 +1010,119 @@
         const catConfig = catalystConfig[item.catalyst_type] || catalystConfig.THEME;
         const isUp = (item.change_rate || '').includes('+');
         const changeClass = isUp ? 'text-emerald-400 bg-emerald-500/10 border-emerald-500/20' : 'text-rose-400 bg-rose-500/10 border-rose-500/20';
+        const countryFlag = item.country === 'KR' ? '🇰🇷' : '🇺🇸';
 
         return `
-          <div 
-            onclick='openChartModal(${JSON.stringify(item).replace(/'/g, "&apos;")})'
-            class="p-5 rounded-2xl bg-surface-card border border-surface-border hover:border-indigo-500/60 cursor-pointer transition-all space-y-3 group shadow-sm flex flex-col justify-between"
-          >
-            <div class="space-y-2">
+          <div class="p-5 sm:p-6 rounded-2xl bg-surface-card border border-surface-border hover:border-indigo-500/60 transition-all space-y-4 group shadow-sm flex flex-col justify-between">
+            
+            <div class="space-y-3">
+              <!-- Top Row: Flag, Category Badge, Change Rate -->
               <div class="flex items-center justify-between">
-                <span class="text-[11px] px-2 py-0.5 rounded-md font-semibold border ${catConfig.badge}">
-                  ${catConfig.label}
-                </span>
-                <span class="font-mono text-xs font-extrabold px-2 py-0.5 rounded border ${changeClass}">
+                <div class="flex items-center space-x-2">
+                  <span class="text-base">${countryFlag}</span>
+                  <span class="text-[11px] px-2.5 py-0.5 rounded-md font-semibold border ${catConfig.badge}">
+                    ${catConfig.label}
+                  </span>
+                  <span class="text-[11px] text-slate-400 bg-slate-800/80 px-2.5 py-0.5 rounded border border-slate-700/60 font-medium">
+                    ${item.cap_category || item.market}
+                  </span>
+                </div>
+                <span class="font-mono text-xs font-extrabold px-2.5 py-0.5 rounded border ${changeClass}">
                   ${item.change_rate || '변동'}
                 </span>
               </div>
 
-              <div class="flex items-baseline space-x-2 pt-1">
-                <span class="font-extrabold text-base text-white group-hover:text-indigo-300 transition-colors">${item.name}</span>
-                <span class="font-mono text-xs text-indigo-400 font-bold">${item.symbol}</span>
-                <span class="text-[11px] text-slate-400">· ${item.cap_category || item.market}</span>
+              <!-- Name & Symbol Header -->
+              <div class="flex items-center justify-between border-b border-surface-border/50 pb-2.5">
+                <div class="flex items-baseline space-x-2.5">
+                  <span class="font-extrabold text-lg text-white group-hover:text-indigo-300 transition-colors">${item.name}</span>
+                  <span class="font-mono text-xs text-indigo-400 font-bold bg-indigo-500/10 px-2 py-0.5 rounded">${item.symbol}</span>
+                </div>
+                <button 
+                  onclick='openChartModal(${JSON.stringify(item).replace(/'/g, "&apos;")})'
+                  class="flex items-center space-x-1.5 text-xs text-indigo-400 hover:text-indigo-300 font-bold px-3 py-1 rounded-lg bg-indigo-500/10 hover:bg-indigo-500/20 border border-indigo-500/30 transition-all"
+                >
+                  <i data-lucide="line-chart" class="w-3.5 h-3.5"></i>
+                  <span>차트 분석</span>
+                </button>
               </div>
 
-              <h4 class="text-xs font-bold text-slate-100 leading-snug">
-                ${item.title}
-              </h4>
-              <p class="text-xs text-slate-300 leading-relaxed line-clamp-3">
-                ${item.summary}
-              </p>
+              <!-- Headline Title & Context -->
+              <div class="space-y-1">
+                <h4 class="text-sm font-bold text-slate-100 leading-snug">
+                  ${item.title}
+                </h4>
+                <p class="text-xs text-slate-300 leading-relaxed">
+                  ${item.summary}
+                </p>
+              </div>
+
+              <!-- 4-Stage Logical Breakdown Box -->
+              <div class="space-y-2 pt-1">
+                ${item.thesis ? `
+                  <div class="p-3 rounded-xl bg-slate-900/80 border border-indigo-500/25 space-y-1">
+                    <div class="text-[11px] font-bold text-indigo-300 flex items-center space-x-1.5">
+                      <i data-lucide="lightbulb" class="w-3.5 h-3.5 text-amber-400 shrink-0"></i>
+                      <span>핵심 투자 논리 & 촉매 (Thesis):</span>
+                    </div>
+                    <p class="text-xs text-slate-300 leading-relaxed pl-5">
+                      ${item.thesis}
+                    </p>
+                  </div>
+                ` : ''}
+
+                ${item.financial_impact ? `
+                  <div class="p-3 rounded-xl bg-slate-900/80 border border-emerald-500/25 space-y-1">
+                    <div class="text-[11px] font-bold text-emerald-300 flex items-center space-x-1.5">
+                      <i data-lucide="trending-up" class="w-3.5 h-3.5 text-emerald-400 shrink-0"></i>
+                      <span>실적 & 마진 파급 경로 (Financial Impact):</span>
+                    </div>
+                    <p class="text-xs text-slate-300 leading-relaxed pl-5">
+                      ${item.financial_impact}
+                    </p>
+                  </div>
+                ` : ''}
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
+                  ${item.competitive_edge ? `
+                    <div class="p-2.5 rounded-xl bg-slate-900/60 border border-cyan-500/20 space-y-1">
+                      <div class="text-[10px] font-bold text-cyan-300 flex items-center space-x-1">
+                        <i data-lucide="shield" class="w-3 h-3 text-cyan-400 shrink-0"></i>
+                        <span>기술적 해자:</span>
+                      </div>
+                      <p class="text-[11px] text-slate-300 leading-relaxed">
+                        ${item.competitive_edge}
+                      </p>
+                    </div>
+                  ` : ''}
+
+                  ${item.risks_to_watch ? `
+                    <div class="p-2.5 rounded-xl bg-slate-900/60 border border-amber-500/20 space-y-1">
+                      <div class="text-[10px] font-bold text-amber-300 flex items-center space-x-1">
+                        <i data-lucide="alert-triangle" class="w-3 h-3 text-amber-400 shrink-0"></i>
+                        <span>핵심 리스크 체크:</span>
+                      </div>
+                      <p class="text-[11px] text-slate-300 leading-relaxed">
+                        ${item.risks_to_watch}
+                      </p>
+                    </div>
+                  ` : ''}
+                </div>
+              </div>
             </div>
 
-            <div class="pt-3 border-t border-surface-border/50 flex items-center justify-between text-[11px] text-slate-400">
-              <span class="truncate max-w-[200px] text-slate-400 font-medium">💡 ${item.reason || '개별 모멘텀 부각'}</span>
-              <span class="text-indigo-400 group-hover:translate-x-1 transition-transform font-bold flex items-center space-x-0.5">
-                <span>차트</span>
+            <!-- Footer: Quick Action -->
+            <div class="pt-3 border-t border-surface-border/50 flex items-center justify-between text-[11px]">
+              <span class="text-slate-400 font-medium truncate max-w-[280px]">💡 ${item.thesis || item.reason || item.title}</span>
+              <button 
+                onclick='openChartModal(${JSON.stringify(item).replace(/'/g, "&apos;")})'
+                class="text-indigo-400 hover:text-indigo-300 font-bold flex items-center space-x-0.5 group-hover:translate-x-0.5 transition-transform shrink-0"
+              >
+                <span>상세 차트 열기</span>
                 <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
-              </span>
+              </button>
             </div>
+
           </div>
         `;
       }).join('');
