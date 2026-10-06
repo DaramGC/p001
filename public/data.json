@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-06T05:10:02.963157+00:00",
+  "updated_at": "2026-10-06T12:08:45.897184+00:00",
   "macro_indicators": [
     {
       "name": "코스피",
@@ -70,9 +70,9 @@
         {
           "symbol": "000660",
           "name": "SK하이닉스",
-          "change": "-3.07%",
+          "change": "-3.10%",
           "role": "HBM3E 글로벌 독점 공급",
-          "current_price": "1,784,500"
+          "current_price": "1,784,000"
         },
         {
           "symbol": "NVDA",
@@ -84,9 +84,9 @@
         {
           "symbol": "042700",
           "name": "한미반도체",
-          "change": "+1.47%",
+          "change": "+2.57%",
           "role": "듀얼 TC 본더 장비 독점",
-          "current_price": "276,000"
+          "current_price": "279,000"
         }
       ]
     },
@@ -101,16 +101,16 @@
         {
           "symbol": "267260",
           "name": "HD현대일렉트릭",
-          "change": "+0.44%",
+          "change": "+1.18%",
           "role": "북미 초고압 변압기 최대 수혜",
-          "current_price": "681,000"
+          "current_price": "686,000"
         },
         {
           "symbol": "010120",
           "name": "LS ELECTRIC",
-          "change": "+2.15%",
+          "change": "+3.82%",
           "role": "배전반 및 IDC 전력 솔루션",
-          "current_price": "214,000"
+          "current_price": "217,500"
         },
         {
           "symbol": "GE",
@@ -132,16 +132,16 @@
         {
           "symbol": "196170",
           "name": "알테오젠",
-          "change": "-0.19%",
+          "change": "+1.73%",
           "role": "SC 제형 변경 플랫폼 독점력",
-          "current_price": "259,000"
+          "current_price": "264,000"
         },
         {
           "symbol": "141080",
           "name": "레고켐바이오",
-          "change": "+1.46%",
+          "change": "+2.67%",
           "role": "차세대 ADC 링커 기술수출",
-          "current_price": "83,500"
+          "current_price": "84,500"
         },
         {
           "symbol": "LLY",
@@ -163,23 +163,23 @@
         {
           "symbol": "105560",
           "name": "KB금융",
-          "change": "-0.12%",
+          "change": "+0.00%",
           "role": "주주환원율 40% 도달 선언",
-          "current_price": "167,200"
+          "current_price": "167,400"
         },
         {
           "symbol": "138040",
           "name": "메리츠금융지주",
-          "change": "+0.58%",
+          "change": "+0.54%",
           "role": "주주환원 모범 지주사",
-          "current_price": "129,550"
+          "current_price": "129,500"
         },
         {
           "symbol": "005380",
           "name": "현대차",
-          "change": "+0.22%",
+          "change": "+0.58%",
           "role": "인도 법인 상장 배당 재원",
-          "current_price": "347,250"
+          "current_price": "348,500"
         }
       ]
     },
@@ -194,16 +194,16 @@
         {
           "symbol": "012450",
           "name": "한화에어로스페이스",
-          "change": "-4.10%",
+          "change": "-3.36%",
           "role": "K9/천무 유럽 수주 주도",
-          "current_price": "1,028,000"
+          "current_price": "1,036,000"
         },
         {
           "symbol": "079550",
           "name": "LIG넥스원",
-          "change": "-7.35%",
+          "change": "-6.56%",
           "role": "유도무기 비궁/천궁 수출",
-          "current_price": "706,000"
+          "current_price": "712,000"
         }
       ]
     },
@@ -218,9 +218,9 @@
         {
           "symbol": "373220",
           "name": "LG에너지솔루션",
-          "change": "+4.85%",
+          "change": "+4.72%",
           "role": "북미 ESS 전용 라인 전환",
-          "current_price": "389,000"
+          "current_price": "388,500"
         },
         {
           "symbol": "TSLA",
@@ -273,9 +273,9 @@
         {
           "symbol": "454910",
           "name": "두산로보틱스",
-          "change": "+2.05%",
+          "change": "+3.56%",
           "role": "협동로봇 라인업 확장",
-          "current_price": "74,600"
+          "current_price": "75,700"
         },
         {
           "symbol": "277810",
@@ -291,7 +291,7 @@
     {
       "id": "cal-01",
       "date": "2026-10-10",
-      "d_day": "D-5",
+      "d_day": "D-4",
       "country": "US",
       "event_name": "미국 9월 소비자물가지수 (CPI) 발표",
       "importance": "HIGH",
@@ -301,7 +301,7 @@
     {
       "id": "cal-02",
       "date": "2026-10-11",
-      "d_day": "D-6",
+      "d_day": "D-5",
       "country": "KR",
       "event_name": "한국은행 금융통화위원회 기준금리 결정",
       "importance": "HIGH",
@@ -311,7 +311,7 @@
     {
       "id": "cal-03",
       "date": "2026-10-16",
-      "d_day": "D-11",
+      "d_day": "D-10",
       "country": "US",
       "event_name": "미국 9월 소매판매 (Retail Sales)",
       "importance": "MEDIUM",
@@ -321,7 +321,7 @@
     {
       "id": "cal-04",
       "date": "2026-11-04",
-      "d_day": "D-30",
+      "d_day": "D-29",
       "country": "US",
       "event_name": "미국 연준 FOMC 정례회의 기준금리 결정",
       "importance": "HIGH",
@@ -339,12 +339,12 @@
       "catalyst_type": "TECH_ORDER",
       "title": "글로벌 2나노 GAA 선단 파운드리향 차세대 ALD 증착 장비 독점 공급 개시",
       "summary": "반도체 회로 미세화 한계로 게이트올어라운드(GAA) 구조가 필수가 되면서 박막을 원자 단위로 정밀 도포하는 ALD 장비 수요가 폭증하고 있습니다.",
-      "change_rate": "+2.17%",
+      "change_rate": "+3.26%",
       "thesis": "기존 CVD 공정으로는 불가능한 2나노 나노시트 단차 피복성을 동사 원자층증착(ALD) 기술이 단독 충족하여 해외 파운드리향 납품 시작.",
       "financial_impact": "장비당 판매단가(ASP)가 전세대 대비 약 25% 상승하였으며, 2026년 하반기 파운드리 신규 라인 가동과 함께 전사 영업이익률 18%대 복귀 전망.",
       "competitive_edge": "국내 최대 반도체 전공정 포트폴리오 보유 및 고객사 2나노 R&D 단계부터 공동 개발한 독점 특허 해자.",
       "risks_to_watch": "글로벌 선단 파운드리 업체의 2나노 양산 일정 지연 시 장비 입고 스케줄 순연 가능성.",
-      "current_price": "141,200"
+      "current_price": "142,700"
     },
     {
       "symbol": "141080",
@@ -355,12 +355,12 @@
       "catalyst_type": "BIO_PIPELINE",
       "title": "차세대 ADC(항체약물접합체) 플랫폼 얀센향 글로벌 임상 1상 진입 및 마일스톤 수령",
       "summary": "동사의 독자적 'ConjuALL' 링커 플랫폼이 적용된 파이프라인의 글로벌 임상이 가속화되며 단계별 마일스톤 유입이 가시화되고 있습니다.",
-      "change_rate": "+1.46%",
+      "change_rate": "+2.67%",
       "thesis": "표적 암세포에서만 약물이 선택적으로 방출되는 안전성 높은 링커 기술을 인정받아 글로벌 빅파마 대상 누적 8조원대 기술수출 계약 체결 완료.",
       "financial_impact": "2026년 내 약 450억원 규모의 임상 진척 마일스톤이 순차적으로 계상되어 별도 기준 흑자 기조 안착 예상.",
       "competitive_edge": "혈중 안정성이 뛰어난 링커와 독자 톡신(Payload) 조합으로 글로벌 경쟁사(시젠, 다이이찌산쿄) 대비 독성 부작용 최소화 입증.",
       "risks_to_watch": "글로벌 경쟁 ADC 후보물질들의 임상 데이터 발표에 따른 단기 섹터 센티먼트 변동성.",
-      "current_price": "83,500"
+      "current_price": "84,500"
     },
     {
       "symbol": "403870",
@@ -371,12 +371,12 @@
       "catalyst_type": "TECH_PATENT",
       "title": "HBM 및 첨단 로직 공정 필수 고압 수소 어닐링 장비 독점력 지속",
       "summary": "반도체 계면의 트랜지스터 결함을 100% 고압 수소 환경에서 열처리하는 전공정 장비 수요가 미세화 진행에 따라 필수 불가결해지고 있습니다.",
-      "change_rate": "+5.34%",
+      "change_rate": "+6.26%",
       "thesis": "초미세 공정일수록 게이트 절연막 계면 결함이 주 결함 요인이 되며, 저온(450도 이하) 고압 수소 어닐링을 구현할 수 있는 유일한 장비사.",
       "financial_impact": "영업이익률이 무려 52%에 달하는 초고수익 구조를 지속하며, 메모리 제조사들의 1b D램 및 첨단 HBM 라인 증설에 따라 2026년 사상 최대 실적 경신 전망.",
       "competitive_edge": "고압 가스 안전 인증 및 원천 특허를 통한 강력한 진입 장벽으로 대체재 부재.",
       "risks_to_watch": "후발 장비사들의 특허 무효화 소송 결과 및 양산 평가 진척 여부 지속 모니터링 필요.",
-      "current_price": "69,000"
+      "current_price": "69,600"
     },
     {
       "symbol": "095610",
@@ -387,12 +387,12 @@
       "catalyst_type": "SUPPLY_CONTRACT",
       "title": "메모리 제조사 레거시 팹 가동률 정상화 및 첨단 박막 증착 장비 수주 턴어라운드",
       "summary": "국내 메모리 양사의 감산 종료와 선단 공정 전환 투자가 동시에 집행되면서 건식 식각 및 박막 장비 납품이 급격한 회복세에 접어들었습니다.",
-      "change_rate": "-1.86%",
+      "change_rate": "+0.34%",
       "thesis": "낸드 적층 단수 증가 및 D램 커패시터 증착 공정에 필수적인 PECVD/Gas Etch 장비의 고객사 발주가 전분기 대비 40% 이상 반등.",
       "financial_impact": "2025년 마진 압박 구간을 벗어나 2026년 분기별 매출 800억원 이상, 영업이익률 두 자릿수 턴어라운드 확실시.",
       "competitive_edge": "삼성전자 및 SK하이닉스 양사 모두를 주요 고객사로 확보하여 CAPEX 재개 시 가장 빠른 실적 레버리지 발생.",
       "risks_to_watch": "낸드 플래시 메모리 시장의 완제품 가격 회복 속도 및 감산 정책 변화.",
-      "current_price": "174,100"
+      "current_price": "178,000"
     },
     {
       "symbol": "084370",
@@ -403,12 +403,12 @@
       "catalyst_type": "TECH_ORDER",
       "title": "차세대 1b D램 및 3D 낸드용 LPCVD 저압 화학증착 장비 수주 급증",
       "summary": "박막의 균일도와 스텝 커버리지가 탁월한 저압 화학증착 장비의 글로벌 탑티어 공급 지위를 강화하고 있습니다.",
-      "change_rate": "+3.05%",
+      "change_rate": "+2.32%",
       "thesis": "외산 장비(도쿄일렉트론, 램리서치)가 독점하던 질화막/산화막 증착 공정을 성공적으로 국산화하여 주요 메모리사 채택률 급상승.",
       "financial_impact": "차세대 선단 공정 침투율 확대로 연간 매출 4,000억원 및 영업이익 800억원대 도달 가시화.",
       "competitive_edge": "싱글 웨이퍼 LPCVD 분야에서 세계 최고 수준의 박막 제어 기술력 보유.",
       "risks_to_watch": "주요 고객사의 설비투자 집행 시기 이연에 따른 분기 실적 변동성.",
-      "current_price": "182,200"
+      "current_price": "180,900"
     },
     {
       "symbol": "397030",
@@ -419,12 +419,12 @@
       "catalyst_type": "BIO_PIPELINE",
       "title": "지속형 알부민 바인더 플랫폼 'SAFA' 기반 자가면역질환 신약 기술수출 성과 가시화",
       "summary": "약물의 체내 반감기를 획기적으로 늘려주는 SAFA 플랫폼을 기반으로 다국적 제약사향 공동연구 및 마일스톤 계약이 순항 중입니다.",
-      "change_rate": "-5.64%",
+      "change_rate": "-5.88%",
       "thesis": "인체 알부민과 결합하여 투약 주기를 주 1회에서 월 1회로 개선하는 플랫폼의 임상적 유효성이 확인되며 글로벌 L/O 협상 유리.",
       "financial_impact": "체결된 기술수출 계약금 및 후속 마일스톤 유입으로 바이오텍 특유의 자금 조달 리스크 완전 해소.",
       "competitive_edge": "항체 단편에 알부민 바인더를 융합하는 독창적 플랫폼으로 다양한 타깃 단백질에 무제한 확장 가능.",
       "risks_to_watch": "파트너사의 글로벌 임상 2상 진입 일정 및 데이터 발표 결과.",
-      "current_price": "16,060"
+      "current_price": "16,020"
     },
     {
       "symbol": "437730",
@@ -435,12 +435,12 @@
       "catalyst_type": "TECH_ORDER",
       "title": "모터·감속기·제어기 일체형 스마트 액추에이터 독점 공급 및 방산 드론 납품 확대",
       "summary": "로봇 관절 및 방산 무인화 장비의 핵심인 '3-in-1 일체형 액추에이터'의 대량 양산 능력을 확보하여 고객사 러브콜이 이어지고 있습니다.",
-      "change_rate": "+0.19%",
+      "change_rate": "+0.58%",
       "thesis": "개별 부품을 조립하던 기존 방식 대비 부피 30% 축소, 전력 효율 20% 향상시킨 일체형 구동 모듈로 로봇·방산 납품 확정.",
       "financial_impact": "현대차그룹 로봇 라인업 및 국내 방산 대기업향 납품 시작으로 2026년 수주잔고 1조원 돌파 전망.",
       "competitive_edge": "소프트웨어 제어 알고리즘과 정밀 하드웨어 모터 설계를 단일 패키지로 내재화한 국내 유일 기업.",
       "risks_to_watch": "원자재(희토류 영구자석 등) 가격 급등에 따른 원가율 상승 가능성.",
-      "current_price": "51,900"
+      "current_price": "52,100"
     },
     {
       "symbol": "SMCI",
@@ -530,7 +530,7 @@
       "lifecycle": "SURGING",
       "time_horizon": "MID_LONG_TERM",
       "priced_in_risk": "MEDIUM",
-      "detected_at": "2026-10-05 16:30",
+      "detected_at": "2026-10-06 21:00",
       "title": "AI 반도체 수요 확장 및 차세대 HBM 패키징 공급 경쟁",
       "summary": "글로벌 빅테크의 AI 데이터센터 설비투자(CAPEX) 확대 지속에 힘입어 차세대 가속기 및 HBM3E/HBM4 공급망 수혜 기업으로 자금 유입이 집중되고 있습니다.",
       "deep_dive": {
@@ -577,12 +577,12 @@
         {
           "title": "Big Tech AI Capex Surge Fuels Global Semiconductor Rally",
           "url": "https://www.cnbc.com",
-          "published_at": "2026-10-05 15:45"
+          "published_at": "2026-10-06 18:30"
         },
         {
           "title": "국내 반도체 대장주, 글로벌 AI 모멘텀 힘입어 강세 지속",
           "url": "https://news.google.com",
-          "published_at": "2026-10-05 16:10"
+          "published_at": "2026-10-06 18:30"
         }
       ]
     },
@@ -592,7 +592,7 @@
       "lifecycle": "MATURE",
       "time_horizon": "MID_LONG_TERM",
       "priced_in_risk": "HIGH",
-      "detected_at": "2026-10-05 14:20",
+      "detected_at": "2026-10-06 21:00",
       "title": "미국 기준금리 정책 경로 및 국채 금리 안정화 기대",
       "summary": "연준(Fed)의 완화적 통화정책 기조와 물가 지표 안정세가 지속되며, 미국 장기채 금리 진정과 함께 빅테크 성장주 밸류에이션 부담이 점진적으로 완화되고 있습니다.",
       "deep_dive": {
@@ -625,7 +625,7 @@
         {
           "title": "Fed rate trajectory in focus as inflation metrics soften",
           "url": "https://www.reuters.com",
-          "published_at": "2026-10-05 13:50"
+          "published_at": "2026-10-06 18:30"
         }
       ]
     },
@@ -635,7 +635,7 @@
       "lifecycle": "SURGING",
       "time_horizon": "MID_LONG_TERM",
       "priced_in_risk": "LOW",
-      "detected_at": "2026-10-05 15:10",
+      "detected_at": "2026-10-06 21:00",
       "title": "국내 밸류업 프로그램 2차 랠리 및 배당·자사주 소각 본격화",
       "summary": "한국거래소 기업 밸류업 가이드라인 강화 및 상장사들의 자발적 주주환원 공시가 확대되면서 저PBR 지주사와 금융주로 기관 및 외국인 자금 매수세가 유입되고 있습니다.",
       "deep_dive": {
@@ -668,7 +668,7 @@
         {
           "title": "밸류업 지수 리밸런싱 앞두고 금융·자동차 저PBR주 매수세 집중",
           "url": "https://news.google.com",
-          "published_at": "2026-10-05 14:40"
+          "published_at": "2026-10-06 18:30"
         }
       ]
     },
@@ -678,7 +678,7 @@
       "lifecycle": "NEW",
       "time_horizon": "MID_LONG_TERM",
       "priced_in_risk": "LOW",
-      "detected_at": "2026-10-05 16:50",
+      "detected_at": "2026-10-06 21:00",
       "title": "글로벌 AI 데이터센터 전력망 슈퍼사이클 및 K-변압기 수주 호황",
       "summary": "AI 연산 폭증으로 미국 전력망 용량이 한계에 도달하면서 초고압 변압기와 전력 기자재 공급 부족이 심화되어 국내외 전력 인프라 기업들이 사상 최대 수주잔고를 기록 중입니다.",
       "deep_dive": {
@@ -718,14 +718,14 @@
         {
           "title": "Global power grid supercycle drives electrification giants to record backlogs",
           "url": "https://www.bloomberg.com",
-          "published_at": "2026-10-05 16:20"
+          "published_at": "2026-10-06 18:30"
         }
       ]
     }
   ],
   "market_summary": {
-    "us_status": "빅테크 실적 및 CPI 발표 앞둔 경계감 속 기술주 중심 선별 랠리",
-    "kr_status": "금통위 피벗 기대감과 HBM·소부장 중심 코스닥·코스피 동반 매수세"
+    "us_status": "나스닥(+1.05%)·S&P 500 강세 지속 속 AI 빅테크 및 반도체 중심 상승 랠리",
+    "kr_status": "코스닥(+2.27%) 기술주 급반등 및 HBM·전력인프라 수혜주 외국인·기관 동반 매수세"
   },
   "trending_tickers": [
     {
@@ -740,9 +740,9 @@
       "symbol": "000660",
       "name": "SK하이닉스",
       "market": "KRX",
-      "change_rate": "-3.07%",
+      "change_rate": "-3.10%",
       "why_trending": "HBM 수요 견인으로 분기 실적 서프라이즈 및 최고 수익성",
-      "current_price": "1,784,500"
+      "current_price": "1,784,000"
     },
     {
       "symbol": "NVDA",
@@ -756,9 +756,9 @@
       "symbol": "267260",
       "name": "HD현대일렉트릭",
       "market": "KRX",
-      "change_rate": "+0.44%",
+      "change_rate": "+1.18%",
       "why_trending": "북미 초고압 변압기 수주 지속 및 전력 슈퍼사이클 모멘텀",
-      "current_price": "681,000"
+      "current_price": "686,000"
     },
     {
       "symbol": "PLTR",
@@ -772,9 +772,9 @@
       "symbol": "042700",
       "name": "한미반도체",
       "market": "KRX",
-      "change_rate": "+1.47%",
+      "change_rate": "+2.57%",
       "why_trending": "HBM용 듀얼 TC 본더 장비 글로벌 출하 증가 및 독점적 해자",
-      "current_price": "276,000"
+      "current_price": "279,000"
     }
   ]
 }
