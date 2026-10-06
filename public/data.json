@@ -1,18 +1,18 @@
 {
-  "updated_at": "2026-10-06T12:08:45.897184+00:00",
+  "updated_at": "2026-10-06T12:10:21.389642+00:00",
   "macro_indicators": [
     {
       "name": "코스피",
       "display": "KOSPI",
-      "price": "6,898.38",
-      "change": "-1.22%",
+      "price": "6,941.39",
+      "change": "-0.89%",
       "is_up": false
     },
     {
       "name": "코스닥",
       "display": "KOSDAQ",
-      "price": "912.02",
-      "change": "+2.27%",
+      "price": "919.92",
+      "change": "+2.98%",
       "is_up": true
     },
     {
@@ -32,9 +32,9 @@
     {
       "name": "원/달러 환율",
       "display": "USD/KRW",
-      "price": "1,342.28",
-      "change": "+0.07%",
-      "is_up": true
+      "price": "1,338.88",
+      "change": "-0.19%",
+      "is_up": false
     },
     {
       "name": "미국 10년물 국채",
@@ -46,16 +46,58 @@
     {
       "name": "변동성(VIX)",
       "display": "VIX",
-      "price": "15.52",
-      "change": "+1.37%",
-      "is_up": true
+      "price": "15.31",
+      "change": "-1.35%",
+      "is_up": false
     },
     {
       "name": "WTI 유가",
       "display": "WTI Oil",
-      "price": "$89.89",
-      "change": "+0.32%",
-      "is_up": true
+      "price": "$87.18",
+      "change": "-2.86%",
+      "is_up": false
+    }
+  ],
+  "economic_calendar": [
+    {
+      "id": "cal-01",
+      "date": "2026-10-10",
+      "d_day": "D-4",
+      "country": "US",
+      "event_name": "미국 9월 소비자물가지수 (CPI) 발표",
+      "importance": "HIGH",
+      "forecast_vs_previous": "예상치: 전년비 +2.3% (전월치: +2.5%)",
+      "market_impact": "근원 CPI의 둔화 지속 여부가 연준의 11월 FOMC 추가 25bp/50bp 금리 인하 강도를 결정짓는 분수령이 됩니다."
+    },
+    {
+      "id": "cal-02",
+      "date": "2026-10-11",
+      "d_day": "D-5",
+      "country": "KR",
+      "event_name": "한국은행 금융통화위원회 기준금리 결정",
+      "importance": "HIGH",
+      "forecast_vs_previous": "현행: 3.50% ➔ 기준금리 25bp 인하 가능성 고조",
+      "market_impact": "가계부채 추이와 수도권 집값 안정을 저울질하며 국내 통화정책 완화 피벗(Pivot) 본격 개시 여부 주목."
+    },
+    {
+      "id": "cal-03",
+      "date": "2026-10-16",
+      "d_day": "D-10",
+      "country": "US",
+      "event_name": "미국 9월 소매판매 (Retail Sales)",
+      "importance": "MEDIUM",
+      "forecast_vs_previous": "예상치: 전월비 +0.3% (전월치: +0.1%)",
+      "market_impact": "미국 GDP의 70%를 차지하는 소비 건전성을 검증하여 경제 '노랜딩(No Landing)' 또는 연착륙 시나리오를 지지할지 판단."
+    },
+    {
+      "id": "cal-04",
+      "date": "2026-11-04",
+      "d_day": "D-29",
+      "country": "US",
+      "event_name": "미국 연준 FOMC 정례회의 기준금리 결정",
+      "importance": "HIGH",
+      "forecast_vs_previous": "시장 컨센서스: 25bp 추가 인하 (연 4.50~4.75%)",
+      "market_impact": "점도표와 제롬 파월 의장의 기자회견을 통해 2026년 최종 종착 금리(Terminal Rate) 수준 제시."
     }
   ],
   "sector_trends": [
@@ -287,48 +329,6 @@
       ]
     }
   ],
-  "economic_calendar": [
-    {
-      "id": "cal-01",
-      "date": "2026-10-10",
-      "d_day": "D-4",
-      "country": "US",
-      "event_name": "미국 9월 소비자물가지수 (CPI) 발표",
-      "importance": "HIGH",
-      "forecast_vs_previous": "예상치: 전년비 +2.3% (전월치: +2.5%)",
-      "market_impact": "근원 CPI의 둔화 지속 여부가 연준의 11월 FOMC 추가 25bp/50bp 금리 인하 강도를 결정짓는 분수령이 됩니다."
-    },
-    {
-      "id": "cal-02",
-      "date": "2026-10-11",
-      "d_day": "D-5",
-      "country": "KR",
-      "event_name": "한국은행 금융통화위원회 기준금리 결정",
-      "importance": "HIGH",
-      "forecast_vs_previous": "현행: 3.50% ➔ 기준금리 25bp 인하 가능성 고조",
-      "market_impact": "가계부채 추이와 수도권 집값 안정을 저울질하며 국내 통화정책 완화 피벗(Pivot) 본격 개시 여부 주목."
-    },
-    {
-      "id": "cal-03",
-      "date": "2026-10-16",
-      "d_day": "D-10",
-      "country": "US",
-      "event_name": "미국 9월 소매판매 (Retail Sales)",
-      "importance": "MEDIUM",
-      "forecast_vs_previous": "예상치: 전월비 +0.3% (전월치: +0.1%)",
-      "market_impact": "미국 GDP의 70%를 차지하는 소비 건전성을 검증하여 경제 '노랜딩' 또는 연착륙 시나리오를 지지할지 판단."
-    },
-    {
-      "id": "cal-04",
-      "date": "2026-11-04",
-      "d_day": "D-29",
-      "country": "US",
-      "event_name": "미국 연준 FOMC 정례회의 기준금리 결정",
-      "importance": "HIGH",
-      "forecast_vs_previous": "시장 컨센서스: 25bp 추가 인하 (연 4.50~4.75%)",
-      "market_impact": "점도표와 제롬 파월 의장의 기자회견을 통해 2026년 최종 종착 금리(Terminal Rate) 수준 제시."
-    }
-  ],
   "small_mid_caps": [
     {
       "symbol": "240810",
@@ -518,8 +518,8 @@
       "change_rate": "+0.28%",
       "thesis": "오프그리드(독립형) 전력망 구축을 추진하는 미국 하이퍼스케일러들과 사전 전력 공급 계약(PPA) 체결 추진.",
       "financial_impact": "2027년 첫 상용 원자로 오로라(Aurora) 가동 시 다년간의 장기 전력 판매 매출 수천억 원 확보 가시화.",
-      "competitive_edge": "금속 연료 및 액체 금속 냉각 방식을 통한 초소형화와 페일세이프(자연 냉각) 고유 안전성.",
-      "risks_to_watch": "미국 원자력규제위원회(NRC) 설계 인허가 승인 일정 지연 가능성.",
+      "competitive_edge": "사용후핵연료를 재활용하는 액체금속 고속증식로 기술로 방사성 폐기물 부담을 획기적으로 낮추는 차세대 원전 해자.",
+      "risks_to_watch": "미국 원자력규제위원회(NRC)의 설계 승인 심사 일정 지연 가능성.",
       "current_price": "$35.97"
     }
   ],
@@ -530,7 +530,7 @@
       "lifecycle": "SURGING",
       "time_horizon": "MID_LONG_TERM",
       "priced_in_risk": "MEDIUM",
-      "detected_at": "2026-10-06 21:00",
+      "detected_at": "2026-10-06 12:10",
       "title": "AI 반도체 수요 확장 및 차세대 HBM 패키징 공급 경쟁",
       "summary": "글로벌 빅테크의 AI 데이터센터 설비투자(CAPEX) 확대 지속에 힘입어 차세대 가속기 및 HBM3E/HBM4 공급망 수혜 기업으로 자금 유입이 집중되고 있습니다.",
       "deep_dive": {
@@ -575,14 +575,14 @@
       ],
       "sources": [
         {
-          "title": "Big Tech AI Capex Surge Fuels Global Semiconductor Rally",
-          "url": "https://www.cnbc.com",
-          "published_at": "2026-10-06 18:30"
+          "title": "與 \"대기업, 당초부터 호남 염두\" vs 野 \"기업은 그런 적 없다\"...'호남 반도체' 공방 - v.daum.net",
+          "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9HaXpaaVdRSjJHSlpyN2pSemFXbmh6NDQwWnc0RWtvYjROY0xMN3VJeEc2SElheG5YdGdPeXBvTG5PZm9pVU5aN1hTWW9HRnc?oc=5",
+          "published_at": "2026-10-06 05:00"
         },
         {
-          "title": "국내 반도체 대장주, 글로벌 AI 모멘텀 힘입어 강세 지속",
-          "url": "https://news.google.com",
-          "published_at": "2026-10-06 18:30"
+          "title": "[일본 특징주] 어드밴테스트, AI 반도체 훈풍에 신고가...시총 30조엔 돌파 - 뉴스핌",
+          "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE1PWHk3NjN4V2Y0WUNWaVhybWFGQTdwanFYZk85a0E2dWdFbmpuWmw1ZTJYNE1OYXpjTjFNTXJaeGRvcEZOS244N2syblM4YXhmOUltQlVucXNTWVRK?oc=5",
+          "published_at": "2026-10-06 05:55"
         }
       ]
     },
@@ -592,7 +592,7 @@
       "lifecycle": "MATURE",
       "time_horizon": "MID_LONG_TERM",
       "priced_in_risk": "HIGH",
-      "detected_at": "2026-10-06 21:00",
+      "detected_at": "2026-10-06 12:10",
       "title": "미국 기준금리 정책 경로 및 국채 금리 안정화 기대",
       "summary": "연준(Fed)의 완화적 통화정책 기조와 물가 지표 안정세가 지속되며, 미국 장기채 금리 진정과 함께 빅테크 성장주 밸류에이션 부담이 점진적으로 완화되고 있습니다.",
       "deep_dive": {
@@ -623,9 +623,14 @@
       ],
       "sources": [
         {
-          "title": "Fed rate trajectory in focus as inflation metrics soften",
-          "url": "https://www.reuters.com",
-          "published_at": "2026-10-06 18:30"
+          "title": "[채권-마감] 금리 보합권 혼조…글로벌 채권 약세에도 선방 - 연합인포맥스",
+          "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBDdkxadEtSRmNnTkxoM29sNzc5Y0s3ZGlXYWZpNnRPTjNQQ2hWUjNnVXlremRCZ1dLZzVvZHQzYWp0azRVZzhmYVZzTXN2bXBvaFZla0dMYVVUdnVsVHN0cGc4QTVFLTdndl9jS3MzQ1E?oc=5",
+          "published_at": "2026-10-06 09:52"
+        },
+        {
+          "title": "신협 부실채권 관리체계 강화…“건전성 관리 기대” - KBS 뉴스",
+          "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBIaFF6UExZY0J3dXFodF84YzJSS0liQkFRVmt6NzVVSWdmYUZkWHU3WGh3ZTI3YU5fay1lLV9zZ2RZMlRfMmJLVjgtLXRhRkd1ZUtQdkIxOG55SUE?oc=5",
+          "published_at": "2026-10-06 05:01"
         }
       ]
     },
@@ -635,7 +640,7 @@
       "lifecycle": "SURGING",
       "time_horizon": "MID_LONG_TERM",
       "priced_in_risk": "LOW",
-      "detected_at": "2026-10-06 21:00",
+      "detected_at": "2026-10-06 12:10",
       "title": "국내 밸류업 프로그램 2차 랠리 및 배당·자사주 소각 본격화",
       "summary": "한국거래소 기업 밸류업 가이드라인 강화 및 상장사들의 자발적 주주환원 공시가 확대되면서 저PBR 지주사와 금융주로 기관 및 외국인 자금 매수세가 유입되고 있습니다.",
       "deep_dive": {
@@ -666,9 +671,14 @@
       ],
       "sources": [
         {
-          "title": "밸류업 지수 리밸런싱 앞두고 금융·자동차 저PBR주 매수세 집중",
-          "url": "https://news.google.com",
-          "published_at": "2026-10-06 18:30"
+          "title": "[ET특징주]샌즈랩, 금융권 'AI 해킹' 공포에 상승세 - 전자신문",
+          "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE1GLWl2Q0JfQzJSMjN6TUxtVXBjWkRwcTZYaWExNWV5UGp4aEh3RHd0TS00dXVVSlJvdlB1X0tyUEpDVjYzaTNNOEZnUm5VZw?oc=5",
+          "published_at": "2026-10-06 04:07"
+        },
+        {
+          "title": "[특징주] 금융권 AI 해킹 사태에 보안주 강세…상한가 마감도(종합) - v.daum.net",
+          "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE01UXIwaWNTUnE5NkYtVEJidmktNEJEU3ljb0lTaGx0ZlNKR01ENGF3NVR3RGlvSER1c1N5endrVGw5MnRiUDgyWVhmUVpUVDJxYm1PeXhkMVBWMkUy?oc=5",
+          "published_at": "2026-10-06 06:49"
         }
       ]
     },
@@ -678,12 +688,12 @@
       "lifecycle": "NEW",
       "time_horizon": "MID_LONG_TERM",
       "priced_in_risk": "LOW",
-      "detected_at": "2026-10-06 21:00",
+      "detected_at": "2026-10-06 12:10",
       "title": "글로벌 AI 데이터센터 전력망 슈퍼사이클 및 K-변압기 수주 호황",
       "summary": "AI 연산 폭증으로 미국 전력망 용량이 한계에 도달하면서 초고압 변압기와 전력 기자재 공급 부족이 심화되어 국내외 전력 인프라 기업들이 사상 최대 수주잔고를 기록 중입니다.",
       "deep_dive": {
-        "trigger_context": "미국 전력연구원(EPRI)에 따르면 2030년까지 AI 데이터센터가 미국 전체 전력 소비량의 9%를 차지할 전망입니다. 기존 노후화된 전력망 교체 주기와 맞물려 초고압 변압기 리드타임이 기존 1년에서 4~5년으로 연장되었습니다.",
-        "transmission_mechanism": "변압기 제조 공급자가 극소수에 불과하여 '부르는 게 값'인 공급자 우위 시장이 형성되었습니다. HD현대일렉트릭 등 국내 전력기기 3사는 2029년까지의 생산 슬롯을 사전 완판하며 평균판매단가(ASP)가 연평균 20% 상승, 영업이익률이 20%를 돌파하는 슈퍼사이클을 누리고 있습니다.",
+        "trigger_context": "미국 전력연구원(EPRI)에 따르면 2030년까지 AI 데이터센터가 미국 전체 전력 소비량의 9%를 차지할 전망입니다. 기존 노후화된 전력망 교체 주기와 맞물려 초고압 변압기 리드타임(주문 후 납품까지 걸리는 시간)이 기존 1년에서 4~5년으로 연장되었습니다.",
+        "transmission_mechanism": "변압기 제조 공급자가 극소수(글로벌 5~6개사)에 불과하여 '부르는 게 값'인 공급자 우위 시장이 형성되었습니다. HD현대일렉트릭 등 국내 전력기기 3사는 2029년까지의 생산 슬롯(Slot)을 사전 완판하며 평균판매단가(ASP)가 연평균 20% 상승, 영업이익률이 20%를 돌파하는 슈퍼사이클을 누리고 있습니다.",
         "key_checkpoints": [
           "북미 전력청(AEP, Duke 등)의 장기 송전선로 증설 인허가 속도",
           "빅테크의 SMR(소형원전) 및 데이터센터 자가발전 오프그리드 솔루션 도입 현황",
@@ -718,14 +728,14 @@
         {
           "title": "Global power grid supercycle drives electrification giants to record backlogs",
           "url": "https://www.bloomberg.com",
-          "published_at": "2026-10-06 18:30"
+          "published_at": "2026-10-06 12:10"
         }
       ]
     }
   ],
   "market_summary": {
-    "us_status": "나스닥(+1.05%)·S&P 500 강세 지속 속 AI 빅테크 및 반도체 중심 상승 랠리",
-    "kr_status": "코스닥(+2.27%) 기술주 급반등 및 HBM·전력인프라 수혜주 외국인·기관 동반 매수세"
+    "us_status": "나스닥(+1.05%)·S&P 500(+0.66%) 상승 랠리 속 테크 빅테크 중심 선별 수급",
+    "kr_status": "코스닥(+2.98%)·코스피(-0.89%) 반등 흐름 속 실적 호전주 선별 접근"
   },
   "trending_tickers": [
     {
