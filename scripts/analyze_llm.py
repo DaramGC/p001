@@ -982,17 +982,42 @@ def analyze_market_with_gemini(articles: list, api_key: str, macro_data: list) -
     {schema_instruction}
     """
 
-    logging.info("Gemini 2.5 Flash 초대형 논리전개 심층 분석 요청 중...")
-    response = client.models.generate_content(
-        model="gemini-2.5-flash",
-        contents=prompt,
-        config=types.GenerateContentConfig(
-            response_mime_type="application/json",
-            temperature=0.2
-        )
-    )
+    # 모델 자동 폴백 (gemini-2.0-flash ➔ gemini-1.5-flash ➔ gemini-1.5-pro)
+    models_to_try = ["gemini-2.0-flash", "gemini-1.5-flash", "gemini-1.5-pro"]
+    response = None
+    last_err = None
+
+    for m in models_to_try:
+        try:
+            logging.info(f"Gemini 모델 [{m}] 초대형 논리전개 심층 분석 요청 중...")
+            response = client.models.generate_content(
+                model=m,
+                contents=prompt,
+                config=types.GenerateContentConfig(
+                    response_mime_type="application/json",
+                    temperature=0.2
+                )
+            )
+            if response and response.text:
+                logging.info(f"Gemini 모델 [{m}] 호출 성공!")
+                break
+        except Exception as e:
+            logging.warning(f"Gemini 모델 [{m}] 호출 실패 ({e}), 다음 모델로 폴백...")
+            last_err = e
+
+    if not response or not response.text:
+        raise RuntimeError(f"모든 Gemini 모델 호출 실패: {last_err}")
 
     result_text = response.text.strip()
+    # 마크다운 코드블록 정제
+    if result_text.startswith("```"):
+        lines = result_text.splitlines()
+        if lines[0].startswith("```"):
+            lines = lines[1:]
+        if lines and lines[-1].startswith("```"):
+            lines = lines[:-1]
+        result_text = "\n".join(lines).strip()
+
     parsed_json = json.loads(result_text)
     parsed_json["updated_at"] = datetime.now(timezone.utc).isoformat()
     parsed_json["macro_indicators"] = macro_data
@@ -1018,7 +1043,7 @@ def analyze_market_with_gemini(articles: list, api_key: str, macro_data: list) -
 
 def main():
     OUTPUT_PATH.parent.mkdir(parents=True, exist_ok=True)
-    api_key = os.environ.get("GEMINI_API_KEY", "").strip()
+    api_key = (os.environ.get("GEMINI_API_KEY", "") or os.environ.get("GOOGLE_API_KEY", "")).strip()
 
     # 1. 거시 지표 수집
     macro_data = fetch_macro_indicators()
