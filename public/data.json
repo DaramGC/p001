@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-06T12:10:21.389642+00:00",
+  "updated_at": "2026-10-06T12:14:54.148749+00:00",
   "macro_indicators": [
     {
       "name": "코스피",
@@ -32,8 +32,8 @@
     {
       "name": "원/달러 환율",
       "display": "USD/KRW",
-      "price": "1,338.88",
-      "change": "-0.19%",
+      "price": "1,338.98",
+      "change": "-0.18%",
       "is_up": false
     },
     {
@@ -46,15 +46,15 @@
     {
       "name": "변동성(VIX)",
       "display": "VIX",
-      "price": "15.31",
-      "change": "-1.35%",
+      "price": "15.32",
+      "change": "-1.29%",
       "is_up": false
     },
     {
       "name": "WTI 유가",
       "display": "WTI Oil",
-      "price": "$87.18",
-      "change": "-2.86%",
+      "price": "$87.19",
+      "change": "-2.85%",
       "is_up": false
     }
   ],
@@ -530,7 +530,7 @@
       "lifecycle": "SURGING",
       "time_horizon": "MID_LONG_TERM",
       "priced_in_risk": "MEDIUM",
-      "detected_at": "2026-10-06 12:10",
+      "detected_at": "2026-10-06 12:14",
       "title": "AI 반도체 수요 확장 및 차세대 HBM 패키징 공급 경쟁",
       "summary": "글로벌 빅테크의 AI 데이터센터 설비투자(CAPEX) 확대 지속에 힘입어 차세대 가속기 및 HBM3E/HBM4 공급망 수혜 기업으로 자금 유입이 집중되고 있습니다.",
       "deep_dive": {
@@ -580,9 +580,9 @@
           "published_at": "2026-10-06 05:00"
         },
         {
-          "title": "[일본 특징주] 어드밴테스트, AI 반도체 훈풍에 신고가...시총 30조엔 돌파 - 뉴스핌",
-          "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE1PWHk3NjN4V2Y0WUNWaVhybWFGQTdwanFYZk85a0E2dWdFbmpuWmw1ZTJYNE1OYXpjTjFNTXJaeGRvcEZOS244N2syblM4YXhmOUltQlVucXNTWVRK?oc=5",
-          "published_at": "2026-10-06 05:55"
+          "title": "[마켓뷰] “오늘은 코스닥의 날”…2차전지·반도체·바이오 ‘급등’ - 조선비즈 - Chosunbiz",
+          "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNbFNOVVlsRDMwVWo5MFRqZ1NyWU44LWlwRVVWZ2w5Ujk1Tm1lalE3UG9vQjFfOWY5RXdNbU1TS1UwRmZHTnhvMHdieHk5ZDJjTVVCY2ItU1laNGFRdHlZVmh2bHBkdWFKdlNFU1ZURjQ1VDkzTEhwcFhyZC1HV1luU1g5WUtCUUdm0gGcAUFVX3lxTE5vMDJtX0NHRmNnbG5mdG9EVnJQb3hGdzdSM3phUXpyZ1B1M0JNc0s2T0FSMkptN3hONklMZ1FiQjE3SGxVLWF3eUdrZmk2dGtRZVNucGJ6MWtNdEthUHhBTDA0S1cwZkIwaUs2Z21wNFFUakM0X1pBQzVBNWNCSGs4ejFBSmFlckR6cjFJSHFWU3NwTEZ6S0tyLXpoaQ?oc=5",
+          "published_at": "2026-10-06 07:06"
         }
       ]
     },
@@ -592,7 +592,7 @@
       "lifecycle": "MATURE",
       "time_horizon": "MID_LONG_TERM",
       "priced_in_risk": "HIGH",
-      "detected_at": "2026-10-06 12:10",
+      "detected_at": "2026-10-06 12:14",
       "title": "미국 기준금리 정책 경로 및 국채 금리 안정화 기대",
       "summary": "연준(Fed)의 완화적 통화정책 기조와 물가 지표 안정세가 지속되며, 미국 장기채 금리 진정과 함께 빅테크 성장주 밸류에이션 부담이 점진적으로 완화되고 있습니다.",
       "deep_dive": {
@@ -628,7 +628,7 @@
           "published_at": "2026-10-06 09:52"
         },
         {
-          "title": "신협 부실채권 관리체계 강화…“건전성 관리 기대” - KBS 뉴스",
+          "title": "신협 부실채권 관리체계 강화…“건전성 관리 기대” - news.kbs.co.kr",
           "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBIaFF6UExZY0J3dXFodF84YzJSS0liQkFRVmt6NzVVSWdmYUZkWHU3WGh3ZTI3YU5fay1lLV9zZ2RZMlRfMmJLVjgtLXRhRkd1ZUtQdkIxOG55SUE?oc=5",
           "published_at": "2026-10-06 05:01"
         }
@@ -640,7 +640,7 @@
       "lifecycle": "SURGING",
       "time_horizon": "MID_LONG_TERM",
       "priced_in_risk": "LOW",
-      "detected_at": "2026-10-06 12:10",
+      "detected_at": "2026-10-06 12:14",
       "title": "국내 밸류업 프로그램 2차 랠리 및 배당·자사주 소각 본격화",
       "summary": "한국거래소 기업 밸류업 가이드라인 강화 및 상장사들의 자발적 주주환원 공시가 확대되면서 저PBR 지주사와 금융주로 기관 및 외국인 자금 매수세가 유입되고 있습니다.",
       "deep_dive": {
@@ -688,7 +688,7 @@
       "lifecycle": "NEW",
       "time_horizon": "MID_LONG_TERM",
       "priced_in_risk": "LOW",
-      "detected_at": "2026-10-06 12:10",
+      "detected_at": "2026-10-06 12:14",
       "title": "글로벌 AI 데이터센터 전력망 슈퍼사이클 및 K-변압기 수주 호황",
       "summary": "AI 연산 폭증으로 미국 전력망 용량이 한계에 도달하면서 초고압 변압기와 전력 기자재 공급 부족이 심화되어 국내외 전력 인프라 기업들이 사상 최대 수주잔고를 기록 중입니다.",
       "deep_dive": {
@@ -728,7 +728,7 @@
         {
           "title": "Global power grid supercycle drives electrification giants to record backlogs",
           "url": "https://www.bloomberg.com",
-          "published_at": "2026-10-06 12:10"
+          "published_at": "2026-10-06 12:14"
         }
       ]
     }
