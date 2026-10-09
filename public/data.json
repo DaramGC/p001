@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-08T23:28:47.601892+00:00",
+  "updated_at": "2026-10-09T06:24:17.760808+00:00",
   "macro_indicators": [
     {
       "name": "코스피",
@@ -32,9 +32,9 @@
     {
       "name": "원/달러 환율",
       "display": "USD/KRW",
-      "price": "1,342.53",
-      "change": "+0.00%",
-      "is_up": true
+      "price": "1,339.40",
+      "change": "-0.18%",
+      "is_up": false
     },
     {
       "name": "미국 10년물 국채",
@@ -53,8 +53,8 @@
     {
       "name": "WTI 유가",
       "display": "WTI Oil",
-      "price": "$91.15",
-      "change": "+1.42%",
+      "price": "$90.55",
+      "change": "+0.13%",
       "is_up": true
     }
   ],
@@ -62,7 +62,7 @@
     {
       "id": "cal-01",
       "date": "2026-10-10",
-      "d_day": "D-2",
+      "d_day": "D-1",
       "country": "US",
       "event_name": "미국 9월 소비자물가지수 (CPI) 발표",
       "importance": "HIGH",
@@ -72,7 +72,7 @@
     {
       "id": "cal-02",
       "date": "2026-10-11",
-      "d_day": "D-3",
+      "d_day": "D-2",
       "country": "KR",
       "event_name": "한국은행 금융통화위원회 기준금리 결정",
       "importance": "HIGH",
@@ -82,7 +82,7 @@
     {
       "id": "cal-03",
       "date": "2026-10-16",
-      "d_day": "D-8",
+      "d_day": "D-7",
       "country": "US",
       "event_name": "미국 9월 소매판매 (Retail Sales)",
       "importance": "MEDIUM",
@@ -92,7 +92,7 @@
     {
       "id": "cal-04",
       "date": "2026-11-04",
-      "d_day": "D-27",
+      "d_day": "D-26",
       "country": "US",
       "event_name": "미국 연준 FOMC 정례회의 기준금리 결정",
       "importance": "HIGH",
@@ -530,7 +530,7 @@
       "lifecycle": "SURGING",
       "time_horizon": "MID_LONG_TERM",
       "priced_in_risk": "MEDIUM",
-      "detected_at": "2026-10-08 23:28",
+      "detected_at": "2026-10-09 06:24",
       "title": "AI 반도체 수요 확장 및 차세대 HBM 패키징 공급 경쟁",
       "summary": "글로벌 빅테크의 AI 데이터센터 설비투자(CAPEX) 확대 지속에 힘입어 차세대 가속기 및 HBM3E/HBM4 공급망 수혜 기업으로 자금 유입이 집중되고 있습니다.",
       "deep_dive": {
@@ -592,7 +592,7 @@
       "lifecycle": "MATURE",
       "time_horizon": "MID_LONG_TERM",
       "priced_in_risk": "HIGH",
-      "detected_at": "2026-10-08 23:28",
+      "detected_at": "2026-10-09 06:24",
       "title": "미국 기준금리 정책 경로 및 국채 금리 안정화 기대",
       "summary": "연준(Fed)의 완화적 통화정책 기조와 물가 지표 안정세가 지속되며, 미국 장기채 금리 진정과 함께 빅테크 성장주 밸류에이션 부담이 점진적으로 완화되고 있습니다.",
       "deep_dive": {
@@ -640,7 +640,7 @@
       "lifecycle": "SURGING",
       "time_horizon": "MID_LONG_TERM",
       "priced_in_risk": "LOW",
-      "detected_at": "2026-10-08 23:28",
+      "detected_at": "2026-10-09 06:24",
       "title": "국내 밸류업 프로그램 2차 랠리 및 배당·자사주 소각 본격화",
       "summary": "한국거래소 기업 밸류업 가이드라인 강화 및 상장사들의 자발적 주주환원 공시가 확대되면서 저PBR 지주사와 금융주로 기관 및 외국인 자금 매수세가 유입되고 있습니다.",
       "deep_dive": {
@@ -671,14 +671,14 @@
       ],
       "sources": [
         {
-          "title": "[단독]금융권 해킹범 지목 ‘광둥성 26세’ “난 허난성 편의점 직원…누군가 누명 씌웠다” 주장 - 경향신문",
-          "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBqVENlUk5wYVNCU3N0SkRhc2NjemRkVFFUbFFKQnRHLW8zVUpsVGVYV1V6RksyWTZfQzg0RWRYcjFvY0ZnWTRQdHFHanRDUG0ybnJMSk51enNSd9IBX0FVX3lxTFBSX0V4M19wRS1wdUN5ZVpfSUt5NW44ZGpZaFB5SWtnM3hLLTA2WHlKcndGM1I3ZmhHZHI5Uzd3UTFqOXprUmZValhmN0NpV2VOMVNQRDJoU1VNbmlTcF9j?oc=5",
-          "published_at": "2026-10-08 06:24"
+          "title": "“금융권 해킹범, 중국 26세 추정”…신원 단서 포착? - KBS 뉴스",
+          "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5pOFFITDdIS3luakxpMnJlSW9jVDhwT2hpRXdhM1phZHRwR2YtN2VNQzBGYWpaSllsaXBXbUprNTY3VWxHd09JMkphT0wyeGd5bmljeGZwUlVTYVE?oc=5",
+          "published_at": "2026-10-09 01:15"
         },
         {
-          "title": "파이오링크, 금융권 해킹 대책으로 ‘CTEM·웹방화벽’ 등 제시 - 보안뉴스",
-          "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1OQjJKbjNsUGVUR1RYeTRSOFVtTVdUdXNlUWFEVG5KX0FEbVZTVTJRVURQbEZWcUpqY2p4bXIyMGNpWVZJYzRFbzhBcEdqZmJRb3hRSkpLazJSNmI3blFFWEZnQnhpY0ZYT2Rv?oc=5",
-          "published_at": "2026-10-08 08:00"
+          "title": "[시승기] 강인하지만 부드럽다…현대차 '디 올 뉴 투싼' - 연합뉴스",
+          "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE03SDlCdWMzNEc3N2k0RUo0MTBwQVBubHRoRW1qWDJMWEJkWGN4UE0tenVmMm5BS3pIRHRKWmd0X0t6M3ZodXcyRUZLV0hlZTFzeHR4Vzd3VGJaakHSAWBBVV95cUxQSm0zOWVpNWVHTkdRMjBuUzQ5VFNpb25ITUl1U1N2eS1NaXF2QWRJaTh2S0JzNzJQazFFTUtOeVBZckdmZThzaDdzNk9nbDY5NndmQkRXRDRMZkNjTDVqS3Q?oc=5",
+          "published_at": "2026-10-09 00:00"
         }
       ]
     },
@@ -688,7 +688,7 @@
       "lifecycle": "NEW",
       "time_horizon": "MID_LONG_TERM",
       "priced_in_risk": "LOW",
-      "detected_at": "2026-10-08 23:28",
+      "detected_at": "2026-10-09 06:24",
       "title": "글로벌 AI 데이터센터 전력망 슈퍼사이클 및 K-변압기 수주 호황",
       "summary": "AI 연산 폭증으로 미국 전력망 용량이 한계에 도달하면서 초고압 변압기와 전력 기자재 공급 부족이 심화되어 국내외 전력 인프라 기업들이 사상 최대 수주잔고를 기록 중입니다.",
       "deep_dive": {
@@ -726,9 +726,9 @@
       ],
       "sources": [
         {
-          "title": "'유가 담합 혐의' SK에너지, 가격 투명성 등 4대 방안 발표 - 연합인포맥스",
-          "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE8yMzZrMm5LbUxwRjREVXFPOWlMSEJOYU5qOEhPSUV4M2hLSzA1X0JfRHVBWl82R2d6dGFCazhEYlZERWJ2TVBKcDVvUTFGMnp4RUJjMnJjbGN0TDk4eVA4a3N6Y21iSFhvemRMRlZoY1Q?oc=5",
-          "published_at": "2026-10-08 02:27"
+          "title": "‘기름값 담합 의혹’ SK에너지, 거래 관행 개선책 발표…“국민께 송구” - KBS 뉴스",
+          "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE51X1JBSWl2NVF4cTFIWlpsQkxyaDFOckM3bVhmUGRkeTVHMjA3T0lDWXRMVHRVN3dfWE1sQzBGVTdnb3ZpTVpqZUtIMGRYX2tiUzFkSHpKVmxXLVU?oc=5",
+          "published_at": "2026-10-08 04:25"
         },
         {
           "title": "[특징주] 바이오인프라, 상폐 절차 유예에 상한가 - 바이오타임즈",
