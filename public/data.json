@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-10T12:46:24.054312+00:00",
+  "updated_at": "2026-10-10T21:54:19.103289+00:00",
   "macro_indicators": [
     {
       "name": "코스피",
@@ -530,7 +530,7 @@
       "lifecycle": "SURGING",
       "time_horizon": "MID_LONG_TERM",
       "priced_in_risk": "MEDIUM",
-      "detected_at": "2026-10-10 12:46",
+      "detected_at": "2026-10-10 21:54",
       "title": "AI 반도체 수요 확장 및 차세대 HBM 패키징 공급 경쟁",
       "summary": "글로벌 빅테크의 AI 데이터센터 설비투자(CAPEX) 확대 지속에 힘입어 차세대 가속기 및 HBM3E/HBM4 공급망 수혜 기업으로 자금 유입이 집중되고 있습니다.",
       "deep_dive": {
@@ -575,14 +575,14 @@
       ],
       "sources": [
         {
-          "title": "‘반도체 여제’ 리사수 방한…삼전닉스만 만난게 아니라는데 - 매일경제",
-          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE0yalhnQ0pPY1owOXNsUm9sV3o3WmF6UFZ3NHRjNHhCS1ptU1JURm9EdnVmblg5bmhXQVNBYlU5YlNuMWhYN1dCaVI2bXhoOUQxZC0zLU9R?oc=5",
-          "published_at": "2026-10-10 06:09"
+          "title": "최태원 “광주 반도체공장 조기 건설”…호남 투자 속도 낸다 - 에너지경제신문",
+          "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1uSzI4WWd2N2ZBUmpyZkZPZW9jb2RtUE9ZNzN1dnNLcEpOQXhiamFza0paekMyM1JkbFhKLS1QY1VDb2hCOVd3THpJSURIbVRhNnBUdHM2U1MxS1U?oc=5",
+          "published_at": "2026-10-10 11:51"
         },
         {
-          "title": "최태원 “호남반도체, 가장 빨리 최대한 짓겠다” - KBS 뉴스",
-          "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE8yMnZkUDBFWXZNX3R0VmZkZXZvVEptZlBBejdvY0dIUWN3WEVDYU5BNzJhc0NMMHVNU1J3eWpWN3JQRmJsbUt3b21UZDFQbU1wQXo0RlZzYjdCSUk?oc=5",
-          "published_at": "2026-10-09 22:14"
+          "title": "엔비디아, 알리바바, 루멘텀 - 마켓인",
+          "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE1NYkVLZkZfWHVCbm1Od3FJbWJIdGx4LV9QQ1BqZXU0QWlHMkxIdm12VmZmcnl3cDAxYmpQLXlwZTFONFpsZXhxTU9RazhINkRRZmx2aUJETl9nWkJfaEFiSjdJdlpnM2Naci1ORWxpRmFZdHM?oc=5",
+          "published_at": "2026-10-09 21:58"
         }
       ]
     },
@@ -592,7 +592,7 @@
       "lifecycle": "MATURE",
       "time_horizon": "MID_LONG_TERM",
       "priced_in_risk": "HIGH",
-      "detected_at": "2026-10-10 12:46",
+      "detected_at": "2026-10-10 21:54",
       "title": "미국 기준금리 정책 경로 및 국채 금리 안정화 기대",
       "summary": "연준(Fed)의 완화적 통화정책 기조와 물가 지표 안정세가 지속되며, 미국 장기채 금리 진정과 함께 빅테크 성장주 밸류에이션 부담이 점진적으로 완화되고 있습니다.",
       "deep_dive": {
@@ -623,6 +623,11 @@
       ],
       "sources": [
         {
+          "title": "은행 예금금리 3%대 후반으로 인상… 5대 은행 정기예금 잔액 1천조 원 넘어 - KBC광주방송",
+          "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFBSOTNjMnF3VjhGUlZobmQ4b2V0ZFF2ZXBJc0hRc3V4TlpHbWp2cFJGZEdlSlJNdjA2Mmxibk9KaGpQWlY3OVczcXpIQVg5UnZNaDRxZUhQYTl0V3l5bHBSNWZR?oc=5",
+          "published_at": "2026-10-09 22:20"
+        },
+        {
           "title": "Fed officials see another hike coming, but no sign as to when, minutes show",
           "url": "https://www.cnbc.com/2026/10/07/fed-officials-see-another-hike-coming-but-no-sign-as-to-when-minutes-show.html",
           "published_at": "2026-10-07 18:42"
@@ -635,7 +640,7 @@
       "lifecycle": "SURGING",
       "time_horizon": "MID_LONG_TERM",
       "priced_in_risk": "LOW",
-      "detected_at": "2026-10-10 12:46",
+      "detected_at": "2026-10-10 21:54",
       "title": "국내 밸류업 프로그램 2차 랠리 및 배당·자사주 소각 본격화",
       "summary": "한국거래소 기업 밸류업 가이드라인 강화 및 상장사들의 자발적 주주환원 공시가 확대되면서 저PBR 지주사와 금융주로 기관 및 외국인 자금 매수세가 유입되고 있습니다.",
       "deep_dive": {
@@ -667,8 +672,13 @@
       "sources": [
         {
           "title": "금융권 해킹 수사 연휴도 반납...중국인·조직 연루 정황까지 - YTN",
-          "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE9wSmlrQ3g0YjFhLXJWYXRiTDEwcHBVZVJaNXJqQ1hlMDRsQjZxT2ljV25aeWpvaHlUYkVBQ0ExTzY4M3BnZm5fYmVVZUM5Z1ExdFhDektNSXdxZ2RWb1E?oc=5",
-          "published_at": "2026-10-10 09:09"
+          "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE5OZDZCVUJOY2U1UGt4U0JNOS0yRlg3Nk40WENsRTlydzBXaXkwRXgwMWpmaGdTMXp1UzhrSTlsYWlEemFreXZ4czN1SGtfUVh6TXM2dUN5MEkxOE9DLVE?oc=5",
+          "published_at": "2026-10-10 14:16"
+        },
+        {
+          "title": "전산장애 잦은 금융사 20곳, 정보보호 예산 집행률 70%도 안 돼 - 문화일보",
+          "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1fX2oyUXlZX3hMS01rV2EzbFpqOXFkcjNmT0Y5Rzh1T0tIRnIzM0FzYWJRZlowVWZGN0FjLXhObHVwSFVoa2doX01mZjFibjM0?oc=5",
+          "published_at": "2026-10-10 10:15"
         }
       ]
     },
@@ -678,7 +688,7 @@
       "lifecycle": "NEW",
       "time_horizon": "MID_LONG_TERM",
       "priced_in_risk": "LOW",
-      "detected_at": "2026-10-10 12:46",
+      "detected_at": "2026-10-10 21:54",
       "title": "글로벌 AI 데이터센터 전력망 슈퍼사이클 및 K-변압기 수주 호황",
       "summary": "AI 연산 폭증으로 미국 전력망 용량이 한계에 도달하면서 초고압 변압기와 전력 기자재 공급 부족이 심화되어 국내외 전력 인프라 기업들이 사상 최대 수주잔고를 기록 중입니다.",
       "deep_dive": {
@@ -716,14 +726,14 @@
       ],
       "sources": [
         {
+          "title": "최태원 “광주 반도체공장 조기 건설”…호남 투자 속도 낸다 - 에너지경제신문",
+          "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1uSzI4WWd2N2ZBUmpyZkZPZW9jb2RtUE9ZNzN1dnNLcEpOQXhiamFza0paekMyM1JkbFhKLS1QY1VDb2hCOVd3THpJSURIbVRhNnBUdHM2U1MxS1U?oc=5",
+          "published_at": "2026-10-10 11:51"
+        },
+        {
           "title": "LG에너지솔루션, ESS 수주 확대에 실적 회복 기대…4분기 흑자전환 주목 - 핀포인트뉴스",
           "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE9PN2l0Mm51M1JQV21FOEhqYlVtRHVrQVhoQlBOR1c3cVQ3WnZhSV9iNmZIbW84ZTBVRDlVWmk4eGNBTTRSa3hpYkpZVHFpOE9PRE1OV1A2emtjbW5mWlYyUmczamMzc1NWeFdxN2JnZkxuU2vSAXdBVV95cUxOc3hoYkdyalllMjJ1ak1JbWlPNE9CUTh6OXJhVXp1R19odTJDN1BZRXlQUVAtRmhHMmRvSk1JU1pXVkt5emhzY1huQ1lBR092aUNnR18wU3RScnNFeXZ5OW94VllVeFZaZTBFZU0tOVdWR1FnRnNqYw?oc=5",
           "published_at": "2026-10-10 08:00"
-        },
-        {
-          "title": "가스기술공사, 세네갈 FSU 시운전 수주…아프리카 LNG시장 확대 - 에너지타임즈",
-          "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9CNzhKTU1zZGVKUkhYUkU3bHFOMHNJOEtzY3BjTU5SNl9pM3ZqU2ZFakItSGlSVEU1eFZYQTFyVGRMU3dpUXZoOXQzTVlEREJ1THczRkstZnJtQk9EMjFDbS1QMTRhaFl4dUd4RQ?oc=5",
-          "published_at": "2026-10-10 00:04"
         }
       ]
     }
