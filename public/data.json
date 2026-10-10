@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-09T22:46:41.995270+00:00",
+  "updated_at": "2026-10-10T06:05:20.224444+00:00",
   "macro_indicators": [
     {
       "name": "코스피",
@@ -32,8 +32,8 @@
     {
       "name": "원/달러 환율",
       "display": "USD/KRW",
-      "price": "1,340.02",
-      "change": "-0.13%",
+      "price": "1,340.90",
+      "change": "-0.07%",
       "is_up": false
     },
     {
@@ -53,8 +53,8 @@
     {
       "name": "WTI 유가",
       "display": "WTI Oil",
-      "price": "$91.66",
-      "change": "+1.36%",
+      "price": "$91.85",
+      "change": "+1.57%",
       "is_up": true
     }
   ],
@@ -62,7 +62,7 @@
     {
       "id": "cal-01",
       "date": "2026-10-10",
-      "d_day": "D-1",
+      "d_day": "D-Day",
       "country": "US",
       "event_name": "미국 9월 소비자물가지수 (CPI) 발표",
       "importance": "HIGH",
@@ -72,7 +72,7 @@
     {
       "id": "cal-02",
       "date": "2026-10-11",
-      "d_day": "D-2",
+      "d_day": "D-1",
       "country": "KR",
       "event_name": "한국은행 금융통화위원회 기준금리 결정",
       "importance": "HIGH",
@@ -82,7 +82,7 @@
     {
       "id": "cal-03",
       "date": "2026-10-16",
-      "d_day": "D-7",
+      "d_day": "D-6",
       "country": "US",
       "event_name": "미국 9월 소매판매 (Retail Sales)",
       "importance": "MEDIUM",
@@ -92,7 +92,7 @@
     {
       "id": "cal-04",
       "date": "2026-11-04",
-      "d_day": "D-26",
+      "d_day": "D-25",
       "country": "US",
       "event_name": "미국 연준 FOMC 정례회의 기준금리 결정",
       "importance": "HIGH",
@@ -530,7 +530,7 @@
       "lifecycle": "SURGING",
       "time_horizon": "MID_LONG_TERM",
       "priced_in_risk": "MEDIUM",
-      "detected_at": "2026-10-09 22:46",
+      "detected_at": "2026-10-10 06:05",
       "title": "AI 반도체 수요 확장 및 차세대 HBM 패키징 공급 경쟁",
       "summary": "글로벌 빅테크의 AI 데이터센터 설비투자(CAPEX) 확대 지속에 힘입어 차세대 가속기 및 HBM3E/HBM4 공급망 수혜 기업으로 자금 유입이 집중되고 있습니다.",
       "deep_dive": {
@@ -575,14 +575,14 @@
       ],
       "sources": [
         {
-          "title": "SK최태원 호남반도체 부지 방문 “가장 빠르게 최대한” - KBS 뉴스",
-          "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1paVdQMWFiOFg2a2tjeURDb3AxRmNycVVoc2FWbHRjQ2xUaHZzUHN4UDNNVDZrV0ZTRHpJZE9wWk83a2lPTkJnNzlSeW04czN3eVIwdXFDZGZSRkJUY290M2Fib3pnUQ?oc=5",
-          "published_at": "2026-10-09 12:51"
+          "title": "‘호남 반도체 팹’ 부지 찾은 최태원 “용수·전력 늦어도 착공” - 뉴스토마토",
+          "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBnZFhmeTNIaXJ4dHhwZjVfMkt4b1VXd1I4bEZNeFhoUmxhMHJ5YlhScERKLTM0RkVTVkxVcDVTSDIwT1ZJeUhxNzFwUTRWSjMtdnJrMm5kS2JHTjFRTVlKWQ?oc=5",
+          "published_at": "2026-10-10 01:52"
         },
         {
-          "title": "엔비디아는 사는데 삼전닉스는 판다…외국인의 'AI 차별화' - 연합인포맥스",
-          "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE16Tjduc0hidmNBcWJFSDJha2RsZ2p2eHY5d241V3JNSjFKaDVxLW5sblBjenVMT3plWU1uS0xWNllvZzFFY0F2Y1UxSDJhQVB6NFMxYVp1NThGbnlPcnZBWG0xdzdrcGJlVkdGS3ZvWVM?oc=5",
-          "published_at": "2026-10-08 23:10"
+          "title": "107조 잔치에도 주가 '뚝'…반도체 비틀대는데 이 종목 왜 뛰지?[김근희의 증시랩업] - 머니투데이 - 머니투데이",
+          "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9pMk55NEFfWDg0REFXSXdYVDdSVGttMkk4aXBxX1BJYnpiYlBheXJZRVNnV3BnN0VBdm9OWHN4S2dqLUhaRVlDR2ppQTBOQ1c1R2JTT0h5RUswYms3b2E5b3pVQkN3bm9i0gFuQVVfeXFMUFh2VnR3THZ5akluaUk1bFg3OTVhM0VYbzlhSWpkWmR2enFhaExSY2pjQVpydHpqcllodWFJOG16Zkx2a1cwdDY5TDNlUmtRVTF4Y05xSklpQ25MVnc3VFYxNy1QNVpmMy1yRGQzemc?oc=5",
+          "published_at": "2026-10-10 00:30"
         }
       ]
     },
@@ -592,7 +592,7 @@
       "lifecycle": "MATURE",
       "time_horizon": "MID_LONG_TERM",
       "priced_in_risk": "HIGH",
-      "detected_at": "2026-10-09 22:46",
+      "detected_at": "2026-10-10 06:05",
       "title": "미국 기준금리 정책 경로 및 국채 금리 안정화 기대",
       "summary": "연준(Fed)의 완화적 통화정책 기조와 물가 지표 안정세가 지속되며, 미국 장기채 금리 진정과 함께 빅테크 성장주 밸류에이션 부담이 점진적으로 완화되고 있습니다.",
       "deep_dive": {
@@ -635,7 +635,7 @@
       "lifecycle": "SURGING",
       "time_horizon": "MID_LONG_TERM",
       "priced_in_risk": "LOW",
-      "detected_at": "2026-10-09 22:46",
+      "detected_at": "2026-10-10 06:05",
       "title": "국내 밸류업 프로그램 2차 랠리 및 배당·자사주 소각 본격화",
       "summary": "한국거래소 기업 밸류업 가이드라인 강화 및 상장사들의 자발적 주주환원 공시가 확대되면서 저PBR 지주사와 금융주로 기관 및 외국인 자금 매수세가 유입되고 있습니다.",
       "deep_dive": {
@@ -666,9 +666,9 @@
       ],
       "sources": [
         {
-          "title": "[단독] 금융권 해킹한 '아르텍스' 그건, 빙산의 일각이었다 - 매일경제",
-          "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBPd2pLTTVMNlBCSEdELTRldmZ2Z0hJaFA4UnFwb1MzQk10ZzRCQ251UVVJcFJpVGtDNi03aGp3SzBXNGlMbXk3RF9HOG5NUmFHc2c?oc=5",
-          "published_at": "2026-10-09 08:32"
+          "title": "한국 금융권 노린 해커, 중국 디도스 대행 조직 배후 정황 - MBC 뉴스",
+          "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE04RHlYNjZrMWJlNEtBeWlTNE9PV1FkdkcyWXBMNGhuTkV6RkRxU29ZMEpwZF9KZGhFajRBb0dzR2djVFJKRFN5SjhxejNRc2d3UnJhbHhPQ0szcnE5dnAtY3p4aFotTEpVUk1XOXpzZkJOOU5j0gF0QVVfeXFMTWZjSWpfUTZzYmxzelJjUDB1b1l0UXpyMVZHbFduUEZSYXRLTlR5VWdHbG9aSWFmYmhKN0pualZmdklDRXYtOHNPZjVWbUhvaUktZzBmR1EtZXVOWXFFbGp3ektJaVNPc2NBQ3ZyNHphX3Z6Z2c?oc=5",
+          "published_at": "2026-10-10 01:27"
         }
       ]
     },
@@ -678,7 +678,7 @@
       "lifecycle": "NEW",
       "time_horizon": "MID_LONG_TERM",
       "priced_in_risk": "LOW",
-      "detected_at": "2026-10-09 22:46",
+      "detected_at": "2026-10-10 06:05",
       "title": "글로벌 AI 데이터센터 전력망 슈퍼사이클 및 K-변압기 수주 호황",
       "summary": "AI 연산 폭증으로 미국 전력망 용량이 한계에 도달하면서 초고압 변압기와 전력 기자재 공급 부족이 심화되어 국내외 전력 인프라 기업들이 사상 최대 수주잔고를 기록 중입니다.",
       "deep_dive": {
@@ -716,14 +716,14 @@
       ],
       "sources": [
         {
-          "title": "‘기름값 담합 의혹’ SK에너지, 거래 관행 개선책 발표…“국민께 송구” - KBS 뉴스",
-          "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE51X1JBSWl2NVF4cTFIWlpsQkxyaDFOckM3bVhmUGRkeTVHMjA3T0lDWXRMVHRVN3dfWE1sQzBGVTdnb3ZpTVpqZUtIMGRYX2tiUzFkSHpKVmxXLVU?oc=5",
-          "published_at": "2026-10-08 04:25"
+          "title": "‘호남 반도체 팹’ 부지 찾은 최태원 “용수·전력 늦어도 착공” - 뉴스토마토",
+          "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBnZFhmeTNIaXJ4dHhwZjVfMkt4b1VXd1I4bEZNeFhoUmxhMHJ5YlhScERKLTM0RkVTVkxVcDVTSDIwT1ZJeUhxNzFwUTRWSjMtdnJrMm5kS2JHTjFRTVlKWQ?oc=5",
+          "published_at": "2026-10-10 01:52"
         },
         {
-          "title": "GS건설 합작사 아문에너지, 롯데정밀화학과 그린암모니아 공급계약 - 서울경제TV",
-          "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5DZVVEZl92b2hURVNiTW5EN2V4YzlHX01sUzJkbDFaUHRMZFpxUTVwTlZaV2l3M2tGUHZhNWVrQ0w2Z2tUNDd6V2NIaHV1YVJqZzVscEJrRzM0S3ZfOEc3anBrcHY?oc=5",
-          "published_at": "2026-10-09 15:17"
+          "title": "가스기술공사, 세네갈 FSU 시운전 수주…아프리카 LNG시장 확대 - 에너지타임즈",
+          "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9CNzhKTU1zZGVKUkhYUkU3bHFOMHNJOEtzY3BjTU5SNl9pM3ZqU2ZFakItSGlSVEU1eFZYQTFyVGRMU3dpUXZoOXQzTVlEREJ1THczRkstZnJtQk9EMjFDbS1QMTRhaFl4dUd4RQ?oc=5",
+          "published_at": "2026-10-10 00:04"
         }
       ]
     }
