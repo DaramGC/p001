@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-11T13:10:06.934919+00:00",
+  "updated_at": "2026-10-11T22:10:34.087633+00:00",
   "macro_indicators": [
     {
       "name": "코스피",
@@ -32,8 +32,8 @@
     {
       "name": "원/달러 환율",
       "display": "USD/KRW",
-      "price": "1,340.90",
-      "change": "-0.07%",
+      "price": "1,341.07",
+      "change": "-0.05%",
       "is_up": false
     },
     {
@@ -54,7 +54,7 @@
       "name": "WTI 유가",
       "display": "WTI Oil",
       "price": "$91.85",
-      "change": "+1.57%",
+      "change": "+0.00%",
       "is_up": true
     }
   ],
@@ -530,7 +530,7 @@
       "lifecycle": "SURGING",
       "time_horizon": "MID_LONG_TERM",
       "priced_in_risk": "MEDIUM",
-      "detected_at": "2026-10-11 13:10",
+      "detected_at": "2026-10-11 22:10",
       "title": "AI 반도체 수요 확장 및 차세대 HBM 패키징 공급 경쟁",
       "summary": "글로벌 빅테크의 AI 데이터센터 설비투자(CAPEX) 확대 지속에 힘입어 차세대 가속기 및 HBM3E/HBM4 공급망 수혜 기업으로 자금 유입이 집중되고 있습니다.",
       "deep_dive": {
@@ -575,14 +575,14 @@
       ],
       "sources": [
         {
-          "title": "이창용 “반도체 호황, 10년 간다지만… 조기 종료 걱정” - 조선비즈 - Chosunbiz",
-          "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOb0N2REVRTWVJNHU5UEFZeFZPaF9PbWpBdTZ5QzEwMW1RVndHbHFnd1BpSW4wX2NTNWcxRjFrZDA4VmlvNTFzdThnQzRmVEI5U2JoR01HUkRjajZRWGhKU1N3Q0pIUE44b2FMZ19fREQ1d1ljOWRqc05mMzJteW1GVElBemx6Z9IBmgFBVV95cUxPSG0wUzJtM1RadTBEUnVXdDh1ZW1fNXA4X1MybGxFT0VxSThtSjJCRlU0X1phS1NXaXY3LTlDTGdUR1A4dlRzQm5GcHR1c3dSQjQyd1RFUXFyOWpDcHFNQ1ZkYWRUX28wUVhuTnFRcUVmbE5pRF9DbFYxTzI1MG9rWnZSMnR5S3pLdnplRURwTjk0RjNfMXpZZkJB?oc=5",
-          "published_at": "2026-10-11 09:08"
+          "title": "최태원 SK 회장 “미·중 반도체 증설 시 우리 점유율 축소…최대한 빨리 확장 해야” - 전자신문",
+          "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE14RzdDT0VkcHJDb1lNUFFDS1JLbmFxWmZCWVpXOXZab2VBQmN1dVA5RmFMNjA2R0YxSklwdEd5RHIxVU1QWk1LdldfWmNvZw?oc=5",
+          "published_at": "2026-10-11 09:23"
         },
         {
-          "title": "호남 반도체 불확실성 걷히나…광주 간 최태원, 조기 착공 의지 - 한겨레",
-          "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE41eXo3RmZzYnoyRnlNMktTSVQ3d2FxX1owUmNRRDV5TEpzWC12S0JrS1NheFhWZFRneEd3bHl6TkkyLVFGRWJlZnZVSjB3RUZTbjhNMVBEWGRmYWpoTy1XWg?oc=5",
-          "published_at": "2026-10-11 07:50"
+          "title": "[중국 특징주] '광저우 제1호 반도체' 캔세미, 13일 창업판 상장 - 뉴스핌",
+          "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE8wYlJJZVJ2NFRDSllReFY1TUpWRjhwZDRheGRXdVpPZzQySG9OdWkwM1RvNWU1em92THE5YjBtNHpONWlWNzM3emJsSXpFMGIwVFJISWEyMGRtcUlK?oc=5",
+          "published_at": "2026-10-11 15:02"
         }
       ]
     },
@@ -592,7 +592,7 @@
       "lifecycle": "MATURE",
       "time_horizon": "MID_LONG_TERM",
       "priced_in_risk": "HIGH",
-      "detected_at": "2026-10-11 13:10",
+      "detected_at": "2026-10-11 22:10",
       "title": "미국 기준금리 정책 경로 및 국채 금리 안정화 기대",
       "summary": "연준(Fed)의 완화적 통화정책 기조와 물가 지표 안정세가 지속되며, 미국 장기채 금리 진정과 함께 빅테크 성장주 밸류에이션 부담이 점진적으로 완화되고 있습니다.",
       "deep_dive": {
@@ -623,14 +623,14 @@
       ],
       "sources": [
         {
-          "title": "은행권 금리 인상 경쟁…예금 연 3% 후반대 - 매일신문",
-          "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE0wbVFhcGIta013aUpYV0VpbkE3eHFFT2xQOHR0bnlGc0JST2t4c2J4Q01PRFI4bS1VQkYyYWx2bGVLMmIwSUJ4dDNYM2dZb21nOXI1OV8zTU9qMi1vdlNDTFN3?oc=5",
-          "published_at": "2026-10-11 09:29"
+          "title": "[뉴욕채권-주간] 장기금리 정점 지났을까…중동 긴장·美 물가지표 주목 - 연합인포맥스",
+          "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1KVlRfTlpMLUEwaWJGalNvTFpranRRQzYzQy1QZjR0Qy1YV2pLdy1ZdzN3OGhvX0ZJZDhjN1ZaRHRaRGVodnJ2Rk5BdEpvZTRTbjk0X0V5WDRsUloxMlhUY1RXMFFiQ29ZNkQySTYwTkk?oc=5",
+          "published_at": "2026-10-11 08:50"
         },
         {
-          "title": "은행 가계대출 57.3% 변동금리...4.3%p 확대 - YTN",
-          "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE5oMXUwUzFjWkRXNzhUSnVJWVhIa0xiNFlqMGlfWWFOR1FZM0dSblVqR1hubThfMFlJd0otSXc2YmJYY1BPTU1fenBWVmFScWpXUWtndEU2cEp1MmVZOHc?oc=5",
-          "published_at": "2026-10-11 01:24"
+          "title": "[김용하 칼럼] 뉴노멀 된 고금리…美 추종 통화정책 멈춰야 - 아주경제",
+          "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9ueW83QTVDWFlUMWEyRk5OOWtXSkVTamllSEFqSy1TWUxNOXE5ZWJaTEJsUWdDVXJVRi1KSkZNLUgxSTg0bnZncENacGVGOTBXX2dYSzNOeWRxZ9IBWEFVX3lxTFBGbmdEY3lfaEVsSVByQ1ZidjFOODFucHVjdFZmLUUxU2lVQkI4YWppVWZaSXVVZm5EbkkxakdvTU96eU10YlNMbFdmZml6NFdBcVM0cUhneDI?oc=5",
+          "published_at": "2026-10-11 04:55"
         }
       ]
     },
@@ -640,7 +640,7 @@
       "lifecycle": "SURGING",
       "time_horizon": "MID_LONG_TERM",
       "priced_in_risk": "LOW",
-      "detected_at": "2026-10-11 13:10",
+      "detected_at": "2026-10-11 22:10",
       "title": "국내 밸류업 프로그램 2차 랠리 및 배당·자사주 소각 본격화",
       "summary": "한국거래소 기업 밸류업 가이드라인 강화 및 상장사들의 자발적 주주환원 공시가 확대되면서 저PBR 지주사와 금융주로 기관 및 외국인 자금 매수세가 유입되고 있습니다.",
       "deep_dive": {
@@ -671,14 +671,14 @@
       ],
       "sources": [
         {
-          "title": "금융권, ‘AI 해킹 공격’ 손 놓고 당했다 …2주 전 보안 세미나서 ‘피해 사례’ 공유 - 경향신문",
-          "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5nYkd5eHIxd2xhanBIcWJpbDJRQmVTclQ5TUxDSXNLYTdiRGliVl9EcEdtQ0xZSkg0ODdMN3c5dFp1R1ltMDU0YVktVUp1Vno0LUFWTlhianVVZ9IBX0FVX3lxTE54TDhGS0dxWHJmNjRPcV9FcjZROWl3eTI5ZXRoZG9MeDZ0NEppMDlMN3U2Mnp3eGxDbmhxUlFMOVhPVGQtRWJDMG1Wa21wYkRIZkp0N0hmeVdweWI5VTdr?oc=5",
-          "published_at": "2026-10-11 12:33"
-        },
-        {
           "title": "삼성전자 외국인 지분율 금융위기 수준 '뚝'…최대 실적에도 17년 만에 최저 - 전자신문",
           "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTFB0NVZrWnhQSTJ3VGkzd3R5WDlWUVJiSnkxa05VS0hLOXRNR2lmcUV5RVczTzVKNGUtSHpOekhGc0dqZ0xuYnA2TENBZlBkdw?oc=5",
           "published_at": "2026-10-11 06:44"
+        },
+        {
+          "title": "대구시, 지방 미분양 해소에 금융·세제 지원 건의 - 경북일보",
+          "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE5RQXlGa3JkUXlwRnhQYXQydzNNTF9pVWdTUDBQOUlpSWduRkM5WVp5MFpvblVqNlZBR3V4MExFRm04UUhFVWQtcTg1dElmS2Z5OGFTc3BNSnE0QVo1UzBVMEhsSkhLNHh1bEI0aWJlZw?oc=5",
+          "published_at": "2026-10-11 07:27"
         }
       ]
     },
@@ -688,7 +688,7 @@
       "lifecycle": "NEW",
       "time_horizon": "MID_LONG_TERM",
       "priced_in_risk": "LOW",
-      "detected_at": "2026-10-11 13:10",
+      "detected_at": "2026-10-11 22:10",
       "title": "글로벌 AI 데이터센터 전력망 슈퍼사이클 및 K-변압기 수주 호황",
       "summary": "AI 연산 폭증으로 미국 전력망 용량이 한계에 도달하면서 초고압 변압기와 전력 기자재 공급 부족이 심화되어 국내외 전력 인프라 기업들이 사상 최대 수주잔고를 기록 중입니다.",
       "deep_dive": {
@@ -726,14 +726,14 @@
       ],
       "sources": [
         {
-          "title": "[美특징주]펭귄솔루션스, 4Q 호실적에 주가 14%↑…AI인프라 사업 기대 - 이데일리",
-          "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNdnZKWUR0TGtNX183TFpyRm9RRVhyMHNtazlUdTNCajI3Rjk4dU1sTkxxWUFCcUd4c1Nzd3ZEZWd0Q1VNRUtneUJSYUpUM1NteURGeW5yR3l4TUtkR1ZSb3lvNl9TTkFVZlAydklTZWdoZ25ieTR4eXNHVzJNQ3RQSQ?oc=5",
-          "published_at": "2026-10-10 23:50"
+          "title": "李대통령 \"원전 위험은 국민이, 이익은 대기업 독점…이례적 특혜 신중해야\" - 연합인포맥스",
+          "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9aLWVZdGtsLVVpNnBvT3NHTDVaeW8xY2dna09jUDA3X1hYeHFyZFdaUVc2MnZLajFRUkNVdjZKUV9lZVZCQURXVENXN2JjUm5OMlBFelVIbmVhNXl6VHRCLTJ4R0M3c1c5WnVsdllvY3A?oc=5",
+          "published_at": "2026-10-11 11:24"
         },
         {
-          "title": "가스기술공사 아프리카 교두보 확보…세네갈 FSU 시운전 수주 - 에너지타임즈",
-          "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9ZbHZITWFiRm5MTldFQk9UWU1Bb2lYdm1vRnppNV9xSHc4SFc2Q2dHV2x0YklHR0JmejdFcUhWZmJQemg1ZkYyNVhPcEN5d0YwRkdMaGpNSS04U0l3bm82Umk5OXRCX2Y2U2xhVQ?oc=5",
-          "published_at": "2026-10-11 09:17"
+          "title": "장기공급계약, 반도체 이어 AI 인프라 부품 업계에서도 '대세' - 뉴스1",
+          "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE9vZDU5VW9YLXBya2JPX2JXeWdmSUZGTVI2SU5xcWVWWW00Q3lKazN6ZjNJei1XS05WU1pUNDRRSXFmaHBwTmJFbXNFTDZaVlBobm51clVXWEpzb0p6a2drSFhDODc?oc=5",
+          "published_at": "2026-10-11 21:45"
         }
       ]
     }
