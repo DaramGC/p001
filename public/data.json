@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-16T21:26:45.931049+00:00",
+  "updated_at": "2026-10-17T04:43:49.736782+00:00",
   "macro_indicators": [
     {
       "name": "코스피",
@@ -26,14 +26,14 @@
       "name": "나스닥",
       "display": "NASDAQ",
       "price": "26,140.03",
-      "change": "-2.14%",
+      "change": "-2.15%",
       "is_up": false
     },
     {
       "name": "원/달러 환율",
       "display": "USD/KRW",
-      "price": "1,340.95",
-      "change": "-0.02%",
+      "price": "1,329.60",
+      "change": "-0.86%",
       "is_up": false
     },
     {
@@ -53,8 +53,8 @@
     {
       "name": "WTI 유가",
       "display": "WTI Oil",
-      "price": "$99.04",
-      "change": "+3.52%",
+      "price": "$101.41",
+      "change": "+6.00%",
       "is_up": true
     }
   ],
@@ -62,7 +62,7 @@
     {
       "id": "cal-01",
       "date": "2026-10-10",
-      "d_day": "D+6",
+      "d_day": "D+7",
       "country": "US",
       "event_name": "미국 9월 소비자물가지수 (CPI) 발표",
       "importance": "HIGH",
@@ -72,7 +72,7 @@
     {
       "id": "cal-02",
       "date": "2026-10-11",
-      "d_day": "D+5",
+      "d_day": "D+6",
       "country": "KR",
       "event_name": "한국은행 금융통화위원회 기준금리 결정",
       "importance": "HIGH",
@@ -82,7 +82,7 @@
     {
       "id": "cal-03",
       "date": "2026-10-16",
-      "d_day": "D-Day",
+      "d_day": "D+1",
       "country": "US",
       "event_name": "미국 9월 소매판매 (Retail Sales)",
       "importance": "MEDIUM",
@@ -92,7 +92,7 @@
     {
       "id": "cal-04",
       "date": "2026-11-04",
-      "d_day": "D-19",
+      "d_day": "D-18",
       "country": "US",
       "event_name": "미국 연준 FOMC 정례회의 기준금리 결정",
       "importance": "HIGH",
@@ -530,7 +530,7 @@
       "lifecycle": "SURGING",
       "time_horizon": "MID_LONG_TERM",
       "priced_in_risk": "MEDIUM",
-      "detected_at": "2026-10-16 21:26",
+      "detected_at": "2026-10-17 04:43",
       "title": "AI 반도체 수요 확장 및 차세대 HBM 패키징 공급 경쟁",
       "summary": "글로벌 빅테크의 AI 데이터센터 설비투자(CAPEX) 확대 지속에 힘입어 차세대 가속기 및 HBM3E/HBM4 공급망 수혜 기업으로 자금 유입이 집중되고 있습니다.",
       "deep_dive": {
@@ -575,14 +575,14 @@
       ],
       "sources": [
         {
-          "title": "[ETF 특징주] 반도체주 시총 1조달러 증발에도 SOXL 자금 밀물 - 뉴스핌",
-          "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE90ZmRYNWc5QmFMNW00Z3BGUkl3WnYwalpJNTFSeTVCM3JKNlNtLWlFUndMX1dON3BQeVRodzBCSEdDS2dtS0pkdUtDQzVtX21uaFVsNms4MWZ3ZnVn?oc=5",
-          "published_at": "2026-10-16 07:29"
+          "title": "젠슨 황 약발도 하루…'AI 채무 공포'에 반도체·기술주 비명[뉴욕마감] - 머니투데이 - 머니투데이",
+          "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9hMGQ4MUdqOVBoRFNycTIyU3ZkaVQ2ckwyR3VsU2t1VjZtNkx0RU9KMlM5eVg1VHJkYkJiaEcxdGdOVE10S3l2d29XcFNkektVemc5dXNZMG5ZSFhLaEZtLW9TTmw3MUdn0gFuQVVfeXFMUFR0MmxFTi1UaU4xYlB3U01vdGVDbjZnWV9Kd2RQdXFEcVNKQUt5R3dUdUxVb1BoR3N2V0Q0X0ttcHRsRWNCSEtaNkJ2WDhwUEdOR2tEOEZ5blBVd1pxQU1jMV9FQmRvYVJmOUFIZXc?oc=5",
+          "published_at": "2026-10-16 21:40"
         },
         {
-          "title": "TSM Stock Still Caught In AI Chip Rout Despite Record Q3 Profit And Bright Outlook: Retail Stays Bullish - Yahoo Finance",
-          "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQdzA5VF9DOVh0c19BRTNZV0JCeWJZOURpSXpuUTNPRU9CbE5nOWlCbGU5ZVNOWTJKbTFfQlJ4Q0Z2RUVfMnpaeHpDbGpudGtOYUNpaEpacGVaMkY3QW1TZUlzSmRNUUtsQjJaMThGRjkyeTdjeEdWeUpYLW05Wm5qMjNXWUxaRFFMVVBSRi16Y1dzSXpC?oc=5",
-          "published_at": "2026-10-15 07:17"
+          "title": "[ET특징주] 우리로, '지난해 매출 절반 규모' 228억원 광반도체 수주… 주가 16% 급등 - 전자신문",
+          "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE1TVENCUTdDUmxOYTUxSDMyb0RQbl9Tdm9PWVRXT3ZPTFNVV1l5YmdfTmttVnFUUkF6RGFhYmJRb2pYTHplSnpEVW1NT1Zqdw?oc=5",
+          "published_at": "2026-10-16 05:01"
         }
       ]
     },
@@ -592,7 +592,7 @@
       "lifecycle": "MATURE",
       "time_horizon": "MID_LONG_TERM",
       "priced_in_risk": "HIGH",
-      "detected_at": "2026-10-16 21:26",
+      "detected_at": "2026-10-17 04:43",
       "title": "미국 기준금리 정책 경로 및 국채 금리 안정화 기대",
       "summary": "연준(Fed)의 완화적 통화정책 기조와 물가 지표 안정세가 지속되며, 미국 장기채 금리 진정과 함께 빅테크 성장주 밸류에이션 부담이 점진적으로 완화되고 있습니다.",
       "deep_dive": {
@@ -623,9 +623,9 @@
       ],
       "sources": [
         {
-          "title": "[투데이’s 특징주] 수출 호조세에 화장품주 장 초반 ‘강세’···환율 악재 뚫었다 By 투데이코리아 - Investing.com 한국어",
-          "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9ZdGo5MXpYX3Z6bWZfY2lEOTBfVzVXRlJqZFpULVp4SWdiZjdhTVc3SUs3c0FudVNIVFpYNjc1Z0hYVEVsSjh2WFYxVmM2c3phdVJaZEtyQ3BXQ094Vm5ib0NCcnBzQzV0dnRHbnVlalQ?oc=5",
-          "published_at": "2026-10-16 02:14"
+          "title": "[뉴욕증시] 코어위브 채권금리 16%…AI 빚 공포 어디까지 번지나 - 자본시장뉴스",
+          "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE0zVHNocHE5OVZLYldvcm9xX3k5UDJJLVlrTlVkNkZ4dEFtRFNOcWlTbG9DbUhudXpfZWRfcGVDd0FiNi1Xak9LdzhjOVUyRDVuNnZENzA5UW1XdHpjRXdEZ1dlUkUxQmM?oc=5",
+          "published_at": "2026-10-17 00:00"
         },
         {
           "title": "[인도 특징주] 예스뱅크, '부실 채권 상각 처리' 무효화 판결에 수익성 부담 ↑...주가 '충격' - 뉴스핌",
@@ -640,7 +640,7 @@
       "lifecycle": "SURGING",
       "time_horizon": "MID_LONG_TERM",
       "priced_in_risk": "LOW",
-      "detected_at": "2026-10-16 21:26",
+      "detected_at": "2026-10-17 04:43",
       "title": "국내 밸류업 프로그램 2차 랠리 및 배당·자사주 소각 본격화",
       "summary": "한국거래소 기업 밸류업 가이드라인 강화 및 상장사들의 자발적 주주환원 공시가 확대되면서 저PBR 지주사와 금융주로 기관 및 외국인 자금 매수세가 유입되고 있습니다.",
       "deep_dive": {
@@ -671,14 +671,9 @@
       ],
       "sources": [
         {
-          "title": "16개 금융회사 연쇄 해킹 이어 또…OK저축은행, 268명 정보 추가 유출 - KBC광주방송",
-          "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFBwNE12TmJOVXhreGJlRUwtc1NfOVpyU3IyUHRBSUJ0MElDZWhzRWppYkNqMjh0cWZhbXJVcks4d3FVUmQ5bG9aT1JDMEhQZEhjc2ZoVVJDSUVEalZ1S2JxZGl3?oc=5",
-          "published_at": "2026-10-16 10:30"
-        },
-        {
-          "title": "한·미 재무·통화당국 첫 2+2 면담 \"경제·금융 협력 방안 논의\" - YTN",
-          "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE9UR3puV0JfTGxmeFQ2SFhGejJQM21ubkdJcG1fQlAtX1lsRUVTNy1DUXItZ3FoRTRENngwZGpxSjFKWXlTSEd0OFhZdWlHbEUxMXlWRG91OFdUbV8xaUE?oc=5",
-          "published_at": "2026-10-16 08:27"
+          "title": "밸류업 지수 리밸런싱 앞두고 금융·자동차 저PBR주 매수세 집중",
+          "url": "https://news.google.com",
+          "published_at": "2026-10-17 04:43"
         }
       ]
     },
@@ -688,7 +683,7 @@
       "lifecycle": "NEW",
       "time_horizon": "MID_LONG_TERM",
       "priced_in_risk": "LOW",
-      "detected_at": "2026-10-16 21:26",
+      "detected_at": "2026-10-17 04:43",
       "title": "글로벌 AI 데이터센터 전력망 슈퍼사이클 및 K-변압기 수주 호황",
       "summary": "AI 연산 폭증으로 미국 전력망 용량이 한계에 도달하면서 초고압 변압기와 전력 기자재 공급 부족이 심화되어 국내외 전력 인프라 기업들이 사상 최대 수주잔고를 기록 중입니다.",
       "deep_dive": {
@@ -726,15 +721,20 @@
       ],
       "sources": [
         {
-          "title": "Global power grid supercycle drives electrification giants to record backlogs",
-          "url": "https://www.bloomberg.com",
-          "published_at": "2026-10-16 21:26"
+          "title": "두산에너빌, 3Q 영업익 85% 성장 전망…원전·가스터빈 본격화 - KB Think",
+          "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE1NbzZScU9mOS12VFBlZGVTZWpkZnAwelZQaXZCcDM1RGVhaHE0Ylk4NkFfbHNoS3pBZjdhelc5RnhSZFV3SVpRTGJvNUxOdmNsWUpEc3VjYzhpaEtIX0R1ampxMHJUdEJQVGlwa2JUazMxZw?oc=5",
+          "published_at": "2026-10-17 00:15"
+        },
+        {
+          "title": "실적 기대 낮아진 두산에너빌리티… SMR 추가 수주가 반전 열쇠 될까 - 핀포인트뉴스",
+          "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE42cGkwTVVGUF9UVzNJanF4cS12V2t1S1VBVTB1ZHFqR3dTQ01uSVpFanZYNnVNYzNCQXlfSkR2R3U0dWdIR01UVmFuWjd5T014WTdOUVVCa0FENHlPd2NoQ040TV8tOXhyNWhmZkhLM0JLWVnSAXdBVV95cUxQLTFjeEJ6cnhVMmVtcHd2WDBISUZYdHcxalZMdUVHbDl5aWd3UF9yOTlhVm05ZEZWVzdXeTdxZjJCMHR3a1Q1bnNZWGNCZFJkWmJVcEgzY29CLWNuWVpfdlg4YnJHdnp6YjB5TlZGQ0EtYkRSYTg4cw?oc=5",
+          "published_at": "2026-10-17 02:47"
         }
       ]
     }
   ],
   "market_summary": {
-    "us_status": "나스닥(-2.14%)·S&P 500(-1.09%) 조정 혼조세 속 테크 빅테크 중심 선별 수급",
+    "us_status": "나스닥(-2.15%)·S&P 500(-1.09%) 조정 혼조세 속 테크 빅테크 중심 선별 수급",
     "kr_status": "코스닥(+4.46%)·코스피(+2.05%) 반등 흐름 속 실적 호전주 선별 접근"
   },
   "trending_tickers": [
