@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-17T11:00:42.251034+00:00",
+  "updated_at": "2026-10-17T15:45:55.635427+00:00",
   "macro_indicators": [
     {
       "name": "코스피",
@@ -530,7 +530,7 @@
       "lifecycle": "SURGING",
       "time_horizon": "MID_LONG_TERM",
       "priced_in_risk": "MEDIUM",
-      "detected_at": "2026-10-17 11:00",
+      "detected_at": "2026-10-17 15:45",
       "title": "AI 반도체 수요 확장 및 차세대 HBM 패키징 공급 경쟁",
       "summary": "글로벌 빅테크의 AI 데이터센터 설비투자(CAPEX) 확대 지속에 힘입어 차세대 가속기 및 HBM3E/HBM4 공급망 수혜 기업으로 자금 유입이 집중되고 있습니다.",
       "deep_dive": {
@@ -575,14 +575,14 @@
       ],
       "sources": [
         {
-          "title": "中 환구시보, 창신메모리 띄우며 韓 반도체 때리기… 머스크 발언 얹어 여론전 나섰다 - 글로벌이코노믹",
-          "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxORTlCVkZnQlZiZlBnMkljVEllWGJTbEN6RU01cS1saVNrMTAyejhPdEw0eU5CZy1ZaGVlLVhVby00T09SR05adFZmMmRKMmFUb3FmOU1OUkxMZXV0OXBTN0kyVS01OGZSM21MSml1NWZwd1RQakZTcmZ6ZEV2WTZ5c2FqUGVTVDlY?oc=5",
-          "published_at": "2026-10-17 04:45"
-        },
-        {
           "title": "[美증시 특징주] AI 신약개발 아이앰빅 상장 이틀째 폭등…\"엔비디아 투자기업\" - 미디어펜",
           "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBEdHQyMW5HeGtLZHZTLTR3TTh1RkxETXRpRU96SEVRZ1gxS0RNcTlUZnZCa2tKVUUwRmVoRTZPcnktcllSbzUtTkxuTVpSME1FY3lnedIBWEFVX3lxTE5kaW00a2ZNSVZJNnhJUXJhSTdUZkh4dXRlSEVpZG9adjNfSDdPOXRXeXRDQllVNVdZTTNsZnRsNGNyVTBDZzBYY1RVb3psMklQYjRMeG42VlQ?oc=5",
           "published_at": "2026-10-16 22:59"
+        },
+        {
+          "title": "Taiwan Semiconductor Manufacturing (TSM) Dropped, So What Is Behind The Move? - Yahoo Finance",
+          "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNU1lxVG1ueWNWR1Ezc3JJN3p5VDk3YU9IZi1DUVpLZDRyTWVqeUFBSnY1REVJWW1OTmRNQnQ2dV84aTBtRUlvSTBRU1VfR1Y4b2pBR19zYW85TGUtb0tVRXpVMGJtd1FfTXQ3cUF0WXRHa0tDcEFPOTF4aWotVG5zWXM1ZjlMRWJXYmQ2OEVreVRjWDBHbjlVU0tpUjUwczlSdFQ1UXNxU2FuQkN4UU4tRA?oc=5",
+          "published_at": "2026-10-17 08:11"
         }
       ]
     },
@@ -592,7 +592,7 @@
       "lifecycle": "MATURE",
       "time_horizon": "MID_LONG_TERM",
       "priced_in_risk": "HIGH",
-      "detected_at": "2026-10-17 11:00",
+      "detected_at": "2026-10-17 15:45",
       "title": "미국 기준금리 정책 경로 및 국채 금리 안정화 기대",
       "summary": "연준(Fed)의 완화적 통화정책 기조와 물가 지표 안정세가 지속되며, 미국 장기채 금리 진정과 함께 빅테크 성장주 밸류에이션 부담이 점진적으로 완화되고 있습니다.",
       "deep_dive": {
@@ -628,9 +628,9 @@
           "published_at": "2026-10-16 23:29"
         },
         {
-          "title": "일은 총재 \"물가 이 이상 상승 용납 못 해\"...금리 인상 지속 방침 - YTN",
-          "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE52YjRKUFhKbWJmOE43NVJzR0VCNExFcGFka0ZyTUgtSmM2d3E1TkloLVROUmVJbHpKTjVTYmhkQ3FMMG43a19HTXdPODNibVFlcjhWRWN0cWJEd0UwZXc?oc=5",
-          "published_at": "2026-10-17 07:13"
+          "title": "일본은행 총재 “더 이상의 물가 상승 용납 못해”…금리 인상 지속 방침 - 경향신문",
+          "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1aYXlrdkZpZW9EMW5uSHdmYnJhMTBqaFIwcmktX2R3R2N0TzVtR2ROZ1NqMHNTNkpMU2EzV2JMUjBxNHB2al9IbUhpUjBZS1VoeVB4UnZhQmdzZ9IBX0FVX3lxTE9Jc1lfR1p4TVk3NlhxamVWRTRsV05qLVBuREVTbXYyRGRwNVFYeGw5RTlYRlhFaFhKWXJlNHY4QnJfQXZNUi1jMEVIN1RZLUlxMHI2SHRLYmhXSjNUOVhj?oc=5",
+          "published_at": "2026-10-17 07:41"
         }
       ]
     },
@@ -640,7 +640,7 @@
       "lifecycle": "SURGING",
       "time_horizon": "MID_LONG_TERM",
       "priced_in_risk": "LOW",
-      "detected_at": "2026-10-17 11:00",
+      "detected_at": "2026-10-17 15:45",
       "title": "국내 밸류업 프로그램 2차 랠리 및 배당·자사주 소각 본격화",
       "summary": "한국거래소 기업 밸류업 가이드라인 강화 및 상장사들의 자발적 주주환원 공시가 확대되면서 저PBR 지주사와 금융주로 기관 및 외국인 자금 매수세가 유입되고 있습니다.",
       "deep_dive": {
@@ -671,9 +671,9 @@
       ],
       "sources": [
         {
-          "title": "밸류업 지수 리밸런싱 앞두고 금융·자동차 저PBR주 매수세 집중",
-          "url": "https://news.google.com",
-          "published_at": "2026-10-17 11:00"
+          "title": "금융권 해킹 악용 ‘아르텍스’, 중국서 유료 출시된다 - 조선비즈 - Chosunbiz",
+          "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQXzRycjFsOEZxbk1aS3ZkRXJTcE5xWWVMbzJUMkdUZU1fSjllWHlJbWJwWW5wU28wQlZXek5yb05HQ25MVzUyUVMwc216V2puX2VlWFZLZFpBTkhHWWtsT25GWmxvVGd2V1FfOWJaMklRSnluUm9XOXh0ZVJCM0p0QmVn0gGWAUFVX3lxTE5OMk5Qb0tNM0puZHlIM3VoU0pmeFhhUW9MTWgwTElWTTlncXBXa0tLdFdoVjJoUnQ3SWdwX1dmSmdpZjBXazRWcENjbVVvemFBNFc1NGpCUXpPbDMyazh0aHB3RFlSWmdxMmxUcW9OU0JOWUVTRFhaVHNmLUhiYl9IdTR3MFNRZWRyaEF0b0F0Q3FvSzlTdw?oc=5",
+          "published_at": "2026-10-16 03:19"
         }
       ]
     },
@@ -683,7 +683,7 @@
       "lifecycle": "NEW",
       "time_horizon": "MID_LONG_TERM",
       "priced_in_risk": "LOW",
-      "detected_at": "2026-10-17 11:00",
+      "detected_at": "2026-10-17 15:45",
       "title": "글로벌 AI 데이터센터 전력망 슈퍼사이클 및 K-변압기 수주 호황",
       "summary": "AI 연산 폭증으로 미국 전력망 용량이 한계에 도달하면서 초고압 변압기와 전력 기자재 공급 부족이 심화되어 국내외 전력 인프라 기업들이 사상 최대 수주잔고를 기록 중입니다.",
       "deep_dive": {
@@ -723,7 +723,7 @@
         {
           "title": "Global power grid supercycle drives electrification giants to record backlogs",
           "url": "https://www.bloomberg.com",
-          "published_at": "2026-10-17 11:00"
+          "published_at": "2026-10-17 15:45"
         }
       ]
     }
