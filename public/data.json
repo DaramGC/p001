@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-17T04:43:49.736782+00:00",
+  "updated_at": "2026-10-17T11:00:42.251034+00:00",
   "macro_indicators": [
     {
       "name": "코스피",
@@ -530,7 +530,7 @@
       "lifecycle": "SURGING",
       "time_horizon": "MID_LONG_TERM",
       "priced_in_risk": "MEDIUM",
-      "detected_at": "2026-10-17 04:43",
+      "detected_at": "2026-10-17 11:00",
       "title": "AI 반도체 수요 확장 및 차세대 HBM 패키징 공급 경쟁",
       "summary": "글로벌 빅테크의 AI 데이터센터 설비투자(CAPEX) 확대 지속에 힘입어 차세대 가속기 및 HBM3E/HBM4 공급망 수혜 기업으로 자금 유입이 집중되고 있습니다.",
       "deep_dive": {
@@ -575,14 +575,14 @@
       ],
       "sources": [
         {
-          "title": "젠슨 황 약발도 하루…'AI 채무 공포'에 반도체·기술주 비명[뉴욕마감] - 머니투데이 - 머니투데이",
-          "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9hMGQ4MUdqOVBoRFNycTIyU3ZkaVQ2ckwyR3VsU2t1VjZtNkx0RU9KMlM5eVg1VHJkYkJiaEcxdGdOVE10S3l2d29XcFNkektVemc5dXNZMG5ZSFhLaEZtLW9TTmw3MUdn0gFuQVVfeXFMUFR0MmxFTi1UaU4xYlB3U01vdGVDbjZnWV9Kd2RQdXFEcVNKQUt5R3dUdUxVb1BoR3N2V0Q0X0ttcHRsRWNCSEtaNkJ2WDhwUEdOR2tEOEZ5blBVd1pxQU1jMV9FQmRvYVJmOUFIZXc?oc=5",
-          "published_at": "2026-10-16 21:40"
+          "title": "中 환구시보, 창신메모리 띄우며 韓 반도체 때리기… 머스크 발언 얹어 여론전 나섰다 - 글로벌이코노믹",
+          "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxORTlCVkZnQlZiZlBnMkljVEllWGJTbEN6RU01cS1saVNrMTAyejhPdEw0eU5CZy1ZaGVlLVhVby00T09SR05adFZmMmRKMmFUb3FmOU1OUkxMZXV0OXBTN0kyVS01OGZSM21MSml1NWZwd1RQakZTcmZ6ZEV2WTZ5c2FqUGVTVDlY?oc=5",
+          "published_at": "2026-10-17 04:45"
         },
         {
-          "title": "[ET특징주] 우리로, '지난해 매출 절반 규모' 228억원 광반도체 수주… 주가 16% 급등 - 전자신문",
-          "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE1TVENCUTdDUmxOYTUxSDMyb0RQbl9Tdm9PWVRXT3ZPTFNVV1l5YmdfTmttVnFUUkF6RGFhYmJRb2pYTHplSnpEVW1NT1Zqdw?oc=5",
-          "published_at": "2026-10-16 05:01"
+          "title": "[美증시 특징주] AI 신약개발 아이앰빅 상장 이틀째 폭등…\"엔비디아 투자기업\" - 미디어펜",
+          "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBEdHQyMW5HeGtLZHZTLTR3TTh1RkxETXRpRU96SEVRZ1gxS0RNcTlUZnZCa2tKVUUwRmVoRTZPcnktcllSbzUtTkxuTVpSME1FY3lnedIBWEFVX3lxTE5kaW00a2ZNSVZJNnhJUXJhSTdUZkh4dXRlSEVpZG9adjNfSDdPOXRXeXRDQllVNVdZTTNsZnRsNGNyVTBDZzBYY1RVb3psMklQYjRMeG42VlQ?oc=5",
+          "published_at": "2026-10-16 22:59"
         }
       ]
     },
@@ -592,7 +592,7 @@
       "lifecycle": "MATURE",
       "time_horizon": "MID_LONG_TERM",
       "priced_in_risk": "HIGH",
-      "detected_at": "2026-10-17 04:43",
+      "detected_at": "2026-10-17 11:00",
       "title": "미국 기준금리 정책 경로 및 국채 금리 안정화 기대",
       "summary": "연준(Fed)의 완화적 통화정책 기조와 물가 지표 안정세가 지속되며, 미국 장기채 금리 진정과 함께 빅테크 성장주 밸류에이션 부담이 점진적으로 완화되고 있습니다.",
       "deep_dive": {
@@ -623,14 +623,14 @@
       ],
       "sources": [
         {
-          "title": "[뉴욕증시] 코어위브 채권금리 16%…AI 빚 공포 어디까지 번지나 - 자본시장뉴스",
-          "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE0zVHNocHE5OVZLYldvcm9xX3k5UDJJLVlrTlVkNkZ4dEFtRFNOcWlTbG9DbUhudXpfZWRfcGVDd0FiNi1Xak9LdzhjOVUyRDVuNnZENzA5UW1XdHpjRXdEZ1dlUkUxQmM?oc=5",
-          "published_at": "2026-10-17 00:00"
+          "title": "코스피 급락에 반대매매 3000억원 육박…채권엔 매수세 - 경향신문",
+          "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9MVzNIVmlRSjJMQVRMVmZiT0hWSE9VRThfdkZmRy1kcHNKenZCV2dVSkhwUUwtTVFhbmxNUTFtTTYwQ2EzNVo0VzUtSkM5dEllT05lZVE1d0ZIQdIBX0FVX3lxTE5JZV9qeXpaeWlOZmZlc0VyRTlseUkyNnItbFlhS2lEaGFscW9DcnBNQ0kzRlVkbVM5c2x3YjJ6SFRpeFpoQmtMRzB5enk5eHAxUThpdDNHbEJUTGpmMmJj?oc=5",
+          "published_at": "2026-10-16 23:29"
         },
         {
-          "title": "[인도 특징주] 예스뱅크, '부실 채권 상각 처리' 무효화 판결에 수익성 부담 ↑...주가 '충격' - 뉴스핌",
-          "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE1TZkpUcDZEWGxnWDdDR09RaUNyTE9YZWJNd2tMdm12cURycUhWd0VmVEJhcnhqN2RvNlVyRElETkRwMDg0ckIzVEVsZTJ2dk5fRTdGS2drQWdaeVY4?oc=5",
-          "published_at": "2026-10-16 08:50"
+          "title": "일은 총재 \"물가 이 이상 상승 용납 못 해\"...금리 인상 지속 방침 - YTN",
+          "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE52YjRKUFhKbWJmOE43NVJzR0VCNExFcGFka0ZyTUgtSmM2d3E1TkloLVROUmVJbHpKTjVTYmhkQ3FMMG43a19HTXdPODNibVFlcjhWRWN0cWJEd0UwZXc?oc=5",
+          "published_at": "2026-10-17 07:13"
         }
       ]
     },
@@ -640,7 +640,7 @@
       "lifecycle": "SURGING",
       "time_horizon": "MID_LONG_TERM",
       "priced_in_risk": "LOW",
-      "detected_at": "2026-10-17 04:43",
+      "detected_at": "2026-10-17 11:00",
       "title": "국내 밸류업 프로그램 2차 랠리 및 배당·자사주 소각 본격화",
       "summary": "한국거래소 기업 밸류업 가이드라인 강화 및 상장사들의 자발적 주주환원 공시가 확대되면서 저PBR 지주사와 금융주로 기관 및 외국인 자금 매수세가 유입되고 있습니다.",
       "deep_dive": {
@@ -673,7 +673,7 @@
         {
           "title": "밸류업 지수 리밸런싱 앞두고 금융·자동차 저PBR주 매수세 집중",
           "url": "https://news.google.com",
-          "published_at": "2026-10-17 04:43"
+          "published_at": "2026-10-17 11:00"
         }
       ]
     },
@@ -683,7 +683,7 @@
       "lifecycle": "NEW",
       "time_horizon": "MID_LONG_TERM",
       "priced_in_risk": "LOW",
-      "detected_at": "2026-10-17 04:43",
+      "detected_at": "2026-10-17 11:00",
       "title": "글로벌 AI 데이터센터 전력망 슈퍼사이클 및 K-변압기 수주 호황",
       "summary": "AI 연산 폭증으로 미국 전력망 용량이 한계에 도달하면서 초고압 변압기와 전력 기자재 공급 부족이 심화되어 국내외 전력 인프라 기업들이 사상 최대 수주잔고를 기록 중입니다.",
       "deep_dive": {
@@ -721,14 +721,9 @@
       ],
       "sources": [
         {
-          "title": "두산에너빌, 3Q 영업익 85% 성장 전망…원전·가스터빈 본격화 - KB Think",
-          "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE1NbzZScU9mOS12VFBlZGVTZWpkZnAwelZQaXZCcDM1RGVhaHE0Ylk4NkFfbHNoS3pBZjdhelc5RnhSZFV3SVpRTGJvNUxOdmNsWUpEc3VjYzhpaEtIX0R1ampxMHJUdEJQVGlwa2JUazMxZw?oc=5",
-          "published_at": "2026-10-17 00:15"
-        },
-        {
-          "title": "실적 기대 낮아진 두산에너빌리티… SMR 추가 수주가 반전 열쇠 될까 - 핀포인트뉴스",
-          "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE42cGkwTVVGUF9UVzNJanF4cS12V2t1S1VBVTB1ZHFqR3dTQ01uSVpFanZYNnVNYzNCQXlfSkR2R3U0dWdIR01UVmFuWjd5T014WTdOUVVCa0FENHlPd2NoQ040TV8tOXhyNWhmZkhLM0JLWVnSAXdBVV95cUxQLTFjeEJ6cnhVMmVtcHd2WDBISUZYdHcxalZMdUVHbDl5aWd3UF9yOTlhVm05ZEZWVzdXeTdxZjJCMHR3a1Q1bnNZWGNCZFJkWmJVcEgzY29CLWNuWVpfdlg4YnJHdnp6YjB5TlZGQ0EtYkRSYTg4cw?oc=5",
-          "published_at": "2026-10-17 02:47"
+          "title": "Global power grid supercycle drives electrification giants to record backlogs",
+          "url": "https://www.bloomberg.com",
+          "published_at": "2026-10-17 11:00"
         }
       ]
     }
