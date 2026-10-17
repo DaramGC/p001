@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-17T15:45:55.635427+00:00",
+  "updated_at": "2026-10-17T20:46:24.372681+00:00",
   "macro_indicators": [
     {
       "name": "코스피",
@@ -530,7 +530,7 @@
       "lifecycle": "SURGING",
       "time_horizon": "MID_LONG_TERM",
       "priced_in_risk": "MEDIUM",
-      "detected_at": "2026-10-17 15:45",
+      "detected_at": "2026-10-17 20:46",
       "title": "AI 반도체 수요 확장 및 차세대 HBM 패키징 공급 경쟁",
       "summary": "글로벌 빅테크의 AI 데이터센터 설비투자(CAPEX) 확대 지속에 힘입어 차세대 가속기 및 HBM3E/HBM4 공급망 수혜 기업으로 자금 유입이 집중되고 있습니다.",
       "deep_dive": {
@@ -575,14 +575,14 @@
       ],
       "sources": [
         {
-          "title": "[美증시 특징주] AI 신약개발 아이앰빅 상장 이틀째 폭등…\"엔비디아 투자기업\" - 미디어펜",
-          "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBEdHQyMW5HeGtLZHZTLTR3TTh1RkxETXRpRU96SEVRZ1gxS0RNcTlUZnZCa2tKVUUwRmVoRTZPcnktcllSbzUtTkxuTVpSME1FY3lnedIBWEFVX3lxTE5kaW00a2ZNSVZJNnhJUXJhSTdUZkh4dXRlSEVpZG9adjNfSDdPOXRXeXRDQllVNVdZTTNsZnRsNGNyVTBDZzBYY1RVb3psMklQYjRMeG42VlQ?oc=5",
-          "published_at": "2026-10-16 22:59"
+          "title": "삼전하닉 추격하는 中 반도체 굴기…창신메모리 매출 600% 폭증 - 주간조선",
+          "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1MRzVaYmo2cGVHV3VWNGpoVWxKUmVTeTNNV3lDcFNfUkItd3RVOEN2dkdzSnBWU2Vtd05XMVpjei13VU9Zdi1FSjNWZFRDNTNfRGZmdHJPZmJhTng1REd4Y1NIRkFoYWdvckHSAW5BVV95cUxPS1h5cmdqdFRtRFh5Qkd4ay1kTF9pczV4TEtEam9qeVZxeFA0cWFWeTZpcW9YZWxKZGxQWHBLNmZXM1FVTURKMTRJbV9mVlJBWm5SQjd6NDlDMERvQmFsalo3Z1JmcmNZSlc1ZDFndw?oc=5",
+          "published_at": "2026-10-17 14:15"
         },
         {
-          "title": "Taiwan Semiconductor Manufacturing (TSM) Dropped, So What Is Behind The Move? - Yahoo Finance",
-          "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNU1lxVG1ueWNWR1Ezc3JJN3p5VDk3YU9IZi1DUVpLZDRyTWVqeUFBSnY1REVJWW1OTmRNQnQ2dV84aTBtRUlvSTBRU1VfR1Y4b2pBR19zYW85TGUtb0tVRXpVMGJtd1FfTXQ3cUF0WXRHa0tDcEFPOTF4aWotVG5zWXM1ZjlMRWJXYmQ2OEVreVRjWDBHbjlVU0tpUjUwczlSdFQ1UXNxU2FuQkN4UU4tRA?oc=5",
-          "published_at": "2026-10-17 08:11"
+          "title": "호남 반도체 부지 장관들 잇단 방문… 의구심 잠 재우기? [이슈플러스] - 세계일보",
+          "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE03UHNVNEo0YlVqZVMyd3phcnVVak5rbEEySlpQSGo2RnNwT1RMUWhuZjhhRlMxS2RYd3NOdzNPV3ZtMThYVmxFOU5SMzZiZkNuM3A1cENRUXLSAVRBVV95cUxOdlJWUXJPbXVhNFFjekRmbXI0bFhUSUZJS0c4Qk5ZUUhoOVlQcjNzQTNfTGJIWmtiQW04aV9rRWQzVVVrNXJxZVh2QVBFR1lYLWU1SXE?oc=5",
+          "published_at": "2026-10-17 10:44"
         }
       ]
     },
@@ -592,7 +592,7 @@
       "lifecycle": "MATURE",
       "time_horizon": "MID_LONG_TERM",
       "priced_in_risk": "HIGH",
-      "detected_at": "2026-10-17 15:45",
+      "detected_at": "2026-10-17 20:46",
       "title": "미국 기준금리 정책 경로 및 국채 금리 안정화 기대",
       "summary": "연준(Fed)의 완화적 통화정책 기조와 물가 지표 안정세가 지속되며, 미국 장기채 금리 진정과 함께 빅테크 성장주 밸류에이션 부담이 점진적으로 완화되고 있습니다.",
       "deep_dive": {
@@ -623,14 +623,9 @@
       ],
       "sources": [
         {
-          "title": "코스피 급락에 반대매매 3000억원 육박…채권엔 매수세 - 경향신문",
-          "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9MVzNIVmlRSjJMQVRMVmZiT0hWSE9VRThfdkZmRy1kcHNKenZCV2dVSkhwUUwtTVFhbmxNUTFtTTYwQ2EzNVo0VzUtSkM5dEllT05lZVE1d0ZIQdIBX0FVX3lxTE5JZV9qeXpaeWlOZmZlc0VyRTlseUkyNnItbFlhS2lEaGFscW9DcnBNQ0kzRlVkbVM5c2x3YjJ6SFRpeFpoQmtMRzB5enk5eHAxUThpdDNHbEJUTGpmMmJj?oc=5",
-          "published_at": "2026-10-16 23:29"
-        },
-        {
-          "title": "일본은행 총재 “더 이상의 물가 상승 용납 못해”…금리 인상 지속 방침 - 경향신문",
-          "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1aYXlrdkZpZW9EMW5uSHdmYnJhMTBqaFIwcmktX2R3R2N0TzVtR2ROZ1NqMHNTNkpMU2EzV2JMUjBxNHB2al9IbUhpUjBZS1VoeVB4UnZhQmdzZ9IBX0FVX3lxTE9Jc1lfR1p4TVk3NlhxamVWRTRsV05qLVBuREVTbXYyRGRwNVFYeGw5RTlYRlhFaFhKWXJlNHY4QnJfQXZNUi1jMEVIN1RZLUlxMHI2SHRLYmhXSjNUOVhj?oc=5",
-          "published_at": "2026-10-17 07:41"
+          "title": "Williams says Fed may not have to hike rates in 2027, at odds with traders",
+          "url": "https://www.cnbc.com/2026/10/13/john-williams-fed-rate-hikes-2027.html",
+          "published_at": "2026-10-13 19:46"
         }
       ]
     },
@@ -640,7 +635,7 @@
       "lifecycle": "SURGING",
       "time_horizon": "MID_LONG_TERM",
       "priced_in_risk": "LOW",
-      "detected_at": "2026-10-17 15:45",
+      "detected_at": "2026-10-17 20:46",
       "title": "국내 밸류업 프로그램 2차 랠리 및 배당·자사주 소각 본격화",
       "summary": "한국거래소 기업 밸류업 가이드라인 강화 및 상장사들의 자발적 주주환원 공시가 확대되면서 저PBR 지주사와 금융주로 기관 및 외국인 자금 매수세가 유입되고 있습니다.",
       "deep_dive": {
@@ -671,9 +666,9 @@
       ],
       "sources": [
         {
-          "title": "금융권 해킹 악용 ‘아르텍스’, 중국서 유료 출시된다 - 조선비즈 - Chosunbiz",
-          "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQXzRycjFsOEZxbk1aS3ZkRXJTcE5xWWVMbzJUMkdUZU1fSjllWHlJbWJwWW5wU28wQlZXek5yb05HQ25MVzUyUVMwc216V2puX2VlWFZLZFpBTkhHWWtsT25GWmxvVGd2V1FfOWJaMklRSnluUm9XOXh0ZVJCM0p0QmVn0gGWAUFVX3lxTE5OMk5Qb0tNM0puZHlIM3VoU0pmeFhhUW9MTWgwTElWTTlncXBXa0tLdFdoVjJoUnQ3SWdwX1dmSmdpZjBXazRWcENjbVVvemFBNFc1NGpCUXpPbDMyazh0aHB3RFlSWmdxMmxUcW9OU0JOWUVTRFhaVHNmLUhiYl9IdTR3MFNRZWRyaEF0b0F0Q3FvSzlTdw?oc=5",
-          "published_at": "2026-10-16 03:19"
+          "title": "밸류업 지수 리밸런싱 앞두고 금융·자동차 저PBR주 매수세 집중",
+          "url": "https://news.google.com",
+          "published_at": "2026-10-17 20:46"
         }
       ]
     },
@@ -683,7 +678,7 @@
       "lifecycle": "NEW",
       "time_horizon": "MID_LONG_TERM",
       "priced_in_risk": "LOW",
-      "detected_at": "2026-10-17 15:45",
+      "detected_at": "2026-10-17 20:46",
       "title": "글로벌 AI 데이터센터 전력망 슈퍼사이클 및 K-변압기 수주 호황",
       "summary": "AI 연산 폭증으로 미국 전력망 용량이 한계에 도달하면서 초고압 변압기와 전력 기자재 공급 부족이 심화되어 국내외 전력 인프라 기업들이 사상 최대 수주잔고를 기록 중입니다.",
       "deep_dive": {
@@ -721,9 +716,9 @@
       ],
       "sources": [
         {
-          "title": "Global power grid supercycle drives electrification giants to record backlogs",
-          "url": "https://www.bloomberg.com",
-          "published_at": "2026-10-17 15:45"
+          "title": "필에너지, 팩토리얼과 전고체 장비 공급계약 - 비건뉴스",
+          "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1DLUJOb3QyWFdXWjB6NVNxR2V0WXdaOGl3R1U2WVR1N0NqUzR3aWowNjk3WEg2UHJDSTM5QUMtb0JpS1FtUktfeDdTNEpPeXNVVnFObzVMWFN5NUV2WHpfSmNFLVBvZw?oc=5",
+          "published_at": "2026-10-17 19:42"
         }
       ]
     }
