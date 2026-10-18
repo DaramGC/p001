@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-18T16:01:30.001374+00:00",
+  "updated_at": "2026-10-18T20:55:54.881982+00:00",
   "macro_indicators": [
     {
       "name": "코스피",
@@ -530,7 +530,7 @@
       "lifecycle": "SURGING",
       "time_horizon": "MID_LONG_TERM",
       "priced_in_risk": "MEDIUM",
-      "detected_at": "2026-10-18 16:01",
+      "detected_at": "2026-10-18 20:55",
       "title": "AI 반도체 수요 확장 및 차세대 HBM 패키징 공급 경쟁",
       "summary": "글로벌 빅테크의 AI 데이터센터 설비투자(CAPEX) 확대 지속에 힘입어 차세대 가속기 및 HBM3E/HBM4 공급망 수혜 기업으로 자금 유입이 집중되고 있습니다.",
       "deep_dive": {
@@ -575,14 +575,14 @@
       ],
       "sources": [
         {
+          "title": "외국인, 삼성전자·SK하이닉스 7.4조 팔았다…개인은 5.1조 '역매수' - 뉴스투데이",
+          "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE16RGg2Q3h6UlZfclR3bWRGbGVzeWxCT2lydzJzQXdQaEwxYmhzQlRMd045YlBFLXlldW1SRjF2SWZheHd1THVOY2tEbGZaRl9tXzRkOUhXYm5LYU5RWVE?oc=5",
+          "published_at": "2026-10-17 23:15"
+        },
+        {
           "title": "[특징주] 티에스이(131290), HBM4 공급 확대에 수익성 '껑충' - 인천일보",
           "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE12QzNWbzVGWEN3bmpvU1lORWplRnd3S2Y4ZGo1YjRZY3l1c0hjcVI2dGhLemdVa0lVV0RPeG9nNVhZUUkzb0dIMXcxS1dxa2RsOEFSdUYxaDBVU01zcGZkNUJ6aGxRS3YwU0twOG51SnI?oc=5",
           "published_at": "2026-10-18 07:28"
-        },
-        {
-          "title": "Taiwan Semiconductor’s (TSM) Profit Rose 69% Last Quarter. Is the Stock Still Cheap? - Yahoo Finance",
-          "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPcXpvWTlBMWF4RXRoZ0lBUk00bzVvSnNsWFJGNEU5eXlRbHdkZlNFM1hRcXhQOXNOZWpab2NmVXpoRWFuMkZOcjE4a3MwUFRtUGpkbWhZTkdBOHhJbnNmcGtiX21xc09lV1FXMmY1VjQ2eXExSHMycktZTU9GZWpqRFRlMk9fWW52Mkc0Z0Eza0JoUXQzWGgwaUI5U0J6TVA2ZVZ3?oc=5",
-          "published_at": "2026-10-18 14:34"
         }
       ]
     },
@@ -592,7 +592,7 @@
       "lifecycle": "MATURE",
       "time_horizon": "MID_LONG_TERM",
       "priced_in_risk": "HIGH",
-      "detected_at": "2026-10-18 16:01",
+      "detected_at": "2026-10-18 20:55",
       "title": "미국 기준금리 정책 경로 및 국채 금리 안정화 기대",
       "summary": "연준(Fed)의 완화적 통화정책 기조와 물가 지표 안정세가 지속되며, 미국 장기채 금리 진정과 함께 빅테크 성장주 밸류에이션 부담이 점진적으로 완화되고 있습니다.",
       "deep_dive": {
@@ -623,14 +623,14 @@
       ],
       "sources": [
         {
-          "title": "\"10월 넘기고 11월에\"…전문가들, 금리 인상 '숨고르기' 전망 - 한국무역협회-KITA.NET",
-          "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxNMF9BQkYxTzhRV0p2OHRKci1DRl9tNHNPQngxemN4dE1MdDc4TUxydEJFZFZEY2xzRmRWR3dEUzh3bm0wV1pWR2VRa29lVVhwOTJJN0ZoYmEzZHUtNWNJR0F6WGRQVzhfY1NxYWRxeWs0am1sTEhIbjBWb0UydVZLWnJKdm02QXZjWnk1aUxQTWQ4VjViQTZMYzlPdm1MQlhjNXpDZVNISGN3RDF0bnc5SmZ3MzJhQl8yYnF4Vnp1bkJ5NUV2dmpQcU42S0dpM1VlcGhxS1Jn?oc=5",
-          "published_at": "2026-10-18 07:52"
+          "title": "[마켓인사이드] 미국 인플레 재점화…10월 FOMC 금리인상 카드 다시 살아나나 - 뉴스투데이",
+          "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE9rMjF0VHJQZVdmeEp1OVZodkc5LXVSWk5YUTUwSWthRjdvclptbnFoZWVPblU5YlBNMUZYMmZMNmZFWlhwdW5POVk1bmxzaWFiZ1dHaHVMQ192YS12cEE?oc=5",
+          "published_at": "2026-10-18 14:44"
         },
         {
-          "title": "[뉴욕마켓워치] 역대 최장 하락세 앞둔 필리 지수…주식·달러↓채권 혼조 - KB Think",
-          "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE9QTXMzR0VnZ3J6QUlEOW5xbE1uemtuUUNCRVV6S0hTM3VfZUJoYXlMV20wc2QtLXJBdmQtaFhsMHBna0dsbmxSQ3ZHXzRlVWdhNnpoN0xxVU5wZmUtY3cxWmNVU2FXNldFd3l1bU1McVZjZw?oc=5",
-          "published_at": "2026-10-16 21:28"
+          "title": "[채권-주간] 위험회피 분위기 속 맞이한 금통위 - 연합인포맥스",
+          "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5WOXg0RzZmY0RESUFCVlh4dU03SjVYZUYtcWMyalc5SjBoaUctTGNlRE83R3FZWGtoMXRObzNSbUlBZ2szN0JxeHRrNTRadEtvX2ZwTmtSUWFwdXdXYzhPeGxfZTlCcGxqakVnQ1hpU2w?oc=5",
+          "published_at": "2026-10-18 04:00"
         }
       ]
     },
@@ -640,7 +640,7 @@
       "lifecycle": "SURGING",
       "time_horizon": "MID_LONG_TERM",
       "priced_in_risk": "LOW",
-      "detected_at": "2026-10-18 16:01",
+      "detected_at": "2026-10-18 20:55",
       "title": "국내 밸류업 프로그램 2차 랠리 및 배당·자사주 소각 본격화",
       "summary": "한국거래소 기업 밸류업 가이드라인 강화 및 상장사들의 자발적 주주환원 공시가 확대되면서 저PBR 지주사와 금융주로 기관 및 외국인 자금 매수세가 유입되고 있습니다.",
       "deep_dive": {
@@ -671,14 +671,9 @@
       ],
       "sources": [
         {
-          "title": "삼전닉스, 금융위기 이후 가장 아픈 한 주…반등 열쇠는 - 노컷뉴스",
-          "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBOZW5wenJITHRGemFoNDMwb3pzX21MREVYUlF6di1xb1VuUElWVHltVG82OVR6Ym1ieTFvOW9NNUlTMnRnTGd6VkZ6OFVpaWVHakE?oc=5",
-          "published_at": "2026-10-18 03:55"
-        },
-        {
-          "title": "9월 금융권 가계대출 증가폭 감소‥\"주식투자 감소 등 영향\" - MBC 뉴스",
-          "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBiVld6WGJfUFdoNzhtWVF5WUR5dHlRZTJ4LTd1UzJFX09Eb0hmbEVvaE9rS216Ynh2T0gwWUlFRURmRUk5UXZ3UFVnZG05RmJpYjNCU29XZVkzVlVTMnI0dkVaY1VwbkNPM2RXZ0YzRWswVy1C0gF0QVVfeXFMTmVMYmdOc2hKaGJza0xHUWFMNE9qQ0ZYRmt4V3FnS3g0UFZiZGkwYXR2SWdVSDl5VmU3QllZXzh6cVdEc2RGY21vcnRWMFpTOW5DcjRmUTc1dUItLVdrR2dGeTFGZzJVaGpJRUltd1BrenptM0U?oc=5",
-          "published_at": "2026-10-15 11:47"
+          "title": "현대차·기아, '이포레스트 테크데이'‥제조 신기술 2백 건 전시 - MBC 뉴스",
+          "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9sdzBxb3JfcWNIUHFSdlBlSjQyRGdMdVNqbWxpQjB6YmdsTFM2QURfWU9WX0hTR2l0eHVtNTB4VDlGMWtCUmhONk5yY3pLd05EXzFIYnJxTVJyUHNBMm5BS2w2eHRqQkRPQnJUZ3NZdGZhQXlt0gF0QVVfeXFMUFpQUXp3ZTlFdWxQd1N3a1djXzhiRUVzWEh5aGMwV1BRbktHUjZDaWhGYzVGUExDbUFubVUyMjBrSDZvUUltU0dqZl9EUHJ4U2tleFN2TDFOdi1LbzA4M2dPME9aN0V6LWJaUE1UNW5iNElrTUg?oc=5",
+          "published_at": "2026-10-18 10:21"
         }
       ]
     },
@@ -688,7 +683,7 @@
       "lifecycle": "NEW",
       "time_horizon": "MID_LONG_TERM",
       "priced_in_risk": "LOW",
-      "detected_at": "2026-10-18 16:01",
+      "detected_at": "2026-10-18 20:55",
       "title": "글로벌 AI 데이터센터 전력망 슈퍼사이클 및 K-변압기 수주 호황",
       "summary": "AI 연산 폭증으로 미국 전력망 용량이 한계에 도달하면서 초고압 변압기와 전력 기자재 공급 부족이 심화되어 국내외 전력 인프라 기업들이 사상 최대 수주잔고를 기록 중입니다.",
       "deep_dive": {
@@ -728,7 +723,7 @@
         {
           "title": "Global power grid supercycle drives electrification giants to record backlogs",
           "url": "https://www.bloomberg.com",
-          "published_at": "2026-10-18 16:01"
+          "published_at": "2026-10-18 20:55"
         }
       ]
     }
