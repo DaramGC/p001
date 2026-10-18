@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-17T20:46:24.372681+00:00",
+  "updated_at": "2026-10-18T04:50:09.524557+00:00",
   "macro_indicators": [
     {
       "name": "코스피",
@@ -53,8 +53,8 @@
     {
       "name": "WTI 유가",
       "display": "WTI Oil",
-      "price": "$101.41",
-      "change": "+6.00%",
+      "price": "$99.02",
+      "change": "+3.50%",
       "is_up": true
     }
   ],
@@ -62,7 +62,7 @@
     {
       "id": "cal-01",
       "date": "2026-10-10",
-      "d_day": "D+7",
+      "d_day": "D+8",
       "country": "US",
       "event_name": "미국 9월 소비자물가지수 (CPI) 발표",
       "importance": "HIGH",
@@ -72,7 +72,7 @@
     {
       "id": "cal-02",
       "date": "2026-10-11",
-      "d_day": "D+6",
+      "d_day": "D+7",
       "country": "KR",
       "event_name": "한국은행 금융통화위원회 기준금리 결정",
       "importance": "HIGH",
@@ -82,7 +82,7 @@
     {
       "id": "cal-03",
       "date": "2026-10-16",
-      "d_day": "D+1",
+      "d_day": "D+2",
       "country": "US",
       "event_name": "미국 9월 소매판매 (Retail Sales)",
       "importance": "MEDIUM",
@@ -92,7 +92,7 @@
     {
       "id": "cal-04",
       "date": "2026-11-04",
-      "d_day": "D-18",
+      "d_day": "D-17",
       "country": "US",
       "event_name": "미국 연준 FOMC 정례회의 기준금리 결정",
       "importance": "HIGH",
@@ -530,7 +530,7 @@
       "lifecycle": "SURGING",
       "time_horizon": "MID_LONG_TERM",
       "priced_in_risk": "MEDIUM",
-      "detected_at": "2026-10-17 20:46",
+      "detected_at": "2026-10-18 04:50",
       "title": "AI 반도체 수요 확장 및 차세대 HBM 패키징 공급 경쟁",
       "summary": "글로벌 빅테크의 AI 데이터센터 설비투자(CAPEX) 확대 지속에 힘입어 차세대 가속기 및 HBM3E/HBM4 공급망 수혜 기업으로 자금 유입이 집중되고 있습니다.",
       "deep_dive": {
@@ -575,14 +575,14 @@
       ],
       "sources": [
         {
-          "title": "삼전하닉 추격하는 中 반도체 굴기…창신메모리 매출 600% 폭증 - 주간조선",
-          "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1MRzVaYmo2cGVHV3VWNGpoVWxKUmVTeTNNV3lDcFNfUkItd3RVOEN2dkdzSnBWU2Vtd05XMVpjei13VU9Zdi1FSjNWZFRDNTNfRGZmdHJPZmJhTng1REd4Y1NIRkFoYWdvckHSAW5BVV95cUxPS1h5cmdqdFRtRFh5Qkd4ay1kTF9pczV4TEtEam9qeVZxeFA0cWFWeTZpcW9YZWxKZGxQWHBLNmZXM1FVTURKMTRJbV9mVlJBWm5SQjd6NDlDMERvQmFsalo3Z1JmcmNZSlc1ZDFndw?oc=5",
-          "published_at": "2026-10-17 14:15"
+          "title": "가상공장서 로봇이 기술 검증…현대차, 엔비디아와 제조 혁신 박차 - 노컷뉴스",
+          "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9tWU5YOVc1cHpSYmJodkxKeDYwdFBUbzNjVzdZLS1SVTFpN2dld2tLSjVWeUpuTVZVSGFQejlOU2RmNkF3SEs0QjU3S0Q2S185Mmc?oc=5",
+          "published_at": "2026-10-18 00:00"
         },
         {
-          "title": "호남 반도체 부지 장관들 잇단 방문… 의구심 잠 재우기? [이슈플러스] - 세계일보",
-          "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE03UHNVNEo0YlVqZVMyd3phcnVVak5rbEEySlpQSGo2RnNwT1RMUWhuZjhhRlMxS2RYd3NOdzNPV3ZtMThYVmxFOU5SMzZiZkNuM3A1cENRUXLSAVRBVV95cUxOdlJWUXJPbXVhNFFjekRmbXI0bFhUSUZJS0c4Qk5ZUUhoOVlQcjNzQTNfTGJIWmtiQW04aV9rRWQzVVVrNXJxZVh2QVBFR1lYLWU1SXE?oc=5",
-          "published_at": "2026-10-17 10:44"
+          "title": "플리토, 반도체 기업과 38억7000만원 공급계약 - 비건뉴스",
+          "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1KVDZGN09qek51RmtHSUtxWm5vd0hsM0UzRk9Id0Iyam9TRXQyV1dLMTFDSkJOQVVUaUJmSnZka2xJejA2MHJPc2lwTmd0Q0RLam9wNzY5TkotemJKT2FMNDFELTlOZw?oc=5",
+          "published_at": "2026-10-18 04:21"
         }
       ]
     },
@@ -592,7 +592,7 @@
       "lifecycle": "MATURE",
       "time_horizon": "MID_LONG_TERM",
       "priced_in_risk": "HIGH",
-      "detected_at": "2026-10-17 20:46",
+      "detected_at": "2026-10-18 04:50",
       "title": "미국 기준금리 정책 경로 및 국채 금리 안정화 기대",
       "summary": "연준(Fed)의 완화적 통화정책 기조와 물가 지표 안정세가 지속되며, 미국 장기채 금리 진정과 함께 빅테크 성장주 밸류에이션 부담이 점진적으로 완화되고 있습니다.",
       "deep_dive": {
@@ -623,9 +623,14 @@
       ],
       "sources": [
         {
-          "title": "Williams says Fed may not have to hike rates in 2027, at odds with traders",
-          "url": "https://www.cnbc.com/2026/10/13/john-williams-fed-rate-hikes-2027.html",
-          "published_at": "2026-10-13 19:46"
+          "title": "[채권-주간] 위험회피 분위기 속 맞이한 금통위 - KB Think",
+          "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE5Rc1lVNDlHRXY1bl9EcTdMUlVPd2Rrc0VNMFdyaXktMW50U3hybHdCaVhicXNPTFhmb3hUY0Y3cnFxaXAtR2k2dGJtNWtzdU92YlVZNFV4aW50MTloZlNwOWNRY0pxb2ZkbGpBWFNfUUJPUQ?oc=5",
+          "published_at": "2026-10-18 04:00"
+        },
+        {
+          "title": "에너지에서 소비재까지 번진 물가 불길… 美 수입물가 4년 만 최대 폭 상승 - 글로벌이코노믹",
+          "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOV3ZWd1dhZTJYd3c2WkZDbjJscC1vQ3FPWVZsUWIxdURGTGxRcXJ4VkNxT1hqLVhSNzVDU2FCeXhfUUZBbEhsTVRXZi1LMTlWSzFWYjNjRkd2TlpWMG1JeEoyQVdiZVpFRFQzVnRHYVpWRVBjRERFdGxJRy1SUDBzd1kxUHlLYUdC?oc=5",
+          "published_at": "2026-10-18 00:23"
         }
       ]
     },
@@ -635,7 +640,7 @@
       "lifecycle": "SURGING",
       "time_horizon": "MID_LONG_TERM",
       "priced_in_risk": "LOW",
-      "detected_at": "2026-10-17 20:46",
+      "detected_at": "2026-10-18 04:50",
       "title": "국내 밸류업 프로그램 2차 랠리 및 배당·자사주 소각 본격화",
       "summary": "한국거래소 기업 밸류업 가이드라인 강화 및 상장사들의 자발적 주주환원 공시가 확대되면서 저PBR 지주사와 금융주로 기관 및 외국인 자금 매수세가 유입되고 있습니다.",
       "deep_dive": {
@@ -666,9 +671,9 @@
       ],
       "sources": [
         {
-          "title": "밸류업 지수 리밸런싱 앞두고 금융·자동차 저PBR주 매수세 집중",
-          "url": "https://news.google.com",
-          "published_at": "2026-10-17 20:46"
+          "title": "가상공장서 로봇이 기술 검증…현대차, 엔비디아와 제조 혁신 박차 - 노컷뉴스",
+          "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9tWU5YOVc1cHpSYmJodkxKeDYwdFBUbzNjVzdZLS1SVTFpN2dld2tLSjVWeUpuTVZVSGFQejlOU2RmNkF3SEs0QjU3S0Q2S185Mmc?oc=5",
+          "published_at": "2026-10-18 00:00"
         }
       ]
     },
@@ -678,7 +683,7 @@
       "lifecycle": "NEW",
       "time_horizon": "MID_LONG_TERM",
       "priced_in_risk": "LOW",
-      "detected_at": "2026-10-17 20:46",
+      "detected_at": "2026-10-18 04:50",
       "title": "글로벌 AI 데이터센터 전력망 슈퍼사이클 및 K-변압기 수주 호황",
       "summary": "AI 연산 폭증으로 미국 전력망 용량이 한계에 도달하면서 초고압 변압기와 전력 기자재 공급 부족이 심화되어 국내외 전력 인프라 기업들이 사상 최대 수주잔고를 기록 중입니다.",
       "deep_dive": {
@@ -716,9 +721,9 @@
       ],
       "sources": [
         {
-          "title": "필에너지, 팩토리얼과 전고체 장비 공급계약 - 비건뉴스",
-          "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1DLUJOb3QyWFdXWjB6NVNxR2V0WXdaOGl3R1U2WVR1N0NqUzR3aWowNjk3WEg2UHJDSTM5QUMtb0JpS1FtUktfeDdTNEpPeXNVVnFObzVMWFN5NUV2WHpfSmNFLVBvZw?oc=5",
-          "published_at": "2026-10-17 19:42"
+          "title": "에너지에서 소비재까지 번진 물가 불길… 美 수입물가 4년 만 최대 폭 상승 - 글로벌이코노믹",
+          "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOV3ZWd1dhZTJYd3c2WkZDbjJscC1vQ3FPWVZsUWIxdURGTGxRcXJ4VkNxT1hqLVhSNzVDU2FCeXhfUUZBbEhsTVRXZi1LMTlWSzFWYjNjRkd2TlpWMG1JeEoyQVdiZVpFRFQzVnRHYVpWRVBjRERFdGxJRy1SUDBzd1kxUHlLYUdC?oc=5",
+          "published_at": "2026-10-18 00:23"
         }
       ]
     }
