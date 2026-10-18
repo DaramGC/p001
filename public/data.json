@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-18T04:50:09.524557+00:00",
+  "updated_at": "2026-10-18T11:27:05.386301+00:00",
   "macro_indicators": [
     {
       "name": "코스피",
@@ -530,7 +530,7 @@
       "lifecycle": "SURGING",
       "time_horizon": "MID_LONG_TERM",
       "priced_in_risk": "MEDIUM",
-      "detected_at": "2026-10-18 04:50",
+      "detected_at": "2026-10-18 11:27",
       "title": "AI 반도체 수요 확장 및 차세대 HBM 패키징 공급 경쟁",
       "summary": "글로벌 빅테크의 AI 데이터센터 설비투자(CAPEX) 확대 지속에 힘입어 차세대 가속기 및 HBM3E/HBM4 공급망 수혜 기업으로 자금 유입이 집중되고 있습니다.",
       "deep_dive": {
@@ -575,14 +575,14 @@
       ],
       "sources": [
         {
-          "title": "가상공장서 로봇이 기술 검증…현대차, 엔비디아와 제조 혁신 박차 - 노컷뉴스",
-          "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9tWU5YOVc1cHpSYmJodkxKeDYwdFBUbzNjVzdZLS1SVTFpN2dld2tLSjVWeUpuTVZVSGFQejlOU2RmNkF3SEs0QjU3S0Q2S185Mmc?oc=5",
-          "published_at": "2026-10-18 00:00"
+          "title": "새우과자도 감자칩도 아니었다…CU서 가장 잘 팔린 과자는 - 이투데이",
+          "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9NeVpTRVJnR0hTV0ZveDJFVmFyOXdUeExiTXVFLWZFcHNickNZRXZOMkFfZFc2aWFVZ1RlUDh5UzdPMmVYMkdxMkp0dHFqTEczT0lvay1BWDdnbDNpei12MlFSZUlnam5BUl8xVHRB?oc=5",
+          "published_at": "2026-10-18 05:50"
         },
         {
-          "title": "플리토, 반도체 기업과 38억7000만원 공급계약 - 비건뉴스",
-          "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1KVDZGN09qek51RmtHSUtxWm5vd0hsM0UzRk9Id0Iyam9TRXQyV1dLMTFDSkJOQVVUaUJmSnZka2xJejA2MHJPc2lwTmd0Q0RLam9wNzY5TkotemJKT2FMNDFELTlOZw?oc=5",
-          "published_at": "2026-10-18 04:21"
+          "title": "[특징주] 티에스이(131290), HBM4 공급 확대에 수익성 '껑충' - 인천일보",
+          "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE12QzNWbzVGWEN3bmpvU1lORWplRnd3S2Y4ZGo1YjRZY3l1c0hjcVI2dGhLemdVa0lVV0RPeG9nNVhZUUkzb0dIMXcxS1dxa2RsOEFSdUYxaDBVU01zcGZkNUJ6aGxRS3YwU0twOG51SnI?oc=5",
+          "published_at": "2026-10-18 07:28"
         }
       ]
     },
@@ -592,7 +592,7 @@
       "lifecycle": "MATURE",
       "time_horizon": "MID_LONG_TERM",
       "priced_in_risk": "HIGH",
-      "detected_at": "2026-10-18 04:50",
+      "detected_at": "2026-10-18 11:27",
       "title": "미국 기준금리 정책 경로 및 국채 금리 안정화 기대",
       "summary": "연준(Fed)의 완화적 통화정책 기조와 물가 지표 안정세가 지속되며, 미국 장기채 금리 진정과 함께 빅테크 성장주 밸류에이션 부담이 점진적으로 완화되고 있습니다.",
       "deep_dive": {
@@ -623,14 +623,14 @@
       ],
       "sources": [
         {
-          "title": "[채권-주간] 위험회피 분위기 속 맞이한 금통위 - KB Think",
-          "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE5Rc1lVNDlHRXY1bl9EcTdMUlVPd2Rrc0VNMFdyaXktMW50U3hybHdCaVhicXNPTFhmb3hUY0Y3cnFxaXAtR2k2dGJtNWtzdU92YlVZNFV4aW50MTloZlNwOWNRY0pxb2ZkbGpBWFNfUUJPUQ?oc=5",
-          "published_at": "2026-10-18 04:00"
+          "title": "\"10월 넘기고 11월에\"…전문가들, 금리 인상 '숨고르기' 전망 - 한국무역협회-KITA.NET",
+          "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxNMF9BQkYxTzhRV0p2OHRKci1DRl9tNHNPQngxemN4dE1MdDc4TUxydEJFZFZEY2xzRmRWR3dEUzh3bm0wV1pWR2VRa29lVVhwOTJJN0ZoYmEzZHUtNWNJR0F6WGRQVzhfY1NxYWRxeWs0am1sTEhIbjBWb0UydVZLWnJKdm02QXZjWnk1aUxQTWQ4VjViQTZMYzlPdm1MQlhjNXpDZVNISGN3RDF0bnc5SmZ3MzJhQl8yYnF4Vnp1bkJ5NUV2dmpQcU42S0dpM1VlcGhxS1Jn?oc=5",
+          "published_at": "2026-10-18 07:51"
         },
         {
-          "title": "에너지에서 소비재까지 번진 물가 불길… 美 수입물가 4년 만 최대 폭 상승 - 글로벌이코노믹",
-          "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOV3ZWd1dhZTJYd3c2WkZDbjJscC1vQ3FPWVZsUWIxdURGTGxRcXJ4VkNxT1hqLVhSNzVDU2FCeXhfUUZBbEhsTVRXZi1LMTlWSzFWYjNjRkd2TlpWMG1JeEoyQVdiZVpFRFQzVnRHYVpWRVBjRERFdGxJRy1SUDBzd1kxUHlLYUdC?oc=5",
-          "published_at": "2026-10-18 00:23"
+          "title": "Williams says Fed may not have to hike rates in 2027, at odds with traders",
+          "url": "https://www.cnbc.com/2026/10/13/john-williams-fed-rate-hikes-2027.html",
+          "published_at": "2026-10-13 19:46"
         }
       ]
     },
@@ -640,7 +640,7 @@
       "lifecycle": "SURGING",
       "time_horizon": "MID_LONG_TERM",
       "priced_in_risk": "LOW",
-      "detected_at": "2026-10-18 04:50",
+      "detected_at": "2026-10-18 11:27",
       "title": "국내 밸류업 프로그램 2차 랠리 및 배당·자사주 소각 본격화",
       "summary": "한국거래소 기업 밸류업 가이드라인 강화 및 상장사들의 자발적 주주환원 공시가 확대되면서 저PBR 지주사와 금융주로 기관 및 외국인 자금 매수세가 유입되고 있습니다.",
       "deep_dive": {
@@ -671,9 +671,9 @@
       ],
       "sources": [
         {
-          "title": "가상공장서 로봇이 기술 검증…현대차, 엔비디아와 제조 혁신 박차 - 노컷뉴스",
-          "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9tWU5YOVc1cHpSYmJodkxKeDYwdFBUbzNjVzdZLS1SVTFpN2dld2tLSjVWeUpuTVZVSGFQejlOU2RmNkF3SEs0QjU3S0Q2S185Mmc?oc=5",
-          "published_at": "2026-10-18 00:00"
+          "title": "토토로는 무슨 동물 배당 조합의 표시 방향 - Calgary Roughnecks",
+          "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPbXRpblNMYTlONW5WTi1mSzdqMUpkcVJfWjd3dmpEanRPZjMzdnJyd1BwR1R0SXBaWm8tWkJWV1IySUZOVXhZWVJzWWtpQ3REWU1BeDg2N2l1WkU1RU54WVhhQndweG8tY0NZZHdka01pX0FJU2ltNG15ZGp1SnB6Q25ieks3bnhyZ0hoRzk0Nml3bGtMN3hPSDhMV05tZ1h5aUF0T2FOcHZEdGRtd1ZocXpZT1VVQQ?oc=5",
+          "published_at": "2026-10-17 15:22"
         }
       ]
     },
@@ -683,7 +683,7 @@
       "lifecycle": "NEW",
       "time_horizon": "MID_LONG_TERM",
       "priced_in_risk": "LOW",
-      "detected_at": "2026-10-18 04:50",
+      "detected_at": "2026-10-18 11:27",
       "title": "글로벌 AI 데이터센터 전력망 슈퍼사이클 및 K-변압기 수주 호황",
       "summary": "AI 연산 폭증으로 미국 전력망 용량이 한계에 도달하면서 초고압 변압기와 전력 기자재 공급 부족이 심화되어 국내외 전력 인프라 기업들이 사상 최대 수주잔고를 기록 중입니다.",
       "deep_dive": {
@@ -721,9 +721,9 @@
       ],
       "sources": [
         {
-          "title": "에너지에서 소비재까지 번진 물가 불길… 美 수입물가 4년 만 최대 폭 상승 - 글로벌이코노믹",
-          "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOV3ZWd1dhZTJYd3c2WkZDbjJscC1vQ3FPWVZsUWIxdURGTGxRcXJ4VkNxT1hqLVhSNzVDU2FCeXhfUUZBbEhsTVRXZi1LMTlWSzFWYjNjRkd2TlpWMG1JeEoyQVdiZVpFRFQzVnRHYVpWRVBjRERFdGxJRy1SUDBzd1kxUHlLYUdC?oc=5",
-          "published_at": "2026-10-18 00:23"
+          "title": "러 에너지·中 시장·美 안보…다 잃은 유럽, 성장엔진 꺼졌다 - 한국경제",
+          "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5VQlFHRVdSZkM3SHRNRmFsdEhTMGRyTlpJLVpUeGE3Y0JpMkxxOHBLY0dCY0M3akRhTXItd3FMUllFaW9WdzMyWk5peHhzcU4wTnNtNWM5ZGlQZw?oc=5",
+          "published_at": "2026-10-18 08:40"
         }
       ]
     }
