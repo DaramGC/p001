@@ -1,19 +1,19 @@
 {
-  "updated_at": "2026-10-19T22:31:13.251735+00:00",
+  "updated_at": "2026-10-20T05:03:23.649220+00:00",
   "macro_indicators": [
     {
       "name": "코스피",
       "display": "KOSPI",
-      "price": "5,768.01",
-      "change": "+1.76%",
-      "is_up": true
+      "price": "5,526.62",
+      "change": "-3.41%",
+      "is_up": false
     },
     {
       "name": "코스닥",
       "display": "KOSDAQ",
-      "price": "808.89",
-      "change": "+1.78%",
-      "is_up": true
+      "price": "784.48",
+      "change": "-2.13%",
+      "is_up": false
     },
     {
       "name": "S&P 500",
@@ -32,8 +32,8 @@
     {
       "name": "원/달러 환율",
       "display": "USD/KRW",
-      "price": "1,330.69",
-      "change": "-0.26%",
+      "price": "1,327.68",
+      "change": "-0.22%",
       "is_up": false
     },
     {
@@ -53,8 +53,8 @@
     {
       "name": "WTI 유가",
       "display": "WTI Oil",
-      "price": "$98.25",
-      "change": "+0.91%",
+      "price": "$98.69",
+      "change": "+0.23%",
       "is_up": true
     }
   ],
@@ -62,7 +62,7 @@
     {
       "id": "cal-01",
       "date": "2026-10-10",
-      "d_day": "D+9",
+      "d_day": "D+10",
       "country": "US",
       "event_name": "미국 9월 소비자물가지수 (CPI) 발표",
       "importance": "HIGH",
@@ -72,7 +72,7 @@
     {
       "id": "cal-02",
       "date": "2026-10-11",
-      "d_day": "D+8",
+      "d_day": "D+9",
       "country": "KR",
       "event_name": "한국은행 금융통화위원회 기준금리 결정",
       "importance": "HIGH",
@@ -82,7 +82,7 @@
     {
       "id": "cal-03",
       "date": "2026-10-16",
-      "d_day": "D+3",
+      "d_day": "D+4",
       "country": "US",
       "event_name": "미국 9월 소매판매 (Retail Sales)",
       "importance": "MEDIUM",
@@ -92,7 +92,7 @@
     {
       "id": "cal-04",
       "date": "2026-11-04",
-      "d_day": "D-16",
+      "d_day": "D-15",
       "country": "US",
       "event_name": "미국 연준 FOMC 정례회의 기준금리 결정",
       "importance": "HIGH",
@@ -112,9 +112,9 @@
         {
           "symbol": "000660",
           "name": "SK하이닉스",
-          "change": "+2.52%",
+          "change": "-5.09%",
           "role": "HBM3E 글로벌 독점 공급",
-          "current_price": "1,304,000"
+          "current_price": "1,212,000"
         },
         {
           "symbol": "NVDA",
@@ -126,9 +126,9 @@
         {
           "symbol": "042700",
           "name": "한미반도체",
-          "change": "+3.10%",
+          "change": "-5.75%",
           "role": "듀얼 TC 본더 장비 독점",
-          "current_price": "216,500"
+          "current_price": "199,800"
         }
       ]
     },
@@ -143,16 +143,16 @@
         {
           "symbol": "267260",
           "name": "HD현대일렉트릭",
-          "change": "+2.13%",
+          "change": "-6.95%",
           "role": "북미 초고압 변압기 최대 수혜",
-          "current_price": "527,000"
+          "current_price": "488,500"
         },
         {
           "symbol": "010120",
           "name": "LS ELECTRIC",
-          "change": "+5.04%",
+          "change": "-7.05%",
           "role": "배전반 및 IDC 전력 솔루션",
-          "current_price": "166,600"
+          "current_price": "153,000"
         },
         {
           "symbol": "GE",
@@ -174,16 +174,16 @@
         {
           "symbol": "196170",
           "name": "알테오젠",
-          "change": "+2.35%",
+          "change": "-3.35%",
           "role": "SC 제형 변경 플랫폼 독점력",
-          "current_price": "239,500"
+          "current_price": "231,000"
         },
         {
           "symbol": "141080",
           "name": "레고켐바이오",
-          "change": "+3.95%",
+          "change": "-1.97%",
           "role": "차세대 ADC 링커 기술수출",
-          "current_price": "71,000"
+          "current_price": "69,500"
         },
         {
           "symbol": "LLY",
@@ -205,23 +205,23 @@
         {
           "symbol": "105560",
           "name": "KB금융",
-          "change": "+0.44%",
+          "change": "-1.60%",
           "role": "주주환원율 40% 도달 선언",
-          "current_price": "160,700"
+          "current_price": "160,100"
         },
         {
           "symbol": "138040",
           "name": "메리츠금융지주",
-          "change": "-0.31%",
+          "change": "-1.98%",
           "role": "주주환원 모범 지주사",
-          "current_price": "129,400"
+          "current_price": "128,400"
         },
         {
           "symbol": "005380",
           "name": "현대차",
-          "change": "+4.01%",
+          "change": "-5.98%",
           "role": "인도 법인 상장 배당 재원",
-          "current_price": "324,500"
+          "current_price": "306,500"
         }
       ]
     },
@@ -236,16 +236,16 @@
         {
           "symbol": "012450",
           "name": "한화에어로스페이스",
-          "change": "+0.45%",
+          "change": "-12.27%",
           "role": "K9/천무 유럽 수주 주도",
-          "current_price": "892,000"
+          "current_price": "794,000"
         },
         {
           "symbol": "079550",
           "name": "LIG넥스원",
-          "change": "+3.14%",
+          "change": "-9.05%",
           "role": "유도무기 비궁/천궁 수출",
-          "current_price": "592,000"
+          "current_price": "543,000"
         }
       ]
     },
@@ -260,9 +260,9 @@
         {
           "symbol": "373220",
           "name": "LG에너지솔루션",
-          "change": "+6.33%",
+          "change": "-4.51%",
           "role": "북미 ESS 전용 라인 전환",
-          "current_price": "428,500"
+          "current_price": "412,500"
         },
         {
           "symbol": "TSLA",
@@ -315,16 +315,16 @@
         {
           "symbol": "454910",
           "name": "두산로보틱스",
-          "change": "+5.93%",
+          "change": "-3.07%",
           "role": "협동로봇 라인업 확장",
-          "current_price": "62,500"
+          "current_price": "60,000"
         },
         {
           "symbol": "277810",
           "name": "레인보우로보틱스",
-          "change": "+7.80%",
+          "change": "-1.59%",
           "role": "휴머노이드 양산 협업",
-          "current_price": "380,000"
+          "current_price": "372,000"
         }
       ]
     }
@@ -339,12 +339,12 @@
       "catalyst_type": "TECH_ORDER",
       "title": "글로벌 2나노 GAA 선단 파운드리향 차세대 ALD 증착 장비 독점 공급 개시",
       "summary": "반도체 회로 미세화 한계로 게이트올어라운드(GAA) 구조가 필수가 되면서 박막을 원자 단위로 정밀 도포하는 ALD 장비 수요가 폭증하고 있습니다.",
-      "change_rate": "+2.48%",
+      "change_rate": "-3.59%",
       "thesis": "기존 CVD 공정으로는 불가능한 2나노 나노시트 단차 피복성을 동사 원자층증착(ALD) 기술이 단독 충족하여 해외 파운드리향 납품 시작.",
       "financial_impact": "장비당 판매단가(ASP)가 전세대 대비 약 25% 상승하였으며, 2026년 하반기 파운드리 신규 라인 가동과 함께 전사 영업이익률 18%대 복귀 전망.",
       "competitive_edge": "국내 최대 반도체 전공정 포트폴리오 보유 및 고객사 2나노 R&D 단계부터 공동 개발한 독점 특허 해자.",
       "risks_to_watch": "글로벌 선단 파운드리 업체의 2나노 양산 일정 지연 시 장비 입고 스케줄 순연 가능성.",
-      "current_price": "111,700"
+      "current_price": "104,600"
     },
     {
       "symbol": "141080",
@@ -355,12 +355,12 @@
       "catalyst_type": "BIO_PIPELINE",
       "title": "차세대 ADC(항체약물접합체) 플랫폼 얀센향 글로벌 임상 1상 진입 및 마일스톤 수령",
       "summary": "동사의 독자적 'ConjuALL' 링커 플랫폼이 적용된 파이프라인의 글로벌 임상이 가속화되며 단계별 마일스톤 유입이 가시화되고 있습니다.",
-      "change_rate": "+3.95%",
+      "change_rate": "-1.97%",
       "thesis": "표적 암세포에서만 약물이 선택적으로 방출되는 안전성 높은 링커 기술을 인정받아 글로벌 빅파마 대상 누적 8조원대 기술수출 계약 체결 완료.",
       "financial_impact": "2026년 내 약 450억원 규모의 임상 진척 마일스톤이 순차적으로 계상되어 별도 기준 흑자 기조 안착 예상.",
       "competitive_edge": "혈중 안정성이 뛰어난 링커와 독자 톡신(Payload) 조합으로 글로벌 경쟁사(시젠, 다이이찌산쿄) 대비 독성 부작용 최소화 입증.",
       "risks_to_watch": "글로벌 경쟁 ADC 후보물질들의 임상 데이터 발표에 따른 단기 섹터 센티먼트 변동성.",
-      "current_price": "71,000"
+      "current_price": "69,500"
     },
     {
       "symbol": "403870",
@@ -371,12 +371,12 @@
       "catalyst_type": "TECH_PATENT",
       "title": "HBM 및 첨단 로직 공정 필수 고압 수소 어닐링 장비 독점력 지속",
       "summary": "반도체 계면의 트랜지스터 결함을 100% 고압 수소 환경에서 열처리하는 전공정 장비 수요가 미세화 진행에 따라 필수 불가결해지고 있습니다.",
-      "change_rate": "+0.74%",
+      "change_rate": "-4.18%",
       "thesis": "초미세 공정일수록 게이트 절연막 계면 결함이 주 결함 요인이 되며, 저온(450도 이하) 고압 수소 어닐링을 구현할 수 있는 유일한 장비사.",
       "financial_impact": "영업이익률이 무려 52%에 달하는 초고수익 구조를 지속하며, 메모리 제조사들의 1b D램 및 첨단 HBM 라인 증설에 따라 2026년 사상 최대 실적 경신 전망.",
       "competitive_edge": "고압 가스 안전 인증 및 원천 특허를 통한 강력한 진입 장벽으로 대체재 부재.",
       "risks_to_watch": "후발 장비사들의 특허 무효화 소송 결과 및 양산 평가 진척 여부 지속 모니터링 필요.",
-      "current_price": "54,500"
+      "current_price": "50,400"
     },
     {
       "symbol": "095610",
@@ -387,12 +387,12 @@
       "catalyst_type": "SUPPLY_CONTRACT",
       "title": "메모리 제조사 레거시 팹 가동률 정상화 및 첨단 박막 증착 장비 수주 턴어라운드",
       "summary": "국내 메모리 양사의 감산 종료와 선단 공정 전환 투자가 동시에 집행되면서 건식 식각 및 박막 장비 납품이 급격한 회복세에 접어들었습니다.",
-      "change_rate": "+0.71%",
+      "change_rate": "-4.95%",
       "thesis": "낸드 적층 단수 증가 및 D램 커패시터 증착 공정에 필수적인 PECVD/Gas Etch 장비의 고객사 발주가 전분기 대비 40% 이상 반등.",
       "financial_impact": "2025년 마진 압박 구간을 벗어나 2026년 분기별 매출 800억원 이상, 영업이익률 두 자릿수 턴어라운드 확실시.",
       "competitive_edge": "삼성전자 및 SK하이닉스 양사 모두를 주요 고객사로 확보하여 CAPEX 재개 시 가장 빠른 실적 레버리지 발생.",
       "risks_to_watch": "낸드 플래시 메모리 시장의 완제품 가격 회복 속도 및 감산 정책 변화.",
-      "current_price": "127,700"
+      "current_price": "117,200"
     },
     {
       "symbol": "084370",
@@ -403,12 +403,12 @@
       "catalyst_type": "TECH_ORDER",
       "title": "차세대 1b D램 및 3D 낸드용 LPCVD 저압 화학증착 장비 수주 급증",
       "summary": "박막의 균일도와 스텝 커버리지가 탁월한 저압 화학증착 장비의 글로벌 탑티어 공급 지위를 강화하고 있습니다.",
-      "change_rate": "+0.31%",
+      "change_rate": "-6.99%",
       "thesis": "외산 장비(도쿄일렉트론, 램리서치)가 독점하던 질화막/산화막 증착 공정을 성공적으로 국산화하여 주요 메모리사 채택률 급상승.",
       "financial_impact": "차세대 선단 공정 침투율 확대로 연간 매출 4,000억원 및 영업이익 800억원대 도달 가시화.",
       "competitive_edge": "싱글 웨이퍼 LPCVD 분야에서 세계 최고 수준의 박막 제어 기술력 보유.",
       "risks_to_watch": "주요 고객사의 설비투자 집행 시기 이연에 따른 분기 실적 변동성.",
-      "current_price": "129,700"
+      "current_price": "117,100"
     },
     {
       "symbol": "397030",
@@ -419,12 +419,12 @@
       "catalyst_type": "BIO_PIPELINE",
       "title": "지속형 알부민 바인더 플랫폼 'SAFA' 기반 자가면역질환 신약 기술수출 성과 가시화",
       "summary": "약물의 체내 반감기를 획기적으로 늘려주는 SAFA 플랫폼을 기반으로 다국적 제약사향 공동연구 및 마일스톤 계약이 순항 중입니다.",
-      "change_rate": "+5.61%",
+      "change_rate": "-2.51%",
       "thesis": "인체 알부민과 결합하여 투약 주기를 주 1회에서 월 1회로 개선하는 플랫폼의 임상적 유효성이 확인되며 글로벌 L/O 협상 유리.",
       "financial_impact": "체결된 기술수출 계약금 및 후속 마일스톤 유입으로 바이오텍 특유의 자금 조달 리스크 완전 해소.",
       "competitive_edge": "항체 단편에 알부민 바인더를 융합하는 독창적 플랫폼으로 다양한 타깃 단백질에 무제한 확장 가능.",
       "risks_to_watch": "파트너사의 글로벌 임상 2상 진입 일정 및 데이터 발표 결과.",
-      "current_price": "13,560"
+      "current_price": "13,210"
     },
     {
       "symbol": "437730",
@@ -435,12 +435,12 @@
       "catalyst_type": "TECH_ORDER",
       "title": "모터·감속기·제어기 일체형 스마트 액추에이터 독점 공급 및 방산 드론 납품 확대",
       "summary": "로봇 관절 및 방산 무인화 장비의 핵심인 '3-in-1 일체형 액추에이터'의 대량 양산 능력을 확보하여 고객사 러브콜이 이어지고 있습니다.",
-      "change_rate": "+5.89%",
+      "change_rate": "+3.41%",
       "thesis": "개별 부품을 조립하던 기존 방식 대비 부피 30% 축소, 전력 효율 20% 향상시킨 일체형 구동 모듈로 로봇·방산 납품 확정.",
       "financial_impact": "현대차그룹 로봇 라인업 및 국내 방산 대기업향 납품 시작으로 2026년 수주잔고 1조원 돌파 전망.",
       "competitive_edge": "소프트웨어 제어 알고리즘과 정밀 하드웨어 모터 설계를 단일 패키지로 내재화한 국내 유일 기업.",
       "risks_to_watch": "원자재(희토류 영구자석 등) 가격 급등에 따른 원가율 상승 가능성.",
-      "current_price": "41,350"
+      "current_price": "42,500"
     },
     {
       "symbol": "SMCI",
@@ -530,7 +530,7 @@
       "lifecycle": "SURGING",
       "time_horizon": "MID_LONG_TERM",
       "priced_in_risk": "MEDIUM",
-      "detected_at": "2026-10-19 22:31",
+      "detected_at": "2026-10-20 05:03",
       "title": "AI 반도체 수요 확장 및 차세대 HBM 패키징 공급 경쟁",
       "summary": "글로벌 빅테크의 AI 데이터센터 설비투자(CAPEX) 확대 지속에 힘입어 차세대 가속기 및 HBM3E/HBM4 공급망 수혜 기업으로 자금 유입이 집중되고 있습니다.",
       "deep_dive": {
@@ -575,14 +575,14 @@
       ],
       "sources": [
         {
-          "title": "[오늘장특징주]마이크론, 엔비디아, 인텔, 네비우스 - 이데일리",
-          "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQZjhnUENQZm1FVzRmYU1MOFBHTjdOZC15YlVhajdHbHVDRGtPbXNKUmoyYnNVTUptd3VtSDloUDhVYWpiWW1xRXY2bUFmYkFtUU5oMGp3UE4wSGQ3SWRQVF82QTdibzMxcnNVa0NrMTY1bmp0SElXWWhrOFlhazlDQw?oc=5",
-          "published_at": "2026-10-19 21:44"
+          "title": "코스피, 나스닥 반등에도 '팔자'폭 확대…SK하이닉스 4% 약세 - 연합인포맥스",
+          "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9GWDlFR08tSkdyMXZ2b3VNQV9kUjIzNkkyLWtlSlFQeFJsb1ZxUmV3RTZtN3BBa2JiTEY4aTE1UU0zaXMzX1BaX2EyWXE4M1NBcDFaTzhsUExJRFNsVmkwVjVUTWZiZ0dzMzM2dE1Na1Y?oc=5",
+          "published_at": "2026-10-20 00:23"
         },
         {
-          "title": "Taiwan Semiconductor Manufacturing (TSM) Stock May Be Reasonably Priced Following Record AI Chip Demand - Simply Wall Street",
-          "url": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxORFBXclh6Y2t3XzNkSkZZRUlBbktHQ0Nqb1JVaWpnRkIwVHNvOWo3cWxoZnRNZUJrU2lIYmJCZFpHRXNwOFlHMGs3SFRNVTZaRnlpcGlJZlBnY1VJSG9SNlBxNTNJemUtcVpMdVBhVTJLVldlcEt2VTJaeXhTUkppSktyakV3enFDU0ZjbmdiNWd2eXZoMFNLdWhUdXB5cVNsdTM2OVVnbEFabHZLOVM4djcxUnQ5RGlzMUdEM3JvZ1RHdWJEYTYxeHRfZ0Q2UnNfRy1Oamo0amREeTQ1c3lPNDZ0WjhBbXFRbGhsTNIB8gFBVV95cUxOZVB5QzZZQ0hpRlRQM293V2N0d3NJMkVNSFk0dnhNUkkteXA0YlpSYm1oS25GVGJUb3JCbC1oSHNDX055c0F0YWU4NG1PSGdRN1IyRGJFTzBuMFpJdUtHa1NzUmFZTjhkMnU5cG1BWm4tLU1EZG1BSHB3SDR4R2N2RWZ0cTkxY0dwN3BCZzMtNGZDVWpHcWFNWUVsSk9VTndhMU1sOW1IdnA2YkFGMVhpanZ5bjM4VE1OYy1ROGxNX3ZwMEY3VC1PUkZHZEJrb01CQUFaeFBzS3BVNjFZOGFvTXVuZFBsMnNsYXJPRWl3TEdOUQ?oc=5",
-          "published_at": "2026-10-19 18:45"
+          "title": "[해외시황] 뉴욕증시, AI·반도체주 반등에도 '혼조'…나스닥 1.11%↑ - 프라임경제",
+          "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBNbFJ5bmpnWmZIWW5lUkFoVDlOam1zcGk0dkhkU29hUzdKcDZTVGZYODV2YzAzS2RrekJkdDNoLXNZVGV3V3Blb2s4Q2toTkpXdUN0R0RkSERhRU0ybW90Tg?oc=5",
+          "published_at": "2026-10-19 23:34"
         }
       ]
     },
@@ -592,7 +592,7 @@
       "lifecycle": "MATURE",
       "time_horizon": "MID_LONG_TERM",
       "priced_in_risk": "HIGH",
-      "detected_at": "2026-10-19 22:31",
+      "detected_at": "2026-10-20 05:03",
       "title": "미국 기준금리 정책 경로 및 국채 금리 안정화 기대",
       "summary": "연준(Fed)의 완화적 통화정책 기조와 물가 지표 안정세가 지속되며, 미국 장기채 금리 진정과 함께 빅테크 성장주 밸류에이션 부담이 점진적으로 완화되고 있습니다.",
       "deep_dive": {
@@ -623,14 +623,14 @@
       ],
       "sources": [
         {
-          "title": "원/달러 환율 2년만에 또 최저…위안화 환율도 1년만에 최저 - 한국무역협회-KITA.NET",
-          "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxNOURaZUpvMnB6cU9JRFMtREd3S1VVQi1lYVhwUWFtLU1qUTE0MldyYTVrSHN0c1cyWE1YUTRDZTcwS0lVQzhmZ3dFbFhrdDdzTkdFWUdpV1BBcGZLbDBNdFExUzhpRXRKek5fNXNBUTVLMGNjTDdUQkl5c1lRUnRDRThzU0hNWWZPYnF6cjd3QjlXRVpza2EycU5XV0d6c1pBZTEyU0Q3XzVsMWhNZHVrMjdTaXZZQUMybXRWNzV2Y2VjWFQ2THdnN1VGR0FldmphSjF5eWNR?oc=5",
-          "published_at": "2026-10-19 08:55"
+          "title": "[환율 전망] 돌아온 AI 투심, 거세질 역외 베팅 - KB Think",
+          "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBIOFRLVUJpR19ZUk5DaV90OFE2blBna1o2MnBKVElpYmhjSDRoQnJrU0JSelhiRDNSRXV6bmFlTFJtbEhnaWpfWl9yZ0ZvSWplT0JxMTZ1TnZrclg4Q0p6MA?oc=5",
+          "published_at": "2026-10-20 01:54"
         },
         {
-          "title": "Williams says Fed may not have to hike rates in 2027, at odds with traders",
-          "url": "https://www.cnbc.com/2026/10/13/john-williams-fed-rate-hikes-2027.html",
-          "published_at": "2026-10-13 19:46"
+          "title": "채권시장 참여자 93% \"10월 금통위 기준금리 동결 예상\" - 연합인포맥스",
+          "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5jdzhFNG5PZXdLVU1QQTM1eFo3bVFxSlNKSkhuN29QLVUwbUhzWDhJRjdlS0Qyc1RKci1IYXp6MV9XbUM2Y2NXNlp4d3hzU3FYTlh4VmdtbFF0OEViNkt1V1NybkVxb3VmMTAxYVN6S2g?oc=5",
+          "published_at": "2026-10-20 01:47"
         }
       ]
     },
@@ -640,7 +640,7 @@
       "lifecycle": "SURGING",
       "time_horizon": "MID_LONG_TERM",
       "priced_in_risk": "LOW",
-      "detected_at": "2026-10-19 22:31",
+      "detected_at": "2026-10-20 05:03",
       "title": "국내 밸류업 프로그램 2차 랠리 및 배당·자사주 소각 본격화",
       "summary": "한국거래소 기업 밸류업 가이드라인 강화 및 상장사들의 자발적 주주환원 공시가 확대되면서 저PBR 지주사와 금융주로 기관 및 외국인 자금 매수세가 유입되고 있습니다.",
       "deep_dive": {
@@ -671,9 +671,14 @@
       ],
       "sources": [
         {
-          "title": "밸류업 지수 리밸런싱 앞두고 금융·자동차 저PBR주 매수세 집중",
-          "url": "https://news.google.com",
-          "published_at": "2026-10-19 22:31"
+          "title": "솔리다임 '중복상장' 못박은 금융당국…美 IPO에 제동 걸리나 - 연합인포맥스",
+          "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBNZnBmYkIza1A5NjJVWkpyVTBMeEN4LXlPT3A1SXpTVGtvWC1Bb2ZJbl9MQkR1RmpfQmpTNUNJVXFVX1NoMFhGRmZEQXdvdlpJcldWVVRvY3A0R3ZSUUFMYWlJWWdmQUdPMmJXMmxWbjM?oc=5",
+          "published_at": "2026-10-19 22:32"
+        },
+        {
+          "title": "'잊고 있던 내 돈' 잠자는 금융자산 14조 원…계좌만 3억 4천만 개 - KBC광주방송",
+          "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9ZUFo4a3ZHZHBGN2lVTjdDWVE5bkJLR0ZyTVpjTTNPSTVmWTdNU0xIMkxNUS1GYVUwMDU2dFE0dWlmaDZ4QWMwREFhc2NKVjY0ZjBvTjU4SXc2WjdsTDNJZERB?oc=5",
+          "published_at": "2026-10-20 03:10"
         }
       ]
     },
@@ -683,7 +688,7 @@
       "lifecycle": "NEW",
       "time_horizon": "MID_LONG_TERM",
       "priced_in_risk": "LOW",
-      "detected_at": "2026-10-19 22:31",
+      "detected_at": "2026-10-20 05:03",
       "title": "글로벌 AI 데이터센터 전력망 슈퍼사이클 및 K-변압기 수주 호황",
       "summary": "AI 연산 폭증으로 미국 전력망 용량이 한계에 도달하면서 초고압 변압기와 전력 기자재 공급 부족이 심화되어 국내외 전력 인프라 기업들이 사상 최대 수주잔고를 기록 중입니다.",
       "deep_dive": {
@@ -721,16 +726,21 @@
       ],
       "sources": [
         {
-          "title": "Global power grid supercycle drives electrification giants to record backlogs",
-          "url": "https://www.bloomberg.com",
-          "published_at": "2026-10-19 22:31"
+          "title": "[특징주] 지투지바이오, 中 UBT와 장기지속형 주사제 개발 협력…강세 - 에너지경제신문",
+          "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9uQnlPdXcycXo3UUpfeFBDQXA0VDZ1U3RwYWE4TzBZTHhPdHNmcnk1VmlsazFLbWk2aHlnSlVVZFJfcGsxUHg0U3E2NzFrci1paE4tZHpHM1VkcTQ?oc=5",
+          "published_at": "2026-10-20 01:23"
+        },
+        {
+          "title": "[특징주] 현대로템, 이라크·루마니아 K2 수주 불확실…주가 약세 - 에너지경제신문",
+          "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE13bnhadHVicWM3SXVKWXcxVWRWWDl5Z084TzBNWGdlalpVZ2k5TTBCVnBpajdnSmNVZHk5YXR3NnFLNjIwQUJ5NS1oNjVienJZVWJIVUlteEFfZ2s?oc=5",
+          "published_at": "2026-10-20 00:19"
         }
       ]
     }
   ],
   "market_summary": {
     "us_status": "나스닥(+1.11%)·S&P 500(+0.41%) 상승 랠리 속 테크 빅테크 중심 선별 수급",
-    "kr_status": "코스닥(+1.78%)·코스피(+1.76%) 반등 흐름 속 실적 호전주 선별 접근"
+    "kr_status": "코스닥(-2.13%)·코스피(-3.41%) 숨고르기 양상 속 실적 호전주 선별 접근"
   },
   "trending_tickers": [
     {
@@ -745,9 +755,9 @@
       "symbol": "000660",
       "name": "SK하이닉스",
       "market": "KRX",
-      "change_rate": "+2.52%",
+      "change_rate": "-5.09%",
       "why_trending": "HBM 수요 견인으로 분기 실적 서프라이즈 및 최고 수익성",
-      "current_price": "1,304,000"
+      "current_price": "1,212,000"
     },
     {
       "symbol": "NVDA",
@@ -761,9 +771,9 @@
       "symbol": "267260",
       "name": "HD현대일렉트릭",
       "market": "KRX",
-      "change_rate": "+2.13%",
+      "change_rate": "-6.95%",
       "why_trending": "북미 초고압 변압기 수주 지속 및 전력 슈퍼사이클 모멘텀",
-      "current_price": "527,000"
+      "current_price": "488,500"
     },
     {
       "symbol": "PLTR",
@@ -777,9 +787,9 @@
       "symbol": "042700",
       "name": "한미반도체",
       "market": "KRX",
-      "change_rate": "+3.10%",
+      "change_rate": "-5.75%",
       "why_trending": "HBM용 듀얼 TC 본더 장비 글로벌 출하 증가 및 독점적 해자",
-      "current_price": "216,500"
+      "current_price": "199,800"
     }
   ]
 }
