@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-22T12:10:00.415049+00:00",
+  "updated_at": "2026-10-22T17:23:59.166037+00:00",
   "macro_indicators": [
     {
       "name": "코스피",
@@ -18,43 +18,43 @@
     {
       "name": "S&P 500",
       "display": "S&P 500",
-      "price": "7,757.17",
-      "change": "+0.59%",
-      "is_up": true
+      "price": "7,657.17",
+      "change": "-1.29%",
+      "is_up": false
     },
     {
       "name": "나스닥",
       "display": "NASDAQ",
-      "price": "26,702.86",
-      "change": "+1.06%",
-      "is_up": true
+      "price": "26,061.74",
+      "change": "-2.40%",
+      "is_up": false
     },
     {
       "name": "원/달러 환율",
       "display": "USD/KRW",
-      "price": "1,323.61",
-      "change": "-0.19%",
+      "price": "1,325.88",
+      "change": "-0.01%",
       "is_up": false
     },
     {
       "name": "미국 10년물 국채",
       "display": "US 10Y",
-      "price": "5.15%",
-      "change": "+0.57%",
-      "is_up": true
+      "price": "4.97%",
+      "change": "-3.40%",
+      "is_up": false
     },
     {
       "name": "변동성(VIX)",
       "display": "VIX",
-      "price": "18.18",
-      "change": "+8.99%",
+      "price": "19.25",
+      "change": "+15.41%",
       "is_up": true
     },
     {
       "name": "WTI 유가",
       "display": "WTI Oil",
-      "price": "$99.29",
-      "change": "+0.78%",
+      "price": "$99.20",
+      "change": "+0.69%",
       "is_up": true
     }
   ],
@@ -119,9 +119,9 @@
         {
           "symbol": "NVDA",
           "name": "NVIDIA",
-          "change": "+2.54%",
+          "change": "-3.98%",
           "role": "차세대 블랙웰 GPU 공급 폭증",
-          "current_price": "$221.97"
+          "current_price": "$213.14"
         },
         {
           "symbol": "042700",
@@ -157,9 +157,9 @@
         {
           "symbol": "GE",
           "name": "GE Vernova",
-          "change": "-1.33%",
+          "change": "-1.73%",
           "role": "글로벌 가스터빈 발전 인프라",
-          "current_price": "$295.88"
+          "current_price": "$290.75"
         }
       ]
     },
@@ -188,9 +188,9 @@
         {
           "symbol": "LLY",
           "name": "Eli Lilly",
-          "change": "-1.01%",
+          "change": "+2.92%",
           "role": "비만치료제 파이프라인 확장",
-          "current_price": "$1,270.75"
+          "current_price": "$1,307.81"
         }
       ]
     },
@@ -267,9 +267,9 @@
         {
           "symbol": "TSLA",
           "name": "Tesla",
-          "change": "+3.41%",
+          "change": "-1.91%",
           "role": "FSD 로보택시 및 메가팩 성장",
-          "current_price": "$386.47"
+          "current_price": "$379.10"
         }
       ]
     },
@@ -284,23 +284,23 @@
         {
           "symbol": "PLTR",
           "name": "Palantir",
-          "change": "+4.74%",
+          "change": "-1.97%",
           "role": "AIP 민간 침투율 급상승",
-          "current_price": "$201.72"
+          "current_price": "$197.74"
         },
         {
           "symbol": "MSFT",
           "name": "Microsoft",
-          "change": "+0.20%",
+          "change": "-1.67%",
           "role": "애저 AI 클라우드 인프라",
-          "current_price": "$532.95"
+          "current_price": "$524.07"
         },
         {
           "symbol": "GOOGL",
           "name": "Alphabet",
-          "change": "-1.62%",
+          "change": "-2.35%",
           "role": "제미나이 AI 검색 상용화",
-          "current_price": "$334.76"
+          "current_price": "$326.90"
         }
       ]
     },
@@ -451,12 +451,12 @@
       "catalyst_type": "AI_INFRA",
       "title": "엔비디아 블랙웰 GPU 가속기용 액체냉각(DLC) 서버 랙 대규모 양산 출하 개시",
       "summary": "100kW 이상 초고발열 AI 칩을 식히기 위한 직접 액체 냉각(Direct Liquid Cooling) 기술이 표준으로 자리잡으며 서버 출하량이 급증하고 있습니다.",
-      "change_rate": "+9.55%",
+      "change_rate": "-6.90%",
       "thesis": "기존 공랭식으로는 감당 불가능한 고밀도 AI 데이터센터의 필수 솔루션을 엔비디아와 공동 설계하여 시장 선점.",
       "financial_impact": "액체냉각 시스템이 적용된 랙의 마진율이 15% 이상으로 개선되며, 단기 회계 관련 노이즈 해소 시 실적 폭발력 부각.",
       "competitive_edge": "모듈형 블록 아키텍처를 통해 경쟁사(Dell, HP) 대비 신제품 출시 기간을 수개월 단축시키는 민첩성.",
       "risks_to_watch": "지배구조 및 회계 감사 관련 불확실성 완전 해소 여부 확인 필요.",
-      "current_price": "$35.57"
+      "current_price": "$33.12"
     },
     {
       "symbol": "ASTS",
@@ -467,12 +467,12 @@
       "catalyst_type": "TECH_ORDER",
       "title": "일반 스마트폰 직접 연결 5G 우주 저궤도 위성 'BlueBird' 상용 궤도 안착",
       "summary": "별도의 특수 단말기 없이 일반 스마트폰으로 저궤도 위성과 직접 음성/데이터를 송수신하는 차세대 통신망 구축이 현실화되고 있습니다.",
-      "change_rate": "-0.56%",
+      "change_rate": "-6.38%",
       "thesis": "AT&T, Verizon 등 미국 1·2위 통신사 및 글로벌 40여 개 통신사와 상용 서비스 계약 체결로 음영지역 없는 글로벌 커버리지 확보.",
       "financial_impact": "2026년 상용 서비스 개시와 함께 통신사 가입자당 추가 부가서비스 수수료(ARPU) 쉐어로 기하급수적 매출 성장 궤도 진입.",
       "competitive_edge": "축구장 크기의 거대 위성 안테나 어레이를 저궤도에 전개하는 독보적 특허 포트폴리오 보유.",
       "risks_to_watch": "후속 위성 발사 로켓 일정 지연 및 규제 당국(FCC)의 최종 주파수 승인 일정.",
-      "current_price": "$40.90"
+      "current_price": "$38.29"
     },
     {
       "symbol": "RKLB",
@@ -483,12 +483,12 @@
       "catalyst_type": "TECH_ORDER",
       "title": "중형 재사용 로켓 'Neutron' 핫파이어 테스트 성공 및 미 국방부 국방 발사 계약 수주",
       "summary": "소형 로켓(Electron)의 높은 발사 성공률에 이어 중형 재사용 로켓 개발이 막바지에 접어들며 스페이스X의 대항마로 급부상 중입니다.",
-      "change_rate": "+5.44%",
+      "change_rate": "-5.58%",
       "thesis": "민간 및 군사위성 발사 수요 폭증 속에서 스페이스X(Falcon 9) 외에 유일하게 정기적 상업 발사가 가능한 민간 발사체 기업.",
       "financial_impact": "위성 제작 및 우주 시스템 부문 수주잔고가 10억 달러를 돌파하며 하드웨어 제조사에서 종합 우주 인프라 기업으로 체질 개선.",
       "competitive_edge": "카본 복합재 차체 및 3D 프린팅 로켓 엔진 기술을 통한 압도적인 발사 비용 절감 및 50회 이상의 상업 궤도 발사 성공 트랙레코드.",
       "risks_to_watch": "Neutron 로켓의 첫 상업 발사 성공 여부 및 연구개발비 집행에 따른 단기 잉여현금흐름 변동.",
-      "current_price": "$53.67"
+      "current_price": "$50.66"
     },
     {
       "symbol": "IONQ",
@@ -499,12 +499,12 @@
       "catalyst_type": "TECH_PATENT",
       "title": "상온 작동 트랩이온 양자컴퓨터 '#AQ 64' 조기 달성 및 엔터프라이즈 클라우드 서비스 확대",
       "summary": "극저온 냉각기 없이 상온에서 동작 가능한 이온트랩 방식의 양자 컴퓨터가 금융 및 신약 개발 알고리즘에서 상용 이점을 증명하고 있습니다.",
-      "change_rate": "+3.26%",
+      "change_rate": "-3.50%",
       "thesis": "초전도 방식(IBM, Google) 대비 큐비트 연결성과 게이트 충실도가 월등하여 상업용 양자 우위(Quantum Advantage) 달성에 가장 근접.",
       "financial_impact": "미국 국립연구소 및 글로벌 제약사들과의 다년 계약으로 2026년 예약 수주액 1억 달러 돌파 예상.",
       "competitive_edge": "천연 원자(바륨 이온)를 큐비트로 사용하여 큐비트 간 완벽한 동질성과 긴 결맞음 시간 확보.",
       "risks_to_watch": "범용 양자컴퓨터 상용화까지의 기술 개발 타임라인 및 추가 자금 조달 가능성.",
-      "current_price": "$32.28"
+      "current_price": "$31.15"
     },
     {
       "symbol": "OKLO",
@@ -515,12 +515,12 @@
       "catalyst_type": "AI_INFRA",
       "title": "샘 올트먼 후원 SMR(소형 모듈 원자로) 차세대 AI 데이터센터 전력 공급 가속",
       "summary": "빅테크 전력망 연결 병목이 5년 이상 지연되자 데이터센터 인근에 즉시 배치 가능한 초소형 고속 원자로 솔루션이 부각되고 있습니다.",
-      "change_rate": "+0.91%",
+      "change_rate": "-3.97%",
       "thesis": "오프그리드(독립형) 전력망 구축을 추진하는 미국 하이퍼스케일러들과 사전 전력 공급 계약(PPA) 체결 추진.",
       "financial_impact": "2027년 첫 상용 원자로 오로라(Aurora) 가동 시 다년간의 장기 전력 판매 매출 수천억 원 확보 가시화.",
       "competitive_edge": "사용후핵연료를 재활용하는 액체금속 고속증식로 기술로 방사성 폐기물 부담을 획기적으로 낮추는 차세대 원전 해자.",
       "risks_to_watch": "미국 원자력규제위원회(NRC)의 설계 승인 심사 일정 지연 가능성.",
-      "current_price": "$27.73"
+      "current_price": "$26.63"
     }
   ],
   "major_issues": [
@@ -530,7 +530,7 @@
       "lifecycle": "SURGING",
       "time_horizon": "MID_LONG_TERM",
       "priced_in_risk": "MEDIUM",
-      "detected_at": "2026-10-22 12:10",
+      "detected_at": "2026-10-22 17:23",
       "title": "AI 반도체 수요 확장 및 차세대 HBM 패키징 공급 경쟁",
       "summary": "글로벌 빅테크의 AI 데이터센터 설비투자(CAPEX) 확대 지속에 힘입어 차세대 가속기 및 HBM3E/HBM4 공급망 수혜 기업으로 자금 유입이 집중되고 있습니다.",
       "deep_dive": {
@@ -580,9 +580,9 @@
           "published_at": "2026-10-22 02:51"
         },
         {
-          "title": "삼성전기·엔비디아, 반도체 기판 파트너십 맺었다 - 연합인포맥스",
-          "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5qT0RjZWt0ZkliWkpFU1BrdllXdU9pMkFENzFUVlp5UHd4b3lTNmpKdUJCYjhQdGVkZHpmRldsUjFDSjIwT2daUV9aTVdNdS1YcUVKdVhGN3ZRM1NXWVlCQ3pocnRhS2N2czBKNE9pRmU?oc=5",
-          "published_at": "2026-10-21 22:17"
+          "title": "[특징주] 삼성전기, 엔비디아발 호재에도 2% 하락 전환 마감(종합) - 연합뉴스",
+          "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5MRXpGc3RDNTh4UjRTZ0dpSlFUcF9xWGs2LUlfM0NQSGFibFlhT01qc3AtS0hTX1M3UFhjV3hOSERPUWZIeUJZQUt4RkxSVGZDUmxxUXRwNzk5NFXSAWBBVV95cUxQT2RfeGtUYlF0WEdSVG8yTUlIcnlkbzVNOS0wSFU4dW4tNUlJN3kxQ1dSVG5aUFZsdzJiXzI5X0taTDhvTEZnLXd2RWN2YUlGMnI4NDROcDRUV2thUW1vSEI?oc=5",
+          "published_at": "2026-10-22 06:52"
         }
       ]
     },
@@ -592,7 +592,7 @@
       "lifecycle": "MATURE",
       "time_horizon": "MID_LONG_TERM",
       "priced_in_risk": "HIGH",
-      "detected_at": "2026-10-22 12:10",
+      "detected_at": "2026-10-22 17:23",
       "title": "미국 기준금리 정책 경로 및 국채 금리 안정화 기대",
       "summary": "연준(Fed)의 완화적 통화정책 기조와 물가 지표 안정세가 지속되며, 미국 장기채 금리 진정과 함께 빅테크 성장주 밸류에이션 부담이 점진적으로 완화되고 있습니다.",
       "deep_dive": {
@@ -623,14 +623,14 @@
       ],
       "sources": [
         {
-          "title": "신현송, 중립금리 상승 가능성 재차 시사…\"최종금리엔 열린 마음\"(종합) - 연합인포맥스",
-          "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1BYnI5a1R2MmNaQTl2Q1M0MHlBZFFuOHJDT21aMldRWHVNc3ZucTBobFJIOTlOV3BhZGVOU2VFVXZLSzRWRUtKRlhXQUY5NVdUS2hqaVFnRDI0YTZIc2U0UVRfM2NpZkVsVkZjOWRuX2w?oc=5",
-          "published_at": "2026-10-22 05:55"
+          "title": "금리 동결했지만 끝 아니다…신현송 \"물가 잡힐 때까지 긴축\" - 머니투데이 - 머니투데이",
+          "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFB6bWlhLVBnOXBwTlkwYnNtTnlNX29QclJ3TkdBYnppbFRUSlA2UHJGcTR0bEx6Nm1TdWFMbzlwZ214NmJhdG9TNTdxOEt2Qm5VX1p1X3BqN2sxeVRhVDVvNEFOMnVGbF8zWVNz0gFwQVVfeXFMTzJQTkNBR0ZCbXVBUW1FejloeTdDTm9YbU1QenBnOS1GR2RVbEwybTlCQXB2amtTUlo1Z2I1ME0xYXVTcWY0MVI5bjF6R1lWTmttUklqczJsT0ZidS1XVEhYa3JrbW14aTY0dk9xMnViSA?oc=5",
+          "published_at": "2026-10-22 05:52"
         },
         {
-          "title": "PLTR Stock Rebounds Above $200 as Palantir Technologies Partners with Knox Systems for Federal Software - FXLeaders",
-          "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxNT3pjVnJHbXN3VEo2NHhpMVlKMTJCLWJXcHdpZGY4eHRPZ1dXbkx5WlhzWUZyRkRLSTB3RlpEcHBLbEVfRXk3VUx6cmRDNTFBLXJZMW9NbG1wQmRHZ1ZhWjcxN2FUd0F2bVZwTm5xc1htTG5Va29BWE5UQkN5Sk1jbVRIeHpVcGIzVFJ5VFgxQnRtblVxS0NkZ011anRvSGlhaDY4Z016dm9GcTBNVHlzTTFYd0RxSktVWkhzcjl5a056QlFIVEhpNlZsR3ZXXzF2Z3cyWHdYTlJFSlh4V1E?oc=5",
-          "published_at": "2026-10-22 06:12"
+          "title": "[미국 특징주] 블랙스톤 3분기 이익 9.2% 감소…금리·인플레에 딜 시장 '꽁꽁' - 뉴스핌",
+          "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE0tRjZ4WFhMZEgyRmxyRk96SmpjSmxaekVYY2hwaWdDYzY2eWpWdlZHUEM5YTU0cXl5NEpGV3lvR1pPLWxSN0VldEpTNGdJSUh4LW1xNXgwdEdIeE4y?oc=5",
+          "published_at": "2026-10-22 15:41"
         }
       ]
     },
@@ -640,7 +640,7 @@
       "lifecycle": "SURGING",
       "time_horizon": "MID_LONG_TERM",
       "priced_in_risk": "LOW",
-      "detected_at": "2026-10-22 12:10",
+      "detected_at": "2026-10-22 17:23",
       "title": "국내 밸류업 프로그램 2차 랠리 및 배당·자사주 소각 본격화",
       "summary": "한국거래소 기업 밸류업 가이드라인 강화 및 상장사들의 자발적 주주환원 공시가 확대되면서 저PBR 지주사와 금융주로 기관 및 외국인 자금 매수세가 유입되고 있습니다.",
       "deep_dive": {
@@ -671,9 +671,9 @@
       ],
       "sources": [
         {
-          "title": "금융위원장·금감원장, ‘레버리지 ETF’ 지적에 재차 사과 “무거운 마음” - KBS 뉴스",
-          "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9XWEhRSVI2VTBscVpvZ1VEQ0Q5ZGZQNFpDSDBoWTZzU3RUSXI0ZzVyS0dZRkhVbGdKR3RxMUZrTXVGTzJtWmRreVdCTlBwNjlyQ2Zsa0RETTFDUHc?oc=5",
-          "published_at": "2026-10-22 06:02"
+          "title": "금융당국 수장들, '단일종목 레버리지 ETF' 손실에 재차 사과 - MBC 뉴스",
+          "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTFA5NUN5cDlPVGVuQ1NhUlZldWc3UnRGdS1qdmhmcDE2RlpaLUswSnR5SWhGZUluM3RsZGxnZVR2MktNQ3QyVWFHbFRLMmZVSTk4YzZBUFdTdWZKY2NjTklvc2V1QkQzUjZJUEdDMG5jZ3pNTzZr0gF0QVVfeXFMTVFhTDNUS252MlZNbl8yTWgxTHBJOFBKMUR3ZDBldm5QalllYkZ2TkdVNWZORVlnZndEd3NJUndGb0liYlA5RFM4NkZ2Qk80bnRoeVlTOFc5dW4xNDhELTNrSjBlTy1XQktpQ3ZzRmlxUFRvbjk?oc=5",
+          "published_at": "2026-10-22 02:10"
         },
         {
           "title": "현대차 신형 투싼, 첫날 1만5045대 계약 '역대 최다' - 지디넷코리아",
@@ -688,7 +688,7 @@
       "lifecycle": "NEW",
       "time_horizon": "MID_LONG_TERM",
       "priced_in_risk": "LOW",
-      "detected_at": "2026-10-22 12:10",
+      "detected_at": "2026-10-22 17:23",
       "title": "글로벌 AI 데이터센터 전력망 슈퍼사이클 및 K-변압기 수주 호황",
       "summary": "AI 연산 폭증으로 미국 전력망 용량이 한계에 도달하면서 초고압 변압기와 전력 기자재 공급 부족이 심화되어 국내외 전력 인프라 기업들이 사상 최대 수주잔고를 기록 중입니다.",
       "deep_dive": {
@@ -726,15 +726,20 @@
       ],
       "sources": [
         {
-          "title": "Global power grid supercycle drives electrification giants to record backlogs",
-          "url": "https://www.bloomberg.com",
-          "published_at": "2026-10-22 12:10"
+          "title": "재경위 '가상자산 과세' 시각차…與 의견분분, 野 \"인프라 미비\"(종합2보) - 연합뉴스",
+          "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBQQTJqdW1ObzNXZTZGNS04UmdrcXVpMDlCRHlUZ0syNk52dU00NEM3QjJxQVU4ZDMwWEZZVk53Z0l6RjZIQ3NTdXo2VTUxcUxNUWhpOTh4Qnh1MEHSAWBBVV95cUxOS3Ixb2ZtNkN5S1luOGtlV0JQM0RkdXlob0tuRTV6NWpsUC1LYmxCMXpmVVJRaXQtZHZ0Z3hPcFBmMGIyLU9WOEQzQ0dMWm4weUFqV243RDhtbDFudTM4c3M?oc=5",
+          "published_at": "2026-10-22 14:30"
+        },
+        {
+          "title": "[미국 특징주] 메타, AI 인프라에 '8250억달러' 베팅…석 달 새 지출 약정 1250억달러 늘어 - 뉴스핌",
+          "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE01N09LZkNGckxRS0JLTEFUTnlmMXdQTlhpckdidi0zaVFIVjU0c2NJSnFxTlBQR1htVUw1M21lWlc4WS1oQU5DOG9pdDIxWlFaaUEtR0VFR2lEV0Rm?oc=5",
+          "published_at": "2026-10-22 14:49"
         }
       ]
     }
   ],
   "market_summary": {
-    "us_status": "나스닥(+1.06%)·S&P 500(+0.59%) 상승 랠리 속 테크 빅테크 중심 선별 수급",
+    "us_status": "나스닥(-2.40%)·S&P 500(-1.29%) 조정 혼조세 속 테크 빅테크 중심 선별 수급",
     "kr_status": "코스닥(-3.30%)·코스피(-2.97%) 숨고르기 양상 속 실적 호전주 선별 접근"
   },
   "trending_tickers": [
@@ -742,9 +747,9 @@
       "symbol": "TSLA",
       "name": "Tesla",
       "market": "NASDAQ",
-      "change_rate": "+3.41%",
+      "change_rate": "-1.91%",
       "why_trending": "차세대 FSD V13 배포 임박 및 자율주행 로보택시 기대감",
-      "current_price": "$386.47"
+      "current_price": "$379.10"
     },
     {
       "symbol": "000660",
@@ -758,9 +763,9 @@
       "symbol": "NVDA",
       "name": "NVIDIA",
       "market": "NASDAQ",
-      "change_rate": "+2.54%",
+      "change_rate": "-3.98%",
       "why_trending": "주요 클라우드 3사의 AI 인프라 투자 지속 확인 및 공급망 개선",
-      "current_price": "$221.97"
+      "current_price": "$213.14"
     },
     {
       "symbol": "267260",
@@ -774,9 +779,9 @@
       "symbol": "PLTR",
       "name": "Palantir",
       "market": "NASDAQ",
-      "change_rate": "+4.74%",
+      "change_rate": "-1.97%",
       "why_trending": "AIP 미국 민간 기업 고객 침투율 급상승 수혜",
-      "current_price": "$201.72"
+      "current_price": "$197.74"
     },
     {
       "symbol": "042700",
