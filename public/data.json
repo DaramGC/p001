@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-24T04:50:28.322403+00:00",
+  "updated_at": "2026-10-24T11:20:16.827318+00:00",
   "macro_indicators": [
     {
       "name": "코스피",
@@ -530,7 +530,7 @@
       "lifecycle": "SURGING",
       "time_horizon": "MID_LONG_TERM",
       "priced_in_risk": "MEDIUM",
-      "detected_at": "2026-10-24 04:50",
+      "detected_at": "2026-10-24 11:20",
       "title": "AI 반도체 수요 확장 및 차세대 HBM 패키징 공급 경쟁",
       "summary": "글로벌 빅테크의 AI 데이터센터 설비투자(CAPEX) 확대 지속에 힘입어 차세대 가속기 및 HBM3E/HBM4 공급망 수혜 기업으로 자금 유입이 집중되고 있습니다.",
       "deep_dive": {
@@ -575,14 +575,14 @@
       ],
       "sources": [
         {
-          "title": "솔리다임 상장 접자 '환호'…SK하이닉스, 하루 만에 '급반등' [종목+] - 한국경제",
-          "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE80allNd3lpWC1pb1ZtVFY3czJNb2RlQklyMVJNZThmTFJNT3hFOFgtTDRLNHlpZDN2SlI4QXRIUFhJa25pcTJQMm1nVzJheER2T3pyd3NRVVFRUQ?oc=5",
-          "published_at": "2026-10-23 13:00"
+          "title": "\"최태원 회장 큰 결단\"…속타던 SK하이닉스 개미들 '환호' [강경주의 테크X] - 한국경제",
+          "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1HT1VGWkUtOHNDWXhKSzIzcnlsbUU3Nm1QWlJUNGJYYW1kTjRmdnQ4U3NQenR5UlZPTmNJOG5yYU54cko4VGlfeHA5ZVpCNnZWZHJZUFZHUjFqdw?oc=5",
+          "published_at": "2026-10-24 00:30"
         },
         {
-          "title": "[특징주] 반도체주, 솔리다임 호재에 낙폭 줄여…하닉은 2% 반등(종합) - 연합뉴스",
-          "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBSVjlBM19OQUVtQW0taUdIRlQ2b2UwNnQtcXRCd1FRZkVXLVQ0c2JxZ0JtRlFOR1pFMVZsNk0wUW02UTkxXzdUaW95b0llaW1XS29VdE9WNTJjSjjSAWBBVV95cUxQUnpxc1hlYTJZRkxvaW9CUk1CM29tbUl1SEdfclNHeUlYZWI0NFNrLUNWN1FrN2JLdFJGbGpVNEV2ay1aaVh6RjMyS2VtNDhBVGhVYXVsbGFtV3JmY2k4bXk?oc=5",
-          "published_at": "2026-10-23 05:13"
+          "title": "\"반도체 인재는 싹부터 키운다\"…학부모들 관심 쏠린 학교 - 한국경제",
+          "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9FMHVxWWtlWjV4eWN2dTA0UU1ETF9hWF9JaVFuTjVnWjV4THJiZnJ1djhqZGRKSjFqYWl0b3BVcnpyWlJuOWp5dXRCSGpxQk8xQTVJMy1WdTQ4dw?oc=5",
+          "published_at": "2026-10-23 05:09"
         }
       ]
     },
@@ -592,7 +592,7 @@
       "lifecycle": "MATURE",
       "time_horizon": "MID_LONG_TERM",
       "priced_in_risk": "HIGH",
-      "detected_at": "2026-10-24 04:50",
+      "detected_at": "2026-10-24 11:20",
       "title": "미국 기준금리 정책 경로 및 국채 금리 안정화 기대",
       "summary": "연준(Fed)의 완화적 통화정책 기조와 물가 지표 안정세가 지속되며, 미국 장기채 금리 진정과 함께 빅테크 성장주 밸류에이션 부담이 점진적으로 완화되고 있습니다.",
       "deep_dive": {
@@ -623,9 +623,9 @@
       ],
       "sources": [
         {
-          "title": "신현송 “초저금리 복귀 어려워…고성장·고금리 대비해 정책 펴겠다” - KBS 뉴스",
-          "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE15MkljM1Qweml4dzhtaXB1Q0dHeVNpLWFMX0Zpa0V4R1NXM2pEdkpvNTVBX1l5STg1eXVZQjJEU2o3ZUVUeWJOcVVzRkhjMzRXc29Zd2UyeDlNUVU?oc=5",
-          "published_at": "2026-10-23 06:37"
+          "title": "Fed rate trajectory in focus as inflation metrics soften",
+          "url": "https://www.reuters.com",
+          "published_at": "2026-10-24 11:20"
         }
       ]
     },
@@ -635,7 +635,7 @@
       "lifecycle": "SURGING",
       "time_horizon": "MID_LONG_TERM",
       "priced_in_risk": "LOW",
-      "detected_at": "2026-10-24 04:50",
+      "detected_at": "2026-10-24 11:20",
       "title": "국내 밸류업 프로그램 2차 랠리 및 배당·자사주 소각 본격화",
       "summary": "한국거래소 기업 밸류업 가이드라인 강화 및 상장사들의 자발적 주주환원 공시가 확대되면서 저PBR 지주사와 금융주로 기관 및 외국인 자금 매수세가 유입되고 있습니다.",
       "deep_dive": {
@@ -666,9 +666,9 @@
       ],
       "sources": [
         {
-          "title": "“미국 주요 은행, AI 접근 차단 조치 강화…AI발 금융사고 대응책 마련” - KBS 뉴스",
-          "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE9kRWIxTUpZRi00ekNnNEpQM3RnRnNsRGtlRVd2bXlXWjMzWGRXLU80VTZ1bTFVX0UxcU1rUlRKSVExcDZCTEJpYjY3T085U250Q204RF8yMDhpV0oxMkFYaXJ1OFVfdw?oc=5",
-          "published_at": "2026-10-23 23:54"
+          "title": "\"3시간 만에 관리자 권한 탈취\"…중국 해커, 韓 금융권 공격 AI 도구로 클라우드 침투 - 보안뉴스",
+          "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE83bEU1U2RoM3V6T1hEaWJnanNnVlQ0MC0tLXFLV0FiSE5DMmQ2ZnRqT0lWU19sQ3AwTU5JelNMSFVzOHFmX1lmcG5Oa3o4YW9yWlVQVGQwWEYybDZWbGRER0d5dkl2QlRWX3NB?oc=5",
+          "published_at": "2026-10-23 00:42"
         }
       ]
     },
@@ -678,7 +678,7 @@
       "lifecycle": "NEW",
       "time_horizon": "MID_LONG_TERM",
       "priced_in_risk": "LOW",
-      "detected_at": "2026-10-24 04:50",
+      "detected_at": "2026-10-24 11:20",
       "title": "글로벌 AI 데이터센터 전력망 슈퍼사이클 및 K-변압기 수주 호황",
       "summary": "AI 연산 폭증으로 미국 전력망 용량이 한계에 도달하면서 초고압 변압기와 전력 기자재 공급 부족이 심화되어 국내외 전력 인프라 기업들이 사상 최대 수주잔고를 기록 중입니다.",
       "deep_dive": {
@@ -719,6 +719,11 @@
           "title": "[오후장특징주]블룸에너지, 덱커 아웃도어, SS&C 테크놀로지스 - 이데일리",
           "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQY1o5d01UWHJ3N2FKcnluRnN5MjNXMHUwMXVNMjlzQndYakpDSFNtZFZ3dExBaXNSdnJqR0hZMWlkRWM1Sm5QWUttUW5TcHFfVFcxSzA4VlZFOTJQLWlNNTNNVTNaX05UNnFFYnRXVzA5S1RJci1TOHRWT2VzUE90Uw?oc=5",
           "published_at": "2026-10-23 20:34"
+        },
+        {
+          "title": "[美특징주]에너지株, 중동 긴장에 국제유가 100달러 돌파…동반 강세 - 이데일리",
+          "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOOE9nX3E0MzlxNXA5Q2JPNVdUek9UYnl3U1dGeWw2bWVCMldBVlU2MUZSb2QzaUJWREZlX29pREpRajk4M1VpUmkyblpHdTY1aXhuZVFBSE9JQUlhTjlLY2VIQWVheTMxYmxmd1BHQ3NJNmF1MjZGU3V4ejU2MXl4MA?oc=5",
+          "published_at": "2026-10-23 19:53"
         }
       ]
     }
