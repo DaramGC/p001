@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-25T16:37:51.296307+00:00",
+  "updated_at": "2026-10-25T21:00:36.093890+00:00",
   "macro_indicators": [
     {
       "name": "코스피",
@@ -32,7 +32,7 @@
     {
       "name": "원/달러 환율",
       "display": "USD/KRW",
-      "price": "1,323.66",
+      "price": "1,323.61",
       "change": "-0.11%",
       "is_up": false
     },
@@ -530,7 +530,7 @@
       "lifecycle": "SURGING",
       "time_horizon": "MID_LONG_TERM",
       "priced_in_risk": "MEDIUM",
-      "detected_at": "2026-10-25 16:37",
+      "detected_at": "2026-10-25 21:00",
       "title": "AI 반도체 수요 확장 및 차세대 HBM 패키징 공급 경쟁",
       "summary": "글로벌 빅테크의 AI 데이터센터 설비투자(CAPEX) 확대 지속에 힘입어 차세대 가속기 및 HBM3E/HBM4 공급망 수혜 기업으로 자금 유입이 집중되고 있습니다.",
       "deep_dive": {
@@ -575,14 +575,14 @@
       ],
       "sources": [
         {
-          "title": "제조업 경기전망 둔화 속 반도체 ‘독주’…철강은 반등 기대 - 경향신문",
-          "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5HZjlUcGJ3YUdxNmlodG1TaHV1SW9zMy05Q0R0TllhUS1vakVsNTVZWXNwbkg5eE9xQTJFOUtybzZmMlA1R2JUOXVKMnJmaHd6YUVST3A3Y0J6UdIBX0FVX3lxTFBXWDk3aTEyQkRQQW1EN042QklRWmpMbHNHWUwyMmM3YW5IZnhNSk5RMUJwbldtREpXQmZyak5Ob0dYMDJVem1DOGlGZ0tkbUZFZUdQY0NId1BfNkU3VnNZ?oc=5",
-          "published_at": "2026-10-25 05:00"
+          "title": "[ZD브리핑] 최대 실적 SK하이닉스‧삼성전자…주가 견인할까 - 지디넷코리아",
+          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE43YkthM2d2b2FWTU5hMm5PUmhwM2k3M1I0ZkQ3ZE84c0ZlOE44UVBWWmZKUmdMdXI0eWZRUlFvbVVMS2NSR2xUdWhKbDctRWVGSzY0Wjln?oc=5",
+          "published_at": "2026-10-25 04:56"
         },
         {
-          "title": "1,837 Taiwan Semiconductor Manufacturing Company Ltd. $TSM Shares Bought by Bernardo Wealth Planning LLC - MarketBeat",
-          "url": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxOMWNrUkZ1aDlnNlAycnVlR1pGV0NrV3hsZnlCTWRWeHludnJteXlkVTJtYnhRMXQyNkJNc0JlMTROSmFKVWhpai1yczNUeDJ2WlZDX1J3NkpjS2tQeGdFUVdKNHVOcHA1TVF0Z2ZiaGR0R1ZRUXRNcW1Rb0ZZTkNRNVpLQnlySEhnWllsa2c5anNHazdBU0V3QS1DZk5IcS1UUUE1ZWtCaE05YUx3aG00Q2wxN3g1VHNteHd0aFE2NDFERnJwMW96bWtnMTU4UEZPU1dNV0tVeGNkZmYzcFZxSXdCVEE4MWx0aFR4OVVJRjZzdWNh?oc=5",
-          "published_at": "2026-10-25 07:35"
+          "title": "Taiwan Semiconductor Manufacturing Co Ltd (TSM) Stock Price, Quote, News & History - Benzinga",
+          "url": "https://news.google.com/rss/articles/CBMiSkFVX3lxTFA0My1mRVpzRm5JRlBRWkVzN3duUmx3LUpUQlRSNTZMTjN1RkdSaW9raTBHd2VMQUc4dHpLa1pwWHR2RTNCbGNPM1lR?oc=5",
+          "published_at": "2026-10-23 23:59"
         }
       ]
     },
@@ -592,7 +592,7 @@
       "lifecycle": "MATURE",
       "time_horizon": "MID_LONG_TERM",
       "priced_in_risk": "HIGH",
-      "detected_at": "2026-10-25 16:37",
+      "detected_at": "2026-10-25 21:00",
       "title": "미국 기준금리 정책 경로 및 국채 금리 안정화 기대",
       "summary": "연준(Fed)의 완화적 통화정책 기조와 물가 지표 안정세가 지속되며, 미국 장기채 금리 진정과 함께 빅테크 성장주 밸류에이션 부담이 점진적으로 완화되고 있습니다.",
       "deep_dive": {
@@ -623,9 +623,14 @@
       ],
       "sources": [
         {
-          "title": "신현송 “과거 같은 초저금리 시대 돌아가기 어려워…고성장·고금리 대비해 정책 펼 것” - 세계일보",
-          "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFBBcU9CaFQzT2V4U3dKcFZOTjNXMGNKcWItMHM0ZWNVVjVsd3pDY1hrUVZxMnljSjJqT0FFMU9QcDdqcFB3ZHhTU1JZbkVlSTEyYi1jeGxaNlbSAVRBVV95cUxQSVotWmd1eXB1NTFmVzBiZDZvT0FSNTNFdzdBeG1aLVB4N2NEVHFQdVNmUGhYbVBEU1p1UENGTFcwWnVzRndwbThZS3hxcHdjXzNCQ1g?oc=5",
-          "published_at": "2026-10-24 12:30"
+          "title": "높아진 금리, 주식 투자자 대응은? - 한겨레",
+          "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1VODR1LUNpQXE1eTdxQ3NOTHFReUdOSExVc3pGRFpzZ1I0ajMxNHY4Y2JObkNmU1U5YUI5WnJSTTE3clBKUVR2TDhuS0IwblNrQ1o5NXNWYmVLQ0ZDb2N3QXp3MzFmajA?oc=5",
+          "published_at": "2026-10-25 10:44"
+        },
+        {
+          "title": "[뉴욕채권-주간] AI 우려, 중심부로 번지나…워시 '금융환경' 평가 주목 - 연합인포맥스",
+          "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFB5YUE3UmJHZEhIbDZ2YzQzdjJNekFYTVBCSkVXU2ZFbDJ5Wk1mM0hSWWRPS1d0dFRWNkVRMVRBNEJvUkZqS241RkZhTVdWZ0JyeGYzeGVpamNyNFp6czlZR1F5R0pCcjZLZ1ZZbVRIVFc?oc=5",
+          "published_at": "2026-10-25 08:08"
         }
       ]
     },
@@ -635,7 +640,7 @@
       "lifecycle": "SURGING",
       "time_horizon": "MID_LONG_TERM",
       "priced_in_risk": "LOW",
-      "detected_at": "2026-10-25 16:37",
+      "detected_at": "2026-10-25 21:00",
       "title": "국내 밸류업 프로그램 2차 랠리 및 배당·자사주 소각 본격화",
       "summary": "한국거래소 기업 밸류업 가이드라인 강화 및 상장사들의 자발적 주주환원 공시가 확대되면서 저PBR 지주사와 금융주로 기관 및 외국인 자금 매수세가 유입되고 있습니다.",
       "deep_dive": {
@@ -671,9 +676,9 @@
           "published_at": "2026-10-25 05:56"
         },
         {
-          "title": "삼일기업공사, 창동염광교회 새 예배당 공사 수주 - 제주교통복지신문",
-          "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5FbldaWFVyand0dVA0ekQ5Y3ZHbG52NUt2Wjl3TDc5OGRodmV0YS1kVFQydC1JM04yZDBqeFFRWVppUHhyLWVWN3AwN25PMG1nVENGcUZ4MmxfcWFacFBSVw?oc=5",
-          "published_at": "2026-10-25 15:07"
+          "title": "[뉴욕채권-주간] AI 우려, 중심부로 번지나…워시 '금융환경' 평가 주목 - 연합인포맥스",
+          "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFB5YUE3UmJHZEhIbDZ2YzQzdjJNekFYTVBCSkVXU2ZFbDJ5Wk1mM0hSWWRPS1d0dFRWNkVRMVRBNEJvUkZqS241RkZhTVdWZ0JyeGYzeGVpamNyNFp6czlZR1F5R0pCcjZLZ1ZZbVRIVFc?oc=5",
+          "published_at": "2026-10-25 08:08"
         }
       ]
     },
@@ -683,7 +688,7 @@
       "lifecycle": "NEW",
       "time_horizon": "MID_LONG_TERM",
       "priced_in_risk": "LOW",
-      "detected_at": "2026-10-25 16:37",
+      "detected_at": "2026-10-25 21:00",
       "title": "글로벌 AI 데이터센터 전력망 슈퍼사이클 및 K-변압기 수주 호황",
       "summary": "AI 연산 폭증으로 미국 전력망 용량이 한계에 도달하면서 초고압 변압기와 전력 기자재 공급 부족이 심화되어 국내외 전력 인프라 기업들이 사상 최대 수주잔고를 기록 중입니다.",
       "deep_dive": {
@@ -723,7 +728,7 @@
         {
           "title": "Global power grid supercycle drives electrification giants to record backlogs",
           "url": "https://www.bloomberg.com",
-          "published_at": "2026-10-25 16:37"
+          "published_at": "2026-10-25 21:00"
         }
       ]
     }
