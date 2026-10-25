@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-25T04:59:49.529037+00:00",
+  "updated_at": "2026-10-25T11:51:05.411765+00:00",
   "macro_indicators": [
     {
       "name": "코스피",
@@ -530,7 +530,7 @@
       "lifecycle": "SURGING",
       "time_horizon": "MID_LONG_TERM",
       "priced_in_risk": "MEDIUM",
-      "detected_at": "2026-10-25 04:59",
+      "detected_at": "2026-10-25 11:51",
       "title": "AI 반도체 수요 확장 및 차세대 HBM 패키징 공급 경쟁",
       "summary": "글로벌 빅테크의 AI 데이터센터 설비투자(CAPEX) 확대 지속에 힘입어 차세대 가속기 및 HBM3E/HBM4 공급망 수혜 기업으로 자금 유입이 집중되고 있습니다.",
       "deep_dive": {
@@ -575,14 +575,14 @@
       ],
       "sources": [
         {
-          "title": "Taiwan Semiconductor Manufactur (TSM) Stock Forecasts - Yahoo Finance",
-          "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPMzhDdnNLQW1lbnEtSEc2SVU3dUE5Z0xrMTdvTGFMSjVPZVlrM0MzcndTWTkxeGJQQzIzeFVwUmxhMUtWR3VqYXVKSkp4eVpiR1U5b0ZvXzJuWnJ1WFV5NkItdGVxU2owS0NTUXZrQVNfWFFHVnJnWGtPM2VGek5jTEVGWlFlYjFIQXc?oc=5",
-          "published_at": "2026-10-23 12:21"
+          "title": "[ZD브리핑] 최대 실적 SK하이닉스‧삼성전자…주가 견인할까 - 지디넷코리아",
+          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE43YkthM2d2b2FWTU5hMm5PUmhwM2k3M1I0ZkQ3ZE84c0ZlOE44UVBWWmZKUmdMdXI0eWZRUlFvbVVMS2NSR2xUdWhKbDctRWVGSzY0Wjln?oc=5",
+          "published_at": "2026-10-25 04:56"
         },
         {
-          "title": "Taiwan Semiconductor Manufacturing Company Ltd. $TSM Stock Sold by RWC Asset Management LLP - MarketBeat",
-          "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxPdEwxdG81Y3hDcGFmT0FvWHppOGJqeVVXTDJkZUhzaXo4QUZWMTB0UDV2STRocXBCa0wxV1UzQkVlU1pzS3pnZE94NnpydEVrb1Z2b1BKX0F3RHY5UjJ3MllmS3YzaTZkaFNSdUNvc2FTVGh1eWNoc2s0SURmb1p6NG9CZnI4N1FtSlB0NnJXNG5Ca1otLXZyeElBZHA0SHctcmlzWlpDZHdwVUtsY0xKZ2V2ZkVXUEowWVJtd0Q2dTYxdHFoUmQ5cU5SSVRMcUVsQlBlaThqZFFWb2tJbHZxWnVmOVI?oc=5",
-          "published_at": "2026-10-24 15:58"
+          "title": "제조업 경기전망 둔화 속 반도체 ‘독주’…철강은 반등 기대 - 경향신문",
+          "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5HZjlUcGJ3YUdxNmlodG1TaHV1SW9zMy05Q0R0TllhUS1vakVsNTVZWXNwbkg5eE9xQTJFOUtybzZmMlA1R2JUOXVKMnJmaHd6YUVST3A3Y0J6UdIBX0FVX3lxTFBXWDk3aTEyQkRQQW1EN042QklRWmpMbHNHWUwyMmM3YW5IZnhNSk5RMUJwbldtREpXQmZyak5Ob0dYMDJVem1DOGlGZ0tkbUZFZUdQY0NId1BfNkU3VnNZ?oc=5",
+          "published_at": "2026-10-25 05:00"
         }
       ]
     },
@@ -592,7 +592,7 @@
       "lifecycle": "MATURE",
       "time_horizon": "MID_LONG_TERM",
       "priced_in_risk": "HIGH",
-      "detected_at": "2026-10-25 04:59",
+      "detected_at": "2026-10-25 11:51",
       "title": "미국 기준금리 정책 경로 및 국채 금리 안정화 기대",
       "summary": "연준(Fed)의 완화적 통화정책 기조와 물가 지표 안정세가 지속되며, 미국 장기채 금리 진정과 함께 빅테크 성장주 밸류에이션 부담이 점진적으로 완화되고 있습니다.",
       "deep_dive": {
@@ -623,14 +623,14 @@
       ],
       "sources": [
         {
-          "title": "[뉴욕채권] 국채가 하락…AI 우려發 안전선호 소강 속 유가 급등 - 연합인포맥스",
-          "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBVcF9tR3d6RlBacS14RHpMaFBual92ZGhuT283cTRnT3lYclZIaURlemZKSDJBU1o4MmFIb0ZVTk9mU3gwSFVDdGRXeTM4eVpLaG85WXl3dkQzRUlEaDY5dUpBcVBxa3I0ZnBuNExkd18?oc=5",
-          "published_at": "2026-10-23 21:55"
+          "title": "높아진 금리, 주식 투자자 대응은? - 한겨레",
+          "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1VODR1LUNpQXE1eTdxQ3NOTHFReUdOSExVc3pGRFpzZ1I0ajMxNHY4Y2JObkNmU1U5YUI5WnJSTTE3clBKUVR2TDhuS0IwblNrQ1o5NXNWYmVLQ0ZDb2N3QXp3MzFmajA?oc=5",
+          "published_at": "2026-10-25 09:20"
         },
         {
-          "title": "주가 급락에 고물가·소비쿠폰 기저효과까지…흔들리는 내수 회복 - 연합인포맥스",
-          "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1LSUVJQVp5blNZNHpFaGFPT3FTeE1EY0E5T1VwZ3RBdjhXRUdJRWpnRDFtbU9WVmx3VzFOMTNad1Z2NzFEbTIxMXNaNmhEcGhhWDFPbGpHZXdaRm1wM18wWjZNbzdrNDdSNjBoQlpLSmc?oc=5",
-          "published_at": "2026-10-24 23:06"
+          "title": "'AI 투자 우려' 메타, 주가 급락·CDS 급등…美 10년물 금리 5% 하회 - 연합인포맥스",
+          "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1MU1FzMnFYd3hrMWFmanZzWFhtSlIwOFVCOHNpRURxR25nUUlSUGhkRmhzTW1XUFJIYnJNLWhuazVPenpBaWpWLVd5V2w2Q0JYbGtvU1l0NDFnLWJXTm1CMHc3QTh2cmpNWjRmeHZTc0I?oc=5",
+          "published_at": "2026-10-22 18:58"
         }
       ]
     },
@@ -640,7 +640,7 @@
       "lifecycle": "SURGING",
       "time_horizon": "MID_LONG_TERM",
       "priced_in_risk": "LOW",
-      "detected_at": "2026-10-25 04:59",
+      "detected_at": "2026-10-25 11:51",
       "title": "국내 밸류업 프로그램 2차 랠리 및 배당·자사주 소각 본격화",
       "summary": "한국거래소 기업 밸류업 가이드라인 강화 및 상장사들의 자발적 주주환원 공시가 확대되면서 저PBR 지주사와 금융주로 기관 및 외국인 자금 매수세가 유입되고 있습니다.",
       "deep_dive": {
@@ -671,9 +671,9 @@
       ],
       "sources": [
         {
-          "title": "“내 렌트카 가격 얼마나 싸질까” 금융위, 캐피탈사 렌탈 한도 2배 확대 - 세계일보",
-          "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9yV2FCYzRrbTc2MEJtbFhPWHNSdkFDVzhXbWdIcVlEdDJSSkNoZjAtX0lOelJkVG9kM0pJQXRvcXd0ZW1hLXdtMW0wQ2ZKb1RmVTByRWo4YlLSAVRBVV95cUxNeF85eHNlSXFVT05EMXljcldSNURKYlA3OVBtODNkZ0UzYVNSSnFQRzZRZUpTUnRJME5pQWF2VmZsM3FsdmNUUUtvWkVGbWtlY1lqNzk?oc=5",
-          "published_at": "2026-10-24 21:03"
+          "title": "밸류업 지수 리밸런싱 앞두고 금융·자동차 저PBR주 매수세 집중",
+          "url": "https://news.google.com",
+          "published_at": "2026-10-25 11:51"
         }
       ]
     },
@@ -683,7 +683,7 @@
       "lifecycle": "NEW",
       "time_horizon": "MID_LONG_TERM",
       "priced_in_risk": "LOW",
-      "detected_at": "2026-10-25 04:59",
+      "detected_at": "2026-10-25 11:51",
       "title": "글로벌 AI 데이터센터 전력망 슈퍼사이클 및 K-변압기 수주 호황",
       "summary": "AI 연산 폭증으로 미국 전력망 용량이 한계에 도달하면서 초고압 변압기와 전력 기자재 공급 부족이 심화되어 국내외 전력 인프라 기업들이 사상 최대 수주잔고를 기록 중입니다.",
       "deep_dive": {
@@ -721,9 +721,9 @@
       ],
       "sources": [
         {
-          "title": "Global power grid supercycle drives electrification giants to record backlogs",
-          "url": "https://www.bloomberg.com",
-          "published_at": "2026-10-25 04:59"
+          "title": "체코 ‘테믈린 원전’ 수주 전초전…美·佛 견제 속 대응 본격화 - 아시아투데이",
+          "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9teXBRdG1uQnlpMUYwNzBPWlVJa0l6VWxoSVE4UzhMSHlLblNoZFlFZTgzd01nM2lLeGpOQ29TQ08tVWVaWlphVG5ra3kwUXc3b1M2MGlTeWZwUGlsRlN0VGpCWl9pNUJsSzRrdQ?oc=5",
+          "published_at": "2026-10-25 08:54"
         }
       ]
     }
