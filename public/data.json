@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-30T22:32:30.609848+00:00",
+  "updated_at": "2026-10-31T06:00:10.103708+00:00",
   "macro_indicators": [
     {
       "name": "코스피",
@@ -32,8 +32,8 @@
     {
       "name": "원/달러 환율",
       "display": "USD/KRW",
-      "price": "1,333.44",
-      "change": "-0.38%",
+      "price": "1,335.10",
+      "change": "-0.25%",
       "is_up": false
     },
     {
@@ -53,16 +53,16 @@
     {
       "name": "WTI 유가",
       "display": "WTI Oil",
-      "price": "$102.95",
-      "change": "-0.21%",
-      "is_up": false
+      "price": "$104.12",
+      "change": "+0.92%",
+      "is_up": true
     }
   ],
   "economic_calendar": [
     {
       "id": "cal-01",
       "date": "2026-10-10",
-      "d_day": "D+20",
+      "d_day": "D+21",
       "country": "US",
       "event_name": "미국 9월 소비자물가지수 (CPI) 발표",
       "importance": "HIGH",
@@ -72,7 +72,7 @@
     {
       "id": "cal-02",
       "date": "2026-10-11",
-      "d_day": "D+19",
+      "d_day": "D+20",
       "country": "KR",
       "event_name": "한국은행 금융통화위원회 기준금리 결정",
       "importance": "HIGH",
@@ -82,7 +82,7 @@
     {
       "id": "cal-03",
       "date": "2026-10-16",
-      "d_day": "D+14",
+      "d_day": "D+15",
       "country": "US",
       "event_name": "미국 9월 소매판매 (Retail Sales)",
       "importance": "MEDIUM",
@@ -92,7 +92,7 @@
     {
       "id": "cal-04",
       "date": "2026-11-04",
-      "d_day": "D-5",
+      "d_day": "D-4",
       "country": "US",
       "event_name": "미국 연준 FOMC 정례회의 기준금리 결정",
       "importance": "HIGH",
@@ -530,7 +530,7 @@
       "lifecycle": "SURGING",
       "time_horizon": "MID_LONG_TERM",
       "priced_in_risk": "MEDIUM",
-      "detected_at": "2026-10-30 22:32",
+      "detected_at": "2026-10-31 06:00",
       "title": "AI 반도체 수요 확장 및 차세대 HBM 패키징 공급 경쟁",
       "summary": "글로벌 빅테크의 AI 데이터센터 설비투자(CAPEX) 확대 지속에 힘입어 차세대 가속기 및 HBM3E/HBM4 공급망 수혜 기업으로 자금 유입이 집중되고 있습니다.",
       "deep_dive": {
@@ -575,14 +575,14 @@
       ],
       "sources": [
         {
-          "title": "삼성·SK하이닉스 분기 영업익 100조 '뉴노멀' 시대 연다 - 지디넷코리아",
-          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1PR194WXhJa0VUUmJJWThBSDZ0RVFDbDVKQXBIQVJiNGM5ZGhRYllncGZ4X0g0TGhESWsyN2Q2YklRQVJmSTZ1OG9ZVWZYWWg4eHQ3SmhR?oc=5",
-          "published_at": "2026-10-30 01:36"
+          "title": "인텔 실적 쇼크 '28% 폭락'...AI 투자 불안 반도체지수 7%↓[뉴욕마감] - 머니투데이 - 머니투데이",
+          "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBFekl1TnVSSExPdGNma2NQSTdhOFNVVDBVaGt4NmktN2tTMjY2RDhxZXYzdmprU3VYVi1RYWVVdjBHa3VFM1VNVEVCVWR1bHB6RU00U3VTQjRkQ1MxS3pXZWtDR0ZleWlK0gFuQVVfeXFMUEFHZ2VBQkluTGRKcnRfcnZCNzg4blduVW5PTFliaHItek9EY1owdjhod2prZ3ZVLXpjemE3V29NbHVZSHpNN3V2YlllLXlmWFR0RWdmdzdheFVLc1MyLTJBUEFsclYzS08tbktQR3c?oc=5",
+          "published_at": "2026-10-30 21:32"
         },
         {
-          "title": "[ET특징주] 서울반도체, 미국發 삭풍에도 주가 12%↑… 탈희토류 LED 개발 영향 - 전자신문",
-          "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE9IYnRlQjFpM2Z0Q254ejZvblJzZXBJZ09GMjVJanVJbUd2X0xZdERrTUpwRVdKVEFxUWliTll2WjYweUtMVEE5UlhwNTlFZw?oc=5",
-          "published_at": "2026-10-30 02:12"
+          "title": "[마켓뷰] AI 투자 우려에 코스피 ‘직격탄’… SK하이닉스 7% 하락 - Chosunbiz",
+          "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPTWQ2Z1I3ZEVkeXYtT0g2a1I1TUUydUZqU0pzVXlmMjNfUE9ha2ljYVZnQ04waENDQ3Y2TkQyS1BJNTJHbVM3eFFGTUs5UXdBRmhsSTE0YWxXcHBlV0VJSUpoQmhhYWx3WjVmcXliYmZ2RWp1OV8zajA5YnRjR3NiamJkY3NOcktx0gGcAUFVX3lxTE5KT0ZEcjFBX3lfYjFISXlJS0Y3Y0JQRG9kMTFteUVGeDNWS2c5Ym5rX2ZwX25JRW8wWmplMTUzWEFHaktjakNoaHRYNk14aE5GeXU2dXJ6NGRyZm40Q1g1LVdWSi1FbG03QnpRRWxMS3ZpQ0Y4c215M0tzeWliblpiRHRGTGJtd3lNZm9jd3JTeEU2bXYtRUZIMTFsTQ?oc=5",
+          "published_at": "2026-10-30 07:24"
         }
       ]
     },
@@ -592,7 +592,7 @@
       "lifecycle": "MATURE",
       "time_horizon": "MID_LONG_TERM",
       "priced_in_risk": "HIGH",
-      "detected_at": "2026-10-30 22:32",
+      "detected_at": "2026-10-31 06:00",
       "title": "미국 기준금리 정책 경로 및 국채 금리 안정화 기대",
       "summary": "연준(Fed)의 완화적 통화정책 기조와 물가 지표 안정세가 지속되며, 미국 장기채 금리 진정과 함께 빅테크 성장주 밸류에이션 부담이 점진적으로 완화되고 있습니다.",
       "deep_dive": {
@@ -623,14 +623,9 @@
       ],
       "sources": [
         {
-          "title": "불장에 ‘빚투’도 훌쩍…금리 오르며 가계 ‘흔들’ - KBS 뉴스",
-          "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE5UaXZWVEg1YVRoT0p0d1JqSTJTN2dBUEFjeHc1V0pSb1RKVEprMmh2Sldhbnk5aXREWlhXNVdyZnBJNnBvN1h4QkZrbkxpaW9YUktBcVNOTkV1LUhGcmVja3gxQ2czZw?oc=5",
-          "published_at": "2026-10-30 21:56"
-        },
-        {
-          "title": "[채권-마감] 강세 플래트닝…주가 급락·WGBI 수요 유입 - 연합인포맥스",
-          "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9tMWY1OGM4SndCQnZld0ptdDdoYjJnME5taUVQdzJyV3A4S21KLU9Pbzc2clI1ZDNsWUZiR1pKdzlneDdoZHRNNTh1UEJDOER0bmJMUlM5c3MyU1UwVlpCM1cyazg0YVVOekg3V01fZ28?oc=5",
-          "published_at": "2026-10-30 09:59"
+          "title": "Fed rate trajectory in focus as inflation metrics soften",
+          "url": "https://www.reuters.com",
+          "published_at": "2026-10-31 06:00"
         }
       ]
     },
@@ -640,7 +635,7 @@
       "lifecycle": "SURGING",
       "time_horizon": "MID_LONG_TERM",
       "priced_in_risk": "LOW",
-      "detected_at": "2026-10-30 22:32",
+      "detected_at": "2026-10-31 06:00",
       "title": "국내 밸류업 프로그램 2차 랠리 및 배당·자사주 소각 본격화",
       "summary": "한국거래소 기업 밸류업 가이드라인 강화 및 상장사들의 자발적 주주환원 공시가 확대되면서 저PBR 지주사와 금융주로 기관 및 외국인 자금 매수세가 유입되고 있습니다.",
       "deep_dive": {
@@ -671,14 +666,14 @@
       ],
       "sources": [
         {
+          "title": "금융권 전체로 번진 해킹…‘1억 원’ 유출 피해도 [뉴스in뉴스] - KBS 뉴스",
+          "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE53LWpITjZTNmNrRDBSMWZfTDNONzVwNHdEU0lNdkhOUlE2ZXVPczdFS0hHcTVYWHhzOVRZdFo0ZnRDUFZ5WlpTVWxYbWhZTDY2TXQybGdFSkViWjA?oc=5",
+          "published_at": "2026-10-30 03:40"
+        },
+        {
           "title": "현대차그룹 새만금 현지사무소 개소…9조 투자 본격 실행 - 대한민국 정책브리핑",
           "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1RV3MzLW9HZlB2bERYa2R3dG1ySnFNaklZcTBHTEZuRHJydzBoQnNkY1hIbmsxZlJza0xvMHU3bTBFSEFqNjNUbzA1MUhPOTdtejNMVDYtRVdhUGhGanJBanR1ampFTmo0VVJPRA?oc=5",
           "published_at": "2026-10-30 08:35"
-        },
-        {
-          "title": "[특징주] '6년만의 분기매출 감소' 현대차, 3%대 약세 마감(종합) - 연합뉴스",
-          "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE4wSm5PNUNfYnlwa3BGXy1NMHdRRzhjcDlUUlR0ZWItTUpGTGtHb3NRUWc2dmxycmMzd1lqQy10LWZqeTZOU1hweE9wRm51N244aVRMazFPekZJUXPSAWBBVV95cUxPTmVrMFZlNWw1V1dob1V3aVZFY19XZkQ4cDJTX3FoVVdqN29McjRPeElReTBvREgteHN5OXhJZkZTakFqR25vVFE1YzZ1RXJaaTk0MVFHLTFZeTM3OE8tc04?oc=5",
-          "published_at": "2026-10-30 06:51"
         }
       ]
     },
@@ -688,7 +683,7 @@
       "lifecycle": "NEW",
       "time_horizon": "MID_LONG_TERM",
       "priced_in_risk": "LOW",
-      "detected_at": "2026-10-30 22:32",
+      "detected_at": "2026-10-31 06:00",
       "title": "글로벌 AI 데이터센터 전력망 슈퍼사이클 및 K-변압기 수주 호황",
       "summary": "AI 연산 폭증으로 미국 전력망 용량이 한계에 도달하면서 초고압 변압기와 전력 기자재 공급 부족이 심화되어 국내외 전력 인프라 기업들이 사상 최대 수주잔고를 기록 중입니다.",
       "deep_dive": {
