@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-31T21:45:56.702807+00:00",
+  "updated_at": "2026-11-01T06:29:19.595124+00:00",
   "macro_indicators": [
     {
       "name": "코스피",
@@ -62,7 +62,7 @@
     {
       "id": "cal-01",
       "date": "2026-10-10",
-      "d_day": "D+21",
+      "d_day": "D+22",
       "country": "US",
       "event_name": "미국 9월 소비자물가지수 (CPI) 발표",
       "importance": "HIGH",
@@ -72,7 +72,7 @@
     {
       "id": "cal-02",
       "date": "2026-10-11",
-      "d_day": "D+20",
+      "d_day": "D+21",
       "country": "KR",
       "event_name": "한국은행 금융통화위원회 기준금리 결정",
       "importance": "HIGH",
@@ -82,7 +82,7 @@
     {
       "id": "cal-03",
       "date": "2026-10-16",
-      "d_day": "D+15",
+      "d_day": "D+16",
       "country": "US",
       "event_name": "미국 9월 소매판매 (Retail Sales)",
       "importance": "MEDIUM",
@@ -92,7 +92,7 @@
     {
       "id": "cal-04",
       "date": "2026-11-04",
-      "d_day": "D-4",
+      "d_day": "D-3",
       "country": "US",
       "event_name": "미국 연준 FOMC 정례회의 기준금리 결정",
       "importance": "HIGH",
@@ -530,7 +530,7 @@
       "lifecycle": "SURGING",
       "time_horizon": "MID_LONG_TERM",
       "priced_in_risk": "MEDIUM",
-      "detected_at": "2026-10-31 21:45",
+      "detected_at": "2026-11-01 06:29",
       "title": "AI 반도체 수요 확장 및 차세대 HBM 패키징 공급 경쟁",
       "summary": "글로벌 빅테크의 AI 데이터센터 설비투자(CAPEX) 확대 지속에 힘입어 차세대 가속기 및 HBM3E/HBM4 공급망 수혜 기업으로 자금 유입이 집중되고 있습니다.",
       "deep_dive": {
@@ -575,14 +575,14 @@
       ],
       "sources": [
         {
-          "title": "[마켓뷰] AI 투자 우려에 코스피 ‘직격탄’… SK하이닉스 7% 하락 - Chosunbiz",
-          "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPTWQ2Z1I3ZEVkeXYtT0g2a1I1TUUydUZqU0pzVXlmMjNfUE9ha2ljYVZnQ04waENDQ3Y2TkQyS1BJNTJHbVM3eFFGTUs5UXdBRmhsSTE0YWxXcHBlV0VJSUpoQmhhYWx3WjVmcXliYmZ2RWp1OV8zajA5YnRjR3NiamJkY3NOcktx0gGcAUFVX3lxTE5KT0ZEcjFBX3lfYjFISXlJS0Y3Y0JQRG9kMTFteUVGeDNWS2c5Ym5rX2ZwX25JRW8wWmplMTUzWEFHaktjakNoaHRYNk14aE5GeXU2dXJ6NGRyZm40Q1g1LVdWSi1FbG03QnpRRWxMS3ZpQ0Y4c215M0tzeWliblpiRHRGTGJtd3lNZm9jd3JTeEU2bXYtRUZIMTFsTQ?oc=5",
-          "published_at": "2026-10-30 07:24"
+          "title": "샘 올트먼, 삼성·SK 회동…AI·반도체 협력 강화 - 연합인포맥스",
+          "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBOQzZ3REtuYTBGNXNhamxhblFwNUFDOGQ1T3Q4MHVCT18tTHZoNkE3a0VhUFpFY3JKSW12NmNRRENVcUcxclRmc0gycUlQc2pJQmh4RndpdXlnZ19QYWlILUxDS1hUdFdSajQwOWtPaUU?oc=5",
+          "published_at": "2026-11-01 04:46"
         },
         {
-          "title": "‘역대급 축제’ 엇갈린 표정…SK하이닉스 웃고 삼성전자 고개 숙이다 - Daum",
-          "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE5vQU1wS0tFdk5HeGRndExjZi1PVzFGb2ZzbmZpUXhVWEJaaHdfY29sTW95b3ZndG5XVHNyci1TNy1UV0Z2Q2c?oc=5",
-          "published_at": "2026-10-31 05:28"
+          "title": "Why Did Taiwan Semiconductor Manufacturing (NYSE:TSM) Shares Drop? - Yahoo Finance",
+          "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNUWxQTWdUN0RiZ1RWclVYTGU4T2plYkhPRWFNb1N0aTZGOWF6eVpGSEQxUGVLZEVDNEt3MENjSzcxcGxyRWs3b0NWX1RQSHVIRlRla1RrcG9VTVBCVzdUVXA4ekxydklCMGVTbVNrODRQLWxDUmlwdXlEX2xIdFZSSjVqRm52aEN0d1MzcW9OdWx4TmY4aHNhWVJnRU1zdWVBdDJzUUpaOTZieDQ?oc=5",
+          "published_at": "2026-11-01 03:20"
         }
       ]
     },
@@ -592,7 +592,7 @@
       "lifecycle": "MATURE",
       "time_horizon": "MID_LONG_TERM",
       "priced_in_risk": "HIGH",
-      "detected_at": "2026-10-31 21:45",
+      "detected_at": "2026-11-01 06:29",
       "title": "미국 기준금리 정책 경로 및 국채 금리 안정화 기대",
       "summary": "연준(Fed)의 완화적 통화정책 기조와 물가 지표 안정세가 지속되며, 미국 장기채 금리 진정과 함께 빅테크 성장주 밸류에이션 부담이 점진적으로 완화되고 있습니다.",
       "deep_dive": {
@@ -625,7 +625,7 @@
         {
           "title": "Fed rate trajectory in focus as inflation metrics soften",
           "url": "https://www.reuters.com",
-          "published_at": "2026-10-31 21:45"
+          "published_at": "2026-11-01 06:29"
         }
       ]
     },
@@ -635,7 +635,7 @@
       "lifecycle": "SURGING",
       "time_horizon": "MID_LONG_TERM",
       "priced_in_risk": "LOW",
-      "detected_at": "2026-10-31 21:45",
+      "detected_at": "2026-11-01 06:29",
       "title": "국내 밸류업 프로그램 2차 랠리 및 배당·자사주 소각 본격화",
       "summary": "한국거래소 기업 밸류업 가이드라인 강화 및 상장사들의 자발적 주주환원 공시가 확대되면서 저PBR 지주사와 금융주로 기관 및 외국인 자금 매수세가 유입되고 있습니다.",
       "deep_dive": {
@@ -666,9 +666,14 @@
       ],
       "sources": [
         {
-          "title": "밸류업 지수 리밸런싱 앞두고 금융·자동차 저PBR주 매수세 집중",
-          "url": "https://news.google.com",
-          "published_at": "2026-10-31 21:45"
+          "title": "내 집 대신 `월 160만원 배당`…공무원 그만둔 부부가 택한 은퇴 전략 - 매일신문",
+          "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE5fYnRjbkEzS0FhUTBWV0Z1eFBGVGpySzcwUDdIRk5kcDlWeHdMTm1JeDVTVU1MTDg2ZllKSGdhc09oaHpyNWt4M2xfN3lYQjE1UENtRU9qcjhsOERseEZYU2F3?oc=5",
+          "published_at": "2026-10-31 23:38"
+        },
+        {
+          "title": "5일 금융권 해킹 대응 점검회의…AI 보안 강화 검토 - KBS 뉴스",
+          "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE02UXA1M3Exd19VeTMxNnZWRG8yNzNlblFXaE15aU9DSzQ2ZDlYUUIyQWhsOE1ZYnRvdW1yeUYtQWNmQTQ4amJTZk9xd3ZpQTZYVGdXVEhZLThpSWs?oc=5",
+          "published_at": "2026-11-01 05:38"
         }
       ]
     },
@@ -678,7 +683,7 @@
       "lifecycle": "NEW",
       "time_horizon": "MID_LONG_TERM",
       "priced_in_risk": "LOW",
-      "detected_at": "2026-10-31 21:45",
+      "detected_at": "2026-11-01 06:29",
       "title": "글로벌 AI 데이터센터 전력망 슈퍼사이클 및 K-변압기 수주 호황",
       "summary": "AI 연산 폭증으로 미국 전력망 용량이 한계에 도달하면서 초고압 변압기와 전력 기자재 공급 부족이 심화되어 국내외 전력 인프라 기업들이 사상 최대 수주잔고를 기록 중입니다.",
       "deep_dive": {
@@ -716,9 +721,9 @@
       ],
       "sources": [
         {
-          "title": "Global power grid supercycle drives electrification giants to record backlogs",
-          "url": "https://www.bloomberg.com",
-          "published_at": "2026-10-31 21:45"
+          "title": "한화그룹, 美 해군 함정 첫 수주…3575억원 상륙함 계약에 추가 3척 옵션 - 에너지경제신문",
+          "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1nVGtBamozTW1BM19fWHlldEVEZUNOZktwM19iU1h4amEzZU9tZFRrYzFpTXFYcnhLc2doZzc1d0Y2cVFrVzhJcWhlZ2dJcTBfZHp0bXNPRWhaWUk?oc=5",
+          "published_at": "2026-11-01 04:21"
         }
       ]
     }
