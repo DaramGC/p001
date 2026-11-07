@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-07T13:21:54.821507+00:00",
+  "updated_at": "2026-11-07T22:06:14.246123+00:00",
   "macro_indicators": [
     {
       "name": "코스피",
@@ -530,7 +530,7 @@
       "lifecycle": "SURGING",
       "time_horizon": "MID_LONG_TERM",
       "priced_in_risk": "MEDIUM",
-      "detected_at": "2026-11-07 13:21",
+      "detected_at": "2026-11-07 22:06",
       "title": "AI 반도체 수요 확장 및 차세대 HBM 패키징 공급 경쟁",
       "summary": "글로벌 빅테크의 AI 데이터센터 설비투자(CAPEX) 확대 지속에 힘입어 차세대 가속기 및 HBM3E/HBM4 공급망 수혜 기업으로 자금 유입이 집중되고 있습니다.",
       "deep_dive": {
@@ -575,14 +575,14 @@
       ],
       "sources": [
         {
+          "title": "[특징주] 반도체 기판주 약세, 삼성전기 14%대 급락…이수페타시스·심텍·대덕전자 등 동반 하락 - CBC뉴스",
+          "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9FblB5U2VwdEtsNGd2WFRnYXRwRGlJSEliZmVFZFROWFl6YUhoUGdkZHZ0OEhnbWNyRTViQzVSTkNaVjFHcExaS1VpWmthSno4NFp2R1o1SmZodDV3SDFpblpTbnBmOS01?oc=5",
+          "published_at": "2026-11-07 16:26"
+        },
+        {
           "title": "[오늘장특징주]엔비디아, 아이렌, 모더나, 스페이스X 外 - 이데일리",
           "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQdGpuT2ZwRWRnRExlemNqV2Nuc1o0Rko1UHItdldSYXpfZW9NRXVUdTlYVW9XX0dqV0RoRDRsbjlmS3pGZzVubWF6Vk5NTE5YWkQ5RnloWWhZVDBvYmxHNXN4NFppSUc5TC1qa1otU0pOSTA0NFVVTE1CNjlJQXpRYQ?oc=5",
           "published_at": "2026-11-06 22:47"
-        },
-        {
-          "title": "[글로벌 특징주] 찬밥 신세였던 반도체 패키징, 칩 가치 절반 넘보는 '귀하신 몸'으로 - 뉴스핌",
-          "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE1YOTNKNG5sQ2ZQYU1YTk5VVnF4Z0d4WDNVMnpaaU1Vblpxd2JnelhyRjdkcENtRGtCT25naVU2SFZoUXAtWV9fVGlWUm1IRUJEa21zQ0pqODlobTlX?oc=5",
-          "published_at": "2026-11-06 14:25"
         }
       ]
     },
@@ -592,7 +592,7 @@
       "lifecycle": "MATURE",
       "time_horizon": "MID_LONG_TERM",
       "priced_in_risk": "HIGH",
-      "detected_at": "2026-11-07 13:21",
+      "detected_at": "2026-11-07 22:06",
       "title": "미국 기준금리 정책 경로 및 국채 금리 안정화 기대",
       "summary": "연준(Fed)의 완화적 통화정책 기조와 물가 지표 안정세가 지속되며, 미국 장기채 금리 진정과 함께 빅테크 성장주 밸류에이션 부담이 점진적으로 완화되고 있습니다.",
       "deep_dive": {
@@ -623,14 +623,14 @@
       ],
       "sources": [
         {
+          "title": "중도금 대출금리 5% 육박…고금리에 수분양자 이자 부담 가중 - KBC광주방송",
+          "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE51VVN0b3Q2X2FPaHJ3dU9TQmgyZG9aWmlTQlNQMVlLVnl4ajVTN2E3dkYyVUplVkVpaFM1clgyUVZqbU9XUDdidkFoYzFoNVRSVG1LeUFyTzZPTVRBM0FvR2p3?oc=5",
+          "published_at": "2026-11-07 13:25"
+        },
+        {
           "title": "Americans are on a 'treadmill of high inflation' and more rate hikes are likely, Fed's Daly says",
           "url": "https://www.cnbc.com/2026/11/06/fed-daly-interest-rates-inflation.html",
           "published_at": "2026-11-06 19:05"
-        },
-        {
-          "title": "Fed officials are already saying they’ll need to get back to hiking rates",
-          "url": "https://www.cnbc.com/2026/10/30/musalem-fed-monetary-policy-tightening.html",
-          "published_at": "2026-10-30 21:53"
         }
       ]
     },
@@ -640,7 +640,7 @@
       "lifecycle": "SURGING",
       "time_horizon": "MID_LONG_TERM",
       "priced_in_risk": "LOW",
-      "detected_at": "2026-11-07 13:21",
+      "detected_at": "2026-11-07 22:06",
       "title": "국내 밸류업 프로그램 2차 랠리 및 배당·자사주 소각 본격화",
       "summary": "한국거래소 기업 밸류업 가이드라인 강화 및 상장사들의 자발적 주주환원 공시가 확대되면서 저PBR 지주사와 금융주로 기관 및 외국인 자금 매수세가 유입되고 있습니다.",
       "deep_dive": {
@@ -671,9 +671,9 @@
       ],
       "sources": [
         {
-          "title": "[특징주]램리서치, 250억달러 자사주 매입 승인에 주가 8%↑ - 이데일리",
-          "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQdXZ1SmI0WnF4aXVmck8xN1lnc25kdTVLaGVJaEs2MHNmc2FmaHZTUWpqSXVHLXhMRVlBd0lnU2tnLVRWX2ZJT0JhTFpBRWJQaWxQNGhKZWhveWR4VXc3S0FCX3NNNnk0eHltM3Q4cFdpLTFhY3RQN3FEcEZuWHpyYw?oc=5",
-          "published_at": "2026-11-06 19:15"
+          "title": "밸류업 지수 리밸런싱 앞두고 금융·자동차 저PBR주 매수세 집중",
+          "url": "https://news.google.com",
+          "published_at": "2026-11-07 22:06"
         }
       ]
     },
@@ -683,7 +683,7 @@
       "lifecycle": "NEW",
       "time_horizon": "MID_LONG_TERM",
       "priced_in_risk": "LOW",
-      "detected_at": "2026-11-07 13:21",
+      "detected_at": "2026-11-07 22:06",
       "title": "글로벌 AI 데이터센터 전력망 슈퍼사이클 및 K-변압기 수주 호황",
       "summary": "AI 연산 폭증으로 미국 전력망 용량이 한계에 도달하면서 초고압 변압기와 전력 기자재 공급 부족이 심화되어 국내외 전력 인프라 기업들이 사상 최대 수주잔고를 기록 중입니다.",
       "deep_dive": {
@@ -721,9 +721,14 @@
       ],
       "sources": [
         {
-          "title": "Global power grid supercycle drives electrification giants to record backlogs",
-          "url": "https://www.bloomberg.com",
-          "published_at": "2026-11-07 13:21"
+          "title": "[특징주] 원전주 두산에너빌리티·한전기술·한전산업 등 전반적 약세…코스피·코스닥 급락 속 낙폭 차이 - CBC뉴스",
+          "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1pVUZfZTllLVIxLWg2Y3prSF9HeEdDNTg4Y280dVUxbW9uangxNkFJbFc5aE1mS2FFZTBhT0Z6SDgyaDhKaVU3c1c4OGxnclhta0JOWDVIOHhKb3lmRlI1aVJPSHk1aG5l?oc=5",
+          "published_at": "2026-11-07 12:00"
+        },
+        {
+          "title": "가온전선, 새만금 수상태양광 전력망 수주… 재생에너지 사업 확대 - https://www.koreasprint.com/",
+          "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5Uc3U2Z1B3NHlMaU9ONVgwVDloYXpZVU9PTUVfazl6V3NUZXdmcGRmQi1HX3R2aUlpVzUzcUZkWDROdm8yM091UW1DQnA2T1pqVWYwT2NqaUVlaXIxYTBzdnp5ZHp6a1k3eFpyRW1R?oc=5",
+          "published_at": "2026-11-07 16:32"
         }
       ]
     }
