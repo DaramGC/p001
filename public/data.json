@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-08T13:44:25.602602+00:00",
+  "updated_at": "2026-11-08T22:18:43.705705+00:00",
   "macro_indicators": [
     {
       "name": "코스피",
@@ -32,8 +32,8 @@
     {
       "name": "원/달러 환율",
       "display": "USD/KRW",
-      "price": "1,356.34",
-      "change": "+0.03%",
+      "price": "1,363.55",
+      "change": "+0.56%",
       "is_up": true
     },
     {
@@ -530,7 +530,7 @@
       "lifecycle": "SURGING",
       "time_horizon": "MID_LONG_TERM",
       "priced_in_risk": "MEDIUM",
-      "detected_at": "2026-11-08 13:44",
+      "detected_at": "2026-11-08 22:18",
       "title": "AI 반도체 수요 확장 및 차세대 HBM 패키징 공급 경쟁",
       "summary": "글로벌 빅테크의 AI 데이터센터 설비투자(CAPEX) 확대 지속에 힘입어 차세대 가속기 및 HBM3E/HBM4 공급망 수혜 기업으로 자금 유입이 집중되고 있습니다.",
       "deep_dive": {
@@ -575,14 +575,14 @@
       ],
       "sources": [
         {
-          "title": "매디슨 황 방한 취소…'엔비디아 AI 데이'는 예정대로 - 지디넷코리아",
-          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBYNlRyNEVwaVl2VFpONWtCUjlXcTFMOFFtMUlSd25aYkVyUUQ2Wjl5Z0l4OHVXZnJwR2lMeWsybktkSmNDUkR4d3l4NF8zNTJ4a3dYMWJR?oc=5",
-          "published_at": "2026-11-08 03:31"
+          "title": "젠슨황, ’中스파이와 불륜설’ 시인…엔비디아, 독립 조사 착수 - 연합뉴스TV",
+          "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5EOVN6SGhKdk9NUGF2R3Z2SFl4bW9LTGl0SXhCQmQ2WDVuSUxCZXdiakJ6OVQyeWlDLXVFajBELW9YMXU2ZGczRTFYX0JHLUxNRVJ6X2p6YmowNUhuSGpzOURXakt4Yjg?oc=5",
+          "published_at": "2026-11-08 21:16"
         },
         {
-          "title": "'젠슨 황 장녀' 매디슨 황 엔비디아 수석이사, 방한 계획 취소 - 뉴스핌",
-          "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE1XMXVWbkJ3RmIwbnV5SXpLN0twMVJOZHRjNHZSbGp5eEpPbF9VRHlFN0dIR3hwTExIRHZxSy1WemFEQkhYQjZUSGRKMDc1YlN2TDJKU2FvQzZaVWcy?oc=5",
-          "published_at": "2026-11-08 02:39"
+          "title": "반도체·AI 인프라주 반등…아이렌 실적 호조에 네오클라우드 투심 회복-[美증시 특징주] - 한국경제TV",
+          "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE53R1F0VzgyR19VN182d2FyOTBQc1FBVlloYkJqV1JESldlTjNHS3hfcVJ3MmtZUmVENW9pdEdvU0ZGd3NOLUtwem9RMjR3SDJFdEdtbGRRVkZlVnBzYno2N2ptRkV6dkpwUjlQOVJEeVMyTzM2ek5v?oc=5",
+          "published_at": "2026-11-08 22:08"
         }
       ]
     },
@@ -592,7 +592,7 @@
       "lifecycle": "MATURE",
       "time_horizon": "MID_LONG_TERM",
       "priced_in_risk": "HIGH",
-      "detected_at": "2026-11-08 13:44",
+      "detected_at": "2026-11-08 22:18",
       "title": "미국 기준금리 정책 경로 및 국채 금리 안정화 기대",
       "summary": "연준(Fed)의 완화적 통화정책 기조와 물가 지표 안정세가 지속되며, 미국 장기채 금리 진정과 함께 빅테크 성장주 밸류에이션 부담이 점진적으로 완화되고 있습니다.",
       "deep_dive": {
@@ -623,6 +623,11 @@
       ],
       "sources": [
         {
+          "title": "[특징주] 삼성전기, 美 물가 충격·AI - 이투데이",
+          "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5WN2g4TXBPa0ZmV3Uzd3l2U09FMWMzRDJMWWRfemw5LWx6Z0hubU16Z2d6UzlpVG95QXZUOGVVaDIyVU9penRQTXgwS2J5dHlDeGVhd3VGZ2pIZmh3Z0JOR0xFdWRHU0Rl?oc=5",
+          "published_at": "2026-11-08 05:57"
+        },
+        {
           "title": "Americans are on a 'treadmill of high inflation' and more rate hikes are likely, Fed's Daly says",
           "url": "https://www.cnbc.com/2026/11/06/fed-daly-interest-rates-inflation.html",
           "published_at": "2026-11-06 19:05"
@@ -635,7 +640,7 @@
       "lifecycle": "SURGING",
       "time_horizon": "MID_LONG_TERM",
       "priced_in_risk": "LOW",
-      "detected_at": "2026-11-08 13:44",
+      "detected_at": "2026-11-08 22:18",
       "title": "국내 밸류업 프로그램 2차 랠리 및 배당·자사주 소각 본격화",
       "summary": "한국거래소 기업 밸류업 가이드라인 강화 및 상장사들의 자발적 주주환원 공시가 확대되면서 저PBR 지주사와 금융주로 기관 및 외국인 자금 매수세가 유입되고 있습니다.",
       "deep_dive": {
@@ -666,9 +671,14 @@
       ],
       "sources": [
         {
-          "title": "핸즈코퍼레이션, 현대차 휠 공급계약 해지 - 비건뉴스",
-          "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFBQcVhWR0hRUURQSUdRLS1CZUwzODJudTlYelNQbHBmeDFNaGphUUlTNzQ4X2V5QUJCUXZhWWRtWkk2V2ZzMVNnb3BwMVlEOWZZeGpEMkdUaTBJS0dPQm5pVEphbmZmUQ?oc=5",
-          "published_at": "2026-11-08 08:42"
+          "title": "“번 돈의 절반은 주주에 돌려줍니다”…4대 금융지주, 배당·자사주 소각 역대급 - 매일경제",
+          "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE05SXpaakc2TjF2TzNva0thbERuOGxZQkhWM2l0bjVyMUtnel9JYjl5enNVaDNvaWZYUEt6YU4xaXNMOVA5dG04WS16ejNEbmRUVEZOaw?oc=5",
+          "published_at": "2026-11-08 13:25"
+        },
+        {
+          "title": "현대차, 중학생 환경교육 성과 공유…6개월간 자생식물 키웠다 - 뉴스핌",
+          "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5HSG5COGtkcXhfY2ZrWUZIbDRkc2ZVd0E3eFV1UWFPc21oTjJncHZHMV92ZWM1LTUteTZsT0JDdEpWQUl1ZFdYQkFGNG02TklZeVk2b01aTFJBUFNo?oc=5",
+          "published_at": "2026-11-08 09:35"
         }
       ]
     },
@@ -678,7 +688,7 @@
       "lifecycle": "NEW",
       "time_horizon": "MID_LONG_TERM",
       "priced_in_risk": "LOW",
-      "detected_at": "2026-11-08 13:44",
+      "detected_at": "2026-11-08 22:18",
       "title": "글로벌 AI 데이터센터 전력망 슈퍼사이클 및 K-변압기 수주 호황",
       "summary": "AI 연산 폭증으로 미국 전력망 용량이 한계에 도달하면서 초고압 변압기와 전력 기자재 공급 부족이 심화되어 국내외 전력 인프라 기업들이 사상 최대 수주잔고를 기록 중입니다.",
       "deep_dive": {
@@ -716,14 +726,14 @@
       ],
       "sources": [
         {
-          "title": "발견부터 생산까지 3년…SLB, 리라 유전 개발 수주 - 에너지안전신문",
-          "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5PTEw2dk9VV2RUNV9UdUI3SG56bFBiVmpPdnFLaGtkeHdqYk5TRUx4LUtGdExvcnlYWVJRYm5qQTR2YXdXMjQ3ZHBfVHBZNFVJeDl6MnRGNWczZG1IOV9YVlA0V3o?oc=5",
-          "published_at": "2026-11-08 05:30"
+          "title": "미 주민투표 ‘데이터센터 제동’ 압도적…‘3대 메가’ 전력수요 늘린 한국은? - 한겨레",
+          "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5fQUFKSzloMml1VXNVTWFndGcxTnhNMzgyTG1OY3JWUVFHZFR0dEo5MFR0UVp3Rk42OElqVl8wbFlvbktZUEV6WmN3dFVDczg1TTZSQS05VnROUllUWG03T25WTWVZUnVWQ1lSNw?oc=5",
+          "published_at": "2026-11-08 11:15"
         },
         {
-          "title": "美 전력망 수주 잇따르는데…전선업계 ‘25% 관세안’ 촉각 - 이투데이",
-          "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1teXVmdm9na1huQVNhV1RzR1kxcFd5QW9OQWpFVVJuV2JTOUc5VTdHS25xUFpmSVIzdnhsR2VzSC1iSVRtZTRnTXVGam9qS2lRMHQtZQ?oc=5",
-          "published_at": "2026-11-08 08:02"
+          "title": "반도체·AI 인프라주 반등…아이렌 실적 호조에 네오클라우드 투심 회복-[美증시 특징주] - 한국경제TV",
+          "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE53R1F0VzgyR19VN182d2FyOTBQc1FBVlloYkJqV1JESldlTjNHS3hfcVJ3MmtZUmVENW9pdEdvU0ZGd3NOLUtwem9RMjR3SDJFdEdtbGRRVkZlVnBzYno2N2ptRkV6dkpwUjlQOVJEeVMyTzM2ek5v?oc=5",
+          "published_at": "2026-11-08 22:08"
         }
       ]
     }
