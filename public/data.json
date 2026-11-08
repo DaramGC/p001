@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-08T06:23:46.626020+00:00",
+  "updated_at": "2026-11-08T13:44:25.602602+00:00",
   "macro_indicators": [
     {
       "name": "코스피",
@@ -530,7 +530,7 @@
       "lifecycle": "SURGING",
       "time_horizon": "MID_LONG_TERM",
       "priced_in_risk": "MEDIUM",
-      "detected_at": "2026-11-08 06:23",
+      "detected_at": "2026-11-08 13:44",
       "title": "AI 반도체 수요 확장 및 차세대 HBM 패키징 공급 경쟁",
       "summary": "글로벌 빅테크의 AI 데이터센터 설비투자(CAPEX) 확대 지속에 힘입어 차세대 가속기 및 HBM3E/HBM4 공급망 수혜 기업으로 자금 유입이 집중되고 있습니다.",
       "deep_dive": {
@@ -575,9 +575,9 @@
       ],
       "sources": [
         {
-          "title": "美 데이터센터 건설 제동 … 韓 반도체 투자·자금 운용 전략 재조정 불가피 - 뉴데일리",
-          "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE03WllMU1lOUmlhMVd0VHMzZU9CdzNkUXZ6UmFwR3hqNjFZQ3Y4LTZfTDloZXNHc0tfazdKRmxNQ3gzb2kyeU5wa01IdHhfQmV0eUk2cXpmN0dtOW9UTUd1Q2Y2TTExVUYwTWFyaHR3TmNJQjRMQTdfTVRzNNIBgAFBVV95cUxOQ3hYS3JxOWU4WjdIdXFuNlp3ZERwdDgyQkhOLTRNWkdKNzFDUDFDSUg0ZTgxcF9acmVORHl0MDZTOUloWTE5OFNFZkotOWF5Wmo4RFo0eUVFTjZBSjdfdzJjTXczeld0OE00RkVGQTVyZlBiYU4tTzlvbWRTZHdBcA?oc=5",
-          "published_at": "2026-11-08 01:20"
+          "title": "매디슨 황 방한 취소…'엔비디아 AI 데이'는 예정대로 - 지디넷코리아",
+          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBYNlRyNEVwaVl2VFpONWtCUjlXcTFMOFFtMUlSd25aYkVyUUQ2Wjl5Z0l4OHVXZnJwR2lMeWsybktkSmNDUkR4d3l4NF8zNTJ4a3dYMWJR?oc=5",
+          "published_at": "2026-11-08 03:31"
         },
         {
           "title": "'젠슨 황 장녀' 매디슨 황 엔비디아 수석이사, 방한 계획 취소 - 뉴스핌",
@@ -592,7 +592,7 @@
       "lifecycle": "MATURE",
       "time_horizon": "MID_LONG_TERM",
       "priced_in_risk": "HIGH",
-      "detected_at": "2026-11-08 06:23",
+      "detected_at": "2026-11-08 13:44",
       "title": "미국 기준금리 정책 경로 및 국채 금리 안정화 기대",
       "summary": "연준(Fed)의 완화적 통화정책 기조와 물가 지표 안정세가 지속되며, 미국 장기채 금리 진정과 함께 빅테크 성장주 밸류에이션 부담이 점진적으로 완화되고 있습니다.",
       "deep_dive": {
@@ -635,7 +635,7 @@
       "lifecycle": "SURGING",
       "time_horizon": "MID_LONG_TERM",
       "priced_in_risk": "LOW",
-      "detected_at": "2026-11-08 06:23",
+      "detected_at": "2026-11-08 13:44",
       "title": "국내 밸류업 프로그램 2차 랠리 및 배당·자사주 소각 본격화",
       "summary": "한국거래소 기업 밸류업 가이드라인 강화 및 상장사들의 자발적 주주환원 공시가 확대되면서 저PBR 지주사와 금융주로 기관 및 외국인 자금 매수세가 유입되고 있습니다.",
       "deep_dive": {
@@ -666,9 +666,9 @@
       ],
       "sources": [
         {
-          "title": "외국인 삼성전자 보유율, 금융위기 이후 17년 만에 최저 - Chosunbiz",
-          "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQYmtpM0xjWTl6UG1YaEVHVWhSSHBueU9oQW8tb3lEdzI2QjVBV212TllpdDdSTktKWWlaSlpRRmVtdXREbGcwMDFzMm13ZVgtb3RJUTFqb0VaVGhwVlJUNFYycjdWb05TX1ptbE1nVVBiVXVkQUhwUFVwRFVKMlpZeThmWXdHUGvSAZsBQVVfeXFMTjNtOUZIZWpmSGx6OWZzajZ2QjdKUTJUSHlvVmJsQTV4djl1aVJsMGQ5aXV4TUVrZFpPeWpMSlZvZ040OVJ1LVlVVDBkY1hCSDFwVEtXdlhuU3BkdDlGdTBWUDZBMkxRamcwODZoY1N4NFdicldHSENmS3pfLTl1aUo5V3h0YXU5d3FmOE1IVXFkOF9wTU04c2ZvM2M?oc=5",
-          "published_at": "2026-11-08 00:28"
+          "title": "핸즈코퍼레이션, 현대차 휠 공급계약 해지 - 비건뉴스",
+          "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFBQcVhWR0hRUURQSUdRLS1CZUwzODJudTlYelNQbHBmeDFNaGphUUlTNzQ4X2V5QUJCUXZhWWRtWkk2V2ZzMVNnb3BwMVlEOWZZeGpEMkdUaTBJS0dPQm5pVEphbmZmUQ?oc=5",
+          "published_at": "2026-11-08 08:42"
         }
       ]
     },
@@ -678,7 +678,7 @@
       "lifecycle": "NEW",
       "time_horizon": "MID_LONG_TERM",
       "priced_in_risk": "LOW",
-      "detected_at": "2026-11-08 06:23",
+      "detected_at": "2026-11-08 13:44",
       "title": "글로벌 AI 데이터센터 전력망 슈퍼사이클 및 K-변압기 수주 호황",
       "summary": "AI 연산 폭증으로 미국 전력망 용량이 한계에 도달하면서 초고압 변압기와 전력 기자재 공급 부족이 심화되어 국내외 전력 인프라 기업들이 사상 최대 수주잔고를 기록 중입니다.",
       "deep_dive": {
@@ -716,14 +716,14 @@
       ],
       "sources": [
         {
-          "title": "[특징주] 원전주 두산에너빌리티·한전기술·한전산업 등 전반적 약세…코스피·코스닥 급락 속 낙폭 차이 - CBC뉴스",
-          "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1pVUZfZTllLVIxLWg2Y3prSF9HeEdDNTg4Y280dVUxbW9uangxNkFJbFc5aE1mS2FFZTBhT0Z6SDgyaDhKaVU3c1c4OGxnclhta0JOWDVIOHhKb3lmRlI1aVJPSHk1aG5l?oc=5",
-          "published_at": "2026-11-07 12:00"
-        },
-        {
           "title": "발견부터 생산까지 3년…SLB, 리라 유전 개발 수주 - 에너지안전신문",
           "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5PTEw2dk9VV2RUNV9UdUI3SG56bFBiVmpPdnFLaGtkeHdqYk5TRUx4LUtGdExvcnlYWVJRYm5qQTR2YXdXMjQ3ZHBfVHBZNFVJeDl6MnRGNWczZG1IOV9YVlA0V3o?oc=5",
           "published_at": "2026-11-08 05:30"
+        },
+        {
+          "title": "美 전력망 수주 잇따르는데…전선업계 ‘25% 관세안’ 촉각 - 이투데이",
+          "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1teXVmdm9na1huQVNhV1RzR1kxcFd5QW9OQWpFVVJuV2JTOUc5VTdHS25xUFpmSVIzdnhsR2VzSC1iSVRtZTRnTXVGam9qS2lRMHQtZQ?oc=5",
+          "published_at": "2026-11-08 08:02"
         }
       ]
     }
