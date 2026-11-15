@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-15T06:52:35.041619+00:00",
+  "updated_at": "2026-11-15T18:59:43.622201+00:00",
   "macro_indicators": [
     {
       "name": "코스피",
@@ -32,8 +32,8 @@
     {
       "name": "원/달러 환율",
       "display": "USD/KRW",
-      "price": "1,336.20",
-      "change": "+0.14%",
+      "price": "1,334.98",
+      "change": "+0.05%",
       "is_up": true
     },
     {
@@ -530,7 +530,7 @@
       "lifecycle": "SURGING",
       "time_horizon": "MID_LONG_TERM",
       "priced_in_risk": "MEDIUM",
-      "detected_at": "2026-11-15 06:52",
+      "detected_at": "2026-11-15 18:59",
       "title": "AI 반도체 수요 확장 및 차세대 HBM 패키징 공급 경쟁",
       "summary": "글로벌 빅테크의 AI 데이터센터 설비투자(CAPEX) 확대 지속에 힘입어 차세대 가속기 및 HBM3E/HBM4 공급망 수혜 기업으로 자금 유입이 집중되고 있습니다.",
       "deep_dive": {
@@ -575,14 +575,14 @@
       ],
       "sources": [
         {
-          "title": "’젠슨 황 쇼크’에 흔들린 국내 증시…엔비디아 실적 촉각 - 연합뉴스TV",
-          "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1rSU1ZLW9lZHV6blY4Z3gtMVIxeGdxSnRfZk1vLTlndjVZY1ZhYmw0RVRuMVZINWRQb19hSGVXZW9IaEs1MVlucjVxMUFZUm5MbDM0cWtIbi1OS3NSWnNQSVJNWFhlNlE?oc=5",
-          "published_at": "2026-11-15 00:41"
+          "title": "엔비디아 실적·앤트로픽 상장…이번주 증시 향방 최대 가늠자 - 경향신문",
+          "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1SZVdJWHN6ckFBUF9ZX3FSaF9IODdhcXVac0RBSnpaUWM1WUlNSzNJeXBYQlhwb1NjV3VZcDRFbmo5WkVBY0Q5ejNiUFhhWmxGNmdiRlZKWUMyUdIBX0FVX3lxTE1TbVBySFpmcnV2TXBIVzJ3RGw2cU43NC0xNV9vbENuZlpDbW85cVdfUE1HRm5nOVlIZ1NpMl8zenZESkpDUngwTTNGVDhON2dVeFhROHpuWDhYWjNGTl9B?oc=5",
+          "published_at": "2026-11-15 11:35"
         },
         {
-          "title": "반도체 쏠림에 증시 조정까지… 한은 \"소비 회복 더딜 수도\" - 조선일보",
-          "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOU3hLSms0clpxbXQySk1nZnFkMGpsVEppVDRmSnMxUTZvNGJHZTVGb01Vay0zM1B2V0p6WEFFR2wzWVM3WVgtY2pxVTNUbm9PM0dCWjJ0YW5FRklZYzJtNkh3TnYzNzdDaGQwOHJxMUhPb2JzTTFXYlM5ZTQ4c0N6ZFhwUVlzMThjbGZSMDlB?oc=5",
-          "published_at": "2026-11-15 02:59"
+          "title": "비반도체 수출도 두자릿수 성장…호주 1위·네덜란드 2위 - 연합뉴스",
+          "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5fOVdLS2UwcUdnTjlJVUpoVUdWcTFIenRXTmlqY3UzQmwwbVFKR25HV3dKS3NCaHlRejJzMG5VVDFlYnh5Yzc5QjNEdjJQcVZGMVNlUldkYUVyd0nSAWBBVV95cUxNWUktOFB1VEZzV01RNEJEZmtmRFIyd1dyXzV6anQ4VUE3VU01Z2ZJbEdndERTaUxQeWFlOG95M2x0OHpsU3RSYjBLT2VSSG81UF9LbXA0SlNvNmNWVjRLSzE?oc=5",
+          "published_at": "2026-11-15 02:00"
         }
       ]
     },
@@ -592,7 +592,7 @@
       "lifecycle": "MATURE",
       "time_horizon": "MID_LONG_TERM",
       "priced_in_risk": "HIGH",
-      "detected_at": "2026-11-15 06:52",
+      "detected_at": "2026-11-15 18:59",
       "title": "미국 기준금리 정책 경로 및 국채 금리 안정화 기대",
       "summary": "연준(Fed)의 완화적 통화정책 기조와 물가 지표 안정세가 지속되며, 미국 장기채 금리 진정과 함께 빅테크 성장주 밸류에이션 부담이 점진적으로 완화되고 있습니다.",
       "deep_dive": {
@@ -623,14 +623,14 @@
       ],
       "sources": [
         {
-          "title": "지난달 전월세 물가 1.4%↑…3년 10개월 만에 최대폭 - SBS 뉴스",
-          "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBCSW9PenVyZUdNbUV1aTB1ZEZvakZHeXkzZmpMVEdzVU1HMTFSN3pGeC1EZVI0UlR5ZXRydURFSFgtTEtGQnh5V0Qwd085WXQ2dlZUajhES1BDMFQ2S251SkFIUG1yT2ZmV2c?oc=5",
-          "published_at": "2026-11-15 01:58"
-        },
-        {
           "title": "Chicago Fed's Goolsbee says central bank 'has definitely got work to do' on inflation",
           "url": "https://www.cnbc.com/2026/11/13/chicago-feds-goolsbee-says-central-bank-has-definitely-got-work-to-do-on-inflation.html",
           "published_at": "2026-11-13 14:22"
+        },
+        {
+          "title": "In a policy switch, the Fed says its October 2027 meeting will not see a vote on interest rates",
+          "url": "https://www.cnbc.com/2026/11/12/in-policy-switch-fed-says-its-october-2027-meeting-will-not-see-a-vote-on-interest-rates.html",
+          "published_at": "2026-11-12 19:05"
         }
       ]
     },
@@ -640,7 +640,7 @@
       "lifecycle": "SURGING",
       "time_horizon": "MID_LONG_TERM",
       "priced_in_risk": "LOW",
-      "detected_at": "2026-11-15 06:52",
+      "detected_at": "2026-11-15 18:59",
       "title": "국내 밸류업 프로그램 2차 랠리 및 배당·자사주 소각 본격화",
       "summary": "한국거래소 기업 밸류업 가이드라인 강화 및 상장사들의 자발적 주주환원 공시가 확대되면서 저PBR 지주사와 금융주로 기관 및 외국인 자금 매수세가 유입되고 있습니다.",
       "deep_dive": {
@@ -671,9 +671,9 @@
       ],
       "sources": [
         {
-          "title": "\"북한 라자루스, 국내 서버 30 곳 겨냥‥정부·금융기관 포함\" - MBC 뉴스",
-          "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9zOGdqZFNjMmR1c0IxNzc5RkR1enJDTzY4TVR2QXRlajZ4dlBrRzU2WlVseDNwVUhvVkcxZFpZLWtRT2V3WUhvSW1VNXdyY3JXNkNKdXV6NVp2cXpMS2hib3lDbVJETWZqM29admtfUmZHMkZa0gF0QVVfeXFMT0Z4eGU3blJwUUoyT3o2b0Q2WEhteTZvNGZMWVpaSVR1cWtVcHR5c3Z0b1d1VU0zNTFDbEF0aGhsY3JnNjFWMzEyaV9paGs5ZDc0X19WWlRkaUsxMmNjZ2g1aVotcHRPaFpkZGNoMFNiTUpENnU?oc=5",
-          "published_at": "2026-11-15 01:58"
+          "title": "밸류업 지수 리밸런싱 앞두고 금융·자동차 저PBR주 매수세 집중",
+          "url": "https://news.google.com",
+          "published_at": "2026-11-15 18:59"
         }
       ]
     },
@@ -683,7 +683,7 @@
       "lifecycle": "NEW",
       "time_horizon": "MID_LONG_TERM",
       "priced_in_risk": "LOW",
-      "detected_at": "2026-11-15 06:52",
+      "detected_at": "2026-11-15 18:59",
       "title": "글로벌 AI 데이터센터 전력망 슈퍼사이클 및 K-변압기 수주 호황",
       "summary": "AI 연산 폭증으로 미국 전력망 용량이 한계에 도달하면서 초고압 변압기와 전력 기자재 공급 부족이 심화되어 국내외 전력 인프라 기업들이 사상 최대 수주잔고를 기록 중입니다.",
       "deep_dive": {
@@ -721,14 +721,14 @@
       ],
       "sources": [
         {
-          "title": "에너지 가격 통제 장기화…정부 재정 부담에 한전·가스공사 부채 확대 - 위키리크스한국",
-          "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBVSFdHYUtHbEM5WUxjT1NmSmdxbWhZSk5Jc3JzdTVja1J0RUtqNWRFODJOemZiclhfWHg4Uk42eEVwaUZITjVfU2gyR2lzRGdYZktRUk1PTnJqYWhhUWh6dUdaRjV1amdLcWZ3UkszTC0?oc=5",
-          "published_at": "2026-11-15 01:57"
+          "title": "AI 인프라주 급락에도 수주잔고 최대…중복 발주 변수 - 글로벌이코노믹",
+          "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNUkJTM0dIN0o5ZThvSDhoWFNjWlBTa0ZJM3BvRXVubzUyWmFuLVkzRnZuR3JMTDc0S1JqeEwxQ3d2YjVXMW1PQ1l3QjRmYXdnTTBBV0dtam5PdmNycGJVUHhGTHk0aExaclgtN3VVVzZla2tNYmlaR19RQlB6cXdCZ3M2SFFNdlBz?oc=5",
+          "published_at": "2026-11-15 18:00"
         },
         {
-          "title": "[특징주] 한국전력, 3분기 어닝 쇼크 '하락' - 전국매일신문",
-          "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5qamZzSXJ4VGZZQkxnd3E0TjQydUZLZW81WUI0d1R6ZUdMXzNrTUxKbk5nTjQyZ2x2dzQ1dHA3b0VCRzNiUVQ5aTdFTXdrMVNqbGEzWW5pWlBrZzNTc1p5dUg0MFVQaThVdERJR2dn?oc=5",
-          "published_at": "2026-11-14 21:45"
+          "title": "[집중분석] '26조원 수주' 이면의 청구서...원자력안전과미래 \"체코 원전, 손익·계약 실체 전면 재검증\" 주장 - 산경e뉴스",
+          "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFA5M2RWdEs0YkxEN011U2ttZWJSTVVKajZCY0xLcURxS1d0N0RtWGVidFJDN01OM0k2VENzVzZJSW9uUUlHY2gzS3JMV0lfX3FkczB4cGYtTFIzTTJLYU8wY1kwYncxdjQ?oc=5",
+          "published_at": "2026-11-15 12:28"
         }
       ]
     }
