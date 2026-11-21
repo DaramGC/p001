@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-21T07:29:31.503098+00:00",
+  "updated_at": "2026-11-21T19:34:29.309069+00:00",
   "macro_indicators": [
     {
       "name": "코스피",
@@ -530,7 +530,7 @@
       "lifecycle": "SURGING",
       "time_horizon": "MID_LONG_TERM",
       "priced_in_risk": "MEDIUM",
-      "detected_at": "2026-11-21 07:29",
+      "detected_at": "2026-11-21 19:34",
       "title": "AI 반도체 수요 확장 및 차세대 HBM 패키징 공급 경쟁",
       "summary": "글로벌 빅테크의 AI 데이터센터 설비투자(CAPEX) 확대 지속에 힘입어 차세대 가속기 및 HBM3E/HBM4 공급망 수혜 기업으로 자금 유입이 집중되고 있습니다.",
       "deep_dive": {
@@ -575,14 +575,14 @@
       ],
       "sources": [
         {
-          "title": "젠슨 황 떠난 엔비디아, AI주 매도세 겹치며 아마존 시총만큼 증발 - 조선일보",
-          "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOZUlyelBkN0tucVotWUQtNlN1Yml3Z0ZybGZ1SzQ3NUtYdDhwRGNoeWlIYjZDSkh2MU9DVGhXRnREY1VUbHp1T2lsTE9JSHJMNFFxN2FXWW1reFEwQTYwcm16MEFXOFZFZWxudklxbEhZc2ZJZ0VuWGVpZ2wxNmxlMnFoZlppWTdfZWZEV1hR?oc=5",
-          "published_at": "2026-11-21 00:59"
+          "title": "트럼프 \"중국에 구형 칩만 판매…안 팔면 중국 스스로 만들 것\" - SBS 뉴스",
+          "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9mMGl3djNyMkJKNTdUS0dwS1M1b1dMaHFQQjctNHViWXNpR1ppSmtuc2xzRFRLZVhUeFBjNmZsMWI3X0xVYm44ZjFkRUs2OVBfWE1QVmhXRFFWSEtCUGx2Tk1fZWM3Mm81dUE?oc=5",
+          "published_at": "2026-11-21 02:07"
         },
         {
-          "title": "엔비디아, 중국 간첩 연루 메가스피드 관련사에 칩 4만개 판매신청 - KBS 뉴스",
-          "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9DN2tydDlMR091MW9yWWdSSmhhOEo5MElGR2ttU0lmWUdyYjREU21JelplRnB1NHVDVGxGRnhNNDNQdXVaNDZhWmh6WVR6Tk1zbjNaOVQ0WFZMc0k?oc=5",
-          "published_at": "2026-11-20 21:14"
+          "title": "[오늘장특징주]앤스로픽, 엔비디아, 유나이티드헬스 - 이데일리",
+          "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNMXEzaXJneGg5cmdDX1lkdW1jMVpFaHJXLUJ1V3NMRFA5b0lZN0tDR3c2c1A4U2c3NlR6RkptQi16YVVDbnZ1MzAxMkhhWDNKS0ppS2wyOW42dmxxVjJleC1XU2tiQ3BnQUFwOVdtY1A4YVdxeGEyZnEyb2ZvN3lsQg?oc=5",
+          "published_at": "2026-11-20 22:31"
         }
       ]
     },
@@ -592,7 +592,7 @@
       "lifecycle": "MATURE",
       "time_horizon": "MID_LONG_TERM",
       "priced_in_risk": "HIGH",
-      "detected_at": "2026-11-21 07:29",
+      "detected_at": "2026-11-21 19:34",
       "title": "미국 기준금리 정책 경로 및 국채 금리 안정화 기대",
       "summary": "연준(Fed)의 완화적 통화정책 기조와 물가 지표 안정세가 지속되며, 미국 장기채 금리 진정과 함께 빅테크 성장주 밸류에이션 부담이 점진적으로 완화되고 있습니다.",
       "deep_dive": {
@@ -623,14 +623,14 @@
       ],
       "sources": [
         {
+          "title": "코스피 5,000선 회복할까...미국 물가·금통위 주목 - YTN",
+          "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE5VT0FuSE5Xc1pWMnBlV2I0aTV1RThJRGNSUkFRZzNsb1BqZnp6MmkxUkZCTjlQNGV0bnNYVzFDMEJfenhDalk0X1g4T19rU2d1QVBuNi1QeWkySGN1UEE?oc=5",
+          "published_at": "2026-11-21 09:38"
+        },
+        {
           "title": "Warsh wants Fed officials to talk less. Instead, they’re talking more",
           "url": "https://www.cnbc.com/2026/11/20/warsh-fed-forward-guidance-rate-hikes.html",
           "published_at": "2026-11-20 21:10"
-        },
-        {
-          "title": "Fed officials expect more rate hikes, worry about AI impact on inflation, minutes show",
-          "url": "https://www.cnbc.com/2026/11/18/fed-minutes-october-2026.html",
-          "published_at": "2026-11-18 19:41"
         }
       ]
     },
@@ -640,7 +640,7 @@
       "lifecycle": "SURGING",
       "time_horizon": "MID_LONG_TERM",
       "priced_in_risk": "LOW",
-      "detected_at": "2026-11-21 07:29",
+      "detected_at": "2026-11-21 19:34",
       "title": "국내 밸류업 프로그램 2차 랠리 및 배당·자사주 소각 본격화",
       "summary": "한국거래소 기업 밸류업 가이드라인 강화 및 상장사들의 자발적 주주환원 공시가 확대되면서 저PBR 지주사와 금융주로 기관 및 외국인 자금 매수세가 유입되고 있습니다.",
       "deep_dive": {
@@ -683,7 +683,7 @@
       "lifecycle": "NEW",
       "time_horizon": "MID_LONG_TERM",
       "priced_in_risk": "LOW",
-      "detected_at": "2026-11-21 07:29",
+      "detected_at": "2026-11-21 19:34",
       "title": "글로벌 AI 데이터센터 전력망 슈퍼사이클 및 K-변압기 수주 호황",
       "summary": "AI 연산 폭증으로 미국 전력망 용량이 한계에 도달하면서 초고압 변압기와 전력 기자재 공급 부족이 심화되어 국내외 전력 인프라 기업들이 사상 최대 수주잔고를 기록 중입니다.",
       "deep_dive": {
@@ -724,6 +724,11 @@
           "title": "[美특징주]블룸에너지, AI 투자심리 악화에 주가 15%↓…7거래일 연속 하락 - 이데일리",
           "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNMWFOSGYtNTFJOGFSOVBwanRVdFVocFlPdVpIRmh2azFSTnY4cmJxVHozTXVfdUJaa3l3aE43dkhLclJXSjdZOW81aDh0NXBaRGVtc1hSZmdGZFZLSlRUZGpjbm9nbUFZdU1jOWZaVlBDUnB1bVR2N3lEMEhfUXctSg?oc=5",
           "published_at": "2026-11-20 20:59"
+        },
+        {
+          "title": "화원-안좌 해저전력망 2차 증설...LS전선, 한전 사업 수주 - 에너지신문",
+          "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE1pSWlfN2ZxcjY3cTlTc2s3M1VNdUZyRTRtUV8zTURvaEpKVzdMSDlXLWhsYnB2S0ZaSmZfcVJxRk5qRmFaSWRMSjM5LWF2Vno0RTJpNXpRLWhOVC1MdTd3WU5RNW54dDJfZS13Y3lONGFqZw?oc=5",
+          "published_at": "2026-11-21 12:00"
         }
       ]
     }
