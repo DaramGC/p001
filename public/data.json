@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-22T07:10:18.231080+00:00",
+  "updated_at": "2026-11-22T19:53:04.318274+00:00",
   "macro_indicators": [
     {
       "name": "코스피",
@@ -32,8 +32,8 @@
     {
       "name": "원/달러 환율",
       "display": "USD/KRW",
-      "price": "1,337.80",
-      "change": "+0.26%",
+      "price": "1,346.04",
+      "change": "+0.88%",
       "is_up": true
     },
     {
@@ -530,7 +530,7 @@
       "lifecycle": "SURGING",
       "time_horizon": "MID_LONG_TERM",
       "priced_in_risk": "MEDIUM",
-      "detected_at": "2026-11-22 07:10",
+      "detected_at": "2026-11-22 19:53",
       "title": "AI 반도체 수요 확장 및 차세대 HBM 패키징 공급 경쟁",
       "summary": "글로벌 빅테크의 AI 데이터센터 설비투자(CAPEX) 확대 지속에 힘입어 차세대 가속기 및 HBM3E/HBM4 공급망 수혜 기업으로 자금 유입이 집중되고 있습니다.",
       "deep_dive": {
@@ -575,14 +575,14 @@
       ],
       "sources": [
         {
-          "title": "수출, 반도체 빼면 세계 8위…K-소비재·방산·원전 등 비반도체도 20% 껑충 - JTBC",
-          "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9PcVZ2Vm0zSmItc250UlI2aHhCRDA0WXM2cDllZlAtR1BPV0E4R0tjdHlNQUFUVW1NMzkxVkdqVkpleVJzbTVVZjlRdnBPVG51XzRSNw?oc=5",
-          "published_at": "2026-11-22 01:13"
+          "title": "美재무장관 \"엔비디아의 규정준수 여부는 젠슨황 개인사와 별개\" - 연합뉴스",
+          "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBPcWlfLTQyU0U0a0U0VWZKVDlfRDBWMkdxTlhhN0o1bmd5SUxDSjFLbHBIQ2hJdDlTVEotRmVJTkotTDdPNmF6RFdwbUVmdl9NOUVaMUlxLVpXMGvSAWBBVV95cUxNYnVwa3A2MzUtZUxzZDA2eFBKaUxDYkNVaEhlakJIZmFlc0UzYm9MY1N5SjB3eDM4eUg1MUdhQU9NLWVUNG0yS1llMW1qajZ0SDJkSnlwNUgyN1ZVMWNzYjQ?oc=5",
+          "published_at": "2026-11-22 16:58"
         },
         {
-          "title": "WSJ “러트닉 미 상무, ‘엔비디아 사태 등 경질 위기’에도 건재” - KBS 뉴스",
-          "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9tbS1reml4eDl3eGlYbWdlaUdaZWRvOVEwUDNPRzNCWVZxRlgybS1jS2hJWV9WNG5JQkxZd1lkb0NjZ1hRakh3OEphQlZYdVlsNEI0UDA2Qk9BM1k?oc=5",
-          "published_at": "2026-11-22 02:16"
+          "title": "“엔비디아 칩 중국 밀수망에 앨리스 황·캄보디아 범죄조직 얽혀” - KBS 뉴스",
+          "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1vOUlreWV0ZXpxc1ZUQ2lFSU9mMGVleVlDWkR2MmdEUno4TGIydnZUNjhTVlZOdlpBLWVwZG5SNFJxRVdTbW5HV2Z6OWxsbG5fTFY5QTU2N3FPU2VUUnpvbzU0SHpSSDNzWXloRTBn?oc=5",
+          "published_at": "2026-11-22 13:42"
         }
       ]
     },
@@ -592,7 +592,7 @@
       "lifecycle": "MATURE",
       "time_horizon": "MID_LONG_TERM",
       "priced_in_risk": "HIGH",
-      "detected_at": "2026-11-22 07:10",
+      "detected_at": "2026-11-22 19:53",
       "title": "미국 기준금리 정책 경로 및 국채 금리 안정화 기대",
       "summary": "연준(Fed)의 완화적 통화정책 기조와 물가 지표 안정세가 지속되며, 미국 장기채 금리 진정과 함께 빅테크 성장주 밸류에이션 부담이 점진적으로 완화되고 있습니다.",
       "deep_dive": {
@@ -623,14 +623,14 @@
       ],
       "sources": [
         {
+          "title": "26일 올해 마지막 금통위… 금리 ‘3.25%’로 인상 전망 - 조선일보",
+          "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNeTJQOHZJQm1tRWtHYndHZGcxN29fTnlyYkRqMk04Y2VaRV9Tb1ZXNGplOHNrSEppb1dpTV9QSXFfM09XeFd0NmZ6WW5tNmRzUlFnb01udUhTX0NUalRZdjVlcnNrOThvcXJGTVgya3RHSVZVZUtRMkhqeTVMYXVtMFRVdlIyTUZmeUZaM0dB?oc=5",
+          "published_at": "2026-11-22 15:31"
+        },
+        {
           "title": "Warsh wants Fed officials to talk less. Instead, they’re talking more",
           "url": "https://www.cnbc.com/2026/11/20/warsh-fed-forward-guidance-rate-hikes.html",
           "published_at": "2026-11-20 21:10"
-        },
-        {
-          "title": "Fed officials expect more rate hikes, worry about AI impact on inflation, minutes show",
-          "url": "https://www.cnbc.com/2026/11/18/fed-minutes-october-2026.html",
-          "published_at": "2026-11-18 19:41"
         }
       ]
     },
@@ -640,7 +640,7 @@
       "lifecycle": "SURGING",
       "time_horizon": "MID_LONG_TERM",
       "priced_in_risk": "LOW",
-      "detected_at": "2026-11-22 07:10",
+      "detected_at": "2026-11-22 19:53",
       "title": "국내 밸류업 프로그램 2차 랠리 및 배당·자사주 소각 본격화",
       "summary": "한국거래소 기업 밸류업 가이드라인 강화 및 상장사들의 자발적 주주환원 공시가 확대되면서 저PBR 지주사와 금융주로 기관 및 외국인 자금 매수세가 유입되고 있습니다.",
       "deep_dive": {
@@ -671,14 +671,14 @@
       ],
       "sources": [
         {
-          "title": "外人 매도 금융위기급…\"코스피, 극단 이미 반영했다\" - 연합인포맥스",
-          "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5hRmlYVUhYeVhjNm14b0RxVkx2VWtaTEJPQWxuSHFzLWFrQkFnNG9vSXBaOEgtVGJSR2VER1NTdldzQW8tUms1M1RETHEwZHRXX2tKYnpUaVp3blJFcmktV05TMDhSNGdHcEVNMEdudXY?oc=5",
-          "published_at": "2026-11-22 05:02"
-        },
-        {
           "title": "나스닥 폭락에 또 검은 월요일?…\"증시 공포 이미 금융위기 수준\" - 비즈워치",
           "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5OTXFkelpaTUs0b0lBeTgxNlZQejRyMl9WNGgtUHdlZ0VpV2c3N0NaT29yTnZQUlUydHF3ZHBtUFpYek5QT3pBY2h6c3NRU0hCVFBhOFlNZERzTmVSU1R6bm92RlREV0tsMVE?oc=5",
           "published_at": "2026-11-22 03:07"
+        },
+        {
+          "title": "나노, 보유 자사주 전량 소각…해외 수주로 수익성 회복할까 - 블로터",
+          "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE96T09wb25UQ2VpdldGbTUxSWN6RXRPeTZ4YnBLWS02YTNFdWtiT09fYjdaUW9CNTJGRE9CQTFSdXVkTi1fTDZOQU9Mc2tNVmM2WDZ0UVRwTFh2SFFFSGNZNF93UkE3SHRS0gFsQVVfeXFMTnZDalZUdHVTM3NqSm1lUlBQdDlyU3g0ajZSV1FmLV9UbXVtRm4zaVlNanRyRV9tWjh4NGNNM2x1YTNLMXF0d2JvSGNrelZWVU9CY0xKdjJjOHF2dlU5NzYtTGhxeTZPbDRYRXp0?oc=5",
+          "published_at": "2026-11-22 08:00"
         }
       ]
     },
@@ -688,7 +688,7 @@
       "lifecycle": "NEW",
       "time_horizon": "MID_LONG_TERM",
       "priced_in_risk": "LOW",
-      "detected_at": "2026-11-22 07:10",
+      "detected_at": "2026-11-22 19:53",
       "title": "글로벌 AI 데이터센터 전력망 슈퍼사이클 및 K-변압기 수주 호황",
       "summary": "AI 연산 폭증으로 미국 전력망 용량이 한계에 도달하면서 초고압 변압기와 전력 기자재 공급 부족이 심화되어 국내외 전력 인프라 기업들이 사상 최대 수주잔고를 기록 중입니다.",
       "deep_dive": {
@@ -726,9 +726,9 @@
       ],
       "sources": [
         {
-          "title": "수출, 반도체 빼면 세계 8위…K-소비재·방산·원전 등 비반도체도 20% 껑충 - JTBC",
-          "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9PcVZ2Vm0zSmItc250UlI2aHhCRDA0WXM2cDllZlAtR1BPV0E4R0tjdHlNQUFUVW1NMzkxVkdqVkpleVJzbTVVZjlRdnBPVG51XzRSNw?oc=5",
-          "published_at": "2026-11-22 01:13"
+          "title": "李대통령 \"AI 데이터센터가 산업화시대 경부고속도로…인력·전력 지원\" - 연합인포맥스",
+          "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9JSzZHMjV6bXo1YkNoU1RKOG9sa3lDYnlKMzVCaU9kbEN3cHJRTUZUSGlHZFktYUNsMnV5X2NKVlN4cWFiQU5wV2EyQk9nOTNlbnVtOWE2YkpVNUthUnR6X0xBNWJwQTd6WTM5eDREc0k?oc=5",
+          "published_at": "2026-11-21 10:41"
         }
       ]
     }
