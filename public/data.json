@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-27T21:29:46.080417+00:00",
+  "updated_at": "2026-11-28T08:10:49.893034+00:00",
   "macro_indicators": [
     {
       "name": "코스피",
@@ -32,8 +32,8 @@
     {
       "name": "원/달러 환율",
       "display": "USD/KRW",
-      "price": "1,333.54",
-      "change": "-0.77%",
+      "price": "1,333.90",
+      "change": "-0.74%",
       "is_up": false
     },
     {
@@ -62,7 +62,7 @@
     {
       "id": "cal-01",
       "date": "2026-10-10",
-      "d_day": "D+48",
+      "d_day": "D+49",
       "country": "US",
       "event_name": "미국 9월 소비자물가지수 (CPI) 발표",
       "importance": "HIGH",
@@ -72,7 +72,7 @@
     {
       "id": "cal-02",
       "date": "2026-10-11",
-      "d_day": "D+47",
+      "d_day": "D+48",
       "country": "KR",
       "event_name": "한국은행 금융통화위원회 기준금리 결정",
       "importance": "HIGH",
@@ -82,7 +82,7 @@
     {
       "id": "cal-03",
       "date": "2026-10-16",
-      "d_day": "D+42",
+      "d_day": "D+43",
       "country": "US",
       "event_name": "미국 9월 소매판매 (Retail Sales)",
       "importance": "MEDIUM",
@@ -92,7 +92,7 @@
     {
       "id": "cal-04",
       "date": "2026-11-04",
-      "d_day": "D+23",
+      "d_day": "D+24",
       "country": "US",
       "event_name": "미국 연준 FOMC 정례회의 기준금리 결정",
       "importance": "HIGH",
@@ -530,7 +530,7 @@
       "lifecycle": "SURGING",
       "time_horizon": "MID_LONG_TERM",
       "priced_in_risk": "MEDIUM",
-      "detected_at": "2026-11-27 21:29",
+      "detected_at": "2026-11-28 08:10",
       "title": "AI 반도체 수요 확장 및 차세대 HBM 패키징 공급 경쟁",
       "summary": "글로벌 빅테크의 AI 데이터센터 설비투자(CAPEX) 확대 지속에 힘입어 차세대 가속기 및 HBM3E/HBM4 공급망 수혜 기업으로 자금 유입이 집중되고 있습니다.",
       "deep_dive": {
@@ -575,14 +575,14 @@
       ],
       "sources": [
         {
-          "title": "SK하이닉스, 자사주 일일 매수 주문량 2배로…주주가치 제고 - 연합뉴스",
-          "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE00SG5MbVVoeUVXU3YwRnJWdGdHUm4xTm1oOW5MU0hYVU1VMG83WE5wM2lxdGhUOFpkWmFxd0ZWeVYxcWlxYXRPYVRMSkV0b0x2dWQ3QUh0QktZYWfSAWBBVV95cUxQMURjWllvS1l6dXpwbzBRVHFnUDlyZlotcGFwSzhFbnR5SW5tQ1N6Y3ItX283cl92N1ROMEIwS3RBU2E1Z2U1MF9TdWJtLUVmUTFLSmwtMGppUDdMWUFhaDA?oc=5",
-          "published_at": "2026-11-27 11:26"
+          "title": "‘젠슨황 불륜 상대’ 연계 중국 시설서 엔비디아 최첨단 칩 발견 - JTBC",
+          "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBzZGxJMXowcXhCa0hIMXlRVTJEeEVYTFBHb1RTcW90OFY4YXYzQUsxR3ZWQW95aEczLWVENzBIUnFpY2QwM2FjVl94Z25kTW5GaEVycQ?oc=5",
+          "published_at": "2026-11-27 22:45"
         },
         {
-          "title": "‘젠슨황 불륜 상대’ 관련 중국 시설에 엔비디아 최첨단 칩 설치 - KBS 뉴스",
-          "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBGSDBwLWI3VEtiakhkZVFydjFhRzN2czB6OEhUZ3ZWeWFHUkY1R2ppdDZVYlpSNDVrRVNpZHBJUWY0S2ROSG94U09oc3dpV2xLV0RRVTM1Y1c0MUU?oc=5",
-          "published_at": "2026-11-27 17:15"
+          "title": "[뉴욕증시] AI株 '블랙 프라이데이 쇼핑'…필리 반도체 지수 4.7%↑ - 연합인포맥스",
+          "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE00R0hnczVjS3UtTjdQdTF1RHVBdkNIc3NFeEp3aFFpRVJzMWNsXzAzbUpjQURuczNlN2tjckhvRW1hYmxJUnl0azBLRXZUWlkzMGJqM1ctLUdObEFYU2lsOFpMa3QyQktTZXdxRnRxeDc?oc=5",
+          "published_at": "2026-11-27 18:23"
         }
       ]
     },
@@ -592,7 +592,7 @@
       "lifecycle": "MATURE",
       "time_horizon": "MID_LONG_TERM",
       "priced_in_risk": "HIGH",
-      "detected_at": "2026-11-27 21:29",
+      "detected_at": "2026-11-28 08:10",
       "title": "미국 기준금리 정책 경로 및 국채 금리 안정화 기대",
       "summary": "연준(Fed)의 완화적 통화정책 기조와 물가 지표 안정세가 지속되며, 미국 장기채 금리 진정과 함께 빅테크 성장주 밸류에이션 부담이 점진적으로 완화되고 있습니다.",
       "deep_dive": {
@@ -623,14 +623,14 @@
       ],
       "sources": [
         {
-          "title": "주담대 금리 15년 만에 최고인데…한은 또 인상, '7% 주담대' 오나 - 머니투데이 - 머니투데이",
-          "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBLeDQtVkRCM0FyZ1FVY0l3STBpdnJqV0IxVkIxdEFmanY2dUNOSzI1bVNvSnNpUnFXaEZPQUxBU1FYU3lGUTBfWHhQNXd3RDJkNFUxODFoM1FCeVNIdHVkOVdoc2VpLW5uRFdF0gFwQVVfeXFMTjczV0xVS2FKb2xWeVNWenAydGNIczFTVHBGQk1aMktsblE1Z19wTWoydUI3N0o0aFVncEY4Z01CRG1Fb21NRmVwZF9HQ2VHSVcwY3A4NkVPQjZSajM2RlJLelhFYmg4Q1VlTDRmLTF0Yg?oc=5",
-          "published_at": "2026-11-26 07:00"
+          "title": "“한은 금리 인상, 이제 시작일 뿐?”…다시 빨라진 글로벌 ‘긴축 시계’ - 매일경제",
+          "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBIOWdNcGJZSU5leU5Qd2k5QkR2ZTg2TW9QNU4yUVJaWnExV3Z1SkJnWGlDeGI4cF9Vd21PdFpSQ3JpLTJzM0RUNFhfM0RPUE81Vmc?oc=5",
+          "published_at": "2026-11-27 22:52"
         },
         {
-          "title": "노무라 \"한은 금리 인상 사이클 사실상 끝났다\" - 연합뉴스",
-          "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5lemRJc0I3T1FjYzBOSnZUTFNUMjZDRWoyYkhHMEIyZ1NhVUYxenVpWWdUX1lNTV81c1VZd3FuVng3aXp1eFhlbFUyVVZrbk5SUHRhLWNheXJHa1nSAWBBVV95cUxQcTVleWxNT2hGUUg1d0FaNEIwc1pITWtFd0lWVFl6b1M5UlZpRy1FbWdacXowZF81SnZfalBHZlRTY3VjdDRNQ2lSNU13aVd6Nkl5NVFlTjZMbzFtWUVpSlg?oc=5",
-          "published_at": "2026-11-27 01:47"
+          "title": "[인도 특징주] 아다니 그룹, 3000억원 규모 채권 발행 나선다 - 뉴스핌",
+          "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBVdjRTLTdhOTlFS3dLRDRZbkVNc0w2Y0xJeUxWcURUTzZ1cXhqcDRYZk5WME5XVmhvV1BiNU5uWHBqQnNqNm5aeVM3dmFMNlp1VW1zcUxuaDhzd0NJ?oc=5",
+          "published_at": "2026-11-27 08:22"
         }
       ]
     },
@@ -640,7 +640,7 @@
       "lifecycle": "SURGING",
       "time_horizon": "MID_LONG_TERM",
       "priced_in_risk": "LOW",
-      "detected_at": "2026-11-27 21:29",
+      "detected_at": "2026-11-28 08:10",
       "title": "국내 밸류업 프로그램 2차 랠리 및 배당·자사주 소각 본격화",
       "summary": "한국거래소 기업 밸류업 가이드라인 강화 및 상장사들의 자발적 주주환원 공시가 확대되면서 저PBR 지주사와 금융주로 기관 및 외국인 자금 매수세가 유입되고 있습니다.",
       "deep_dive": {
@@ -671,14 +671,9 @@
       ],
       "sources": [
         {
-          "title": "SK하이닉스, 자사주 일일 매수 주문량 2배로…주주가치 제고 - 연합뉴스",
-          "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE00SG5MbVVoeUVXU3YwRnJWdGdHUm4xTm1oOW5MU0hYVU1VMG83WE5wM2lxdGhUOFpkWmFxd0ZWeVYxcWlxYXRPYVRMSkV0b0x2dWQ3QUh0QktZYWfSAWBBVV95cUxQMURjWllvS1l6dXpwbzBRVHFnUDlyZlotcGFwSzhFbnR5SW5tQ1N6Y3ItX283cl92N1ROMEIwS3RBU2E1Z2U1MF9TdWJtLUVmUTFLSmwtMGppUDdMWUFhaDA?oc=5",
-          "published_at": "2026-11-27 11:26"
-        },
-        {
-          "title": "삼성전자, 오늘 30조 배당…이재용 회장 4488억 - 한겨레",
-          "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE42ZXJ1alF4TGNiUWlSTTZYbnVEaXVKZVFITTN0RXpCaUM0MFJfbkZ1OGRycm9sclRQVE9JbW1vMGUxRC11Ui1jRlkwVUtEMTRFel8tWUs5NlA4RTY5ZnF1aERIUlNxZnVZR0E?oc=5",
-          "published_at": "2026-11-27 04:50"
+          "title": "내 계좌엔 얼마 들어올까? 역대급 배당금 쏘는 삼성전자 - 네이버페이 머니스토리",
+          "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBXRlBHOHpxOTVUYk5waVAxTkNRTHQ0UmxQVlJybXdnUU5HU0tQVWo5QWFTd0Nna3V1QUR2SnJRV2tHVUFkSlA4aS1taWRqVG0wdEE?oc=5",
+          "published_at": "2026-11-27 18:55"
         }
       ]
     },
@@ -688,7 +683,7 @@
       "lifecycle": "NEW",
       "time_horizon": "MID_LONG_TERM",
       "priced_in_risk": "LOW",
-      "detected_at": "2026-11-27 21:29",
+      "detected_at": "2026-11-28 08:10",
       "title": "글로벌 AI 데이터센터 전력망 슈퍼사이클 및 K-변압기 수주 호황",
       "summary": "AI 연산 폭증으로 미국 전력망 용량이 한계에 도달하면서 초고압 변압기와 전력 기자재 공급 부족이 심화되어 국내외 전력 인프라 기업들이 사상 최대 수주잔고를 기록 중입니다.",
       "deep_dive": {
@@ -728,7 +723,7 @@
         {
           "title": "Global power grid supercycle drives electrification giants to record backlogs",
           "url": "https://www.bloomberg.com",
-          "published_at": "2026-11-27 21:29"
+          "published_at": "2026-11-28 08:10"
         }
       ]
     }
